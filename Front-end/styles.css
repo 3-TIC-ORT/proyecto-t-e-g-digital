@@ -1,15 +1,5 @@
-.cuadro {
+.class {
     width: 900px;
     height: 900px;
     background-color: rgb(170, 170, 77);
-    text-align: center;
-    background-image: url(https://c0.klipartz.com/pngpicture/306/465/gratis-png-pergamino-de-papel-pergaminos.png);
-}
-
-.jugar {
-    align-items: center;
-}
-
-.reglamento { 
-    align-items: center;
 }

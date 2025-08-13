@@ -1,8 +1,3 @@
-let australia = document.getElementById("australiaid");
-function test6 () {
-alert("Australia");
-};
-australia.addEventListener("click", test6);
 let players = document.getElementById("playersid");
 function test3 () {
 alert(parseInt(players.value) + " jugadores");
@@ -22,11 +17,6 @@ msg="Con Objetivos Secretos";
 alert(msg);
 };
 };
-let randomizador = Math.random();
-function test5 () {
-alert(randomizador);
-};
 let ready = document.getElementById("gameready");
 ready.addEventListener("click", test3);
 ready.addEventListener("click", test4);
-ready.addEventListener("click", test5);

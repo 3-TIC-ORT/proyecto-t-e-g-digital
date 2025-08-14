@@ -1,0 +1,26 @@
+body {
+    position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #694b16;
+   height: 500px;
+}
+
+.boton_atras {
+    position: absolute;
+    top: 1.5rem; 
+    left: 1.5rem; 
+    z-index: 100;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f7f3e9; 
+    background-color: #866318; 
+    border: 3px solid #b8a27d; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}

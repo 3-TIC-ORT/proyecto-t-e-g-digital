@@ -19,6 +19,7 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     display: inline-block;
+    ;
 }
 
 .boton_atras {
@@ -39,11 +40,12 @@
 }
 
 body {
-     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #694b16;
-    height: 500px;
+    position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #694b16;
+   height: 500px;
 }
+

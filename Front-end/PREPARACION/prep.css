@@ -16,11 +16,18 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     color: #f7f3e9; 
-    background-color: #866318; 
-    border: 3px solid #b8a27d; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
     padding: 5px 10px;
     border-radius: 5px; 
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     display: inline-block;
+    text-decoration: none;
 }
+
+a {
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+    }

@@ -1,17 +1,19 @@
 body {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: #242322;
-   height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    height: 80vh; 
+    margin: 0;
+    filter: brightness(1); 
+    transition: filter 0.3s ease;
 }
 
 a {
-color: black;
-font-style: normal;
-text-decoration: none;
+    color: black; 
+    font-style: normal;
+    text-decoration: none;
 }
 
 .botones_inicio {
@@ -64,3 +66,36 @@ text-decoration: none;
     transition-delay: 50ms;
 }
 
+.barra_volumen {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #242322; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
+    padding: 4px 7px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 50ms;
+}
+
+.logoMini {
+    position: absolute;
+    top: 56rem; 
+    right: 110rem; 
+    height: 70px; 
+    width: 70px; 
+}
+
+.barraBrillo {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #242322; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
+    padding: 4px 6px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 50ms;
+}

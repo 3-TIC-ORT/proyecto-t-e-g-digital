@@ -1,38 +1,62 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let music = document.getElementById('backgroundMusic');
-    let botonMusica = document.getElementById('boton_musica');
-    let volumeSlider = document.getElementById('volumeSlider');
+// MUSICA
+document.addEventListener("DOMContentLoaded", function() {
+    let musica = document.getElementById("backgroundMusic");
+    let botonMusica = document.getElementById("boton_musica");
+    let barraVolumen = document.getElementById("barraVolumen");
 
-    let isPlaying = (localStorage.getItem('isMusicPlaying') === 'true');
-    let volume = localStorage.getItem('musicVolume');
+    let estaSonando = (localStorage.getItem("isMusicPlaying") === "true");
+    let volumenGuardado = localStorage.getItem("musicVolume");
 
-    if (volume == 0) {
-        music.volume = volume;
-        volumeSlider.value = volume;
+    if (volumenGuardado) {
+        musica.volume = volumenGuardado;
+        barraVolumen.value = volumenGuardado;
     }
 
-    if (isPlaying) {
-        music.play();
-        botonMusica.textContent = 'Música: SI';
+    if (estaSonando) {
+        musica.play();
+        botonMusica.textContent = "Música: SI";
     } else {
-        music.pause();
-        botonMusica.textContent = 'Música: NO';
+        musica.pause();
+        botonMusica.textContent = "Música: NO";
     }
 
-    botonMusica.addEventListener('click', () => {
-        if (music.paused) {
-            music.play();
-            botonMusica.textContent = 'Música: SI';
+    // Botón de musica
+
+    botonMusica.addEventListener("click", pausarMusica);
+        
+        function pausarMusica () {
+        if (musica.paused) {
+            musica.play();
+            botonMusica.textContent = "Música: SI";
         } else {
-            music.pause();
-            botonMusica.textContent = 'Música: NO';
+            musica.pause();
+            botonMusica.textContent = "Música: NO";
         }
-        localStorage.setItem('isMusicPlaying', !music.paused);
-    });
+        localStorage.setItem("isMusicPlaying", !musica.paused);
+    }
 
-
-    volumeSlider.addEventListener('input', () => {
-        music.volume = volumeSlider.value;
-        localStorage.setItem('musicVolume', music.volume);
-    });
+    // VOLUMEN
+    barraVolumen.addEventListener("input", cambiarVolumen)
+        
+        function cambiarVolumen() {
+        musica.volume = barraVolumen.value;
+        localStorage.setItem("musicVolume", musica.volume);
+    };
 });
+
+// BRILLO
+function cambiarBrillo() {
+  let barraBrillo = document.getElementById("barraBrillo");
+  let valorBrillo = barraBrillo.value;
+  document.body.style.filter = "brightness(" + valorBrillo + ")";
+}
+
+// DOMContentLoaded para la barra del brillo
+document.addEventListener("DOMContentLoaded", domLoader)
+    
+  function domLoader () {
+  barraBrillo.addEventListener("input", cambiarBrillo);
+};
+
+// Esto si lo hice yo muchachos, aunque tuve que buscar como se modificaban cosas como el volumen y el brillo. Igual para ser franco el codigo me fallo varias veces y use 
+// ayuda para arreglarlo, pero al final lo logre hacer funcionar. Espero que les sirva y que no haya problemas con el codigo.

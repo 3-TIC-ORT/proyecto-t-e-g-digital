@@ -42,17 +42,25 @@
 }
 
 body {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: #242323;
-   height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    height: 60vh; 
+    margin: 0;
 }
 
 a {
 color: black;
 font-style: normal;
 text-decoration: none;
+}
+
+.logoMini {
+    position: absolute;
+    top: 56rem; 
+    right: 110rem; 
+    height: 70px; 
+    width: 70px; 
 }

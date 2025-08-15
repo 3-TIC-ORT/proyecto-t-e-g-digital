@@ -1,0 +1,65 @@
+body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #242322;
+   height: 500px;
+}
+
+a {
+color: black;
+font-style: normal;
+text-decoration: none;
+}
+
+.botones_inicio {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f7f3e9; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+
+.boton_atras {
+    position: absolute;
+    top: 1.5rem; 
+    left: 1.5rem; 
+    z-index: 100;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f7f3e9; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.musica {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #242322; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 50ms;
+}

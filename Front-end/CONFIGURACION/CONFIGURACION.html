@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFIGURACION</title>
+    <script src="../CONFIGURACION/CONFIGURACION.js" defer></script>
+    <link rel="stylesheet" href="../CONFIGURACION/CONFIGURACION.css">
+</head>
+<body>
+    
+     <div class="boton_atras"><a href="../INICIO/inicio.html"> Salir </a></div>
+
+     <button class="musica" id="boton_musica">Música: NO</button>
+
+     <label class="barra_volumen" for="volumeSlider">Volumen:</label>
+     <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+
+     <audio id="backgroundMusic" loop>
+        <source src="../INICIO/MUSICA.mp3" type="audio/mpeg">
+     </audio>
+</body>
+</html>  

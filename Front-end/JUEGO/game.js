@@ -8,6 +8,8 @@ let fichassumatra = {
 cantidad: 5,
 color: "Azul",}
 let randomizador = 0;
+let turno = "Azul";
+let currentturn = document.getElementById("currentturn");
 function test6 () {
 atackaustralia = 1;
 };
@@ -16,6 +18,7 @@ let sumatra = document.getElementById("sumatraid");
 let targetsumatra = 0;
 sumatra.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
 australia.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
+currentturn.textContent = "Turno: " + turno;
 function test7 () {
 if (atackaustralia === 1){
 atackaustralia = 0;
@@ -26,6 +29,10 @@ sumatra.addEventListener("click", test7);
 let atacarrojo = document.getElementById("atacarrojo");
 function test8 () {
 randomizador = Math.random();
+if (turno != "Rojo"){
+alert("No es tu turno");
+};
+if (turno === "Rojo"){
 if (fichasaustralia["cantidad"] <= 1) {
 alert("No se puede atacar con " + fichasaustralia["cantidad"] + " fichas")
 };
@@ -45,11 +52,11 @@ fichasaustralia["cantidad"]--;
 };
 };
 };
+};
 australia.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
 sumatra.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
 };
 atacarrojo.addEventListener("click", test8);
-
 let atacksumatra = 0;
 let targetaustralia = 0;
 function test9 () {
@@ -66,6 +73,10 @@ australia.addEventListener("click", test10);
 let atacarazul = document.getElementById("atacarazul");
 function test11 () {
 randomizador = Math.random();
+if (turno != "Azul"){
+alert("No es tu turno");
+};
+if (turno === "Azul"){
 if (fichassumatra["cantidad"] <= 1) {
 alert("No se puede atacar con " + fichassumatra["cantidad"] + " fichas")
 };
@@ -85,8 +96,25 @@ if (fichasaustralia["cantidad"] < 1) {
 fichassumatra["cantidad"]--;
 };
 };
+};
 sumatra.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
 australia.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
 };
 atacarazul.addEventListener("click", test11);
+let skipazul = document.getElementById("pasaazul");
+function test12 () {
+if (turno === "Azul"){
+turno = "Rojo"
+};
+currentturn.textContent = "Turno: " + turno;
+};
+skipazul.addEventListener("click", test12);
+let skiprojo = document.getElementById("pasarojo");
+function test13 () {
+if (turno === "Rojo"){
+turno = "Azul"
+};
+currentturn.textContent = "Turno: " + turno;
+};
+skiprojo.addEventListener("click", test13);
 

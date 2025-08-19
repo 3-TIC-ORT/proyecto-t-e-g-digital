@@ -28,6 +28,11 @@
     text-decoration: none;
 }
 
+.currentturn{
+color:white;
+background-color: darkgoldenrod;
+}
+
 a {
 color: black;
 font-style: normal;

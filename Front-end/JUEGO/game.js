@@ -1,4 +1,4 @@
-let australia = document.getElementById("australiaid");
+let australiabutton = document.getElementById("australiaid");
 let atackaustralia = 0;
 let fichasaustralia = {
 cantidad: 2,
@@ -13,11 +13,11 @@ let currentturn = document.getElementById("currentturn");
 function test6 () {
 atackaustralia = 1;
 };
-australia.addEventListener("click", test6);
-let sumatra = document.getElementById("sumatraid");
+australiabutton.addEventListener("click", test6);
+let sumatrabutton = document.getElementById("sumatraid");
 let targetsumatra = 0;
-sumatra.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
-australia.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
+sumatrabutton.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
+australiabutton.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
 currentturn.textContent = "Turno: " + turno;
 function test7 () {
 if (atackaustralia === 1){
@@ -25,7 +25,7 @@ atackaustralia = 0;
 targetsumatra = 1;
 };
 };
-sumatra.addEventListener("click", test7);
+sumatrabutton.addEventListener("click", test7);
 let atacarrojo = document.getElementById("atacarrojo");
 function test8 () {
 randomizador = Math.random();
@@ -53,8 +53,8 @@ fichasaustralia["cantidad"]--;
 };
 };
 };
-australia.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
-sumatra.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
+australiabutton.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
+sumatrabutton.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
 };
 atacarrojo.addEventListener("click", test8);
 let atacksumatra = 0;
@@ -62,14 +62,14 @@ let targetaustralia = 0;
 function test9 () {
 atacksumatra = 1;
 };
-sumatra.addEventListener("click", test9)
+sumatrabutton.addEventListener("click", test9)
 function test10 () {
 if (atacksumatra === 1){
 atacksumatra = 0;
 targetaustralia = 1;
 };
 };
-australia.addEventListener("click", test10);
+australiabutton.addEventListener("click", test10);
 let atacarazul = document.getElementById("atacarazul");
 function test11 () {
 randomizador = Math.random();
@@ -97,8 +97,8 @@ fichassumatra["cantidad"]--;
 };
 };
 };
-sumatra.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
-australia.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
+sumatrabutton.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
+australiabutton.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
 };
 atacarazul.addEventListener("click", test11);
 let skipazul = document.getElementById("pasaazul");
@@ -118,3 +118,34 @@ currentturn.textContent = "Turno: " + turno;
 };
 skiprojo.addEventListener("click", test13);
 
+let paises = [];
+australia = {
+continente: "Oceanía",
+fichas: 2,
+colorfichas: "Rojo",
+limitrofes: [],
+selected: 0,
+};
+sumatra = {
+continente: "Oceanía",
+fichas: 5,
+colorfichas: "Azul",
+limitrofes: [],
+selected: 0,
+};
+java = {
+continente: "Oceanía",
+fichas: 1,
+colorfichas: "Azul",
+limitrofes: [],
+selected: 0,
+};
+sumatra.limitrofes.push(australia);
+australia.limitrofes.push(sumatra);
+australia.limitrofes.push(java);
+java.limitrofes.push(australia);
+paises.push(australia, sumatra, java);
+let i = 0;
+function victoria () {
+while (paises.lenght > i)
+}

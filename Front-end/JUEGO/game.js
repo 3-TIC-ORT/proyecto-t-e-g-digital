@@ -119,25 +119,28 @@ currentturn.textContent = "Turno: " + turno;
 skiprojo.addEventListener("click", test13);
 
 let paises = [];
-australia = {
+let australia = {
 nombre: "Australia",
+id: document.getElementById("australiaid"),
 continente: "Oceanía",
 fichas: 2,
 colorfichas: "Rojo",
 limitrofes: [],
 selected: 0,
 };
-sumatra = {
+let sumatra = {
 nombre: "Sumatra",
+id: document.getElementById("sumatraid"),
 continente: "Oceanía",
 fichas: 5,
 colorfichas: "Azul",
 limitrofes: [],
 selected: 0,
 };
-java = {
+let java = {
 nombre: "Java",
 continente: "Oceanía",
+id: document.getElementById("javaid"),
 fichas: 1,
 colorfichas: "Azul",
 limitrofes: [],
@@ -151,6 +154,7 @@ paises.push(australia, sumatra, java);
 let i = 0;
 let conquistas = 0;
 function victoria () {
+i = 0;
 while (paises.length > i+1){
 if (paises[i].colorfichas === paises[i+1].colorfichas){
 conquistas++;
@@ -168,33 +172,20 @@ winner.addEventListener("click", victoria);
 let dado = Math.floor(Math.random() * 6) + 1;
 let paisseleccionado = 0;
 let paisatacado = 0;
-function test14 () {
-if (turno === australia.colorfichas){
-paisseleccionado =  australia;
-} else if (turno != australia.colorfichas){
+function test14(pais) {
+if (turno === pais.colorfichas && pais.fichas > 1){
+paisseleccionado =  pais;
+} else if (turno != pais.colorfichas){
 i = 0;
-while (australia.limitrofes.length > i && paisseleccionado != australia.limitrofes[i]){
+while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]){
 i++;
 };
-if (australia.limitrofes[i] === paisseleccionado){
-paisatacado = australia;
+if (pais.limitrofes[i] === paisseleccionado){
+paisatacado = pais;
 alert(paisseleccionado.nombre + " ataca a " + paisatacado.nombre);
 };
 };
 };
-function test15 () {
-if (turno === sumatra.colorfichas){
-paisseleccionado =  sumatra;
-} else if (turno != sumatra.colorfichas){
-i = 0;
-while (sumatra.limitrofes.length > i && paisseleccionado != sumatra.limitrofes[i]){
-i++;
-};
-if (sumatra.limitrofes[i] === paisseleccionado){
-paisatacado = sumatra;
-alert(paisseleccionado.nombre + " ataca a " + paisatacado.nombre);
-};
-};
-};
-australiabutton.addEventListener("click", test14);
-sumatrabutton.addEventListener("click", test15);
+australia.id.addEventListener("click", ()=> test14(australia));
+sumatra.id.addEventListener("click", ()=> test14(sumatra));
+java.id.addEventListener("click", ()=> test14(java));

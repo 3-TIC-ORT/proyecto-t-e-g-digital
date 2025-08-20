@@ -10,6 +10,12 @@
     background-color: darkcyan;
 }
 
+.java{
+    width: 40px;
+    height: 60px;
+    background-color: darkcyan;
+}
+
 .boton_atras {
     position: absolute;
     top: 1.5rem; 

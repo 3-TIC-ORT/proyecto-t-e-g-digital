@@ -169,7 +169,7 @@ conquistas = 0
 };
 let winner = document.getElementById("winner");
 winner.addEventListener("click", victoria);
-let dado = Math.floor(Math.random() * 6) + 1;
+let dado = 0;
 let paisseleccionado = 0;
 let paisatacado = 0;
 function test14(pais) {
@@ -189,3 +189,71 @@ alert(paisseleccionado.nombre + " ataca a " + paisatacado.nombre);
 australia.id.addEventListener("click", ()=> test14(australia));
 sumatra.id.addEventListener("click", ()=> test14(sumatra));
 java.id.addEventListener("click", ()=> test14(java));
+let dadosatacante = 0;
+let dadosdefensor = 0;
+let resultadosatacante = [];
+let resultadosdefensor = [];
+let dadoreserva = 0;
+function test16(color){
+if (color === turno && color === paisseleccionado.colorfichas){
+dadosatacante = paisseleccionado.fichas - 1;
+dadosdefensor = paisatacado.fichas;
+if(dadosatacante > 3){
+dadosatacante = 3;
+};
+if(dadosdefensor > 3){
+dadosdefensor = 3;
+};
+while (dadosatacante > 0){
+dado = Math.floor(Math.random() * 6) + 1;
+resultadosatacante.push(dado);
+dadosatacante--;
+};
+while (dadosdefensor > 0){
+dado = Math.floor(Math.random() * 6) + 1;
+resultadosdefensor.push(dado);
+dadosdefensor--;
+};
+if (resultadosatacante.length > 1){
+while (resultadosatacante[0] < resultadosatacante[1]){
+dado = resultadosatacante.shift();
+resultadosatacante.push(dado);
+};
+if (resultadosatacante.length === 3){
+if (resultadosatacante[1] < resultadosatacante[2]){
+dado = resultadosatacante.pop();
+dadoreserva = resultadosatacante.pop();
+resultadosatacante.push(dadoreserva);
+resultadosatacante.push(dado);
+};
+};
+};
+if (resultadosdefensor.length > 1){
+while (resultadosdefensor[0] < resultadosdefensor[1]){
+dado = resultadosdefensor.shift();
+resultadosdefensor.push(dado);
+};
+if (resultadosdefensor.length === 3){
+if (resultadosdefensor[1] < resultadosdefensor[2]){
+dado = resultadosdefensor.pop();
+dadoreserva = resultadosdefensor.pop();
+resultadosdefensor.push(dadoreserva);
+resultadosdefensor.push(dado);
+};
+};
+};
+i = 0;
+while (resultadosatacante.length > i && resultadosdefensor.length > i){
+if (resultadosdefensor[i] >= resultadosatacante[i]){
+paisseleccionado.fichas--;
+} else if (resultadosatacante[i] > resultadosdefensor[i]) {
+paisatacado.fichas--;
+};
+i++;
+};
+alert(paisseleccionado.fichas);
+alert(paisatacado.fichas);
+};
+};
+atacarrojo.addEventListener("click", ()=> test16("Rojo"));
+atacarazul.addEventListener("click", ()=> test16("Azul"));

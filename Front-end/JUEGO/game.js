@@ -50,6 +50,11 @@ australia.limitrofes.push(java);
 java.limitrofes.push(australia);
 paises.push(australia, sumatra, java);
 let i = 0;
+while (paises.length > i){
+paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
+i++;
+};
+i = 0
 let conquistas = 0;
 function victoria () {
 i = 0;
@@ -73,7 +78,7 @@ let paisatacado = 0;
 function test14(pais) {
 if (turno === pais.colorfichas && pais.fichas > 1){
 paisseleccionado =  pais;
-} else if (turno != pais.colorfichas){
+} else if (turno != pais.colorfichas && paisseleccionado.colorfichas != pais.colorfichas){
 i = 0;
 while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]){
 i++;
@@ -92,7 +97,7 @@ let resultadosatacante = [];
 let resultadosdefensor = [];
 let dadoreserva = 0;
 function test16(color){
-if (color === turno && color === paisseleccionado.colorfichas){
+if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0){
 dadosatacante = paisseleccionado.fichas - 1;
 dadosdefensor = paisatacado.fichas;
 if(dadosatacante > 3){
@@ -109,7 +114,7 @@ dadosatacante--;
 };
 while (dadosdefensor > 0){
 dado = Math.floor(Math.random() * 6) + 1;
-console.log(dado + "dado defensor");
+console.log(dado + " dado defensor");
 resultadosdefensor.push(dado);
 dadosdefensor--;
 };
@@ -147,15 +152,20 @@ if (resultadosdefensor[i] >= resultadosatacante[i]){
 console.log(resultadosatacante[i] + " atacante vs " + resultadosdefensor[i] + " defensor");
 console.log(paisseleccionado.nombre + " pierde una ficha");
 paisseleccionado.fichas--;
-paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
 } else if (resultadosatacante[i] > resultadosdefensor[i]) {
 console.log(resultadosatacante[i] + " atacante vs " + resultadosdefensor[i] + " defensor");
 console.log(paisatacado.nombre + " pierde una ficha");
 paisatacado.fichas--;
-paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
 };
 i++;
 };
+if (paisatacado.fichas === 0){
+paisatacado.fichas++;
+paisseleccionado.fichas--;
+paisatacado.colorfichas = paisseleccionado.colorfichas;
+};
+paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
 paisseleccionado = 0;
 paisatacado = 0;
 resultadosatacante = [];

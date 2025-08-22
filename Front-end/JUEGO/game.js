@@ -44,11 +44,21 @@ fichas: 1,
 colorfichas: "Azul",
 limitrofes: [],
 };
+let borneo = {
+nombre: "Borneo",
+continente: "Oceanía",
+id: document.getElementById("borneoid"),
+fichas: 2,
+colorfichas: "Rojo",
+limitrofes: [],
+}
 sumatra.limitrofes.push(australia);
 australia.limitrofes.push(sumatra);
 australia.limitrofes.push(java);
+australia.limitrofes.push(borneo);
 java.limitrofes.push(australia);
-paises.push(australia, sumatra, java);
+borneo.limitrofes.push(australia);
+paises.push(australia, sumatra, java, borneo);
 let i = 0;
 while (paises.length > i){
 paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
@@ -91,6 +101,7 @@ paisatacado = pais;
 australia.id.addEventListener("click", ()=> test14(australia));
 sumatra.id.addEventListener("click", ()=> test14(sumatra));
 java.id.addEventListener("click", ()=> test14(java));
+borneo.id.addEventListener("click", ()=> test14(borneo));
 let dadosatacante = 0;
 let dadosdefensor = 0;
 let resultadosatacante = [];

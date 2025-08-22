@@ -164,3 +164,35 @@ resultadosdefensor = [];
 };
 atacarrojo.addEventListener("click", ()=> test16("Rojo"));
 atacarazul.addEventListener("click", ()=> test16("Azul"));
+
+
+
+// Guardar juego:
+
+let estadoJuego = {
+countries: [
+    {
+        nombre: australia.nombre,
+        fichas: australia.fichas,
+        color: australia.colorfichas,
+        limitrofes: australia.limitrofes,
+    },
+
+    {
+        nombre: sumatra.nombre,
+        fichas: sumatra.fichas,
+        color: sumatra.colorfichas,
+        limitrofes: sumatra.limitrofes,
+    },
+    
+    {
+        nombre: java.nombre,
+        fichas: java.fichas,
+        color: java.color,
+        limitrofes: java.limitrofes,
+    }
+],
+
+saveturno: turno,
+
+};

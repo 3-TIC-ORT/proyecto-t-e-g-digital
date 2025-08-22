@@ -1,106 +1,8 @@
-let australiabutton = document.getElementById("australiaid");
-let atackaustralia = 0;
-let fichasaustralia = {
-cantidad: 2,
-color: "Rojo",
-};
-let fichassumatra = {
-cantidad: 5,
-color: "Azul",}
-let randomizador = 0;
 let turno = "Azul";
 let currentturn = document.getElementById("currentturn");
-function test6 () {
-atackaustralia = 1;
-};
-australiabutton.addEventListener("click", test6);
-let sumatrabutton = document.getElementById("sumatraid");
-let targetsumatra = 0;
-sumatrabutton.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
-australiabutton.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
-currentturn.textContent = "Turno: " + turno;
-function test7 () {
-if (atackaustralia === 1){
-atackaustralia = 0;
-targetsumatra = 1;
-};
-};
-sumatrabutton.addEventListener("click", test7);
 let atacarrojo = document.getElementById("atacarrojo");
-function test8 () {
-randomizador = Math.random();
-if (turno != "Rojo"){
-alert("No es tu turno");
-};
-if (turno === "Rojo"){
-if (fichasaustralia["cantidad"] <= 1) {
-alert("No se puede atacar con " + fichasaustralia["cantidad"] + " fichas")
-};
-if (fichasaustralia["color"] === fichassumatra["color"]){
-alert("No podés atacar tu propio país");
-};
-if (atackaustralia === 0 && targetsumatra === 1 && fichasaustralia["cantidad"] > 1 && fichasaustralia["color"] != fichassumatra["color"]){
-targetsumatra = 0;
-if(randomizador >= 0.5){
-fichasaustralia["cantidad"]--;
-}; if (randomizador < 0.5) {
-fichassumatra["cantidad"]--;
-if (fichassumatra["cantidad"] < 1) {
-fichassumatra["color"] = "Rojo";
-fichassumatra["cantidad"]++;
-fichasaustralia["cantidad"]--;
-};
-};
-};
-};
-australiabutton.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
-sumatrabutton.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
-};
-atacarrojo.addEventListener("click", test8);
-let atacksumatra = 0;
-let targetaustralia = 0;
-function test9 () {
-atacksumatra = 1;
-};
-sumatrabutton.addEventListener("click", test9)
-function test10 () {
-if (atacksumatra === 1){
-atacksumatra = 0;
-targetaustralia = 1;
-};
-};
-australiabutton.addEventListener("click", test10);
 let atacarazul = document.getElementById("atacarazul");
-function test11 () {
-randomizador = Math.random();
-if (turno != "Azul"){
-alert("No es tu turno");
-};
-if (turno === "Azul"){
-if (fichassumatra["cantidad"] <= 1) {
-alert("No se puede atacar con " + fichassumatra["cantidad"] + " fichas")
-};
-if (fichasaustralia["color"] === fichassumatra["color"]){
-alert("No podés atacar tu propio país");
-};
-if (atacksumatra === 0 && targetaustralia === 1 && fichassumatra["cantidad"] > 1 && fichasaustralia["color"] != fichassumatra["color"]){
-targetaustralia = 0;
-if(randomizador < 0.5){
-fichasaustralia["cantidad"]--;
-if (fichasaustralia["cantidad"] < 1) {
-    fichasaustralia["color"] = "Azul";
-    fichasaustralia["cantidad"]++;
-    fichassumatra["cantidad"]--;
-    };
-}; if (randomizador >= 0.5) {
-fichassumatra["cantidad"]--;
-};
-};
-};
-sumatrabutton.textContent = "Sumatra " + fichassumatra["cantidad"] + " " + fichassumatra["color"];
-australiabutton.textContent = "Australia " + fichasaustralia["cantidad"] + " " + fichasaustralia["color"];
-};
-atacarazul.addEventListener("click", test11);
+currentturn.textContent = "Turno: " + turno;
 let skipazul = document.getElementById("pasaazul");
 function test12 () {
 if (turno === "Azul"){
@@ -117,25 +19,22 @@ turno = "Azul"
 currentturn.textContent = "Turno: " + turno;
 };
 skiprojo.addEventListener("click", test13);
-
 let paises = [];
 let australia = {
 nombre: "Australia",
 id: document.getElementById("australiaid"),
 continente: "Oceanía",
-fichas: 2,
+fichas: 3,
 colorfichas: "Rojo",
 limitrofes: [],
-selected: 0,
 };
 let sumatra = {
 nombre: "Sumatra",
 id: document.getElementById("sumatraid"),
 continente: "Oceanía",
-fichas: 5,
+fichas: 6,
 colorfichas: "Azul",
 limitrofes: [],
-selected: 0,
 };
 let java = {
 nombre: "Java",
@@ -144,7 +43,6 @@ id: document.getElementById("javaid"),
 fichas: 1,
 colorfichas: "Azul",
 limitrofes: [],
-selected: 0,
 };
 sumatra.limitrofes.push(australia);
 australia.limitrofes.push(sumatra);
@@ -182,7 +80,6 @@ i++;
 };
 if (pais.limitrofes[i] === paisseleccionado){
 paisatacado = pais;
-alert(paisseleccionado.nombre + " ataca a " + paisatacado.nombre);
 };
 };
 };
@@ -206,16 +103,18 @@ dadosdefensor = 3;
 };
 while (dadosatacante > 0){
 dado = Math.floor(Math.random() * 6) + 1;
+console.log(dado + " dado atacante");
 resultadosatacante.push(dado);
 dadosatacante--;
 };
 while (dadosdefensor > 0){
 dado = Math.floor(Math.random() * 6) + 1;
+console.log(dado + "dado defensor");
 resultadosdefensor.push(dado);
 dadosdefensor--;
 };
 if (resultadosatacante.length > 1){
-while (resultadosatacante[0] < resultadosatacante[1]){
+while (resultadosatacante[0] < resultadosatacante[1] || resultadosatacante[0] < resultadosatacante[2]){
 dado = resultadosatacante.shift();
 resultadosatacante.push(dado);
 };
@@ -223,13 +122,13 @@ if (resultadosatacante.length === 3){
 if (resultadosatacante[1] < resultadosatacante[2]){
 dado = resultadosatacante.pop();
 dadoreserva = resultadosatacante.pop();
-resultadosatacante.push(dadoreserva);
 resultadosatacante.push(dado);
+resultadosatacante.push(dadoreserva);
 };
 };
 };
 if (resultadosdefensor.length > 1){
-while (resultadosdefensor[0] < resultadosdefensor[1]){
+while (resultadosdefensor[0] < resultadosdefensor[1] || resultadosdefensor[0] < resultadosdefensor[2]){
 dado = resultadosdefensor.shift();
 resultadosdefensor.push(dado);
 };
@@ -237,22 +136,30 @@ if (resultadosdefensor.length === 3){
 if (resultadosdefensor[1] < resultadosdefensor[2]){
 dado = resultadosdefensor.pop();
 dadoreserva = resultadosdefensor.pop();
-resultadosdefensor.push(dadoreserva);
 resultadosdefensor.push(dado);
+resultadosdefensor.push(dadoreserva);
 };
 };
 };
 i = 0;
 while (resultadosatacante.length > i && resultadosdefensor.length > i){
 if (resultadosdefensor[i] >= resultadosatacante[i]){
+console.log(resultadosatacante[i] + " atacante vs " + resultadosdefensor[i] + " defensor");
+console.log(paisseleccionado.nombre + " pierde una ficha");
 paisseleccionado.fichas--;
+paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
 } else if (resultadosatacante[i] > resultadosdefensor[i]) {
+console.log(resultadosatacante[i] + " atacante vs " + resultadosdefensor[i] + " defensor");
+console.log(paisatacado.nombre + " pierde una ficha");
 paisatacado.fichas--;
+paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
 };
 i++;
 };
-alert(paisseleccionado.fichas);
-alert(paisatacado.fichas);
+paisseleccionado = 0;
+paisatacado = 0;
+resultadosatacante = [];
+resultadosdefensor = [];
 };
 };
 atacarrojo.addEventListener("click", ()=> test16("Rojo"));

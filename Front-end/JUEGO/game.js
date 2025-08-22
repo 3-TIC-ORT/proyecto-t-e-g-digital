@@ -1,3 +1,6 @@
+import fs from "fs";
+
+
 let turno = "Azul";
 let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
@@ -52,36 +55,49 @@ fichas: 2,
 colorfichas: "Rojo",
 limitrofes: [],
 }
+let chile = {
+nombre: "Chile",
+continente: "América del Sur",
+id: document.getElementById("chileid"),
+fichas: 1,
+colorfichas: "Rojo",
+limitrofes: [],
+};
+let india = {
+nombre: "India",
+continente: "Asia",
+id: document.getElementById("indiaid"),
+fichas: 1,
+colorfichas: "Rojo",
+limitrofes: [],
+};
+let malasia = {
+nombre: "Malasia",
+continente: "Asia",
+id: document.getElementById("malasiaid"),
+fichas: 4,
+colorfichas: "Azul",
+limitrofes: [],
+};
 sumatra.limitrofes.push(australia);
+sumatra.limitrofes.push(india);
 australia.limitrofes.push(sumatra);
 australia.limitrofes.push(java);
 australia.limitrofes.push(borneo);
+australia.limitrofes.push(chile);
 java.limitrofes.push(australia);
 borneo.limitrofes.push(australia);
-paises.push(australia, sumatra, java, borneo);
+borneo.limitrofes.push(malasia);
+chile.limitrofes.push(australia);
+india.limitrofes.push(sumatra);
+malasia.limitrofes.push(borneo);
+paises.push(australia, sumatra, java, borneo, chile, india, malasia);
 let i = 0;
 while (paises.length > i){
 paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
 i++;
 };
 i = 0
-let conquistas = 0;
-function victoria () {
-i = 0;
-while (paises.length > i+1){
-if (paises[i].colorfichas === paises[i+1].colorfichas){
-conquistas++;
-};
-i++;
-};
-if (conquistas + 1 === paises.length){
-alert("Ganó el " + paises[1].colorfichas)
-} else {
-conquistas = 0
-};
-};
-let winner = document.getElementById("winner");
-winner.addEventListener("click", victoria);
 let dado = 0;
 let paisseleccionado = 0;
 let paisatacado = 0;
@@ -102,6 +118,9 @@ australia.id.addEventListener("click", ()=> test14(australia));
 sumatra.id.addEventListener("click", ()=> test14(sumatra));
 java.id.addEventListener("click", ()=> test14(java));
 borneo.id.addEventListener("click", ()=> test14(borneo));
+chile.id.addEventListener("click", ()=> test14(chile));
+india.id.addEventListener("click", ()=> test14(india));
+malasia.id.addEventListener("click", ()=> test14(malasia));
 let dadosatacante = 0;
 let dadosdefensor = 0;
 let resultadosatacante = [];
@@ -191,29 +210,13 @@ atacarazul.addEventListener("click", ()=> test16("Azul"));
 // Guardar juego:
 
 let estadoJuego = {
-countries: [
-    {
-        nombre: australia.nombre,
-        fichas: australia.fichas,
-        color: australia.colorfichas,
-        limitrofes: australia.limitrofes,
-    },
-
-    {
-        nombre: sumatra.nombre,
-        fichas: sumatra.fichas,
-        color: sumatra.colorfichas,
-        limitrofes: sumatra.limitrofes,
-    },
-    
-    {
-        nombre: java.nombre,
-        fichas: java.fichas,
-        color: java.color,
-        limitrofes: java.limitrofes,
-    }
-],
-
+countries: paises,
 saveturno: turno,
-
 };
+
+guardarJuego = document.getElementById("guardar")
+
+function guardarJuego() {
+    fs.writeFileSync("datos.json", estadoJuego)
+}
+guardarJuego.addEventListener("click",guardarJuego());

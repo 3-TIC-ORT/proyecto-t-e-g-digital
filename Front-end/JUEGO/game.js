@@ -120,7 +120,9 @@ i = 0
 let dado = 0;
 let paisseleccionado = 0;
 let paisatacado = 0;
+let paisreceptor = 0;
 function test14(pais) {
+if (fase === "Atacar"){
 if (turno === pais.colorfichas && pais.fichas > 1){
 paisseleccionado =  pais;
 } else if (turno != pais.colorfichas && paisseleccionado.colorfichas != pais.colorfichas){
@@ -132,6 +134,36 @@ if (pais.limitrofes[i] === paisseleccionado){
 paisatacado = pais;
 };
 };
+};
+if (fase === "Reagrupar"){
+if (turno === pais.colorfichas && paisseleccionado.colorfichas === pais.colorfichas){
+i = 0;
+while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]){
+i++;
+};
+if (pais.limitrofes[i] === paisseleccionado){
+paisreceptor = pais;
+}
+};
+if (turno === pais.colorfichas){
+i = 0;
+while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]){
+i++;
+};
+if (pais.limitrofes[i] != paisseleccionado && pais.fichas > 1){
+paisseleccionado = pais;
+};
+};
+if (paisreceptor === pais){
+paisseleccionado.fichas--;
+paisreceptor.fichas++;
+paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+paisreceptor.id.textContent = paisreceptor.nombre + " " + paisreceptor.fichas + " " + paisreceptor.colorfichas;
+paisreceptor = 0;
+paisseleccionado = 0;
+};
+};
+i = 0;
 };
 australia.id.addEventListener("click", ()=> test14(australia));
 sumatra.id.addEventListener("click", ()=> test14(sumatra));

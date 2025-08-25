@@ -1,27 +1,26 @@
-import fs from "fs";
-
-
 let turno = "Azul";
+let colores = ["Azul", "Rojo"];
 let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
 let atacarazul = document.getElementById("atacarazul");
 currentturn.textContent = "Turno: " + turno;
 let skipazul = document.getElementById("pasaazul");
-function test12 () {
-if (turno === "Azul"){
-turno = "Rojo"
-};
-currentturn.textContent = "Turno: " + turno;
-};
-skipazul.addEventListener("click", test12);
 let skiprojo = document.getElementById("pasarojo");
-function test13 () {
-if (turno === "Rojo"){
-turno = "Azul"
+let i = 0;
+function test12 (colorturno) {
+while (colores[i] != colorturno){
+i++;
 };
+i++;
+if (i >= colores.length){
+i = 0;
+};
+turno = colores[i];
 currentturn.textContent = "Turno: " + turno;
 };
-skiprojo.addEventListener("click", test13);
+i = 0;
+skipazul.addEventListener("click", ()=> test12("Azul"));
+skiprojo.addEventListener("click", ()=> test12("Rojo"));
 let paises = [];
 let australia = {
 nombre: "Australia",
@@ -92,7 +91,6 @@ chile.limitrofes.push(australia);
 india.limitrofes.push(sumatra);
 malasia.limitrofes.push(borneo);
 paises.push(australia, sumatra, java, borneo, chile, india, malasia);
-let i = 0;
 while (paises.length > i){
 paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
 i++;
@@ -210,13 +208,14 @@ atacarazul.addEventListener("click", ()=> test16("Azul"));
 // Guardar juego:
 
 let estadoJuego = {
-countries: paises,
-saveturno: turno,
-};
-
-guardarJuego = document.getElementById("guardar")
-
+    countries: paises,
+    saveturno: turno,
+    };
+    
+guardarButton = document.getElementById("guardar");
+    
 function guardarJuego() {
-    fs.writeFileSync("datos.json", estadoJuego)
-}
-guardarJuego.addEventListener("click",guardarJuego());
+    console.log("Guardando...");
+    fs.writeFileSync("datos.json", estadoJuego);
+};
+guardarButton.addEventListener("click", guardarJuego);

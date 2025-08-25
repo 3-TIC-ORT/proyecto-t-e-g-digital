@@ -1,22 +1,43 @@
 let turno = "Azul";
 let colores = ["Azul", "Rojo"];
+let fase =  "Atacar";
+let fases = ["Atacar", "Reagrupar", "Incorporar"];
+let currentphase = document.getElementById("currentphase");
 let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
 let atacarazul = document.getElementById("atacarazul");
-currentturn.textContent = "Turno: " + turno;
 let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
 let i = 0;
+currentturn.textContent = "Turno: " + turno;
+currentphase.textContent = "Fase: " + fase;
 function test12 (colorturno) {
+if (colorturno === turno){ 
+if (fase === "Atacar"){
+fase = "Reagrupar";
+currentphase.textContent = "Fase: " + fase;
+} else if (fase === "Reagrupar" || fase === "Incorporar"){
 while (colores[i] != colorturno){
 i++;
 };
 i++;
-if (i >= colores.length){
+if (i === colores.length){
+if (fase === "Incorporar"){
+fase = "Atacar";
+} else if (fase === "Reagrupar"){
+fase = "Incorporar";
+};
 i = 0;
+} else if (i < colores.length){
+if (fase === "Reagrupar"){
+fase = "Atacar"
+};
 };
 turno = colores[i];
 currentturn.textContent = "Turno: " + turno;
+currentphase.textContent = "Fase: " + fase;
+};
+};
 };
 i = 0;
 skipazul.addEventListener("click", ()=> test12("Azul"));

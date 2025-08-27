@@ -1,19 +1,17 @@
 import fs from "fs";
+import { estadoJuego, turno, paises } from "./game.js";
 
-let turno = "Azul";
-let paises = [
-  { nombre: "Australia", fichas: 3, colorfichas: "Rojo" },
-  { nombre: "Sumatra", fichas: 6, colorfichas: "Azul" }
-];
 
-let estadoJuego = {
-    countries: paises,
-    saveturno: turno,
-};
 
-fs.writeFileSync("datos.json", JSON.stringify(estadoJuego, null, 2));
+function guardarJuego() {
+    estadoJuego.saveturno = turno;
+    estadoJuego.countries = paises;
 
-let contenido = fs.readFileSync("datos.json", "utf-8");
+    let jsonData = JSON.stringify(estadoJuego);
 
-console.log("Contenido del archivo datos.json:");
-console.log(contenido);
+    fs.writeFileSync("datos.json", jsonData, "utf-8");
+    console.log("Juego guardado en juego_guardado.json");
+}
+
+export { guardarJuego };
+

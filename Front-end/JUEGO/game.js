@@ -51,6 +51,7 @@ fichas: 3,
 colorfichas: "Rojo",
 limitrofes: [],
 };
+
 let sumatra = {
 nombre: "Sumatra",
 id: document.getElementById("sumatraid"),
@@ -59,6 +60,7 @@ fichas: 6,
 colorfichas: "Azul",
 limitrofes: [],
 };
+
 let java = {
 nombre: "Java",
 continente: "Oceanía",
@@ -67,6 +69,7 @@ fichas: 1,
 colorfichas: "Azul",
 limitrofes: [],
 };
+
 let borneo = {
 nombre: "Borneo",
 continente: "Oceanía",
@@ -74,7 +77,8 @@ id: document.getElementById("borneoid"),
 fichas: 2,
 colorfichas: "Rojo",
 limitrofes: [],
-}
+};
+
 let chile = {
 nombre: "Chile",
 continente: "América del Sur",
@@ -83,6 +87,7 @@ fichas: 1,
 colorfichas: "Rojo",
 limitrofes: [],
 };
+
 let india = {
 nombre: "India",
 continente: "Asia",
@@ -91,6 +96,7 @@ fichas: 1,
 colorfichas: "Rojo",
 limitrofes: [],
 };
+
 let malasia = {
 nombre: "Malasia",
 continente: "Asia",
@@ -99,6 +105,7 @@ fichas: 4,
 colorfichas: "Azul",
 limitrofes: [],
 };
+
 sumatra.limitrofes.push(australia);
 sumatra.limitrofes.push(india);
 australia.limitrofes.push(sumatra);
@@ -256,5 +263,14 @@ resultadosdefensor = [];
 atacarrojo.addEventListener("click", ()=> test16("Rojo"));
 atacarazul.addEventListener("click", ()=> test16("Azul"));  
     
-guardarButton = document.getElementById("guardar");
 
+let estadoJuego = {
+    countries: paises,
+    saveturno: turno,
+};
+guardarButton = document.getElementById("guardar");
+guardarButton.addEventListener('click', guardarJuego);
+
+
+export { estadoJuego};
+import { guardarJuego } from "../../Back-end/GuardarDATOS";

@@ -254,21 +254,7 @@ resultadosdefensor = [];
 };
 };
 atacarrojo.addEventListener("click", ()=> test16("Rojo"));
-atacarazul.addEventListener("click", ()=> test16("Azul"));
-
-
-
-// Guardar juego:
-
-let estadoJuego = {
-    countries: paises,
-    saveturno: turno,
-    };
+atacarazul.addEventListener("click", ()=> test16("Azul"));  
     
 guardarButton = document.getElementById("guardar");
-    
-function guardarJuego() {
-    console.log("Guardando...");
-    fs.writeFileSync("datos.json", estadoJuego);
-};
-guardarButton.addEventListener("click", guardarJuego);
+

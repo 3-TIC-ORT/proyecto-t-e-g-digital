@@ -11,6 +11,7 @@ let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
 let skipamarillo = document.getElementById("pasaamarillo");
 let i = 0;
+let i2 = 0;
 let fichasnuevasrojo = 0;
 let fichasnuevasazul = 0;
 let fichasnuevasamarillo = 0;
@@ -20,7 +21,7 @@ let australia = {
 nombre: "Australia",
 id: document.getElementById("australiaid"),
 continente: "Oceanía",
-fichas: 3,
+fichas: 1,
 colorfichas: "Rojo",
 limitrofes: [],
 };
@@ -29,7 +30,7 @@ let sumatra = {
 nombre: "Sumatra",
 id: document.getElementById("sumatraid"),
 continente: "Oceanía",
-fichas: 6,
+fichas: 1,
 colorfichas: "Amarillo",
 limitrofes: [],
 };
@@ -47,7 +48,7 @@ let borneo = {
 nombre: "Borneo",
 continente: "Oceanía",
 id: document.getElementById("borneoid"),
-fichas: 2,
+fichas: 1,
 colorfichas: "Rojo",
 limitrofes: [],
 };
@@ -57,7 +58,7 @@ nombre: "Chile",
 continente: "América del Sur",
 id: document.getElementById("chileid"),
 fichas: 1,
-colorfichas: "Rojo",
+colorfichas: "Amarillo",
 limitrofes: [],
 };
 
@@ -74,25 +75,18 @@ let malasia = {
 nombre: "Malasia",
 continente: "Asia",
 id: document.getElementById("malasiaid"),
-fichas: 4,
+fichas: 1,
 colorfichas: "Azul",
 limitrofes: [],
 };
 
-sumatra.limitrofes.push(australia);
-sumatra.limitrofes.push(india);
-australia.limitrofes.push(sumatra);
-australia.limitrofes.push(java);
-australia.limitrofes.push(borneo);
-australia.limitrofes.push(chile);
+australia.limitrofes.push(sumatra, java, borneo, chile);
+sumatra.limitrofes.push(australia, india);
 java.limitrofes.push(australia);
-borneo.limitrofes.push(australia);
-borneo.limitrofes.push(malasia);
+borneo.limitrofes.push(australia, malasia);
 chile.limitrofes.push(australia);
-india.limitrofes.push(sumatra);
-india.limitrofes.push(malasia);
-malasia.limitrofes.push(borneo);
-malasia.limitrofes.push(india);
+india.limitrofes.push(sumatra, malasia);
+malasia.limitrofes.push(borneo, india);
 paises.push(australia, sumatra, java, borneo, chile, india, malasia);
 while (paises.length > i){
 paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
@@ -120,14 +114,19 @@ if (fase === "Incorporar"){
 fase = "Atacar";
 } else if (fase === "Reagrupar"){
 fase = "Incorporar";
-i = 0;
-while (paises.length > i){
-if (paises[i].colorfichas === "Rojo"){
+fichasnuevasrojo = 0;
+fichasnuevasazul = 0;
+fichasnuevasamarillo = 0;
+i2 = 0;
+while (paises.length > i2){
+if (paises[i2].colorfichas === "Rojo"){
 fichasnuevasrojo++;
-} else if (paises[i].colorfichas === "Azul"){
+} else if (paises[i2].colorfichas === "Azul"){
 fichasnuevasazul++;
-} else if (paises[i].colorfichas === "Amarillo"){
+} else if (paises[i2].colorfichas === "Amarillo"){
 fichasnuevasamarillo++;
+};
+i2++;
 };
 if(fichasnuevasrojo % 2 === 1){
 fichasnuevasrojo--;
@@ -142,8 +141,12 @@ fichasnuevasrojo = fichasnuevasrojo / 2;
 fichasnuevasazul = fichasnuevasazul / 2;
 fichasnuevasamarillo = fichasnuevasamarillo / 2;
 console.log(fichasnuevasrojo);
+console.log(fichasnuevasazul);
+console.log(fichasnuevasamarillo)
+i2 = 0;
+};
 i = 0;
-}; if (i < colores.length){
+} else if (i < colores.length){
 if (fase === "Reagrupar"){
 fase = "Atacar"
 };
@@ -151,8 +154,6 @@ fase = "Atacar"
 turno = colores[i];
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
-};
-};
 };
 };
 };
@@ -203,6 +204,31 @@ paisseleccionado = 0;
 };
 };
 if (fase === "Incorporar"){
+if (turno === pais.colorfichas){
+if (turno === "Rojo"){
+if (fichasnuevasrojo > 0){
+paisseleccionado = pais;
+paisseleccionado.fichas++;
+fichasnuevasrojo--;
+};
+};
+if (turno === "Azul"){
+if (fichasnuevasazul > 0){
+paisseleccionado = pais;
+paisseleccionado.fichas++;
+fichasnuevasazul--;
+};
+};
+if (turno === "Amarillo"){
+if (fichasnuevasamarillo > 0){
+paisseleccionado = pais;
+paisseleccionado.fichas++;
+fichasnuevasamarillo--;
+};
+};
+paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+paisseleccionado = 0;
+};
 };
 i = 0;
 };

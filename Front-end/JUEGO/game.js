@@ -92,28 +92,13 @@ chile.limitrofes.push(australia);
 india.limitrofes.push(sumatra, malasia);
 malasia.limitrofes.push(borneo, india);
 paises.push(australia, sumatra, java, borneo, chile, india, malasia);
-
-// Inicialización del Juego y Event Listeners
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
 while (paises.length > i) {
-    paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
-    i++;
+paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
+i++;
 };
 i = 0;
-skipazul.addEventListener("click", () => test12("Azul"));
-skiprojo.addEventListener("click", () => test12("Rojo"));
-skipamarillo.addEventListener("click", () => test12("Amarillo"));
-australia.id.addEventListener("click", () => test14(australia));
-sumatra.id.addEventListener("click", () => test14(sumatra));
-java.id.addEventListener("click", () => test14(java));
-borneo.id.addEventListener("click", () => test14(borneo));
-chile.id.addEventListener("click", () => test14(chile));
-india.id.addEventListener("click", () => test14(india));
-malasia.id.addEventListener("click", () => test14(malasia));
-atacarrojo.addEventListener("click", () => test16("Rojo"));
-atacarazul.addEventListener("click", () => test16("Azul"));
-atacaramarillo.addEventListener("click", () => test16("Amarillo"));
 
 // Funciones del Juego
 function test12(colorturno) {
@@ -290,3 +275,18 @@ function test16(color) {
         resultadosdefensor = [];
     };
 };
+
+// Inicialización del Juego y Event Listeners
+skipazul.addEventListener("click", () => test12("Azul"));
+skiprojo.addEventListener("click", () => test12("Rojo"));
+skipamarillo.addEventListener("click", () => test12("Amarillo"));
+australia.id.addEventListener("click", () => test14(australia));
+sumatra.id.addEventListener("click", () => test14(sumatra));
+java.id.addEventListener("click", () => test14(java));
+borneo.id.addEventListener("click", () => test14(borneo));
+chile.id.addEventListener("click", () => test14(chile));
+india.id.addEventListener("click", () => test14(india));
+malasia.id.addEventListener("click", () => test14(malasia));
+atacarrojo.addEventListener("click", () => test16("Rojo"));
+atacarazul.addEventListener("click", () => test16("Azul"));
+atacaramarillo.addEventListener("click", () => test16("Amarillo"));

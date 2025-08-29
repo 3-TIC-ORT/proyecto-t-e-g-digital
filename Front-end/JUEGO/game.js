@@ -1,4 +1,3 @@
-
 let turno = "Rojo";
 let colores = ["Rojo", "Azul", "Amarillo"];
 let fase =  "Atacar";
@@ -121,10 +120,30 @@ if (fase === "Incorporar"){
 fase = "Atacar";
 } else if (fase === "Reagrupar"){
 fase = "Incorporar";
-
-};
 i = 0;
-} else if (i < colores.length){
+while (paises.length > i){
+if (paises[i].colorfichas === "Rojo"){
+fichasnuevasrojo++;
+} else if (paises[i].colorfichas === "Azul"){
+fichasnuevasazul++;
+} else if (paises[i].colorfichas === "Amarillo"){
+fichasnuevasamarillo++;
+};
+if(fichasnuevasrojo % 2 === 1){
+fichasnuevasrojo--;
+};
+if(fichasnuevasazul % 2 === 1){
+fichasnuevasazul--;
+};
+if(fichasnuevasamarillo % 2 === 1){
+fichasnuevasamarillo--;
+};
+fichasnuevasrojo = fichasnuevasrojo / 2;
+fichasnuevasazul = fichasnuevasazul / 2;
+fichasnuevasamarillo = fichasnuevasamarillo / 2;
+console.log(fichasnuevasrojo);
+i = 0;
+}; if (i < colores.length){
 if (fase === "Reagrupar"){
 fase = "Atacar"
 };
@@ -132,6 +151,8 @@ fase = "Atacar"
 turno = colores[i];
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
+};
+};
 };
 };
 };

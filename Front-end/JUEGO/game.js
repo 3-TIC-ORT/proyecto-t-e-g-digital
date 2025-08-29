@@ -1,3 +1,4 @@
+import { guardarJuego } from "./GuardarDATOS.js";
 let turno = "Azul";
 let colores = ["Azul", "Rojo"];
 let fase =  "Atacar";
@@ -268,9 +269,8 @@ let estadoJuego = {
     countries: paises,
     saveturno: turno,
 };
-guardarButton = document.getElementById("guardar");
+
+let guardarButton = document.getElementById("guardar");
 guardarButton.addEventListener('click', guardarJuego);
 
-
-export { estadoJuego};
-import { guardarJuego } from "../../Back-end/GuardarDATOS";
+export { estadoJuego, turno, paises };

@@ -1,17 +1,18 @@
 import fs from "fs";
-import { estadoJuego, turno, paises } from "./game.js";
-
-
+import { paises, turno } from "./game.js";
 
 function guardarJuego() {
-    estadoJuego.saveturno = turno;
-    estadoJuego.countries = paises;
+    let estadoJuego = {
+        countries: paises.map(p => ({
+            nombre: p.nombre,
+            continente: p.continente,
+            fichas: p.fichas,
+            colorfichas: p.colorfichas
+        })),
+        saveturno: turno
+    };
 
-    let jsonData = JSON.stringify(estadoJuego);
-
+    let jsonData = JSON.stringify(estadoJuego, null, 2);
     fs.writeFileSync("datos.json", jsonData, "utf-8");
-    console.log("Juego guardado en juego_guardado.json");
-}
-
-export { guardarJuego };
-
+    console.log("Juego guardado en datos.json");
+    }

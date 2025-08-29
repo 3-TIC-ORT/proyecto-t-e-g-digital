@@ -1,48 +1,21 @@
-import { guardarJuego } from "./GuardarDATOS.js";
-let turno = "Azul";
-let colores = ["Azul", "Rojo"];
+
+let turno = "Rojo";
+let colores = ["Rojo", "Azul", "Amarillo"];
 let fase =  "Atacar";
 let fases = ["Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
 let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
 let atacarazul = document.getElementById("atacarazul");
+let atacaramarillo = document.getElementById("atacaramarillo");
 let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
+let skipamarillo = document.getElementById("pasaamarillo");
 let i = 0;
-currentturn.textContent = "Turno: " + turno;
-currentphase.textContent = "Fase: " + fase;
-function test12 (colorturno) {
-if (colorturno === turno){ 
-if (fase === "Atacar"){
-fase = "Reagrupar";
-currentphase.textContent = "Fase: " + fase;
-} else if (fase === "Reagrupar" || fase === "Incorporar"){
-while (colores[i] != colorturno){
-i++;
-};
-i++;
-if (i === colores.length){
-if (fase === "Incorporar"){
-fase = "Atacar";
-} else if (fase === "Reagrupar"){
-fase = "Incorporar";
-};
-i = 0;
-} else if (i < colores.length){
-if (fase === "Reagrupar"){
-fase = "Atacar"
-};
-};
-turno = colores[i];
-currentturn.textContent = "Turno: " + turno;
-currentphase.textContent = "Fase: " + fase;
-};
-};
-};
-i = 0;
-skipazul.addEventListener("click", ()=> test12("Azul"));
-skiprojo.addEventListener("click", ()=> test12("Rojo"));
+let fichasnuevasrojo = 0;
+let fichasnuevasazul = 0;
+let fichasnuevasamarillo = 0;
+
 let paises = [];
 let australia = {
 nombre: "Australia",
@@ -58,7 +31,7 @@ nombre: "Sumatra",
 id: document.getElementById("sumatraid"),
 continente: "Oceanía",
 fichas: 6,
-colorfichas: "Azul",
+colorfichas: "Amarillo",
 limitrofes: [],
 };
 
@@ -118,7 +91,9 @@ borneo.limitrofes.push(australia);
 borneo.limitrofes.push(malasia);
 chile.limitrofes.push(australia);
 india.limitrofes.push(sumatra);
+india.limitrofes.push(malasia);
 malasia.limitrofes.push(borneo);
+malasia.limitrofes.push(india);
 paises.push(australia, sumatra, java, borneo, chile, india, malasia);
 while (paises.length > i){
 paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
@@ -129,6 +104,41 @@ let dado = 0;
 let paisseleccionado = 0;
 let paisatacado = 0;
 let paisreceptor = 0;
+currentturn.textContent = "Turno: " + turno;
+currentphase.textContent = "Fase: " + fase;
+function test12 (colorturno) {
+if (colorturno === turno){ 
+if (fase === "Atacar"){
+fase = "Reagrupar";
+currentphase.textContent = "Fase: " + fase;
+} else if (fase === "Reagrupar" || fase === "Incorporar"){
+while (colores[i] != colorturno){
+i++;
+};
+i++;
+if (i === colores.length){
+if (fase === "Incorporar"){
+fase = "Atacar";
+} else if (fase === "Reagrupar"){
+fase = "Incorporar";
+
+};
+i = 0;
+} else if (i < colores.length){
+if (fase === "Reagrupar"){
+fase = "Atacar"
+};
+};
+turno = colores[i];
+currentturn.textContent = "Turno: " + turno;
+currentphase.textContent = "Fase: " + fase;
+};
+};
+};
+i = 0;
+skipazul.addEventListener("click", ()=> test12("Azul"));
+skiprojo.addEventListener("click", ()=> test12("Rojo"));
+skipamarillo.addEventListener("click", ()=> test12("Amarillo"));
 function test14(pais) {
 if (fase === "Atacar"){
 if (turno === pais.colorfichas && pais.fichas > 1){
@@ -170,6 +180,8 @@ paisreceptor.id.textContent = paisreceptor.nombre + " " + paisreceptor.fichas + 
 paisreceptor = 0;
 paisseleccionado = 0;
 };
+};
+if (fase === "Incorporar"){
 };
 i = 0;
 };
@@ -262,15 +274,12 @@ resultadosdefensor = [];
 };
 };
 atacarrojo.addEventListener("click", ()=> test16("Rojo"));
-atacarazul.addEventListener("click", ()=> test16("Azul"));  
+atacarazul.addEventListener("click", ()=> test16("Azul"));
+atacaramarillo.addEventListener("click", ()=> test16("Amarillo"));
     
 
 let estadoJuego = {
-    countries: paises,
-    saveturno: turno,
+   paises: paises,
+   turno: turno,
+   fase: fase,
 };
-
-let guardarButton = document.getElementById("guardar");
-guardarButton.addEventListener('click', guardarJuego);
-
-export { estadoJuego, turno, paises };

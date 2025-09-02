@@ -32,7 +32,7 @@ let australia = {
     nombre: "Australia",
     id: document.getElementById("australiaid"),
     continente: "Oceanía",
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Rojo",
     limitrofes: [],
 };
@@ -40,7 +40,7 @@ let sumatra = {
     nombre: "Sumatra",
     id: document.getElementById("sumatraid"),
     continente: "Oceanía",
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Amarillo",
     limitrofes: [],
 };
@@ -48,7 +48,7 @@ let java = {
     nombre: "Java",
     continente: "Oceanía",
     id: document.getElementById("javaid"),
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Azul",
     limitrofes: [],
 };
@@ -56,7 +56,7 @@ let borneo = {
     nombre: "Borneo",
     continente: "Oceanía",
     id: document.getElementById("borneoid"),
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Rojo",
     limitrofes: [],
 };
@@ -64,7 +64,7 @@ let chile = {
     nombre: "Chile",
     continente: "América del Sur",
     id: document.getElementById("chileid"),
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Amarillo",
     limitrofes: [],
 };
@@ -72,7 +72,7 @@ let india = {
     nombre: "India",
     continente: "Asia",
     id: document.getElementById("indiaid"),
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Rojo",
     limitrofes: [],
 };
@@ -80,7 +80,7 @@ let malasia = {
     nombre: "Malasia",
     continente: "Asia",
     id: document.getElementById("malasiaid"),
-    fichas: 1,
+    fichas: 3,
     colorfichas: "Azul",
     limitrofes: [],
 };
@@ -105,26 +105,35 @@ function test12(colorturno) {
     if (colorturno === turno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
-            currentphase.textContent = "Fase: " + fase;
         } else if (fase === "Reagrupar" || fase === "Incorporar") {
             while (colores[i] != colorturno) {
                 i++;
             };
             i++;
+            if (i < colores.length) {
+                if (fase === "Reagrupar") {
+                    fase = "Atacar";
+                };};
             if (i === colores.length) {
                 if (fase === "Incorporar") {
                     fase = "Atacar";
-                } else if (fase === "Reagrupar") {
-                    fase = "Incorporar";
                     i = 0;
-                    while (paises.length > i) {
-                        if (paises[i].colorfichas === "Rojo") {
+                }; 
+                if (fase === "Reagrupar") {
+                    fichasnuevasrojo = 0;
+                    fichasnuevasazul = 0;
+                    fichasnuevasamarillo = 0;
+                    i2 = 0;
+                    while (paises.length > i2) {
+                        if (paises[i2].colorfichas === "Rojo") {
                             fichasnuevasrojo++;
-                        } else if (paises[i].colorfichas === "Azul") {
+                        } else if (paises[i2].colorfichas === "Azul") {
                             fichasnuevasazul++;
-                        } else if (paises[i].colorfichas === "Amarillo") {
+                        } else if (paises[i2].colorfichas === "Amarillo") {
                             fichasnuevasamarillo++;
                         };
+                        i2++;
+                    };
                         if (fichasnuevasrojo % 2 === 1) {
                             fichasnuevasrojo--;
                         };
@@ -134,16 +143,15 @@ function test12(colorturno) {
                         if (fichasnuevasamarillo % 2 === 1) {
                             fichasnuevasamarillo--;
                         };
-                        fichasnuevasrojo = fichasnuevasrojo / 2;
-                        fichasnuevasazul = fichasnuevasazul / 2;
-                        fichasnuevasamarillo = fichasnuevasamarillo / 2;
-                        console.log(fichasnuevasrojo);
-                        i = 0;
-                    };
-                    if (i < colores.length) {
-                        if (fase === "Reagrupar") {
-                            fase = "Atacar";
-                        };
+                    fichasnuevasrojo = fichasnuevasrojo / 2;
+                    fichasnuevasazul = fichasnuevasazul / 2;
+                    fichasnuevasamarillo = fichasnuevasamarillo / 2;
+                    fase = "Incorporar";
+                    i = 0;
+                    i2 = 0;
+                    console.log(fichasnuevasrojo);
+                    console.log(fichasnuevasazul);
+                    console.log(fichasnuevasamarillo);
                     };
                 };
             };
@@ -152,7 +160,6 @@ function test12(colorturno) {
             currentphase.textContent = "Fase: " + fase;
         };
     };
-};
 function test14(pais) {
     if (fase === "Atacar") {
         if (turno === pais.colorfichas && pais.fichas > 1) {
@@ -196,9 +203,34 @@ function test14(pais) {
         };
     };
     if (fase === "Incorporar") {
-    };
-    i = 0;
-};
+        if (turno === pais.colorfichas){
+            if (turno === "Rojo"){
+            if (fichasnuevasrojo > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevasrojo--;
+            };
+            };
+            if (turno === "Azul"){
+            if (fichasnuevasazul > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevasazul--;
+            };
+            };
+            if (turno === "Amarillo"){
+            if (fichasnuevasamarillo > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevasamarillo--;
+            };
+            };
+            paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            paisseleccionado = 0;
+            };
+            };
+            i = 0;
+            };           
 function test16(color) {
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
         dadosatacante = paisseleccionado.fichas - 1;
@@ -277,8 +309,8 @@ function test16(color) {
 };
 
 // Inicialización del Juego y Event Listeners
-skipazul.addEventListener("click", () => test12("Azul"));
 skiprojo.addEventListener("click", () => test12("Rojo"));
+skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 australia.id.addEventListener("click", () => test14(australia));
 sumatra.id.addEventListener("click", () => test14(sumatra));

@@ -21,7 +21,12 @@ let dadosdefensor = 0;
 let resultadosatacante = [];
 let resultadosdefensor = [];
 let dadoreserva = 0;
-let i2 = 0;
+let i12 = 0;
+let i121 = 0;
+let i141 = 0;
+let i142 = 0;
+let i161 = 0;
+let i162 = 0;
 let fichasnuevasrojo = 0;
 let fichasnuevasazul = 0;
 let fichasnuevasamarillo = 0;
@@ -102,94 +107,112 @@ i = 0;
 
 // Funciones del Juego
 function test12(colorturno) {
+    i121 = 0;
+    i122 = 0;
     if (colorturno === turno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
-        } else if (fase === "Reagrupar" || fase === "Incorporar") {
-            while (colores[i] != colorturno) {
-                i++;
+            currentphase.textContent = "Fase: " + fase;
+        } 
+    else if (fase === "Reagrupar"){
+        i121 = 0;
+            while (colores[i121] != colorturno) {
+                i121++;
             };
-            i++;
-            if (i < colores.length) {
-                if (fase === "Reagrupar") {
-                    fase = "Atacar";
-                };};
-            if (i === colores.length) {
-                if (fase === "Incorporar") {
-                    fase = "Atacar";
-                    i = 0;
-                }; 
-                if (fase === "Reagrupar") {
-                    fichasnuevasrojo = 0;
-                    fichasnuevasazul = 0;
-                    fichasnuevasamarillo = 0;
-                    i2 = 0;
-                    while (paises.length > i2) {
-                        if (paises[i2].colorfichas === "Rojo") {
-                            fichasnuevasrojo++;
-                        } else if (paises[i2].colorfichas === "Azul") {
-                            fichasnuevasazul++;
-                        } else if (paises[i2].colorfichas === "Amarillo") {
-                            fichasnuevasamarillo++;
-                        };
-                        i2++;
+            i121++;
+            if (i121 < colores.length) {
+            fase = "Atacar";
+            turno = colores[i121];
+            currentturn.textContent = "Turno: " + turno;
+            currentphase.textContent = "Fase: " + fase;
+                }
+            else if (i121 === colores.length) {
+                fichasnuevasrojo = 0;
+                fichasnuevasazul = 0;
+                fichasnuevasamarillo = 0;
+                i122 = 0;
+                while (paises.length > i122) {
+                    if (paises[i122].colorfichas === "Rojo") {
+                        fichasnuevasrojo++;
+                    } else if (paises[i122].colorfichas === "Azul") {
+                        fichasnuevasazul++;
+                    } else if (paises[i122].colorfichas === "Amarillo") {
+                        fichasnuevasamarillo++;
                     };
-                        if (fichasnuevasrojo % 2 === 1) {
-                            fichasnuevasrojo--;
-                        };
-                        if (fichasnuevasazul % 2 === 1) {
-                            fichasnuevasazul--;
-                        };
-                        if (fichasnuevasamarillo % 2 === 1) {
-                            fichasnuevasamarillo--;
-                        };
+                    i122++;
+                    };
+                    if (fichasnuevasrojo % 2 === 1) {
+                        fichasnuevasrojo--;
+                    };
+                    if (fichasnuevasazul % 2 === 1) {
+                        fichasnuevasazul--;
+                    };
+                    if (fichasnuevasamarillo % 2 === 1) {
+                        fichasnuevasamarillo--;
+                    };
                     fichasnuevasrojo = fichasnuevasrojo / 2;
                     fichasnuevasazul = fichasnuevasazul / 2;
                     fichasnuevasamarillo = fichasnuevasamarillo / 2;
                     fase = "Incorporar";
-                    i = 0;
-                    i2 = 0;
+                    i121 = 0;
+                    i122 = 0;
+                    turno = colores[i121];
+                    currentturn.textContent = "Turno: " + turno;
+                    currentphase.textContent = "Fase: " + fase;
                     console.log(fichasnuevasrojo);
                     console.log(fichasnuevasazul);
                     console.log(fichasnuevasamarillo);
                     };
+                }
+            else if (fase === "Incorporar"){
+                while (colores[i121] != colorturno) {
+                    i121++;
+                };
+                i121++;
+                if (i121 < colores.length){
+                    turno = colores[i121];
+                    currentturn.textContent = "Turno: " + turno;
+                }
+                else if (i121 === colores.length) {
+                    fase = "Atacar";
+                    i121 = 0;
+                    turno = colores[i121];
+                    currentturn.textContent = "Turno: " + turno;
+                    currentphase.textContent = "Fase: " + fase;
                 };
             };
-            turno = colores[i];
-            currentturn.textContent = "Turno: " + turno;
-            currentphase.textContent = "Fase: " + fase;
+            };
         };
-    };
 function test14(pais) {
     if (fase === "Atacar") {
         if (turno === pais.colorfichas && pais.fichas > 1) {
             paisseleccionado = pais;
         } else if (turno != pais.colorfichas && paisseleccionado.colorfichas != pais.colorfichas) {
-            i = 0;
-            while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]) {
-                i++;
+            i141 = 0;
+            while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
+                i141++;
             };
-            if (pais.limitrofes[i] === paisseleccionado) {
+            if (pais.limitrofes[i141] === paisseleccionado) {
                 paisatacado = pais;
             };
         };
     };
     if (fase === "Reagrupar") {
         if (turno === pais.colorfichas && paisseleccionado.colorfichas === pais.colorfichas) {
-            i = 0;
-            while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]) {
-                i++;
+            i141 = 0;
+            while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
+                i141++;
             };
-            if (pais.limitrofes[i] === paisseleccionado) {
+            if (pais.limitrofes[i141] === paisseleccionado) {
                 paisreceptor = pais;
             }
         };
         if (turno === pais.colorfichas) {
-            i = 0;
-            while (pais.limitrofes.length > i && paisseleccionado != pais.limitrofes[i]) {
-                i++;
+            i141 = 0;
+            while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
+                i141++;
             };
-            if (pais.limitrofes[i] != paisseleccionado && pais.fichas > 1) {
+            if (pais.limitrofes[i141] != paisseleccionado && pais.fichas > 1) {
                 paisseleccionado = pais;
             };
         };
@@ -229,7 +252,7 @@ function test14(pais) {
             paisseleccionado = 0;
             };
             };
-            i = 0;
+            i141 = 0;
             };           
 function test16(color) {
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
@@ -281,18 +304,18 @@ function test16(color) {
                 };
             };
         };
-        i = 0;
-        while (resultadosatacante.length > i && resultadosdefensor.length > i) {
-            if (resultadosdefensor[i] >= resultadosatacante[i]) {
-                console.log(resultadosatacante[i] + " atacante vs " + resultadosdefensor[i] + " defensor");
+        i161 = 0;
+        while (resultadosatacante.length > i161 && resultadosdefensor.length > i161) {
+            if (resultadosdefensor[i161] >= resultadosatacante[i161]) {
+                console.log(resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor");
                 console.log(paisseleccionado.nombre + " pierde una ficha");
                 paisseleccionado.fichas--;
-            } else if (resultadosatacante[i] > resultadosdefensor[i]) {
-                console.log(resultadosatacante[i] + " atacante vs " + resultadosdefensor[i] + " defensor");
+            } else if (resultadosatacante[i161] > resultadosdefensor[i161]) {
+                console.log(resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor");
                 console.log(paisatacado.nombre + " pierde una ficha");
                 paisatacado.fichas--;
             };
-            i++;
+            i161++;
         };
         if (paisatacado.fichas === 0) {
             paisatacado.fichas++;

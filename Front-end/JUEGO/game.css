@@ -28,6 +28,18 @@ background-color: darkcyan;
     background-color: darkolivegreen;
 }
 
+.peru{
+    width: 50px;
+    height: 50px;
+    background-color: darkolivegreen;
+}
+
+.argentina{
+    width: 70px;
+    height: 90px;
+    background-color: darkolivegreen;
+}
+
 .india{
     width: 40px;
     height: 50px;
@@ -37,6 +49,18 @@ background-color: darkcyan;
 .malasia{
     width: 40px;
     height: 50px;
+    background-color: yellowgreen;
+}
+
+.china{
+    width: 60px;
+    height: 80px;
+    background-color: yellowgreen;
+}
+
+.iran{
+    width: 30px;
+    height: 80px;
     background-color: yellowgreen;
 }
 

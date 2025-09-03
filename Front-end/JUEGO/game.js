@@ -1,6 +1,6 @@
 // Declaración de Variables Globales
 let turno = "Rojo";
-let colores = ["Rojo", "Azul", "Amarillo"];
+let colores = ["Rojo", "Azul", "Amarillo", "Verde"];
 let fase = "Atacar";
 let fases = ["Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
@@ -8,9 +8,11 @@ let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
 let atacarazul = document.getElementById("atacarazul");
 let atacaramarillo = document.getElementById("atacaramarillo");
+let atacarverde = document.getElementById("atacarverde");
 let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
 let skipamarillo = document.getElementById("pasaamarillo");
+let skipverde = document.getElementById("pasaverde");
 let i = 0;
 let dado = 0;
 let paisseleccionado = 0;
@@ -30,6 +32,7 @@ let i162 = 0;
 let fichasnuevasrojo = 0;
 let fichasnuevasazul = 0;
 let fichasnuevasamarillo = 0;
+let fichasnuevasverde = 0;
 
 // Definición de Países y Mapa
 let paises = [];
@@ -46,7 +49,7 @@ let sumatra = {
     id: document.getElementById("sumatraid"),
     continente: "Oceanía",
     fichas: 3,
-    colorfichas: "Amarillo",
+    colorfichas: "Verde",
     limitrofes: [],
 };
 let java = {
@@ -102,7 +105,7 @@ let iran = {
     continente: "Asia",
     id: document.getElementById("iranid"),
     fichas: 3,
-    colorfichas: "Rojo",
+    colorfichas: "Verde",
     limitrofes: [],
 };
 let peru = {
@@ -110,7 +113,7 @@ let peru = {
     continente: "América del Sur",
     id: document.getElementById("peruid"),
     fichas: 3,
-    colorfichas: "Amarillo",
+    colorfichas: "Verde",
     limitrofes: [],
 };
 let argentina = {
@@ -166,6 +169,7 @@ function test12(colorturno) {
                 fichasnuevasrojo = 0;
                 fichasnuevasazul = 0;
                 fichasnuevasamarillo = 0;
+                fichasnuevasverde = 0;
                 i122 = 0;
                 while (paises.length > i122) {
                     if (paises[i122].colorfichas === "Rojo") {
@@ -174,7 +178,9 @@ function test12(colorturno) {
                         fichasnuevasazul++;
                     } else if (paises[i122].colorfichas === "Amarillo") {
                         fichasnuevasamarillo++;
-                    };
+                    } else if (paises[i122].colorfichas === "Verde"){
+                        fichasnuevasverde++;
+                    }
                     i122++;
                     };
                     if (fichasnuevasrojo % 2 === 1) {
@@ -186,9 +192,13 @@ function test12(colorturno) {
                     if (fichasnuevasamarillo % 2 === 1) {
                         fichasnuevasamarillo--;
                     };
+                    if (fichasnuevasverde % 2 === 1) {
+                        fichasnuevasverde--;
+                    };
                     fichasnuevasrojo = fichasnuevasrojo / 2;
                     fichasnuevasazul = fichasnuevasazul / 2;
                     fichasnuevasamarillo = fichasnuevasamarillo / 2;
+                    fichasnuevasverde = fichasnuevasverde / 2;
                     fase = "Incorporar";
                     i121 = 0;
                     i122 = 0;
@@ -198,6 +208,7 @@ function test12(colorturno) {
                     console.log(fichasnuevasrojo);
                     console.log(fichasnuevasazul);
                     console.log(fichasnuevasamarillo);
+                    console.log(fichasnuevasverde);
                     };
                 }
             else if (fase === "Incorporar"){
@@ -282,6 +293,13 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevasamarillo--;
+            };
+            };
+            if (turno === "Verde"){
+            if (fichasnuevasverde > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevasverde--;
             };
             };
             paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
@@ -371,6 +389,7 @@ function test16(color) {
 skiprojo.addEventListener("click", () => test12("Rojo"));
 skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
+skipverde.addEventListener("click", () => test12("Verde"));
 australia.id.addEventListener("click", () => test14(australia));
 sumatra.id.addEventListener("click", () => test14(sumatra));
 java.id.addEventListener("click", () => test14(java));
@@ -385,3 +404,4 @@ argentina.id.addEventListener("click", () => test14(argentina));
 atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));
+atacarverde.addEventListener("click", () => test16("Verde"));

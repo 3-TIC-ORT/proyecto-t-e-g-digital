@@ -14,6 +14,7 @@ let skiprojo = document.getElementById("pasarojo");
 let skipamarillo = document.getElementById("pasaamarillo");
 let skipverde = document.getElementById("pasaverde");
 let i = 0;
+let i2 = 0;
 let dado = 0;
 let paisseleccionado = 0;
 let paisatacado = 0;
@@ -29,19 +30,22 @@ let i141 = 0;
 let i142 = 0;
 let i161 = 0;
 let i162 = 0;
+let i171 = 0;
+let i172 = 0;
 let fichasnuevasrojo = 0;
 let fichasnuevasazul = 0;
 let fichasnuevasamarillo = 0;
 let fichasnuevasverde = 0;
+let randomizador = 0;
 
 // Definición de Países y Mapa
 let paises = [];
 let australia = {
     nombre: "Australia",
     id: document.getElementById("australiaid"),
-    continente: "Oceanía",
+    continente: "",
     fichas: 3,
-    colorfichas: "Rojo",
+    colorfichas: "",
     limitrofes: [],
 };
 let sumatra = {
@@ -49,7 +53,7 @@ let sumatra = {
     id: document.getElementById("sumatraid"),
     continente: "Oceanía",
     fichas: 3,
-    colorfichas: "Verde",
+    colorfichas: "",
     limitrofes: [],
 };
 let java = {
@@ -57,7 +61,7 @@ let java = {
     continente: "Oceanía",
     id: document.getElementById("javaid"),
     fichas: 3,
-    colorfichas: "Azul",
+    colorfichas: "",
     limitrofes: [],
 };
 let borneo = {
@@ -65,7 +69,7 @@ let borneo = {
     continente: "Oceanía",
     id: document.getElementById("borneoid"),
     fichas: 3,
-    colorfichas: "Rojo",
+    colorfichas: "",
     limitrofes: [],
 };
 let chile = {
@@ -73,7 +77,7 @@ let chile = {
     continente: "América del Sur",
     id: document.getElementById("chileid"),
     fichas: 3,
-    colorfichas: "Amarillo",
+    colorfichas: "",
     limitrofes: [],
 };
 let india = {
@@ -81,7 +85,7 @@ let india = {
     continente: "Asia",
     id: document.getElementById("indiaid"),
     fichas: 3,
-    colorfichas: "Rojo",
+    colorfichas: "",
     limitrofes: [],
 };
 let malasia = {
@@ -89,7 +93,7 @@ let malasia = {
     continente: "Asia",
     id: document.getElementById("malasiaid"),
     fichas: 3,
-    colorfichas: "Azul",
+    colorfichas: "",
     limitrofes: [],
 };
 let china = {
@@ -97,7 +101,7 @@ let china = {
     continente: "Asia",
     id: document.getElementById("chinaid"),
     fichas: 3,
-    colorfichas: "Amarillo",
+    colorfichas: "",
     limitrofes: [],
 };
 let iran = {
@@ -105,7 +109,7 @@ let iran = {
     continente: "Asia",
     id: document.getElementById("iranid"),
     fichas: 3,
-    colorfichas: "Verde",
+    colorfichas: "",
     limitrofes: [],
 };
 let peru = {
@@ -113,7 +117,7 @@ let peru = {
     continente: "América del Sur",
     id: document.getElementById("peruid"),
     fichas: 3,
-    colorfichas: "Verde",
+    colorfichas: "",
     limitrofes: [],
 };
 let argentina = {
@@ -121,7 +125,7 @@ let argentina = {
     continente: "América del Sur",
     id: document.getElementById("argentinaid"),
     fichas: 3,
-    colorfichas: "Azul",
+    colorfichas: "",
     limitrofes: [],
 };
 australia.limitrofes.push(sumatra, java, borneo, chile);
@@ -139,8 +143,16 @@ paises.push(australia, sumatra, java, borneo, chile, india, malasia, china, iran
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
 while (paises.length > i) {
-paises[i].id.textContent = paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
+randomizador = Math.floor(Math.random() * paises.length);
+if (i2 === colores.length) {
+i2 = 0;
+};
+if (paises[randomizador].colorfichas === ""){
+paises[randomizador].colorfichas = colores[i2];
 i++;
+i2++;
+};
+paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
 };
 i = 0;
 
@@ -307,7 +319,20 @@ function test14(pais) {
             };
             };
             i141 = 0;
-            };           
+            };  
+function test17(colour){
+    i171 = 0;
+    i172 = 0;
+    while (paises.length > i171){
+        if (paises[i171].colorfichas === colour){
+            i172++;
+        };
+        i171++;
+    };
+    if (i172 >= 6){
+        alert("Ganó el " + colour);
+    };
+};     
 function test16(color) {
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
         dadosatacante = paisseleccionado.fichas - 1;
@@ -375,6 +400,7 @@ function test16(color) {
             paisatacado.fichas++;
             paisseleccionado.fichas--;
             paisatacado.colorfichas = paisseleccionado.colorfichas;
+            test17(color);
         };
         paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
         paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;

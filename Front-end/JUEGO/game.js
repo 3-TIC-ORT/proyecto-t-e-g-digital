@@ -128,6 +128,30 @@ let argentina = {
     colorfichas: "",
     limitrofes: [],
 };
+let uruguay = {
+    nombre: "Uruguay",
+    continente: "América del Sur",
+    id: document.getElementById("uruguayid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let brasil = {
+    nombre: "Brasil",
+    continente: "América del Sur",
+    id: document.getElementById("brasilid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let colombia = {
+    nombre: "Colombia",
+    continente: "América del Sur",
+    id: document.getElementById("colombiaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 australia.limitrofes.push(sumatra, java, borneo, chile);
 sumatra.limitrofes.push(australia, india);
 java.limitrofes.push(australia);
@@ -137,9 +161,12 @@ india.limitrofes.push(sumatra, malasia, china, iran);
 malasia.limitrofes.push(borneo, india, china);
 china.limitrofes.push(india, malasia, iran);
 iran.limitrofes.push(india, china);
-peru.limitrofes.push(chile, argentina);
-argentina.limitrofes.push(chile, peru);
-paises.push(australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina);
+peru.limitrofes.push(chile, argentina, brasil, colombia);
+argentina.limitrofes.push(chile, peru, uruguay, brasil);
+uruguay.limitrofes.push(argentina, brasil);
+brasil.limitrofes.push(peru, argentina, uruguay, colombia);
+colombia.limitrofes.push(peru, brasil);
+paises.push(australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia);
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
 while (paises.length > i) {
@@ -329,7 +356,7 @@ function test17(colour){
         };
         i171++;
     };
-    if (i172 >= 6){
+    if (i172 >= 8){
         alert("Ganó el " + colour);
     };
 };     
@@ -427,6 +454,9 @@ china.id.addEventListener("click", () => test14(china));
 iran.id.addEventListener("click", () => test14(iran));
 peru.id.addEventListener("click", () => test14(peru));
 argentina.id.addEventListener("click", () => test14(argentina));
+uruguay.id.addEventListener("click", () => test14(uruguay));
+brasil.id.addEventListener("click", () => test14(brasil));
+colombia.id.addEventListener("click", () => test14(colombia));
 atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));

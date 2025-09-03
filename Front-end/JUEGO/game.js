@@ -38,12 +38,20 @@ let fichasnuevasamarillo = 0;
 let fichasnuevasverde = 0;
 let randomizador = 0;
 
+//declaracion continentes
+let sudamerica = []
+let oceania = [];
+let norteamerica = []
+let europa = []
+let africa = []
+let asia = []
+
+
 // Definición de Países y Mapa
-let paises = [];
 let australia = {
     nombre: "Australia",
     id: document.getElementById("australiaid"),
-    continente: "",
+    continente: oceania,
     fichas: 3,
     colorfichas: "",
     limitrofes: [],
@@ -51,14 +59,14 @@ let australia = {
 let sumatra = {
     nombre: "Sumatra",
     id: document.getElementById("sumatraid"),
-    continente: "Oceanía",
+    continente: oceania,
     fichas: 3,
     colorfichas: "",
     limitrofes: [],
 };
 let java = {
     nombre: "Java",
-    continente: "Oceanía",
+    continente: oceania,
     id: document.getElementById("javaid"),
     fichas: 3,
     colorfichas: "",
@@ -66,7 +74,7 @@ let java = {
 };
 let borneo = {
     nombre: "Borneo",
-    continente: "Oceanía",
+    continente: oceania,
     id: document.getElementById("borneoid"),
     fichas: 3,
     colorfichas: "",
@@ -74,7 +82,7 @@ let borneo = {
 };
 let chile = {
     nombre: "Chile",
-    continente: "América del Sur",
+    continente: sudamerica,
     id: document.getElementById("chileid"),
     fichas: 3,
     colorfichas: "",
@@ -82,7 +90,7 @@ let chile = {
 };
 let india = {
     nombre: "India",
-    continente: "Asia",
+    continente: asia,
     id: document.getElementById("indiaid"),
     fichas: 3,
     colorfichas: "",
@@ -90,7 +98,7 @@ let india = {
 };
 let malasia = {
     nombre: "Malasia",
-    continente: "Asia",
+    continente: asia,
     id: document.getElementById("malasiaid"),
     fichas: 3,
     colorfichas: "",
@@ -98,7 +106,7 @@ let malasia = {
 };
 let china = {
     nombre: "China",
-    continente: "Asia",
+    continente: asia,
     id: document.getElementById("chinaid"),
     fichas: 3,
     colorfichas: "",
@@ -106,7 +114,7 @@ let china = {
 };
 let iran = {
     nombre: "Irán",
-    continente: "Asia",
+    continente: asia,
     id: document.getElementById("iranid"),
     fichas: 3,
     colorfichas: "",
@@ -114,7 +122,7 @@ let iran = {
 };
 let peru = {
     nombre: "Perú",
-    continente: "América del Sur",
+    continente: sudamerica,
     id: document.getElementById("peruid"),
     fichas: 3,
     colorfichas: "",
@@ -122,7 +130,7 @@ let peru = {
 };
 let argentina = {
     nombre: "Argentina",
-    continente: "América del Sur",
+    continente: sudamerica,
     id: document.getElementById("argentinaid"),
     fichas: 3,
     colorfichas: "",
@@ -130,7 +138,7 @@ let argentina = {
 };
 let uruguay = {
     nombre: "Uruguay",
-    continente: "América del Sur",
+    continente: sudamerica,
     id: document.getElementById("uruguayid"),
     fichas: 3,
     colorfichas: "",
@@ -138,7 +146,7 @@ let uruguay = {
 };
 let brasil = {
     nombre: "Brasil",
-    continente: "América del Sur",
+    continente: sudamerica,
     id: document.getElementById("brasilid"),
     fichas: 3,
     colorfichas: "",
@@ -146,12 +154,17 @@ let brasil = {
 };
 let colombia = {
     nombre: "Colombia",
-    continente: "América del Sur",
+    continente: sudamerica,
     id: document.getElementById("colombiaid"),
     fichas: 3,
     colorfichas: "",
     limitrofes: [],
 };
+
+
+
+
+//push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
 sumatra.limitrofes.push(australia, india);
 java.limitrofes.push(australia);
@@ -166,7 +179,19 @@ argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
 brasil.limitrofes.push(peru, argentina, uruguay, colombia);
 colombia.limitrofes.push(peru, brasil);
-paises.push(australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia);
+
+//declaracion de paises
+let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia];
+
+//push de paises a los continentes
+oceania.push(australia, sumatra, java, borneo);
+sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
+asia.push(india, malasia, china, iran);
+
+//declaracion de continentes
+let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
+
+//Turno y Fase
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
 while (paises.length > i) {

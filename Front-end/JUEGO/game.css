@@ -1,85 +1,94 @@
+body {
+    position: relative;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #242323;
+    height: 500px;
+ }
+
+.oceania{
+    background-color: darkcyan;
+}
+
 .australia {
     width: 100px;
     height: 80px;
-    background-color: darkcyan;
 }
 
 .sumatra{
     width: 50px;
     height: 70px;
-    background-color: darkcyan;
 }
 
 .borneo{
-width: 50px;
-height: 70px;
-background-color: darkcyan;
+    width: 50px;
+    height: 70px;
 }
 
 .java{
     width: 30px;
     height: 40px;
-    background-color: darkcyan;
+}
+
+.sudamerica{
+    background-color: darkolivegreen;
 }
 
 .chile{
     width: 30px;
     height: 100px;
-    background-color: darkolivegreen;
 }
 
 .peru{
     width: 50px;
     height: 50px;
-    background-color: darkolivegreen;
 }
 
 .argentina{
-    width: 70px;
+    width: 60px;
     height: 90px;
-    background-color: darkolivegreen;
 }
 
 .uruguay{
     width: 35px;
     height: 35px;
-    background-color: darkolivegreen;
 }
 
 .brasil{
     width: 80px;
     height: 65px;
-    background-color: darkolivegreen;
 }
 
 .colombia{
     width: 60px;
     height: 45px;
-    background-color: darkolivegreen;
+}
+
+.asia{
+    background-color: yellowgreen;
 }
 
 .india{
     width: 40px;
     height: 50px;
-    background-color: yellowgreen;
 }
 
 .malasia{
     width: 40px;
     height: 50px;
-    background-color: yellowgreen;
 }
 
 .china{
     width: 60px;
     height: 80px;
-    background-color: yellowgreen;
 }
 
 .iran{
     width: 30px;
     height: 80px;
-    background-color: yellowgreen;
 }
 
 .boton_atras {
@@ -101,21 +110,13 @@ background-color: darkcyan;
 }
 
 .currentturn{
-color:white;
-background-color: darkgoldenrod;
+    color:white;
+    background-color: darkgoldenrod;
+    width: 100px;
 }
 
 a {
-color: black;
-font-style: normal;
-text-decoration: none;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
 }
-
-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #242323;
-    height: 500px;
- }

@@ -161,9 +161,6 @@ let colombia = {
     limitrofes: [],
 };
 
-
-
-
 //push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
 sumatra.limitrofes.push(australia, india);

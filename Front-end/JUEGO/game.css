@@ -15,15 +15,15 @@ body {
 
 .australia {
     position: absolute;
-    top: 29rem; 
-    right: 7rem; 
+    top: 30rem; 
+    right: 4rem; 
     width: 100px;
     height: 80px;
 }
 
 .sumatra{
     position: absolute;
-    top: 24rem; 
+    top: 27rem; 
     right: 12rem;
     width: 50px;
     height: 70px;
@@ -39,10 +39,10 @@ body {
 
 .java{
     position: absolute;
-    top: 24rem; 
+    top: 25rem; 
     right: 3rem;
     width: 40px;
-    height: 50px;
+    height: 60px;
 }
 
 .sudamerica{
@@ -50,31 +50,49 @@ body {
 }
 
 .chile{
+    position: absolute;
+    top: 27rem; 
+    left: 27rem;
     width: 30px;
     height: 100px;
 }
 
 .peru{
+    position: absolute;
+    top: 24rem; 
+    left: 26rem;
     width: 50px;
     height: 50px;
 }
 
 .argentina{
-    width: 60px;
-    height: 90px;
+    position: absolute;
+    top: 27rem; 
+    left: 29rem;
+    width: 50px;
+    height: 100px;
 }
 
 .uruguay{
+    position: absolute;
+    top: 27rem; 
+    left: 32rem;
     width: 35px;
     height: 35px;
 }
 
 .brasil{
-    width: 80px;
-    height: 65px;
+    position: absolute;
+    top: 22rem; 
+    left: 29rem;
+    width: 90px;
+    height: 75px;
 }
 
 .colombia{
+    position: absolute;
+    top: 21rem; 
+    left: 25rem;
     width: 60px;
     height: 45px;
 }
@@ -85,25 +103,34 @@ body {
 
 .india{
     position: absolute;
-    top: 18rem; 
-    right: 15rem;
-    width: 40px;
-    height: 50px;
+    top: 19rem; 
+    right: 14rem;
+    width: 50px;
+    height: 60px;
 }
 
 .malasia{
-    width: 40px;
-    height: 50px;
+    position: absolute;
+    top: 19rem; 
+    right: 10rem;
+    width: 50px;
+    height: 60px;
 }
 
 .china{
-    width: 60px;
-    height: 80px;
+    position: absolute;
+    top: 13rem; 
+    right: 10rem;
+    width: 80px;
+    height: 90px;
 }
 
 .iran{
+    position: absolute;
+    top: 13rem; 
+    right: 16rem;
     width: 30px;
-    height: 80px;
+    height: 90px;
 }
 
 .boton_atras {
@@ -127,7 +154,7 @@ body {
 .currentturn{
     color:white;
     background-color: darkgoldenrod;
-    width: 100px;
+    width: 120px;
     text-align: center;
 }
 
@@ -135,4 +162,9 @@ a {
     color: black;
     font-style: normal;
     text-decoration: none;
+}
+
+.footer{
+    position: absolute;
+    top: 37rem;
 }

@@ -15,8 +15,8 @@ body {
 
 .australia {
     position: absolute;
-    top: 30rem; 
-    right: 4rem; 
+    top: 31rem; 
+    right: 2rem; 
     width: 100px;
     height: 80px;
 }
@@ -24,23 +24,25 @@ body {
 .sumatra{
     position: absolute;
     top: 27rem; 
-    right: 12rem;
+    right: 11rem;
     width: 50px;
     height: 70px;
+    transform:rotate(-30deg)
 }
 
 .borneo{
     position: absolute;
     top: 24rem; 
-    right: 7rem;
-    width: 50px;
+    right: 6rem;
+    width: 40px;
     height: 70px;
+    transform:rotate(-15deg)
 }
 
 .java{
     position: absolute;
-    top: 25rem; 
-    right: 3rem;
+    top: 24rem; 
+    right: 2rem;
     width: 40px;
     height: 60px;
 }
@@ -51,49 +53,51 @@ body {
 
 .chile{
     position: absolute;
-    top: 27rem; 
-    left: 27rem;
+    top: 30rem; 
+    left: 25rem;
     width: 30px;
-    height: 100px;
+    height: 120px;
 }
 
 .peru{
     position: absolute;
-    top: 24rem; 
-    left: 26rem;
-    width: 50px;
+    top: 27rem; 
+    left: 24rem;
+    width: 80px;
     height: 50px;
 }
 
 .argentina{
     position: absolute;
-    top: 27rem; 
-    left: 29rem;
+    top: 30rem; 
+    left: 27rem;
     width: 50px;
-    height: 100px;
+    height: 120px;
+    transform:rotate(10deg)
 }
 
 .uruguay{
     position: absolute;
-    top: 27rem; 
-    left: 32rem;
-    width: 35px;
-    height: 35px;
+    top: 31rem; 
+    left: 30rem;
+    width: 75px;
+    height: 40px;
+    transform:rotate(-15deg)
 }
 
 .brasil{
     position: absolute;
-    top: 22rem; 
+    top: 25rem; 
     left: 29rem;
-    width: 90px;
-    height: 75px;
+    width: 120px;
+    height: 85px;
 }
 
 .colombia{
     position: absolute;
-    top: 21rem; 
-    left: 25rem;
-    width: 60px;
+    top: 24rem; 
+    left: 23rem;
+    width: 100px;
     height: 45px;
 }
 
@@ -103,40 +107,70 @@ body {
 
 .india{
     position: absolute;
-    top: 19rem; 
-    right: 14rem;
-    width: 50px;
-    height: 60px;
+    top: 21rem; 
+    right: 9rem;
+    width: 40px;
+    height: 80px;
+    transform:rotate(10deg)
 }
 
 .malasia{
     position: absolute;
     top: 19rem; 
-    right: 10rem;
+    right: 3rem;
     width: 50px;
     height: 60px;
+    transform:rotate(-15deg)
 }
 
 .china{
     position: absolute;
-    top: 13rem; 
-    right: 10rem;
-    width: 80px;
-    height: 90px;
+    top: 16rem; 
+    right: 3rem;
+    width: 160px;
+    height: 50px;
+    transform:rotate(-15deg)
 }
 
 .iran{
     position: absolute;
-    top: 13rem; 
+    top: 12rem; 
     right: 16rem;
     width: 30px;
-    height: 90px;
+    height: 150px;
+    transform:rotate(-35deg)
+}
+
+.japon{
+    position: absolute;
+    top: 8rem; 
+    right: 2rem;
+    width: 80px;
+    height: 40px;
+    transform:rotate(40deg)
 }
 
 .boton_atras {
     position: absolute;
-    top: 1.5rem; 
     left: 1.5rem; 
+    z-index: 100;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f7f3e9; 
+    background-color: #c59a3e; 
+    border: 3px solid #ffffff; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.guardar{
+    position: absolute;
+    right: 1.5rem;
+    width: 100px;
     z-index: 100;
     font-weight: 400;
     text-transform: uppercase;
@@ -166,5 +200,5 @@ a {
 
 .footer{
     position: absolute;
-    top: 37rem;
+    top: 40rem;
 }

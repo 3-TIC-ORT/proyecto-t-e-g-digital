@@ -48,7 +48,7 @@ body {
 }
 
 .sudamerica{
-    background-color: darkolivegreen;
+    background-color: seagreen;
 }
 
 .chile{
@@ -102,7 +102,7 @@ body {
 }
 
 .asia{
-    background-color: yellowgreen;
+    background-color:darkslategray;
 }
 
 .india{
@@ -174,6 +174,24 @@ body {
     right: 9rem;
     width: 80px;
     height: 60px;
+    transform:rotate(-20deg)
+}
+
+.turquia{
+    position: absolute;
+    top: 19rem; 
+    right: 17rem;
+    width: 120px;
+    height: 40px;
+    transform:rotate(-20deg)
+}
+
+.israel{
+    position: absolute;
+    top: 22rem; 
+    right: 17rem;
+    width: 90px;
+    height: 40px;
     transform:rotate(-20deg)
 }
 

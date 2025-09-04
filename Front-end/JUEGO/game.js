@@ -152,6 +152,22 @@ let kamchatka = {
     colorfichas: "",
     limitrofes: [],
 };
+let turquia = {
+    nombre: "Turquía",
+    continente: asia,
+    id: document.getElementById("turquiaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let israel = {
+    nombre: "Israel",
+    continente: asia,
+    id: document.getElementById("israelid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 let peru = {
     nombre: "Perú",
     continente: sudamerica,
@@ -202,11 +218,13 @@ chile.limitrofes.push(australia, peru, argentina);
 india.limitrofes.push(sumatra, malasia, china, iran);
 malasia.limitrofes.push(borneo, india, china);
 china.limitrofes.push(india, malasia, iran, japon, gobi, mongolia, kamchatka);
-iran.limitrofes.push(india, china, gobi, mongolia);
+iran.limitrofes.push(india, china, gobi, mongolia, turquia);
 japon.limitrofes.push(china, kamchatka);
 gobi.limitrofes.push(china, iran, mongolia);
 mongolia.limitrofes.push(china, iran, gobi);
 kamchatka.limitrofes.push(china, japon);
+turquia.limitrofes.push(iran, israel),
+israel.limitrofes.push(turquia),
 peru.limitrofes.push(chile, argentina, brasil, colombia);
 argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
@@ -214,12 +232,12 @@ brasil.limitrofes.push(peru, argentina, uruguay, colombia);
 colombia.limitrofes.push(peru, brasil);
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka];
+let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel];
 
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
-asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka);
+asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
@@ -414,7 +432,7 @@ function test17(colour){
         };
         i171++;
     };
-    if (i172 >= 10){
+    if (i172 >= 11){
         alert("Ganó el " + colour);
     };
 };     
@@ -514,6 +532,8 @@ japon.id.addEventListener("click", () => test14(japon));
 gobi.id.addEventListener("click", () => test14(gobi));
 mongolia.id.addEventListener("click", () => test14(mongolia));
 kamchatka.id.addEventListener("click", () => test14(kamchatka));
+turquia.id.addEventListener("click", () => test14(turquia));
+israel.id.addEventListener("click", () => test14(israel));
 peru.id.addEventListener("click", () => test14(peru));
 argentina.id.addEventListener("click", () => test14(argentina));
 uruguay.id.addEventListener("click", () => test14(uruguay));

@@ -120,6 +120,22 @@ let iran = {
     colorfichas: "",
     limitrofes: [],
 };
+let japon = {
+    nombre: "Japón",
+    continente: asia,
+    id: document.getElementById("japonid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let gobi = {
+    nombre: "Gobi",
+    continente: asia,
+    id: document.getElementById("gobiid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 let peru = {
     nombre: "Perú",
     continente: sudamerica,
@@ -169,21 +185,23 @@ borneo.limitrofes.push(australia, malasia);
 chile.limitrofes.push(australia, peru, argentina);
 india.limitrofes.push(sumatra, malasia, china, iran);
 malasia.limitrofes.push(borneo, india, china);
-china.limitrofes.push(india, malasia, iran);
-iran.limitrofes.push(india, china);
+china.limitrofes.push(india, malasia, iran, japon, gobi);
+iran.limitrofes.push(india, china, gobi);
 peru.limitrofes.push(chile, argentina, brasil, colombia);
 argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
 brasil.limitrofes.push(peru, argentina, uruguay, colombia);
 colombia.limitrofes.push(peru, brasil);
+japon.limitrofes.push(china);
+gobi.limitrofes.push(china, iran);
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia];
+let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi];
 
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
-asia.push(india, malasia, china, iran);
+asia.push(india, malasia, china, iran, japon, gobi);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
@@ -474,6 +492,8 @@ india.id.addEventListener("click", () => test14(india));
 malasia.id.addEventListener("click", () => test14(malasia));
 china.id.addEventListener("click", () => test14(china));
 iran.id.addEventListener("click", () => test14(iran));
+japon.id.addEventListener("click", () => test14(japon));
+gobi.id.addEventListener("click", () => test14(gobi));
 peru.id.addEventListener("click", () => test14(peru));
 argentina.id.addEventListener("click", () => test14(argentina));
 uruguay.id.addEventListener("click", () => test14(uruguay));

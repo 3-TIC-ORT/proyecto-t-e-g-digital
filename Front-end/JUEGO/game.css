@@ -78,8 +78,8 @@ body {
 
 .uruguay{
     position: absolute;
-    top: 31rem; 
-    left: 30rem;
+    top: 30.5rem; 
+    left: 30.5rem;
     width: 75px;
     height: 40px;
     transform:rotate(-15deg)
@@ -88,7 +88,7 @@ body {
 .brasil{
     position: absolute;
     top: 25rem; 
-    left: 29rem;
+    left: 29.5rem;
     width: 120px;
     height: 85px;
 }
@@ -107,11 +107,11 @@ body {
 
 .india{
     position: absolute;
-    top: 21rem; 
+    top: 20rem; 
     right: 9rem;
     width: 40px;
-    height: 80px;
-    transform:rotate(10deg)
+    height: 100px;
+    transform:rotate(15deg)
 }
 
 .malasia{
@@ -172,7 +172,7 @@ body {
     position: absolute;
     top: 5rem; 
     right: 9rem;
-    width: 80px;
+    width: 60px;
     height: 60px;
     transform:rotate(-20deg)
 }
@@ -191,19 +191,53 @@ body {
     top: 22rem; 
     right: 17rem;
     width: 90px;
-    height: 40px;
+    height: 30px;
     transform:rotate(-20deg)
 }
 
 .arabia {
     position: absolute;
-    top: 24rem; 
-    right: 14rem;
-    width: 90px;
-    height: 40px;
+    top: 23rem; 
+    right: 15rem;
+    width: 60px;
+    height: 60px;
     transform:rotate(-25deg)
 }
 
+.siberia{
+    position: absolute;
+    top: 8rem; 
+    right: 13rem;
+    width: 120px;
+    height: 30px;
+    transform:rotate(-15deg)
+}
+
+.taimir{
+    position: absolute;
+    top: 4rem; 
+    right: 15rem;
+    width: 50px;
+    height: 60px;
+    transform:rotate(15deg)
+}
+
+.tartaria{
+    position: absolute;
+    top: 4rem; 
+    right: 18.5rem;
+    width: 40px;
+    height: 70px;
+}
+
+.aral{
+    position: absolute;
+    top: 6rem; 
+    right: 21rem;
+    width: 40px;
+    height: 70px;
+    transform:rotate(-15deg)
+}
 
 .boton_atras {
     position: absolute;

@@ -208,6 +208,30 @@ let aral = {
     colorfichas: "",
     limitrofes: [],
 };
+let rusia = {
+    nombre:"Rusia",
+    continente: europa,
+    id: document.getElementById("rusiaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let suecia = {
+    nombre:"Suecia",
+    continente: europa,
+    id: document.getElementById("sueciaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let polonia = {
+    nombre:"Polonia",
+    continente: europa,
+    id: document.getElementById("poloniaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 let peru = {
     nombre: "Perú",
     continente: sudamerica,
@@ -258,18 +282,21 @@ chile.limitrofes.push(australia, peru, argentina);
 india.limitrofes.push(sumatra, malasia, china, iran);
 malasia.limitrofes.push(borneo, india, china);
 china.limitrofes.push(india, malasia, iran, japon, gobi, mongolia, kamchatka, siberia);
-iran.limitrofes.push(india, china, gobi, mongolia, turquia, aral);
+iran.limitrofes.push(india, china, gobi, mongolia, turquia, aral, rusia);
 japon.limitrofes.push(china, kamchatka);
 gobi.limitrofes.push(china, iran, mongolia);
 mongolia.limitrofes.push(china, iran, gobi, siberia);
 kamchatka.limitrofes.push(china, japon, siberia);
-turquia.limitrofes.push(iran, israel, arabia),
+turquia.limitrofes.push(iran, israel, arabia, rusia, polonia),
 israel.limitrofes.push(turquia, arabia),
 arabia.limitrofes.push(turquia, israel);
 siberia.limitrofes.push(china, mongolia, kamchatka, taimir, tartaria, aral);
 taimir.limitrofes.push(siberia, tartaria);
 tartaria.limitrofes.push(siberia, taimir, aral);
-aral.limitrofes.push(iran, siberia, tartaria);
+aral.limitrofes.push(iran, siberia, tartaria, rusia);
+rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);
+suecia.limitrofes.push(rusia);
+polonia.limitrofes.push(turquia, rusia);
 peru.limitrofes.push(chile, argentina, brasil, colombia);
 argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
@@ -277,12 +304,13 @@ brasil.limitrofes.push(peru, argentina, uruguay, colombia);
 colombia.limitrofes.push(peru, brasil);
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral];
+let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, polonia];
 
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
 asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral);
+europa.push(rusia, suecia, polonia);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
@@ -584,6 +612,9 @@ siberia.id.addEventListener("click", () => test14(siberia));
 taimir.id.addEventListener("click", () => test14(taimir));
 tartaria.id.addEventListener("click", () => test14(tartaria));
 aral.id.addEventListener("click", () => test14(aral));
+rusia.id.addEventListener("click", () => test14(rusia));
+suecia.id.addEventListener("click", () => test14(suecia));
+polonia.id.addEventListener("click", () => test14(polonia));
 peru.id.addEventListener("click", () => test14(peru));
 argentina.id.addEventListener("click", () => test14(argentina));
 uruguay.id.addEventListener("click", () => test14(uruguay));

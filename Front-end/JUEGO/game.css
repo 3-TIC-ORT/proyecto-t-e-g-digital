@@ -247,6 +247,37 @@ body {
     transform:rotate(-15deg)
 }
 
+.europa{
+    background-color:orchid;
+}
+
+.rusia{
+    position: absolute;
+    top: 6rem; 
+    right: 22rem;
+    width: 60px;
+    height: 220px;
+    transform:rotate(-30deg)
+}
+
+.suecia{
+    position: absolute;
+    top: 7rem; 
+    right: 30rem;
+    width: 80px;
+    height: 60px;
+    transform:rotate(-15deg)
+}
+
+.polonia{
+    position: absolute;
+    top: 16rem; 
+    right: 23.5rem;
+    width: 60px;
+    height: 70px;
+    transform:rotate(-20deg)
+}
+
 .boton_atras {
     position: absolute;
     left: 1.5rem; 
@@ -297,7 +328,7 @@ a {
 
 .footer{
     position: absolute;
-    top: 36rem;
+    top: 40rem;
 }
 
 .boton_interaccion {

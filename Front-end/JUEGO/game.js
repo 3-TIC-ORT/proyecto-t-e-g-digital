@@ -168,6 +168,14 @@ let israel = {
     colorfichas: "",
     limitrofes: [],
 };
+let arabia = {
+    nombre:"Arabia",
+    continente: asia,
+    id: document.getElementById("arabiaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+}
 let peru = {
     nombre: "Perú",
     continente: sudamerica,
@@ -230,14 +238,15 @@ argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
 brasil.limitrofes.push(peru, argentina, uruguay, colombia);
 colombia.limitrofes.push(peru, brasil);
+arabia.limitrofes.push(israel, turquia);
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel];
+let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia];
 
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
-asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel);
+asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
@@ -534,6 +543,7 @@ mongolia.id.addEventListener("click", () => test14(mongolia));
 kamchatka.id.addEventListener("click", () => test14(kamchatka));
 turquia.id.addEventListener("click", () => test14(turquia));
 israel.id.addEventListener("click", () => test14(israel));
+arabia.id.addEventListener("click", () => test14(arabia));
 peru.id.addEventListener("click", () => test14(peru));
 argentina.id.addEventListener("click", () => test14(argentina));
 uruguay.id.addEventListener("click", () => test14(uruguay));
@@ -543,3 +553,4 @@ atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));
 atacarverde.addEventListener("click", () => test16("Verde"));
+

@@ -80,14 +80,6 @@ let borneo = {
     colorfichas: "",
     limitrofes: [],
 };
-let chile = {
-    nombre: "Chile",
-    continente: sudamerica,
-    id: document.getElementById("chileid"),
-    fichas: 3,
-    colorfichas: "",
-    limitrofes: [],
-};
 let india = {
     nombre: "India",
     continente: asia,
@@ -232,6 +224,30 @@ let polonia = {
     colorfichas: "",
     limitrofes: [],
 };
+let alaska = {
+    nombre:"Alaska",
+    continente: norteamerica,
+    id: document.getElementById("alaskaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let mexico = {
+    nombre:"México",
+    continente: norteamerica,
+    id: document.getElementById("mexicoid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let chile = {
+    nombre: "Chile",
+    continente: sudamerica,
+    id: document.getElementById("chileid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 let peru = {
     nombre: "Perú",
     continente: sudamerica,
@@ -272,13 +288,28 @@ let colombia = {
     colorfichas: "",
     limitrofes: [],
 };
+let sahara = {
+    nombre: "Sahara",
+    continente: africa,
+    id: document.getElementById("saharaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let egipto = {
+    nombre: "Egipto",
+    continente: africa,
+    id: document.getElementById("egiptoid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 
 //push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
 sumatra.limitrofes.push(australia, india);
 java.limitrofes.push(australia);
 borneo.limitrofes.push(australia, malasia);
-chile.limitrofes.push(australia, peru, argentina);
 india.limitrofes.push(sumatra, malasia, china, iran);
 malasia.limitrofes.push(borneo, india, china);
 china.limitrofes.push(india, malasia, iran, japon, gobi, mongolia, kamchatka, siberia);
@@ -286,9 +317,9 @@ iran.limitrofes.push(india, china, gobi, mongolia, turquia, aral, rusia);
 japon.limitrofes.push(china, kamchatka);
 gobi.limitrofes.push(china, iran, mongolia);
 mongolia.limitrofes.push(china, iran, gobi, siberia);
-kamchatka.limitrofes.push(china, japon, siberia);
-turquia.limitrofes.push(iran, israel, arabia, rusia, polonia),
-israel.limitrofes.push(turquia, arabia),
+kamchatka.limitrofes.push(china, japon, siberia, alaska);
+turquia.limitrofes.push(iran, israel, arabia, rusia, polonia, egipto),
+israel.limitrofes.push(turquia, arabia, egipto),
 arabia.limitrofes.push(turquia, israel);
 siberia.limitrofes.push(china, mongolia, kamchatka, taimir, tartaria, aral);
 taimir.limitrofes.push(siberia, tartaria);
@@ -296,21 +327,28 @@ tartaria.limitrofes.push(siberia, taimir, aral);
 aral.limitrofes.push(iran, siberia, tartaria, rusia);
 rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);
 suecia.limitrofes.push(rusia);
-polonia.limitrofes.push(turquia, rusia);
+polonia.limitrofes.push(turquia, rusia, egipto);
+alaska.limitrofes.push(kamchatka);
+mexico.limitrofes.push(colombia);
+chile.limitrofes.push(australia, peru, argentina);
 peru.limitrofes.push(chile, argentina, brasil, colombia);
 argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
-brasil.limitrofes.push(peru, argentina, uruguay, colombia);
-colombia.limitrofes.push(peru, brasil);
+brasil.limitrofes.push(peru, argentina, uruguay, colombia, sahara);
+colombia.limitrofes.push(mexico, peru, brasil);
+sahara.limitrofes.push(brasil, egipto);
+egipto.limitrofes.push(turquia, israel, polonia, sahara);
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, chile, india, malasia, china, iran, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, polonia];
+let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, polonia, sahara, egipto, alaska, mexico];
 
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
 asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral);
 europa.push(rusia, suecia, polonia);
+africa.push(sahara, egipto);
+norteamerica.push(alaska, mexico);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
@@ -596,7 +634,6 @@ australia.id.addEventListener("click", () => test14(australia));
 sumatra.id.addEventListener("click", () => test14(sumatra));
 java.id.addEventListener("click", () => test14(java));
 borneo.id.addEventListener("click", () => test14(borneo));
-chile.id.addEventListener("click", () => test14(chile));
 india.id.addEventListener("click", () => test14(india));
 malasia.id.addEventListener("click", () => test14(malasia));
 china.id.addEventListener("click", () => test14(china));
@@ -615,11 +652,16 @@ aral.id.addEventListener("click", () => test14(aral));
 rusia.id.addEventListener("click", () => test14(rusia));
 suecia.id.addEventListener("click", () => test14(suecia));
 polonia.id.addEventListener("click", () => test14(polonia));
+alaska.id.addEventListener("click", () => test14(alaska));
+mexico.id.addEventListener("click", () => test14(mexico));
+chile.id.addEventListener("click", () => test14(chile));
 peru.id.addEventListener("click", () => test14(peru));
 argentina.id.addEventListener("click", () => test14(argentina));
 uruguay.id.addEventListener("click", () => test14(uruguay));
 brasil.id.addEventListener("click", () => test14(brasil));
 colombia.id.addEventListener("click", () => test14(colombia));
+sahara.id.addEventListener("click", () => test14(sahara));
+egipto.id.addEventListener("click", () => test14(egipto));
 atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));

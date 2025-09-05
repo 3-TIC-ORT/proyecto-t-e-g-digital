@@ -7,6 +7,9 @@ body {
     justify-items: center;
     background-color: #242323;
     height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
  }
 
 .oceania{
@@ -99,6 +102,11 @@ body {
     left: 23rem;
     width: 100px;
     height: 45px;
+    background-image: url(../IMAGENES/colombia.png);
+    background-size:50px; 
+    background-position: center; 
+    background-repeat: no-repeat
+
 }
 
 .asia{
@@ -289,5 +297,16 @@ a {
 
 .footer{
     position: absolute;
-    top: 40rem;
+    top: 36rem;
 }
+
+.boton_interaccion {
+width: fit-content;
+height: fit-content;
+color: #c59a3e;
+padding: 4px;
+background-color: #242323;
+font-weight: 100;
+margin: 2px;
+}
+

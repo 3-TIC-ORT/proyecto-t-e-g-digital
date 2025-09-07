@@ -10,137 +10,65 @@
     <link rel="stylesheet" href="../JUEGO/game.css" />
 </head>
 <body>
-    <header><button id="guardar" class="guardar"> Guardar </button>
-    <div class="boton_atras"><a href="../INICIO/inicio.html"> Salir </a></div>
-    <div id="currentturn" class="currentturn">
-    Turno:
-    </div>
-    <div id="currentphase" class="currentturn">
-    Fase:
-    </div>
+    <header>
+        <button id="guardar" class="guardar"> Guardar </button>
+        <div class="boton_atras"><a href="../INICIO/inicio.html"> Salir </a></div>
+        <div id="currentturn" class="currentturn">
+            Turno:
+        </div>
+        <div id="currentphase" class="currentturn">
+            Fase:
+        </div>
     </header>
-    <img src="../IMAGENES/mapa.png" width=100% height=auto>
-    <div id="rusiaid" class="europa rusia">
-    Rusia
+
+    <div class="map-container">
+        <img src="../IMAGENES/mapa.png" class="mapa">
+
+        <div id="rusiaid" class="europa rusia">Rusia</div>
+        <div id="alemaniaid" class="europa alemania">Alemania</div>
+        <div id="sueciaid" class="europa suecia">Suecia</div>
+        <div id="poloniaid" class="europa polonia">Polonia</div>
+        <div id="iranid" class="asia iran">Irán</div>
+        <div id="japonid" class="asia japon">Japón</div>
+        <div id="gobiid" class="asia gobi">Gobi</div>
+        <div id="mongoliaid" class="asia mongolia">Mongolia</div>
+        <div id="kamchatkaid" class="asia kamchatka">Kamchatka</div>
+        <div id="turquiaid" class="asia turquia">Turquía</div>
+        <div id="israelid" class="asia israel">Israel</div>
+        <div id="arabiaid" class="asia arabia">Arabia</div>
+        <div id="siberiaid" class="asia siberia">Siberia</div>
+        <div id="taimirid" class="asia taimir">Taimir</div>
+        <div id="tartariaid" class="asia tartaria">Tartaria</div>
+        <div id="aralid" class="asia aral">Aral</div>
+        <div id="chinaid" class="asia china">China</div>
+        <div id="malasiaid" class="asia malasia">Malasia</div>
+        <div id="indiaid" class="asia india">India</div>
+        <div id="sumatraid" class="oceania sumatra">Sumatra</div>
+        <div id="borneoid" class="oceania borneo">Borneo</div>
+        <div id="javaid" class="oceania java">Java</div>
+        <div id="australiaid" class="oceania australia">Australia</div>
+        <div id="alaskaid" class="norteamerica alaska">Alaska</div>
+        <div id="mexicoid" class="norteamerica mexico">México</div>
+        <div id="chileid" class="sudamerica chile">Chile</div>
+        <div id="peruid" class="sudamerica peru">Perú</div>
+        <div id="argentinaid" class="sudamerica argentina">Argentina</div>
+        <div id="uruguayid" class="sudamerica uruguay">Uruguay</div>
+        <div id="brasilid" class="sudamerica brasil">Brasil</div>
+        <div id="colombiaid" class="sudamerica colombia">Colombia</div>
+        <div id="saharaid" class="africa sahara">Sahara</div>
+        <div id="egiptoid" class="africa egipto">Egipto</div>
+        <div id="etiopiaid" class="africa etiopia">Etiopía</div>
     </div>
-    <div id="sueciaid" class="europa suecia">
-    Suecia
-    </div>
-    <div id="poloniaid" class="europa polonia">
-    Polonia
-    </div>
-    <div id="iranid" class="asia iran">
-    Irán
-    </div>
-    <div id="japonid" class="asia japon">
-    Japón
-    </div>
-    <div id="gobiid" class="asia gobi">
-    Gobi
-    </div>
-    <div id="mongoliaid" class="asia mongolia">
-    Mongolia
-    </div>
-    <div id="kamchatkaid" class="asia kamchatka">
-    Kamchatka
-    </div>
-    <div id="turquiaid" class="asia turquia">
-    Turquía
-    </div>
-    <div id="israelid" class="asia israel">
-    Israel
-    </div>
-    <div id="arabiaid" class="asia arabia">
-    Arabia
-    </div>
-    <div id="siberiaid" class="asia siberia">
-    Siberia
-    </div>
-    <div id="taimirid" class="asia taimir">
-    Taimir
-    </div>
-    <div id="tartariaid" class="asia tartaria">
-    Tartaria
-    </div>
-    <div id="aralid" class="asia aral">
-    Aral
-    </div>
-    <div id="chinaid" class="asia china">
-    China
-    </div>
-    <div id="malasiaid" class="asia malasia">
-    Malasia
-    </div>
-    <div id="indiaid" class="asia india">
-    India
-    </div>
-    <div id="sumatraid" class="oceania sumatra">
-    Sumatra
-    </div>
-    <div id="borneoid" class="oceania borneo">
-    Borneo
-    </div>
-    <div id="javaid" class="oceania java">
-    Java
-    </div>
-    <div id="australiaid" class="oceania australia">
-    Australia
-    </div>
-    <div id="alaskaid" class="norteamerica alaska">
-    Alaska
-    </div>
-    <div id="mexicoid" class="norteamerica mexico">
-    México
-    </div>
-    <div id="chileid" class="sudamerica chile">
-    Chile
-    </div>
-    <div id="peruid" class="sudamerica peru">
-    Perú
-    </div>
-    <div id="argentinaid" class="sudamerica argentina">
-    Argentina
-    </div>
-    <div id="uruguayid" class="sudamerica uruguay">
-    Uruguay
-    </div>
-    <div id="brasilid" class="sudamerica brasil">
-    Brasil
-    </div>
-    <div id="colombiaid" class="sudamerica colombia">
-    Colombia
-    </div>
-    <div id="saharaid" class="africa sahara">
-    Sahara
-    </div>
-    <div id="egiptoid" class="africa egipto">
-    Egipto
-    </div>
+
     <footer class="footer">
-    <button id="atacarrojo" class="boton_interaccion">
-    Atacar (Rojo)
-    </button>
-    <button id="pasarojo" class="boton_interaccion">
-    Pasar Turno (Rojo)
-    </button>
-    <button id="atacarazul" class="boton_interaccion">
-    Atacar (Azul)
-    </button>
-    <button id="pasaazul" class="boton_interaccion">
-    Pasar Turno (Azul)
-    </button>
-    <button id="atacaramarillo" class="boton_interaccion">
-    Atacar (Amarillo)
-    </button>
-    <button id="pasaamarillo" class="boton_interaccion">
-    Pasar Turno (Amarillo)
-    </button>
-    <button id="atacarverde" class="boton_interaccion">
-    Atacar (Verde)
-    </button>
-    <button id="pasaverde" class="boton_interaccion">
-    Pasar Turno (Verde)
-    </button>
+        <button id="atacarrojo" class="boton_interaccion">Atacar (Rojo)</button>
+        <button id="pasarojo" class="boton_interaccion">Pasar Turno (Rojo)</button>
+        <button id="atacarazul" class="boton_interaccion">Atacar (Azul)</button>
+        <button id="pasaazul" class="boton_interaccion">Pasar Turno (Azul)</button>
+        <button id="atacaramarillo" class="boton_interaccion">Atacar (Amarillo)</button>
+        <button id="pasaamarillo" class="boton_interaccion">Pasar Turno (Amarillo)</button>
+        <button id="atacarverde" class="boton_interaccion">Atacar (Verde)</button>
+        <button id="pasaverde" class="boton_interaccion">Pasar Turno (Verde)</button>
     </footer>
 </body>
 </html>

@@ -1,362 +1,375 @@
 body {
     position: relative;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-items: center;
     background-color: #242323;
-    height: 500px;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
- }
-
-.oceania{
-    background-color: darkcyan;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
+
+.oceania { background-color: darkcyan; }
+.sudamerica { background-color: seagreen; }
+.asia { background-color: darkslategray; }
+.europa { background-color: orchid; }
+.africa { background-color: sienna; }
+.norteamerica { background-color: orangered; }
+
+
+.map-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1e1e1e; 
+}
+
+.mapa {
+  width: 95%;       
+  height: auto;     
+  display: block;
+  margin: 0 auto;   
+  object-fit: contain;
+}
+
 
 .australia {
     position: absolute;
-    top: 31rem; 
-    right: 2rem; 
-    width: 100px;
-    height: 80px;
+    top: 75%;
+    right: 2%;
+    width: 7%;
+    height: auto;
 }
 
-.sumatra{
+.sumatra {
     position: absolute;
-    top: 27rem; 
-    right: 11rem;
-    width: 50px;
-    height: 70px;
-    transform:rotate(-30deg)
+    top: 66%;
+    right: 12%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-30deg);
 }
 
-.borneo{
+.borneo {
     position: absolute;
-    top: 24rem; 
-    right: 6rem;
-    width: 40px;
-    height: 70px;
-    transform:rotate(-15deg)
+    top: 59%;
+    right: 7%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.java{
+.java {
     position: absolute;
-    top: 24rem; 
-    right: 2rem;
-    width: 40px;
-    height: 60px;
+    top: 59%;
+    right: 2%;
+    width: 3%;
+    height: auto;
 }
 
-.sudamerica{
-    background-color: seagreen;
-}
 
-.chile{
+.chile {
     position: absolute;
-    top: 30rem; 
-    left: 25rem;
-    width: 30px;
-    height: 120px;
+    top: 73%;
+    right: 70%;
+    width: 2%;
+    height: auto;
 }
 
-.peru{
+.peru {
     position: absolute;
-    top: 27rem; 
-    left: 24rem;
-    width: 80px;
-    height: 50px;
+    top: 66%;
+    right: 72%;
+    width: 4%;
+    height: auto;
 }
 
-.argentina{
+.argentina {
     position: absolute;
-    top: 30rem; 
-    left: 27rem;
-    width: 50px;
-    height: 120px;
-    transform:rotate(10deg)
+    top: 74%;
+    right: 67%;
+    width: 3%;
+    height: auto;
+    transform: rotate(10deg);
 }
 
-.uruguay{
+.uruguay {
     position: absolute;
-    top: 30.5rem; 
-    left: 30.5rem;
-    width: 75px;
-    height: 40px;
-    transform:rotate(-15deg)
+    top: 74%;
+    right: 63%;
+    width: 4%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.brasil{
+.brasil {
     position: absolute;
-    top: 25rem; 
-    left: 29.5rem;
-    width: 120px;
-    height: 85px;
+    top: 62%;
+    right: 65%;
+    width: 8%;
+    height: auto;
 }
 
-.colombia{
+.colombia {
     position: absolute;
-    top: 24rem; 
-    left: 23rem;
-    width: 100px;
-    height: 45px;
-    background-image: url(../IMAGENES/colombia.png);
-    background-size:50px; 
-    background-position: center; 
-    background-repeat: no-repeat
-
+    top: 59%;
+    right: 73%;
+    width: 5%;
+    height: auto;
 }
 
-.asia{
-    background-color:darkslategray;
-}
-
-.india{
+.india {
     position: absolute;
-    top: 20rem; 
-    right: 9rem;
-    width: 40px;
-    height: 100px;
-    transform:rotate(15deg)
+    top: 50%;
+    right: 9%;
+    width: 3%;
+    height: auto;
+    transform: rotate(15deg);
 }
 
-.malasia{
+.malasia {
     position: absolute;
-    top: 19rem; 
-    right: 3rem;
-    width: 50px;
-    height: 60px;
-    transform:rotate(-15deg)
+    top: 47%;
+    right: 3%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.china{
+.china {
     position: absolute;
-    top: 9rem; 
-    right: 7rem;
-    width: 70px;
-    height: 160px;
-    transform:rotate(-15deg)
+    top: 23%;
+    right: 7%;
+    width: 6%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.iran{
+.iran {
     position: absolute;
-    top: 10rem; 
-    right: 17rem;
-    width: 30px;
-    height: 200px;
-    transform:rotate(-35deg)
+    top: 25%;
+    right: 18%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-35deg);
 }
 
-.japon{
+.japon {
     position: absolute;
-    top: 8rem; 
-    right: 2rem;
-    width: 80px;
-    height: 40px;
-    transform:rotate(40deg)
+    top: 20%;
+    right: 2%;
+    width: 4%;
+    height: auto;
+    transform: rotate(40deg);
 }
 
-.gobi{
+.gobi {
     position: absolute;
-    top: 14rem; 
-    right: 12rem;
-    width: 70px;
-    height: 60px;
-    transform:rotate(-15deg)
+    top: 35%;
+    right: 12%;
+    width: 4%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.mongolia{
+.mongolia {
     position: absolute;
-    top: 10rem; 
-    right: 13rem;
-    width: 80px;
-    height: 60px;
-    transform:rotate(-15deg)
+    top: 25%;
+    right: 13%;
+    width: 5%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.kamchatka{
+.kamchatka {
     position: absolute;
-    top: 5rem; 
-    right: 9rem;
-    width: 60px;
-    height: 60px;
-    transform:rotate(-20deg)
+    top: 12%;
+    right: 9%;
+    width: 4%;
+    height: auto;
+    transform: rotate(-20deg);
 }
 
-.turquia{
+.turquia {
     position: absolute;
-    top: 19rem; 
-    right: 17rem;
-    width: 120px;
-    height: 40px;
-    transform:rotate(-20deg)
+    top: 48%;
+    right: 17%;
+    width: 7%;
+    height: auto;
+    transform: rotate(-20deg);
 }
 
-.israel{
+.israel {
     position: absolute;
-    top: 22rem; 
-    right: 17rem;
-    width: 90px;
-    height: 30px;
-    transform:rotate(-20deg)
+    top: 55%;
+    right: 17%;
+    width: 5%;
+    height: auto;
+    transform: rotate(-20deg);
 }
 
 .arabia {
     position: absolute;
-    top: 23rem; 
-    right: 15rem;
-    width: 60px;
-    height: 60px;
-    transform:rotate(-25deg)
+    top: 58%;
+    right: 15%;
+    width: 5%;
+    height: auto;
+    transform: rotate(-25deg);
 }
 
-.siberia{
+.siberia {
     position: absolute;
-    top: 8rem; 
-    right: 13rem;
-    width: 120px;
-    height: 30px;
-    transform:rotate(-15deg)
+    top: 20%;
+    right: 13%;
+    width: 7%;
+    height: auto;
+    transform: rotate(-15deg);
 }
-
-.taimir{
+z
+.taimir {
     position: absolute;
-    top: 4rem; 
-    right: 15rem;
-    width: 50px;
-    height: 60px;
-    transform:rotate(15deg)
+    top: 10%;
+    right: 15%;
+    width: 4%;
+    height: auto;
+    transform: rotate(15deg);
 }
 
-.tartaria{
+.tartaria {
     position: absolute;
-    top: 4rem; 
-    right: 18.5rem;
-    width: 40px;
-    height: 70px;
+    top: 10%;
+    right: 18.5%;
+    width: 3%;
+    height: auto;
 }
 
-.aral{
+.aral {
     position: absolute;
-    top: 6rem; 
-    right: 21rem;
-    width: 40px;
-    height: 70px;
-    transform:rotate(-15deg)
+    top: 15%;
+    right: 21%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.europa{
-    background-color:orchid;
-}
-
-.rusia{
+.rusia {
     position: absolute;
-    top: 6rem; 
-    right: 22rem;
-    width: 60px;
-    height: 220px;
-    transform:rotate(-30deg)
+    top: 15%;
+    right: 22%;
+    width: 4%;
+    height: auto;
+    transform: rotate(-30deg);
 }
 
-.suecia{
+.suecia {
     position: absolute;
-    top: 7rem; 
-    right: 30rem;
-    width: 80px;
-    height: 60px;
-    transform:rotate(-15deg)
+    top: 18%;
+    right: 30%;
+    width: 5%;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-.polonia{
+.polonia {
     position: absolute;
-    top: 16rem; 
-    right: 23.5rem;
-    width: 60px;
-    height: 70px;
-    transform:rotate(-20deg)
+    top: 40%;
+    right: 24%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-20deg);
 }
 
-.africa{
-    background-color:sienna;
-}
-
-.sahara{
+.alemania {
     position: absolute;
-    top: 29rem; 
-    right: 30rem;
-    width: 80px;
-    height: 70px;
+    top: 38%;
+    right: 27%;
+    width: 3%;
+    height: auto;
+    transform: rotate(-10deg);
 }
 
-.egipto{
+.sahara {
     position: absolute;
-    top: 28.5rem; 
-    right: 19rem;
-    width: 110px;
-    height: 40px;
-    transform:rotate(20deg)
+    top: 72%;
+    right: 30%;
+    width: 5%;
+    height: auto;
 }
 
-.norteamerica{
-    background-color:orangered;
-}
-
-.mexico{
+.egipto {
     position: absolute;
-    top: 21rem; 
-    right: 60rem;
-    width: 120px;
-    height: 35px;
-    transform:rotate(30deg)
+    top: 71%;
+    right: 19%;
+    width: 7%;
+    height: auto;
+    transform: rotate(20deg);
 }
 
-.alaska{
+.etiopia {
     position: absolute;
-    top: 12rem; 
-    right: 78.5rem;
-    width: 50px;
-    height: 90px;
+    top: 68%;
+    right: 25%;
+    width: 5%;
+    height: auto;
+    transform: rotate(10deg);
+}
+
+.mexico {
+    position: absolute;
+    top: 52%;
+    right: 60%;
+    width: 7%;
+    height: auto;
+    transform: rotate(30deg);
+}
+
+.alaska {
+    position: absolute;
+    top: 30%;
+    right: 78.5%;
+    width: 3%;
+    height: auto;
 }
 
 .boton_atras {
     position: absolute;
-    left: 1.5rem; 
+    left: 1.5rem;
     z-index: 100;
     font-weight: 400;
     text-transform: uppercase;
-    color: #f7f3e9; 
-    background-color: #c59a3e; 
-    border: 3px solid #ffffff; 
+    color: #f7f3e9;
+    background-color: #c59a3e;
+    border: 3px solid #ffffff;
     padding: 5px 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     display: inline-block;
     text-decoration: none;
 }
 
-.guardar{
+.guardar {
     position: absolute;
     right: 1.5rem;
     width: 100px;
     z-index: 100;
     font-weight: 400;
     text-transform: uppercase;
-    color: #f7f3e9; 
-    background-color: #c59a3e; 
-    border: 3px solid #ffffff; 
+    color: #f7f3e9;
+    background-color: #c59a3e;
+    border: 3px solid #ffffff;
     padding: 5px 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     display: inline-block;
     text-decoration: none;
 }
 
-.currentturn{
-    color:white;
+.currentturn {
+    color: white;
     background-color: darkgoldenrod;
     width: 120px;
     text-align: center;
@@ -368,18 +381,19 @@ a {
     text-decoration: none;
 }
 
-.footer{
+.footer {
     position: absolute;
-    top: 40rem;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
 }
 
 .boton_interaccion {
-width: fit-content;
-height: fit-content;
-color: #c59a3e;
-padding: 4px;
-background-color: #242323;
-font-weight: 100;
-margin: 2px;
+    width: fit-content;
+    height: fit-content;
+    color: #c59a3e;
+    padding: 4px;
+    background-color: #242323;
+    font-weight: 100;
+    margin: 2px;
 }
-

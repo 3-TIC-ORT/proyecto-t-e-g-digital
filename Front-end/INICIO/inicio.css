@@ -59,8 +59,8 @@ text-decoration: none;
 
 .logoMini {
     position: absolute;
-    top: 35rem; 
-    right: 78rem; 
+    top: 85%; 
+    right: 92%; 
     height: 68px; 
     width: 70px; 
 }

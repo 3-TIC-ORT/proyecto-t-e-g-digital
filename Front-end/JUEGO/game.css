@@ -5,9 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #242323;
-    height: 100vh;
+    height: 120vh;
     margin: 0;
-    overflow: hidden;
+    gap: 1%;
 }
 
 .oceania { background-color: darkcyan; }
@@ -20,14 +20,14 @@ body {
 
 .map-container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   background-color: #1e1e1e; 
 }
 
 .mapa {
-  width: 95%;       
+  width: 100%;       
   height: auto;     
   display: block;
   margin: 0 auto;   
@@ -37,149 +37,149 @@ body {
 
 .australia {
     position: absolute;
-    top: 75%;
+    top: 72%;
     right: 2%;
     width: 7%;
-    height: auto;
+    height: 14%;
 }
 
 .sumatra {
     position: absolute;
-    top: 66%;
-    right: 12%;
+    top: 63%;
+    right: 14%;
     width: 3%;
-    height: auto;
+    height: 12%;
     transform: rotate(-30deg);
 }
 
 .borneo {
     position: absolute;
-    top: 59%;
+    top: 55%;
     right: 7%;
     width: 3%;
-    height: auto;
+    height: 12%;
     transform: rotate(-15deg);
 }
 
 .java {
     position: absolute;
-    top: 59%;
+    top: 54%;
     right: 2%;
     width: 3%;
-    height: auto;
+    height: 12%;
 }
 
 
 .chile {
     position: absolute;
     top: 73%;
-    right: 70%;
+    right: 68%;
     width: 2%;
-    height: auto;
+    height: 18%;
 }
 
 .peru {
     position: absolute;
-    top: 66%;
-    right: 72%;
-    width: 4%;
-    height: auto;
+    top: 63%;
+    right: 65%;
+    width: 6%;
+    height: 8%;
 }
 
 .argentina {
     position: absolute;
-    top: 74%;
-    right: 67%;
-    width: 3%;
-    height: auto;
+    top: 72%;
+    right: 64%;
+    width: 4%;
+    height: 18%;
     transform: rotate(10deg);
 }
 
 .uruguay {
     position: absolute;
     top: 74%;
-    right: 63%;
-    width: 4%;
-    height: auto;
+    right: 58%;
+    width: 6%;
+    height: 6%;
     transform: rotate(-15deg);
 }
 
 .brasil {
     position: absolute;
-    top: 62%;
-    right: 65%;
-    width: 8%;
-    height: auto;
+    top: 58%;
+    right: 55%;
+    width: 9%;
+    height: 13%;
 }
 
 .colombia {
     position: absolute;
-    top: 59%;
-    right: 73%;
-    width: 5%;
-    height: auto;
+    top: 55%;
+    right: 65%;
+    width: 7%;
+    height: 7%;
 }
 
 .india {
     position: absolute;
-    top: 50%;
-    right: 9%;
+    top: 48%;
+    right: 11%;
     width: 3%;
-    height: auto;
+    height: 14%;
     transform: rotate(15deg);
 }
 
 .malasia {
     position: absolute;
-    top: 47%;
+    top: 43%;
     right: 3%;
-    width: 3%;
-    height: auto;
+    width: 5%;
+    height: 8%;
     transform: rotate(-15deg);
 }
 
 .china {
     position: absolute;
-    top: 23%;
-    right: 7%;
+    top: 15%;
+    right: 8%;
     width: 6%;
-    height: auto;
+    height: 30%;
     transform: rotate(-15deg);
 }
 
 .iran {
     position: absolute;
-    top: 25%;
-    right: 18%;
+    top: 22%;
+    right: 20%;
     width: 3%;
-    height: auto;
+    height: 28%;
     transform: rotate(-35deg);
 }
 
 .japon {
     position: absolute;
-    top: 20%;
+    top: 14%;
     right: 2%;
-    width: 4%;
-    height: auto;
+    width: 7%;
+    height: 6%;
     transform: rotate(40deg);
 }
 
 .gobi {
     position: absolute;
-    top: 35%;
-    right: 12%;
-    width: 4%;
-    height: auto;
-    transform: rotate(-15deg);
+    top: 31%;
+    right: 13.5%;
+    width: 5%;
+    height: 10%;
+    transform: rotate(-25deg);
 }
 
 .mongolia {
     position: absolute;
-    top: 25%;
-    right: 13%;
-    width: 5%;
-    height: auto;
+    top: 21%;
+    right: 15.5%;
+    width: 6%;
+    height: 10%;
     transform: rotate(-15deg);
 }
 
@@ -221,19 +221,19 @@ body {
 
 .siberia {
     position: absolute;
-    top: 20%;
+    top: 10%;
     right: 13%;
     width: 7%;
     height: auto;
     transform: rotate(-15deg);
 }
-z
+
 .taimir {
     position: absolute;
-    top: 10%;
+    top: 5%;
     right: 15%;
     width: 4%;
-    height: auto;
+    height: 4%;
     transform: rotate(15deg);
 }
 
@@ -318,19 +318,19 @@ z
 
 .mexico {
     position: absolute;
-    top: 52%;
-    right: 60%;
-    width: 7%;
-    height: auto;
+    top: 46%;
+    right: 72%;
+    width: 9%;
+    height: 7%;
     transform: rotate(30deg);
 }
 
 .alaska {
     position: absolute;
-    top: 30%;
-    right: 78.5%;
-    width: 3%;
-    height: auto;
+    top: 26%;
+    right: 94%;
+    width: 4%;
+    height: 14%;
 }
 
 .boton_atras {
@@ -382,10 +382,17 @@ a {
 }
 
 .footer {
+    display: flex;
+    direction: row;
     position: absolute;
-    bottom: 1rem;
+    bottom: 1%;
     width: 100%;
     text-align: center;
+}
+
+.sector{
+    display:flex;
+    direction: column;
 }
 
 .boton_interaccion {

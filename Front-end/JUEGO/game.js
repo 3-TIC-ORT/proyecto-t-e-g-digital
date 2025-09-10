@@ -360,7 +360,7 @@ etiopia.limitrofes.push(egipto, sahara);
 
 //declaracion de paises
 let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico];
-
+let estadoJuego = paises
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
@@ -473,6 +473,7 @@ function test12(colorturno) {
                     currentphase.textContent = "Fase: " + fase;
                 };
             };
+
             };
         };
 function test14(pais) {
@@ -649,8 +650,6 @@ skiprojo.addEventListener("click", () => test12("Rojo"));
 skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
-
-
 australia.id.addEventListener("click", () => test14(australia));
 sumatra.id.addEventListener("click", () => test14(sumatra));
 java.id.addEventListener("click", () => test14(java));
@@ -685,9 +684,10 @@ colombia.id.addEventListener("click", () => test14(colombia));
 sahara.id.addEventListener("click", () => test14(sahara));
 egipto.id.addEventListener("click", () => test14(egipto));
 etiopia.id.addEventListener("click", () => test14(etiopia));
-
 atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));
 atacarverde.addEventListener("click", () => test16("Verde"));
 
+
+    

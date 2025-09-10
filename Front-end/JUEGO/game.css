@@ -72,7 +72,7 @@ body {
 
 .chile {
     position: absolute;
-    top: 73%;
+    top: 74%;
     right: 68%;
     width: 2%;
     height: 18%;
@@ -80,7 +80,7 @@ body {
 
 .peru {
     position: absolute;
-    top: 63%;
+    top: 65%;
     right: 65%;
     width: 6%;
     height: 8%;
@@ -88,7 +88,7 @@ body {
 
 .argentina {
     position: absolute;
-    top: 72%;
+    top: 74%;
     right: 64%;
     width: 4%;
     height: 18%;
@@ -106,15 +106,15 @@ body {
 
 .brasil {
     position: absolute;
-    top: 58%;
-    right: 55%;
+    top: 60%;
+    right: 55.5%;
     width: 9%;
     height: 13%;
 }
 
 .colombia {
     position: absolute;
-    top: 55%;
+    top: 57%;
     right: 65%;
     width: 7%;
     height: 7%;
@@ -151,8 +151,8 @@ body {
     position: absolute;
     top: 22%;
     right: 20%;
-    width: 3%;
-    height: 28%;
+    width: 2%;
+    height: 30%;
     transform: rotate(-35deg);
 }
 
@@ -185,97 +185,97 @@ body {
 
 .kamchatka {
     position: absolute;
-    top: 12%;
-    right: 9%;
-    width: 4%;
-    height: auto;
+    top: 6%;
+    right: 11%;
+    width: 5%;
+    height: 8%;
     transform: rotate(-20deg);
 }
 
 .turquia {
     position: absolute;
-    top: 48%;
-    right: 17%;
-    width: 7%;
-    height: auto;
+    top: 45%;
+    right: 20%;
+    width: 9%;
+    height: 6%;
     transform: rotate(-20deg);
 }
 
 .israel {
     position: absolute;
-    top: 55%;
-    right: 17%;
-    width: 5%;
-    height: auto;
+    top: 52%;
+    right: 21%;
+    width: 6%;
+    height: 7%;
     transform: rotate(-20deg);
 }
 
 .arabia {
     position: absolute;
-    top: 58%;
-    right: 15%;
+    top: 56%;
+    right: 18%;
     width: 5%;
-    height: auto;
+    height: 7%;
     transform: rotate(-25deg);
 }
 
 .siberia {
     position: absolute;
-    top: 10%;
-    right: 13%;
-    width: 7%;
-    height: auto;
-    transform: rotate(-15deg);
+    top: 15%;
+    right: 16%;
+    width: 8%;
+    height: 6%;
+    transform: rotate(-10deg);
 }
 
 .taimir {
     position: absolute;
     top: 5%;
-    right: 15%;
+    right: 17.5%;
     width: 4%;
-    height: 4%;
+    height: 9%;
     transform: rotate(15deg);
 }
 
 .tartaria {
     position: absolute;
-    top: 10%;
-    right: 18.5%;
+    top: 3%;
+    right: 22%;
     width: 3%;
-    height: auto;
+    height: 13%;
 }
 
 .aral {
     position: absolute;
-    top: 15%;
-    right: 21%;
+    top: 9%;
+    right: 25%;
     width: 3%;
-    height: auto;
+    height: 12%;
     transform: rotate(-15deg);
 }
 
 .rusia {
     position: absolute;
-    top: 15%;
-    right: 22%;
-    width: 4%;
-    height: auto;
+    top: 9%;
+    right: 26%;
+    width: 5%;
+    height: 36%;
     transform: rotate(-30deg);
 }
 
 .suecia {
     position: absolute;
-    top: 18%;
-    right: 30%;
-    width: 5%;
-    height: auto;
+    top: 13%;
+    right: 36%;
+    width: 6%;
+    height: 10%;
     transform: rotate(-15deg);
 }
 
 .polonia {
     position: absolute;
     top: 40%;
-    right: 24%;
+    right: 44%;
     width: 3%;
     height: auto;
     transform: rotate(-20deg);
@@ -284,7 +284,7 @@ body {
 .alemania {
     position: absolute;
     top: 38%;
-    right: 27%;
+    right: 47%;
     width: 3%;
     height: auto;
     transform: rotate(-10deg);
@@ -318,7 +318,7 @@ body {
 
 .mexico {
     position: absolute;
-    top: 46%;
+    top: 48%;
     right: 72%;
     width: 9%;
     height: 7%;
@@ -327,7 +327,7 @@ body {
 
 .alaska {
     position: absolute;
-    top: 26%;
+    top: 27%;
     right: 94%;
     width: 4%;
     height: 14%;

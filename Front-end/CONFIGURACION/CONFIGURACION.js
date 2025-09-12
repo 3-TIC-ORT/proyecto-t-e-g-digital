@@ -14,23 +14,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (estaSonando) {
         musica.play();
-        botonMusica.textContent = "Música: SI";
+        botonMusica.textContent = "Musica: SI";
     } else {
         musica.pause();
-        botonMusica.textContent = "Música: NO";
+        botonMusica.textContent = "Musica: NO";
     }
 
-    // Botón de musica
+    // Boton de musica
 
     botonMusica.addEventListener("click", pausarMusica);
         
         function pausarMusica () {
         if (musica.paused) {
             musica.play();
-            botonMusica.textContent = "Música: SI";
+            botonMusica.textContent = "Musica: SI";
         } else {
             musica.pause();
-            botonMusica.textContent = "Música: NO";
+            botonMusica.textContent = "Musica: NO";
         }
         localStorage.setItem("isMusicPlaying", !musica.paused);
     }

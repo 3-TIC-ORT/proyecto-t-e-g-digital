@@ -741,4 +741,26 @@ skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 
-    
+
+//funcion guardar partida
+
+function obtenerEstadoJuego() {
+    let paisesLimpios = paises.map(p => ({
+      nombre: p.nombre,
+      fichas: p.fichas,
+      color: p.color,
+    }));
+  
+    return {
+      paises: paisesLimpios,
+      turno: turno,  
+      fase: fase,    
+    };
+  }
+  
+function guardarPartida() {
+    let estado = obtenerEstadoJuego();
+    postEvent("guardarJuego", estado, (resp) => {
+      console.log("Guardado:", resp.msg);
+    });
+  }

@@ -1,0 +1,605 @@
+[
+  {
+    "paises": [
+      {
+        "nombre": "Australia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Sumatra",
+        "fichas": 3
+      },
+      {
+        "nombre": "Java",
+        "fichas": 3
+      },
+      {
+        "nombre": "Borneo",
+        "fichas": 3
+      },
+      {
+        "nombre": "India",
+        "fichas": 3
+      },
+      {
+        "nombre": "Malasia",
+        "fichas": 3
+      },
+      {
+        "nombre": "China",
+        "fichas": 3
+      },
+      {
+        "nombre": "Irán",
+        "fichas": 3
+      },
+      {
+        "nombre": "Chile",
+        "fichas": 3
+      },
+      {
+        "nombre": "Perú",
+        "fichas": 3
+      },
+      {
+        "nombre": "Argentina",
+        "fichas": 3
+      },
+      {
+        "nombre": "Uruguay",
+        "fichas": 3
+      },
+      {
+        "nombre": "Brasil",
+        "fichas": 3
+      },
+      {
+        "nombre": "Colombia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Japón",
+        "fichas": 3
+      },
+      {
+        "nombre": "Gobi",
+        "fichas": 3
+      },
+      {
+        "nombre": "Mongolia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Kamchatka",
+        "fichas": 3
+      },
+      {
+        "nombre": "Turquía",
+        "fichas": 3
+      },
+      {
+        "nombre": "Israel",
+        "fichas": 3
+      },
+      {
+        "nombre": "Arabia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Siberia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Taimir",
+        "fichas": 3
+      },
+      {
+        "nombre": "Tartaria",
+        "fichas": 3
+      },
+      {
+        "nombre": "Aral",
+        "fichas": 3
+      },
+      {
+        "nombre": "Rusia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Suecia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Alemania",
+        "fichas": 3
+      },
+      {
+        "nombre": "Polonia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Sahara",
+        "fichas": 3
+      },
+      {
+        "nombre": "Egipto",
+        "fichas": 3
+      },
+      {
+        "nombre": "Etiopía",
+        "fichas": 3
+      },
+      {
+        "nombre": "Alaska",
+        "fichas": 3
+      },
+      {
+        "nombre": "México",
+        "fichas": 3
+      },
+      {
+        "nombre": "Italia",
+        "fichas": 3
+      },
+      {
+        "nombre": "California",
+        "fichas": 3
+      },
+      {
+        "nombre": "Francia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Oregon",
+        "fichas": 3
+      },
+      {
+        "nombre": "España",
+        "fichas": 3
+      },
+      {
+        "nombre": "Gran Bretaña",
+        "fichas": 1
+      },
+      {
+        "nombre": "Islandia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Zaire",
+        "fichas": 3
+      },
+      {
+        "nombre": "Sudáfrica",
+        "fichas": 3
+      },
+      {
+        "nombre": "Madagascar",
+        "fichas": 3
+      },
+      {
+        "nombre": "Nueva York",
+        "fichas": 3
+      }
+    ],
+    "turno": "Rojo",
+    "fase": "Reagrupar"
+  },
+  {
+    "paises": [
+      {
+        "nombre": "Australia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Sumatra",
+        "fichas": 3
+      },
+      {
+        "nombre": "Java",
+        "fichas": 3
+      },
+      {
+        "nombre": "Borneo",
+        "fichas": 3
+      },
+      {
+        "nombre": "India",
+        "fichas": 3
+      },
+      {
+        "nombre": "Malasia",
+        "fichas": 3
+      },
+      {
+        "nombre": "China",
+        "fichas": 3
+      },
+      {
+        "nombre": "Irán",
+        "fichas": 3
+      },
+      {
+        "nombre": "Chile",
+        "fichas": 3
+      },
+      {
+        "nombre": "Perú",
+        "fichas": 3
+      },
+      {
+        "nombre": "Argentina",
+        "fichas": 3
+      },
+      {
+        "nombre": "Uruguay",
+        "fichas": 3
+      },
+      {
+        "nombre": "Brasil",
+        "fichas": 3
+      },
+      {
+        "nombre": "Colombia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Japón",
+        "fichas": 3
+      },
+      {
+        "nombre": "Gobi",
+        "fichas": 3
+      },
+      {
+        "nombre": "Mongolia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Kamchatka",
+        "fichas": 3
+      },
+      {
+        "nombre": "Turquía",
+        "fichas": 3
+      },
+      {
+        "nombre": "Israel",
+        "fichas": 3
+      },
+      {
+        "nombre": "Arabia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Siberia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Taimir",
+        "fichas": 3
+      },
+      {
+        "nombre": "Tartaria",
+        "fichas": 3
+      },
+      {
+        "nombre": "Aral",
+        "fichas": 3
+      },
+      {
+        "nombre": "Rusia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Suecia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Alemania",
+        "fichas": 3
+      },
+      {
+        "nombre": "Polonia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Sahara",
+        "fichas": 3
+      },
+      {
+        "nombre": "Egipto",
+        "fichas": 3
+      },
+      {
+        "nombre": "Etiopía",
+        "fichas": 3
+      },
+      {
+        "nombre": "Alaska",
+        "fichas": 3
+      },
+      {
+        "nombre": "México",
+        "fichas": 3
+      },
+      {
+        "nombre": "Italia",
+        "fichas": 3
+      },
+      {
+        "nombre": "California",
+        "fichas": 3
+      },
+      {
+        "nombre": "Francia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Oregon",
+        "fichas": 3
+      },
+      {
+        "nombre": "España",
+        "fichas": 3
+      },
+      {
+        "nombre": "Gran Bretaña",
+        "fichas": 3
+      },
+      {
+        "nombre": "Islandia",
+        "fichas": 3
+      },
+      {
+        "nombre": "Zaire",
+        "fichas": 3
+      },
+      {
+        "nombre": "Sudáfrica",
+        "fichas": 3
+      },
+      {
+        "nombre": "Madagascar",
+        "fichas": 3
+      },
+      {
+        "nombre": "Nueva York",
+        "fichas": 3
+      }
+    ],
+    "turno": "Rojo",
+    "fase": "Reagrupar"
+  },
+  {
+    "paises": [
+      {
+        "nombre": "Australia",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Sumatra",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Java",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Borneo",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "India",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Malasia",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "China",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Irán",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Chile",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Perú",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Argentina",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Uruguay",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Brasil",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Colombia",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Japón",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Gobi",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Mongolia",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Kamchatka",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Turquía",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Israel",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Arabia",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Siberia",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Taimir",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Tartaria",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Aral",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Rusia",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Suecia",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Alemania",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Polonia",
+        "fichas": 1,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Sahara",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Egipto",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Etiopía",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "Alaska",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "México",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Italia",
+        "fichas": 3,
+        "color": "Rojo"
+      },
+      {
+        "nombre": "California",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Francia",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Oregon",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "España",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Gran Bretaña",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Islandia",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Zaire",
+        "fichas": 3,
+        "color": "Verde"
+      },
+      {
+        "nombre": "Sudáfrica",
+        "fichas": 3,
+        "color": "Amarillo"
+      },
+      {
+        "nombre": "Madagascar",
+        "fichas": 3,
+        "color": "Azul"
+      },
+      {
+        "nombre": "Nueva York",
+        "fichas": 3,
+        "color": "Verde"
+      }
+    ],
+    "turno": "Rojo",
+    "fase": "Reagrupar"
+  }
+]

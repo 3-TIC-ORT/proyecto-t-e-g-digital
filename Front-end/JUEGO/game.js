@@ -38,13 +38,15 @@ let fichasnuevasamarillo = 0;
 let fichasnuevasverde = 0;
 let randomizador = 0;
 
+connect2Server(3000);
+
 //declaracion continentes
-let sudamerica = []
+let sudamerica = [];
 let oceania = [];
-let norteamerica = []
-let europa = []
-let africa = []
-let asia = []
+let norteamerica = [];
+let europa = [];
+let africa = [];
+let asia = [];
 
 
 // Definición de Países y Mapa
@@ -409,6 +411,14 @@ let madagascar = {
     colorfichas: "",
     limitrofes: [],
 };
+canada = {
+    nombre: "Canadá",
+    continente: norteamerica,
+    id: document.getElementById("canadaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 
 //push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
@@ -456,9 +466,11 @@ etiopia.limitrofes.push(egipto, sahara, zaire, sudafrica);
 zaire.limitrofes.push(sahara, etiopia, sudafrica, madagascar);
 sudafrica.limitrofes.push(etiopia, zaire);
 madagascar.limitrofes.push(egipto, zaire);
+canada.limitrofes.push();
+
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire, sudafrica, madagascar, nuevayork];
+let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire, sudafrica, madagascar, nuevayork, canada];
 let estadoJuego = paises
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
@@ -466,10 +478,12 @@ sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
 asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral);
 europa.push(rusia, suecia, polonia, alemania, italia, francia, españa, granbretaña, islandia);
 africa.push(sahara, egipto, etiopia, zaire, sudafrica, madagascar);
-norteamerica.push(alaska, oregon, california, mexico);
+norteamerica.push(alaska, oregon, california, mexico, canada, nuevayork);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
+
+
 
 //Turno y Fase
 currentturn.textContent = "Turno: " + turno;
@@ -488,7 +502,7 @@ paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises
 };
 i = 0;
 
-// Funciones del Juego
+
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
@@ -496,6 +510,7 @@ function test12(colorturno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
+            guardarPartida();
         } 
     else if (fase === "Reagrupar"){
         i121 = 0;
@@ -570,6 +585,7 @@ function test12(colorturno) {
                     turno = colores[i121];
                     currentturn.textContent = "Turno: " + turno;
                     currentphase.textContent = "Fase: " + fase;
+    
                 };
             };
 
@@ -801,9 +817,7 @@ skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 
-
 //funcion guardar partida
-
 function obtenerEstadoJuego() {
     let paisesLimpios = paises.map(p => ({
       nombre: p.nombre,
@@ -820,7 +834,5 @@ function obtenerEstadoJuego() {
   
 function guardarPartida() {
     let estado = obtenerEstadoJuego();
-    postEvent("guardarJuego", estado, (resp) => {
-      console.log("Guardado:", resp.msg);
-    });
-  }
+    postEvent("guardarEstado", (estado));
+    }

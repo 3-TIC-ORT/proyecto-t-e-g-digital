@@ -317,30 +317,64 @@ body {
     transform: rotate(-10deg);
 }
 
+.granbretaña{
+    position: absolute;
+    top: 30%;
+    right: 43%;
+    width: 4%;
+    height: 14%;
+    transform: rotate(25deg);
+}
+
+.islandia{
+    position: absolute;
+    top: 27%;
+    right: 54%;
+    width: 4%;
+    height: 13%;
+}
+
 .sahara {
     position: absolute;
     top: 69%;
-    right: 36%;
-    width: 6%;
+    right: 35%;
+    width: 7%;
     height: 12%;
 }
 
 .egipto {
     position: absolute;
-    top: 69.5%;
+    top: 69%;
     right: 22%;
     width: 9%;
-    height: 6%;
+    height: 7%;
     transform: rotate(20deg);
 }
 
 .etiopia {
     position: absolute;
-    top: 76%;
-    right: 25%;
-    width: 9%;
-    height: 6%;
+    top: 75%;
+    right: 24%;
+    width: 11%;
+    height: 7%;
     transform: rotate(15deg);
+}
+
+.zaire {
+    position: absolute;
+    top: 80%;
+    right: 30%;
+    width: 7.5%;
+    height: 8%;
+    transform: rotate(15deg);
+}
+
+.sudafrica {
+    position: absolute;
+    top: 86%;
+    right: 26.5%;
+    width: 5%;
+    height: 9%;
 }
 
 .mexico {

@@ -257,6 +257,22 @@ let españa = {
     colorfichas: "",
     limitrofes: [],
 };
+let granbretaña = {
+    nombre:"Gran Bretaña",
+    continente: europa,
+    id: document.getElementById("granbretañaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let islandia = {
+    nombre:"Islandia",
+    continente: europa,
+    id: document.getElementById("islandiaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 let alaska = {
     nombre:"Alaska",
     continente: norteamerica,
@@ -361,6 +377,14 @@ let etiopia = {
     colorfichas: "",
     limitrofes: [],
 };
+let zaire = {
+    nombre: "Zaire",
+    continente: africa,
+    id: document.getElementById("zaireid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 
 //push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
@@ -383,12 +407,14 @@ taimir.limitrofes.push(siberia, tartaria);
 tartaria.limitrofes.push(siberia, taimir, aral);
 aral.limitrofes.push(iran, siberia, tartaria, rusia);
 rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);
-suecia.limitrofes.push(rusia);
-alemania.limitrofes.push(polonia, italia, francia);
+suecia.limitrofes.push(rusia, islandia);
+alemania.limitrofes.push(polonia, italia, francia, granbretaña);
 polonia.limitrofes.push(turquia, rusia, egipto, italia);
 italia.limitrofes.push(polonia, alemania, francia);
 francia.limitrofes.push(alemania, italia, españa);
-españa.limitrofes.push(sahara, francia);
+españa.limitrofes.push(sahara, francia, granbretaña);
+granbretaña.limitrofes.push(alemania, españa, islandia);
+islandia.limitrofes.push(suecia, granbretaña);
 alaska.limitrofes.push(kamchatka, oregon);
 oregon.limitrofes.push(alaska, california);
 california.limitrofes.push(mexico, oregon);
@@ -399,19 +425,20 @@ argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
 brasil.limitrofes.push(peru, argentina, uruguay, colombia, sahara);
 colombia.limitrofes.push(mexico, peru, brasil);
-sahara.limitrofes.push(brasil, egipto, españa);
+sahara.limitrofes.push(brasil, egipto, españa, zaire);
 egipto.limitrofes.push(turquia, israel, polonia, sahara);
-etiopia.limitrofes.push(egipto, sahara);
+etiopia.limitrofes.push(egipto, sahara, zaire);
+zaire.limitrofes.push(sahara, etiopia);
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa];
+let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire];
 let estadoJuego = paises
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
 asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral);
-europa.push(rusia, suecia, polonia, alemania, italia, francia, españa);
-africa.push(sahara, egipto, etiopia);
+europa.push(rusia, suecia, polonia, alemania, italia, francia, españa, granbretaña, islandia);
+africa.push(sahara, egipto, etiopia, zaire);
 norteamerica.push(alaska, oregon, california, mexico);
 
 //declaracion de continentes
@@ -717,6 +744,8 @@ alemania.id.addEventListener("click", () => test14(alemania));
 italia.id.addEventListener("click", () => test14(italia));
 francia.id.addEventListener("click", () => test14(francia));
 españa.id.addEventListener("click", ()=> test14(españa));
+granbretaña.id.addEventListener("click", ()=> test14(granbretaña));
+islandia.id.addEventListener("click", () => test14(islandia));
 alaska.id.addEventListener("click", () => test14(alaska));
 oregon.id.addEventListener("click", () => test14(oregon));
 california.id.addEventListener("click", () => test14(california));
@@ -730,6 +759,7 @@ colombia.id.addEventListener("click", () => test14(colombia));
 sahara.id.addEventListener("click", () => test14(sahara));
 egipto.id.addEventListener("click", () => test14(egipto));
 etiopia.id.addEventListener("click", () => test14(etiopia));
+zaire.id.addEventListener("click", () => test14(zaire));
 
 // Event listeners juego
 atacarrojo.addEventListener("click", () => test16("Rojo"));

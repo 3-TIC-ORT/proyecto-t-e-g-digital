@@ -38,7 +38,7 @@ let fichasnuevasamarillo = 0;
 let fichasnuevasverde = 0;
 let randomizador = 0;
 
-connect2Server(3000);
+connect2Server(3015);
 
 //declaracion continentes
 let sudamerica = [];
@@ -283,6 +283,22 @@ let alaska = {
     colorfichas: "",
     limitrofes: [],
 };
+let canada = {
+    nombre: "Canadá",
+    continente: norteamerica,
+    id: document.getElementById("canadaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let yukon = {
+    nombre:"Yukon",
+    continente: norteamerica,
+    id: document.getElementById("yukonid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
 let oregon = {
     nombre:"Oregon",
     continente: norteamerica,
@@ -295,6 +311,30 @@ let nuevayork = {
     nombre:"Nueva York",
     continente: norteamerica,
     id: document.getElementById("nuevayorkid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let terranova = {
+    nombre:"Terranova",
+    continente: norteamerica,
+    id: document.getElementById("terranovaid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let labrador = {
+    nombre:"Labrador",
+    continente: norteamerica,
+    id: document.getElementById("labradorid"),
+    fichas: 3,
+    colorfichas: "",
+    limitrofes: [],
+};
+let groenlandia = {
+    nombre:"Groenlandia",
+    continente: norteamerica,
+    id: document.getElementById("groenlandiaid"),
     fichas: 3,
     colorfichas: "",
     limitrofes: [],
@@ -411,14 +451,6 @@ let madagascar = {
     colorfichas: "",
     limitrofes: [],
 };
-canada = {
-    nombre: "Canadá",
-    continente: norteamerica,
-    id: document.getElementById("canadaid"),
-    fichas: 3,
-    colorfichas: "",
-    limitrofes: [],
-};
 
 //push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
@@ -448,10 +480,15 @@ italia.limitrofes.push(polonia, alemania, francia);
 francia.limitrofes.push(alemania, italia, españa);
 españa.limitrofes.push(sahara, francia, granbretaña);
 granbretaña.limitrofes.push(alemania, españa, islandia);
-islandia.limitrofes.push(suecia, granbretaña);
-alaska.limitrofes.push(kamchatka, oregon);
-oregon.limitrofes.push(alaska, nuevayork, california);
-nuevayork.limitrofes.push(oregon, california);
+islandia.limitrofes.push(suecia, granbretaña, groenlandia);
+alaska.limitrofes.push(kamchatka, oregon, yukon);
+canada.limitrofes.push(oregon, nuevayork, yukon, terranova);
+yukon.limitrofes.push(alaska, oregon, canada)
+oregon.limitrofes.push(alaska, nuevayork, california, canada, yukon);
+nuevayork.limitrofes.push(oregon, california, canada, terranova, groenlandia);
+terranova.limitrofes.push(nuevayork, canada, labrador);
+labrador.limitrofes.push(terranova, groenlandia);
+groenlandia.limitrofes.push(islandia, nuevayork, labrador);
 california.limitrofes.push(mexico, oregon, nuevayork);
 mexico.limitrofes.push(colombia, california);
 chile.limitrofes.push(australia, peru, argentina);
@@ -466,19 +503,17 @@ etiopia.limitrofes.push(egipto, sahara, zaire, sudafrica);
 zaire.limitrofes.push(sahara, etiopia, sudafrica, madagascar);
 sudafrica.limitrofes.push(etiopia, zaire);
 madagascar.limitrofes.push(egipto, zaire);
-canada.limitrofes.push();
-
 
 //declaracion de paises
-let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire, sudafrica, madagascar, nuevayork, canada];
-let estadoJuego = paises
+let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire, sudafrica, madagascar, nuevayork, canada, yukon, terranova, labrador, groenlandia];
+let estadoJuego = paises;
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
 asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral);
 europa.push(rusia, suecia, polonia, alemania, italia, francia, españa, granbretaña, islandia);
 africa.push(sahara, egipto, etiopia, zaire, sudafrica, madagascar);
-norteamerica.push(alaska, oregon, california, mexico, canada, nuevayork);
+norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, terranova, labrador, groenlandia);
 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
@@ -558,6 +593,18 @@ function test12(colorturno) {
                     fichasnuevasazul = fichasnuevasazul / 2;
                     fichasnuevasamarillo = fichasnuevasamarillo / 2;
                     fichasnuevasverde = fichasnuevasverde / 2;
+                    if (fichasnuevasrojo < 3) {
+                        fichasnuevasrojo = 3;
+                    };
+                    if (fichasnuevasazul < 3) {
+                        fichasnuevasazul = 3;
+                    };
+                    if (fichasnuevasamarillo < 3) {
+                        fichasnuevasamarillo = 3;
+                    };
+                    if (fichasnuevasverde < 3) {
+                        fichasnuevasverde = 3;
+                    };
                     fase = "Incorporar";
                     i121 = 0;
                     i122 = 0;
@@ -790,8 +837,13 @@ españa.id.addEventListener("click", ()=> test14(españa));
 granbretaña.id.addEventListener("click", ()=> test14(granbretaña));
 islandia.id.addEventListener("click", () => test14(islandia));
 alaska.id.addEventListener("click", () => test14(alaska));
+canada.id.addEventListener("click", () => test14(canada));
+yukon.id.addEventListener("click", () => test14(yukon));
 oregon.id.addEventListener("click", () => test14(oregon));
 nuevayork.id.addEventListener("click", () => test14(nuevayork));
+terranova.id.addEventListener("click", () => test14(terranova));
+labrador.id.addEventListener("click", () => test14(labrador));
+groenlandia.id.addEventListener("click", () => test14(groenlandia));
 california.id.addEventListener("click", () => test14(california));
 mexico.id.addEventListener("click", () => test14(mexico));
 chile.id.addEventListener("click", () => test14(chile));
@@ -822,7 +874,7 @@ function obtenerEstadoJuego() {
     let paisesLimpios = paises.map(p => ({
       nombre: p.nombre,
       fichas: p.fichas,
-      color: p.color,
+      color: p.colorfichas,
     }));
   
     return {
@@ -830,9 +882,9 @@ function obtenerEstadoJuego() {
       turno: turno,  
       fase: fase,    
     };
-  }
+  };
   
 function guardarPartida() {
     let estado = obtenerEstadoJuego();
-    postEvent("guardarEstado", (estado));
-    }
+    postEvent("guardarEstado", estado);
+};

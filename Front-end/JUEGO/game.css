@@ -338,8 +338,8 @@ body {
     position: absolute;
     top: 69%;
     right: 35%;
-    width: 7%;
-    height: 12%;
+    width: 8%;
+    height: 13%;
 }
 
 .egipto {
@@ -397,10 +397,10 @@ body {
 
 .california{
     position: absolute;
-    top: 40%;
-    right: 78%;
-    width: 9%;
-    height: 6%;
+    top: 41%;
+    right: 77%;
+    width: 13%;
+    height: 7%;
     transform: rotate(-20deg);
 }
 
@@ -408,18 +408,61 @@ body {
     position: absolute;
     top: 36%;
     right: 83%;
-    width: 12%;
-    height: 8%;
-    transform: rotate(-35deg);
+    width: 13%;
+    height: 9%;
+    transform: rotate(-30deg);
 }
 
 .nuevayork{
     position: absolute;
-    top: 31%;
-    right: 75%;
-    width: 9%;
+    top: 32%;
+    right: 72%;
+    width: 12%;
     height: 6%;
     transform: rotate(20deg);
+}
+
+.terranova{
+    position: absolute;
+    top: 26%;
+    right: 71%;
+    width: 10%;
+    height: 6%;
+    transform: rotate(20deg);
+}
+
+.labrador{
+    position: absolute;
+    top: 17%;
+    right: 71%;
+    width: 5%;
+    height: 9%;
+}
+
+.groenlandia{
+    position: absolute;
+    top: 4%;
+    right: 62%;
+    width: 6%;
+    height: 23%;
+}
+
+.canada {
+    position: absolute;
+    top: 3%;
+    right: 80%;
+    width: 7%;
+    height: 25%;
+    transform: rotate(15deg);
+}
+
+.yukon{
+    position: absolute;
+    top: 16%;
+    right: 87.5%;
+    width: 6.5%;
+    height: 17%;
+    transform: rotate(-15deg);
 }
 
 .alaska {

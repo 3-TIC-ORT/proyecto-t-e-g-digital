@@ -377,6 +377,15 @@ body {
     height: 9%;
 }
 
+.madagascar {
+    position: absolute;
+    top: 79%;
+    right: 19%;
+    width: 3%;
+    height: 14%;
+    transform: rotate(15deg);
+}
+
 .mexico {
     position: absolute;
     top: 48%;
@@ -402,6 +411,15 @@ body {
     width: 12%;
     height: 8%;
     transform: rotate(-35deg);
+}
+
+.nuevayork{
+    position: absolute;
+    top: 31%;
+    right: 75%;
+    width: 9%;
+    height: 6%;
+    transform: rotate(20deg);
 }
 
 .alaska {

@@ -1,3 +1,5 @@
+import { response } from "express";
+
 // Declaración de Variables Globales
 let turno = "Rojo";
 let colores = ["Rojo", "Azul", "Amarillo", "Verde"];
@@ -888,3 +890,8 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
 };
+
+function cargarPartido() {    
+    getEvent("cargarEstado", (estado) => {        
+    })
+}

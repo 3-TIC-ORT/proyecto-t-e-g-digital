@@ -10,7 +10,7 @@ subscribePOSTEvent("guardarEstado", (estado) => guardarEstado(estado));
 
 //cargar juego
 function leerEstado() {
-   estadoJuego = fs.readFileSync("./datos/datos.json", JSON.parse("utf-8"))
+  let estadoJuego = fs.readFileSync("./datos/datos.json", JSON.parse("utf-8"))
    return estadoJuego
 }
 

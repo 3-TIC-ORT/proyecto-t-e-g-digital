@@ -15,8 +15,7 @@ let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
 let skipamarillo = document.getElementById("pasaamarillo");
 let skipverde = document.getElementById("pasaverde");
-let skipmagenta = document.getElementById("pasamagenta");
-let skipnegro = document.getElementById("pasanegro");
+let botonGuardar = document.getElementById("guardar")
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -38,14 +37,11 @@ let i162 = 0;
 let i171 = 0;
 let i172 = 0;
 let icarg = 0;
-let fichasnuevas = {
-    rojo: 0,
-    azul: 0,
-    amarillo: 0,
-    verde: 0,
-    magenta: 0,
-    negro: 0,
-};
+let fichasnuevasrojo = 0;
+let fichasnuevasazul = 0;
+let fichasnuevasamarillo = 0;
+let fichasnuevasverde = 0;
+let randomizador = 0;
 
 connect2Server(3015);
 
@@ -553,7 +549,6 @@ function test12(colorturno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
-            guardarPartida();
         } 
     else if (fase === "Reagrupar"){
         i121 = 0;
@@ -976,8 +971,7 @@ skiprojo.addEventListener("click", () => test12("Rojo"));
 skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
-skipmagenta.addEventListener("click", () => test12("Magenta"));
-skipnegro.addEventListener("click", () => test12("Negro"));
+botonGuardar.addEventListener("click", guardarPartida);
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

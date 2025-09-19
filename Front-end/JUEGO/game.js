@@ -1,6 +1,6 @@
 // Declaración de Variables Globales
 let turno = "Rojo";
-let colores = ["Rojo", "Azul", "Amarillo", "Verde"];
+let colores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
 let fase = "Atacar";
 let fases = ["Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
@@ -9,6 +9,8 @@ let atacarrojo = document.getElementById("atacarrojo");
 let atacarazul = document.getElementById("atacarazul");
 let atacaramarillo = document.getElementById("atacaramarillo");
 let atacarverde = document.getElementById("atacarverde");
+let atacarmagenta = document.getElementById("atacarmagenta");
+let atacarnegro = document.getElementById("atacarnegro");
 let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
 let skipamarillo = document.getElementById("pasaamarillo");
@@ -40,7 +42,6 @@ let fichasnuevasamarillo = 0;
 let fichasnuevasverde = 0;
 let randomizador = 0;
 
-
 connect2Server(3015);
 
 //declaracion continentes
@@ -57,7 +58,7 @@ let australia = {
     nombre: "Australia",
     id: document.getElementById("australiaid"),
     continente: oceania,
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -65,7 +66,7 @@ let sumatra = {
     nombre: "Sumatra",
     id: document.getElementById("sumatraid"),
     continente: oceania,
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -73,7 +74,7 @@ let java = {
     nombre: "Java",
     continente: oceania,
     id: document.getElementById("javaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -81,7 +82,7 @@ let borneo = {
     nombre: "Borneo",
     continente: oceania,
     id: document.getElementById("borneoid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -89,7 +90,7 @@ let india = {
     nombre: "India",
     continente: asia,
     id: document.getElementById("indiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -97,7 +98,7 @@ let malasia = {
     nombre: "Malasia",
     continente: asia,
     id: document.getElementById("malasiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -105,7 +106,7 @@ let china = {
     nombre: "China",
     continente: asia,
     id: document.getElementById("chinaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -113,7 +114,7 @@ let iran = {
     nombre: "Irán",
     continente: asia,
     id: document.getElementById("iranid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -121,7 +122,7 @@ let japon = {
     nombre: "Japón",
     continente: asia,
     id: document.getElementById("japonid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -129,7 +130,7 @@ let gobi = {
     nombre: "Gobi",
     continente: asia,
     id: document.getElementById("gobiid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -137,7 +138,7 @@ let mongolia = {
     nombre: "Mongolia",
     continente: asia,
     id: document.getElementById("mongoliaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -145,7 +146,7 @@ let kamchatka = {
     nombre: "Kamchatka",
     continente: asia,
     id: document.getElementById("kamchatkaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -153,7 +154,7 @@ let turquia = {
     nombre: "Turquía",
     continente: asia,
     id: document.getElementById("turquiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -161,7 +162,7 @@ let israel = {
     nombre: "Israel",
     continente: asia,
     id: document.getElementById("israelid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -169,7 +170,7 @@ let arabia = {
     nombre:"Arabia",
     continente: asia,
     id: document.getElementById("arabiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -177,7 +178,7 @@ let siberia = {
     nombre:"Siberia",
     continente: asia,
     id: document.getElementById("siberiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -185,7 +186,7 @@ let taimir = {
     nombre:"Taimir",
     continente: asia,
     id: document.getElementById("taimirid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -193,7 +194,7 @@ let tartaria = {
     nombre:"Tartaria",
     continente: asia,
     id: document.getElementById("tartariaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -201,7 +202,7 @@ let aral = {
     nombre:"Aral",
     continente: asia,
     id: document.getElementById("aralid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -209,7 +210,7 @@ let rusia = {
     nombre:"Rusia",
     continente: europa,
     id: document.getElementById("rusiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -217,7 +218,7 @@ let suecia = {
     nombre:"Suecia",
     continente: europa,
     id: document.getElementById("sueciaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -225,16 +226,15 @@ let polonia = {
     nombre:"Polonia",
     continente: europa,
     id: document.getElementById("poloniaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
-
 let alemania = {
     nombre:"Alemania",
     continente: europa,
     id: document.getElementById("alemaniaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -242,7 +242,7 @@ let italia = {
     nombre:"Italia",
     continente: europa,
     id: document.getElementById("italiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -250,7 +250,7 @@ let francia = {
     nombre:"Francia",
     continente: europa,
     id: document.getElementById("franciaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -258,7 +258,7 @@ let españa = {
     nombre:"España",
     continente: europa,
     id: document.getElementById("españaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -266,7 +266,7 @@ let granbretaña = {
     nombre:"Gran Bretaña",
     continente: europa,
     id: document.getElementById("granbretañaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -274,7 +274,7 @@ let islandia = {
     nombre:"Islandia",
     continente: europa,
     id: document.getElementById("islandiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -282,7 +282,7 @@ let alaska = {
     nombre:"Alaska",
     continente: norteamerica,
     id: document.getElementById("alaskaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -290,7 +290,7 @@ let canada = {
     nombre: "Canadá",
     continente: norteamerica,
     id: document.getElementById("canadaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -298,7 +298,7 @@ let yukon = {
     nombre:"Yukon",
     continente: norteamerica,
     id: document.getElementById("yukonid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -306,7 +306,7 @@ let oregon = {
     nombre:"Oregon",
     continente: norteamerica,
     id: document.getElementById("oregonid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -314,7 +314,7 @@ let nuevayork = {
     nombre:"Nueva York",
     continente: norteamerica,
     id: document.getElementById("nuevayorkid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -322,7 +322,7 @@ let terranova = {
     nombre:"Terranova",
     continente: norteamerica,
     id: document.getElementById("terranovaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -330,7 +330,7 @@ let labrador = {
     nombre:"Labrador",
     continente: norteamerica,
     id: document.getElementById("labradorid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -338,7 +338,7 @@ let groenlandia = {
     nombre:"Groenlandia",
     continente: norteamerica,
     id: document.getElementById("groenlandiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -346,7 +346,7 @@ let california = {
     nombre:"California",
     continente: norteamerica,
     id: document.getElementById("californiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -354,7 +354,7 @@ let mexico = {
     nombre:"México",
     continente: norteamerica,
     id: document.getElementById("mexicoid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -362,7 +362,7 @@ let chile = {
     nombre: "Chile",
     continente: sudamerica,
     id: document.getElementById("chileid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -370,7 +370,7 @@ let peru = {
     nombre: "Perú",
     continente: sudamerica,
     id: document.getElementById("peruid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -378,7 +378,7 @@ let argentina = {
     nombre: "Argentina",
     continente: sudamerica,
     id: document.getElementById("argentinaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -386,7 +386,7 @@ let uruguay = {
     nombre: "Uruguay",
     continente: sudamerica,
     id: document.getElementById("uruguayid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -394,7 +394,7 @@ let brasil = {
     nombre: "Brasil",
     continente: sudamerica,
     id: document.getElementById("brasilid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -402,7 +402,7 @@ let colombia = {
     nombre: "Colombia",
     continente: sudamerica,
     id: document.getElementById("colombiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -410,7 +410,7 @@ let sahara = {
     nombre: "Sahara",
     continente: africa,
     id: document.getElementById("saharaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -418,7 +418,7 @@ let egipto = {
     nombre: "Egipto",
     continente: africa,
     id: document.getElementById("egiptoid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -426,7 +426,7 @@ let etiopia = {
     nombre: "Etiopía",
     continente: africa,
     id: document.getElementById("etiopiaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -434,7 +434,7 @@ let zaire = {
     nombre: "Zaire",
     continente: africa,
     id: document.getElementById("zaireid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -442,7 +442,7 @@ let sudafrica = {
     nombre: "Sudáfrica",
     continente: africa,
     id: document.getElementById("sudafricaid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -450,7 +450,7 @@ let madagascar = {
     nombre: "Madagascar",
     continente: africa,
     id: document.getElementById("madagascarid"),
-    fichas: 3,
+    fichas: 1,
     colorfichas: "",
     limitrofes: [],
 };
@@ -562,50 +562,70 @@ function test12(colorturno) {
             currentphase.textContent = "Fase: " + fase;
                 }
             else if (i121 === colores.length) {
-                fichasnuevasrojo = 0;
-                fichasnuevasazul = 0;
-                fichasnuevasamarillo = 0;
-                fichasnuevasverde = 0;
+                fichasnuevas.rojo = 0;
+                fichasnuevas.azul = 0;
+                fichasnuevas.amarillo = 0;
+                fichasnuevas.verde = 0;
+                fichasnuevas.magenta = 0,
+                fichasnuevas.negro = 0;
                 i122 = 0;
                 while (paises.length > i122) {
                     if (paises[i122].colorfichas === "Rojo") {
-                        fichasnuevasrojo++;
+                        fichasnuevas.rojo++;
                     } else if (paises[i122].colorfichas === "Azul") {
-                        fichasnuevasazul++;
+                        fichasnuevas.azul++;
                     } else if (paises[i122].colorfichas === "Amarillo") {
-                        fichasnuevasamarillo++;
+                        fichasnuevas.amarillo++;
                     } else if (paises[i122].colorfichas === "Verde"){
-                        fichasnuevasverde++;
+                        fichasnuevas.verde++;
+                    } else if (paises[i122].colorfichas === "Magenta"){
+                        fichasnuevas.magenta++;
+                    } else if (paises[i122].colorfichas === "Negro"){
+                        fichasnuevas.negro++;
                     }
                     i122++;
                     };
-                    if (fichasnuevasrojo % 2 === 1) {
-                        fichasnuevasrojo--;
+                    if (fichasnuevas.rojo % 2 === 1) {
+                        fichasnuevas.rojo--;
                     };
-                    if (fichasnuevasazul % 2 === 1) {
-                        fichasnuevasazul--;
+                    if (fichasnuevas.azul % 2 === 1) {
+                        fichasnuevas.azul--;
                     };
-                    if (fichasnuevasamarillo % 2 === 1) {
-                        fichasnuevasamarillo--;
+                    if (fichasnuevas.amarillo % 2 === 1) {
+                        fichasnuevas.amarillo--;
                     };
-                    if (fichasnuevasverde % 2 === 1) {
-                        fichasnuevasverde--;
+                    if (fichasnuevas.verde % 2 === 1) {
+                        fichasnuevas.verde--;
                     };
-                    fichasnuevasrojo = fichasnuevasrojo / 2;
-                    fichasnuevasazul = fichasnuevasazul / 2;
-                    fichasnuevasamarillo = fichasnuevasamarillo / 2;
-                    fichasnuevasverde = fichasnuevasverde / 2;
-                    if (fichasnuevasrojo < 3) {
-                        fichasnuevasrojo = 3;
+                    if (fichasnuevas.magenta % 2 === 1) {
+                        fichasnuevast.magenta--;
                     };
-                    if (fichasnuevasazul < 3) {
-                        fichasnuevasazul = 3;
+                    if (fichasnuevas.negro % 2 === 1) {
+                        fichasnuevas.negro--;
                     };
-                    if (fichasnuevasamarillo < 3) {
-                        fichasnuevasamarillo = 3;
+                    fichasnuevas.rojo = fichasnuevas.rojo / 2;
+                    fichasnuevas.azul = fichasnuevas.azul / 2;
+                    fichasnuevas.amarillo = fichasnuevas.amarillo / 2;
+                    fichasnuevas.verde = fichasnuevas.verde / 2;
+                    fichasnuevas.magenta = fichasnuevas.magenta / 2;
+                    fichasnuevas.negro = fichasnuevas.negro / 2;
+                    if (fichasnuevas.rojo < 3) {
+                        fichasnuevas.rojo = 3;
                     };
-                    if (fichasnuevasverde < 3) {
-                        fichasnuevasverde = 3;
+                    if (fichasnuevas.azul < 3) {
+                        fichasnuevas.azul = 3;
+                    };
+                    if (fichasnuevas.amarillo < 3) {
+                        fichasnuevas.amarillo = 3;
+                    };
+                    if (fichasnuevas.verde < 3) {
+                        fichasnuevas.verde = 3;
+                    };
+                    if (fichasnuevas.magenta < 3) {
+                        fichasnuevas.magenta = 3;
+                    };
+                    if (fichasnuevas.negro < 3) {
+                        fichasnuevas.negro = 3;
                     };
                     fase = "Incorporar";
                     i121 = 0;
@@ -613,17 +633,31 @@ function test12(colorturno) {
                     turno = colores[i121];
                     currentturn.textContent = "Turno: " + turno;
                     currentphase.textContent = "Fase: " + fase;
-                    console.log(fichasnuevasrojo);
-                    console.log(fichasnuevasazul);
-                    console.log(fichasnuevasamarillo);
-                    console.log(fichasnuevasverde);
+                    console.log(fichasnuevas.rojo);
+                    console.log(fichasnuevas.azul);
+                    console.log(fichasnuevas.amarillo);
+                    console.log(fichasnuevas.verde);
+                    console.log(fichasnuevas.magenta);
+                    console.log(fichasnuevas.negro);
                     };
                 }
             else if (fase === "Incorporar"){
                 while (colores[i121] != colorturno) {
                     i121++;
                 };
+                if (colores[i121] === "Rojo" && fichasnuevas.rojo === 0){
                 i121++;
+                } else if (colores[i121] === "Azul" && fichasnuevas.azul === 0) {
+                i121++;
+                } else if (colores[i121] === "Amarillo" && fichasnuevas.amarillo === 0) {
+                i121++;
+                } else if (colores[i121] === "Verde" && fichasnuevas.verde === 0) {
+                    i121++;
+                } else if (colores[i121] === "Magenta" && fichasnuevas.magenta === 0) {
+                i121++;
+                } else if (colores[i121] === "Negro" && fichasnuevas.negro === 0) {
+                i121++;
+                };
                 if (i121 < colores.length){
                     turno = colores[i121];
                     currentturn.textContent = "Turno: " + turno;
@@ -685,31 +719,45 @@ function test14(pais) {
     if (fase === "Incorporar") {
         if (turno === pais.colorfichas){
             if (turno === "Rojo"){
-            if (fichasnuevasrojo > 0){
+            if (fichasnuevas.rojo > 0){
             paisseleccionado = pais;
             paisseleccionado.fichas++;
-            fichasnuevasrojo--;
+            fichasnuevas.rojo--;
             };
             };
             if (turno === "Azul"){
-            if (fichasnuevasazul > 0){
+            if (fichasnuevas.azul > 0){
             paisseleccionado = pais;
             paisseleccionado.fichas++;
-            fichasnuevasazul--;
+            fichasnuevas.azul--;
             };
             };
             if (turno === "Amarillo"){
-            if (fichasnuevasamarillo > 0){
+            if (fichasnuevas.amarillo > 0){
             paisseleccionado = pais;
             paisseleccionado.fichas++;
-            fichasnuevasamarillo--;
+            fichasnuevas.amarillo--;
             };
             };
             if (turno === "Verde"){
-            if (fichasnuevasverde > 0){
+            if (fichasnuevas.verde > 0){
             paisseleccionado = pais;
             paisseleccionado.fichas++;
-            fichasnuevasverde--;
+            fichasnuevas.verde--;
+            };
+            };
+            if (turno === "Magenta"){
+            if (fichasnuevas.magenta > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.magenta--;
+            };
+            };
+            if (turno === "Negro"){
+            if (fichasnuevas.negro > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.negro--;
             };
             };
             paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
@@ -866,11 +914,12 @@ atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));
 atacarverde.addEventListener("click", () => test16("Verde"));
+atacarmagenta.addEventListener("click", () => test16("Magenta"));
+atacarnegro.addEventListener("click", () => test16("Negro"));
 skiprojo.addEventListener("click", () => test12("Rojo"));
 skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
-botonGuardar.addEventListener("click", guardarPartida)
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

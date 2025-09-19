@@ -885,13 +885,23 @@ function obtenerEstadoJuego() {
       fase: fase,    
     };
   };
-  
+
 function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
 };
 
-function cargarPartido() {    
-    getEvent("cargarEstado", (estado) => {        
+function cargarPartida() {    
+    getEvent("cargarEstado", (estado) => {  
+        turno = estado.turno;
+        fase = estado.fase;
+
+
+        while (estado.paises.length > icarg) {
+            paises[icarg].fichas = estado.paises[icarg].fichas;
+            paises[icarg].colorfichas = estado.paises[icarg].color;
+            paises[icarg].id.textContent = paises[icarg].nombre + " " + paises[icarg].fichas + " " + paises[icarg].colorfichas;
+            icarg++;
+        }
     })
 }

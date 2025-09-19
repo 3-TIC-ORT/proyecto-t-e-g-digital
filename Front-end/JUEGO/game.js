@@ -30,6 +30,7 @@ let resultadosdefensor = [];
 let dadoreserva = 0;
 let i121 = 0;
 let i122 = 0;
+let i123 = 0;
 let i141 = 0;
 let i142 = 0;
 let i161 = 0;
@@ -482,7 +483,7 @@ aral.limitrofes.push(iran, siberia, tartaria, rusia);
 rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);
 suecia.limitrofes.push(rusia, islandia);
 alemania.limitrofes.push(polonia, italia, francia, granbretaña);
-polonia.limitrofes.push(turquia, rusia, egipto, italia);
+polonia.limitrofes.push(turquia, rusia, egipto, alemania, italia);
 italia.limitrofes.push(polonia, alemania, francia);
 francia.limitrofes.push(alemania, italia, españa);
 españa.limitrofes.push(sahara, francia, granbretaña);
@@ -574,6 +575,7 @@ function test12(colorturno) {
                 fichasnuevas.magenta = 0,
                 fichasnuevas.negro = 0;
                 i122 = 0;
+                i123 = 0;
                 while (paises.length > i122) {
                     if (paises[i122].colorfichas === "Rojo") {
                         fichasnuevas.rojo++;
@@ -590,6 +592,55 @@ function test12(colorturno) {
                     }
                     i122++;
                     };
+                    i123 = 0;
+                    if (fichasnuevas.rojo === 0){
+                    while(colores[i123] != "Rojo"){
+                    i123++;
+                    };
+                    colores.slice(i123, 1);
+                    delete fichasnuevas.rojo;
+                    };
+                    i123 = 0;
+                    if (fichasnuevas.azul === 0){
+                    while(colores[i123] != "Azul"){
+                    i123++;
+                    };
+                    colores.slice(i123, 1);
+                    delete fichasnuevas.azul;
+                    };
+                    i123 = 0;
+                    if (fichasnuevas.amarillo === 0){
+                    while(colores[i123] != "Amarillo"){
+                    i123++;
+                    };
+                    colores.slice(i123, 1);
+                    delete fichasnuevas.amarillo;
+                    };
+                    i123 = 0;
+                    if (fichasnuevas.verde === 0){
+                    while(colores[i123] != "Verde"){
+                    i123++;
+                    };
+                    colores.slice(i123, 1);
+                    delete fichasnuevas.verde;
+                    };
+                    i123 = 0;
+                    if (fichasnuevas.magenta === 0){
+                    while(colores[i123] != "Magenta"){
+                    i123++;
+                    };
+                    colores.slice(i123, 1);
+                    delete fichasnuevas.magenta;
+                    };
+                    i123 = 0;
+                    if (fichasnuevas.negro === 0){
+                    while(colores[i123] != "Negro"){
+                    i123++;
+                    };
+                    colores.slice(i123, 1);
+                    delete fichasnuevas.negro;
+                    };
+                    i123 = 0;
                     if (fichasnuevas.rojo % 2 === 1) {
                         fichasnuevas.rojo--;
                     };

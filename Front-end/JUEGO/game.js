@@ -920,6 +920,7 @@ skiprojo.addEventListener("click", () => test12("Rojo"));
 skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
+botonGuardar.addEventListener("click", guardarPartida);
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

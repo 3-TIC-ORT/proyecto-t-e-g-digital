@@ -44,6 +44,7 @@ let fichasnuevasverde = 0;
 let randomizador = 0;
 
 connect2Server(3015);
+cargarPartida();
 
 //declaracion continentes
 let sudamerica = [];
@@ -991,12 +992,15 @@ function obtenerEstadoJuego() {
 function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
+    icarg = 0;
 };
 
 function cargarPartida() {    
     getEvent("cargarEstado", (estado) => {  
         turno = estado.turno;
         fase = estado.fase;
+        currentturn.textContent = "Turno: " + turno;
+        currentphase.textContent = "Fase: " + fase;
 
 
         while (estado.paises.length > icarg) {

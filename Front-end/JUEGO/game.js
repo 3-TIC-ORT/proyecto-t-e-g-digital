@@ -15,6 +15,8 @@ let skipazul = document.getElementById("pasaazul");
 let skiprojo = document.getElementById("pasarojo");
 let skipamarillo = document.getElementById("pasaamarillo");
 let skipverde = document.getElementById("pasaverde");
+let skipmagenta = document.getElementById("pasamagenta");
+let skipnegro = document.getElementById("pasanegro");
 let botonGuardar = document.getElementById("guardar")
 let i = 0;
 let i2 = 0;
@@ -37,11 +39,14 @@ let i162 = 0;
 let i171 = 0;
 let i172 = 0;
 let icarg = 0;
-let fichasnuevasrojo = 0;
-let fichasnuevasazul = 0;
-let fichasnuevasamarillo = 0;
-let fichasnuevasverde = 0;
-let randomizador = 0;
+let fichasnuevas = {
+    rojo: 0,
+    azul: 0,
+    amarillo: 0,
+    verde: 0,
+    magenta: 0,
+    negro: 0,
+};
 
 connect2Server(3015);
 cargarPartida();
@@ -480,8 +485,8 @@ aral.limitrofes.push(iran, siberia, tartaria, rusia);
 rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);
 suecia.limitrofes.push(rusia, islandia);
 alemania.limitrofes.push(polonia, italia, francia, granbretaña);
-polonia.limitrofes.push(turquia, rusia, egipto, alemania, italia);
-italia.limitrofes.push(polonia, alemania, francia);
+polonia.limitrofes.push(turquia, rusia, egipto, alemania);
+italia.limitrofes.push(alemania, francia);
 francia.limitrofes.push(alemania, italia, españa);
 españa.limitrofes.push(sahara, francia, granbretaña);
 granbretaña.limitrofes.push(alemania, españa, islandia);
@@ -502,8 +507,8 @@ argentina.limitrofes.push(chile, peru, uruguay, brasil);
 uruguay.limitrofes.push(argentina, brasil);
 brasil.limitrofes.push(peru, argentina, uruguay, colombia, sahara);
 colombia.limitrofes.push(mexico, peru, brasil);
-sahara.limitrofes.push(brasil, egipto, españa, zaire);
-egipto.limitrofes.push(turquia, israel, polonia, sahara, madagascar);
+sahara.limitrofes.push(brasil, egipto, españa, etiopia, zaire);
+egipto.limitrofes.push(turquia, israel, polonia, sahara, etiopia, madagascar);
 etiopia.limitrofes.push(egipto, sahara, zaire, sudafrica);
 zaire.limitrofes.push(sahara, etiopia, sudafrica, madagascar);
 sudafrica.limitrofes.push(etiopia, zaire);
@@ -972,6 +977,8 @@ skiprojo.addEventListener("click", () => test12("Rojo"));
 skipazul.addEventListener("click", () => test12("Azul"));
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
+skipmagenta.addEventListener("click", () => test12("Magenta"));
+skipnegro.addEventListener("click", () => test12("Negro"));
 botonGuardar.addEventListener("click", guardarPartida);
 
 //funcion guardar partida

@@ -39,6 +39,13 @@ let i162 = 0;
 let i171 = 0;
 let i172 = 0;
 let icarg = 0;
+let fnrojo = 0;
+let fnazul = 0;
+let fnamarillo = 0;
+let fnverde = 0;
+let fnmagenta = 0;
+let fnnegro = 0;
+let fn = [fnrojo, fnazul, fnamarillo, fnverde, fnmagenta, fnnegro];
 let fichasnuevas = {
     rojo: 0,
     azul: 0,
@@ -48,17 +55,100 @@ let fichasnuevas = {
     negro: 0,
 };
 
+//Declaración de objetivos secretos
+let obj1 = {
+    oceania: 0,
+    africa: 6,
+    sudamerica: 0,
+    asia: 0,
+    europa: 4,
+    norteamerica: 5,
+    color: "",
+};
+let obj2 = {
+    oceania: 0,
+    africa: 3,
+    sudamerica: 6,
+    asia: 0,
+    europa: 7,
+    norteamerica: 0,
+    color: "",
+};
+let obj3 = {
+    oceania: 0,
+    africa: 0,
+    sudamerica: 2,
+    asia: 15,
+    europa: 0,
+    norteamerica: 0,
+    color: "",
+};
+let obj4 = {
+    oceania: 0,
+    africa: 0,
+    sudamerica: 2,
+    asia: 4,
+    europa: 9,
+    norteamerica: 0,
+    color: "",
+};
+let obj5 = {
+    oceania: 2,
+    africa: 0,
+    sudamerica: 0,
+    asia: 4,
+    europa: 0,
+    norteamerica: 10,
+    color: "",
+};
+let obj6 = {
+    oceania: 2,
+    africa: 2,
+    sudamerica: 2,
+    asia: 3,
+    europa: 3,
+    norteamerica: 4,
+    color: "",
+};
+let obj7 = {
+    oceania: 4,
+    africa: 0,
+    sudamerica: 0,
+    asia: 0,
+    europa: 2,
+    norteamerica: 10,
+    color: "",
+};
+let obj8 = {
+    oceania: 0,
+    africa: 6,
+    sudamerica: 6,
+    asia: 4,
+    europa: 0,
+    norteamerica: 0,
+    color: "",
+};
+let obj9 = {
+    oceania: 4,
+    africa: 6,
+    sudamerica: 0,
+    asia: 0,
+    europa: 0,
+    norteamerica: 5,
+    color: "",
+};
+let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
+
 connect2Server(3015);
 cargarPartida();
 
 //declaracion continentes
-let sudamerica = [];
 let oceania = [];
-let norteamerica = [];
-let europa = [];
 let africa = [];
+let sudamerica = [];
 let asia = [];
-
+let europa = [];
+let norteamerica = [];
 
 // Definición de Países y Mapa
 let australia = {
@@ -474,12 +564,12 @@ iran.limitrofes.push(india, china, gobi, mongolia, turquia, aral, rusia);
 japon.limitrofes.push(china, kamchatka);
 gobi.limitrofes.push(china, iran, mongolia);
 mongolia.limitrofes.push(china, iran, gobi, siberia, aral);
-kamchatka.limitrofes.push(china, japon, siberia, alaska);
+kamchatka.limitrofes.push(china, japon, siberia, taimir, alaska);
 turquia.limitrofes.push(iran, israel, arabia, rusia, polonia, egipto),
 israel.limitrofes.push(turquia, arabia, egipto),
 arabia.limitrofes.push(turquia, israel);
 siberia.limitrofes.push(china, mongolia, kamchatka, taimir, tartaria, aral);
-taimir.limitrofes.push(siberia, tartaria);
+taimir.limitrofes.push(kamchatka, siberia, tartaria);
 tartaria.limitrofes.push(siberia, taimir, aral);
 aral.limitrofes.push(iran, mongolia, siberia, tartaria, rusia);
 rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);
@@ -493,7 +583,7 @@ granbretaña.limitrofes.push(alemania, españa, islandia);
 islandia.limitrofes.push(suecia, granbretaña, groenlandia);
 alaska.limitrofes.push(kamchatka, oregon, yukon);
 canada.limitrofes.push(oregon, nuevayork, yukon, terranova);
-yukon.limitrofes.push(alaska, oregon, canada)
+yukon.limitrofes.push(alaska, oregon, canada);
 oregon.limitrofes.push(alaska, nuevayork, california, canada, yukon);
 nuevayork.limitrofes.push(oregon, california, canada, terranova, groenlandia);
 terranova.limitrofes.push(nuevayork, canada, labrador);
@@ -519,10 +609,10 @@ let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chi
 let estadoJuego = paises;
 //push de paises a los continentes
 oceania.push(australia, sumatra, java, borneo);
+africa.push(sahara, egipto, etiopia, zaire, sudafrica, madagascar);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
 asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral);
 europa.push(rusia, suecia, polonia, alemania, italia, francia, españa, granbretaña, islandia);
-africa.push(sahara, egipto, etiopia, zaire, sudafrica, madagascar);
 norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, terranova, labrador, groenlandia);
 
 //declaracion de continentes
@@ -546,8 +636,16 @@ i2++;
 paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
 };
 i = 0;
-
-
+i2 = 0;
+while (colores.length > i) {
+    randomizador = Math.floor(Math.random() * objetivos.length);
+    if (objetivos[randomizador].color === ""){
+        objetivos[randomizador].color = colores[i];
+        i++;
+        console.log(objetivos[randomizador]);
+    };
+};
+i = 0;
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
@@ -598,7 +696,7 @@ function test12(colorturno) {
                     while(colores[i123] != "Rojo"){
                     i123++;
                     };
-                    colores.slice(i123, 1);
+                    colores.splice(i123, 1);
                     delete fichasnuevas.rojo;
                     };
                     i123 = 0;
@@ -606,7 +704,7 @@ function test12(colorturno) {
                     while(colores[i123] != "Azul"){
                     i123++;
                     };
-                    colores.slice(i123, 1);
+                    colores.splice(i123, 1);
                     delete fichasnuevas.azul;
                     };
                     i123 = 0;
@@ -614,7 +712,7 @@ function test12(colorturno) {
                     while(colores[i123] != "Amarillo"){
                     i123++;
                     };
-                    colores.slice(i123, 1);
+                    colores.splice(i123, 1);
                     delete fichasnuevas.amarillo;
                     };
                     i123 = 0;
@@ -622,7 +720,7 @@ function test12(colorturno) {
                     while(colores[i123] != "Verde"){
                     i123++;
                     };
-                    colores.slice(i123, 1);
+                    colores.splice(i123, 1);
                     delete fichasnuevas.verde;
                     };
                     i123 = 0;
@@ -630,7 +728,7 @@ function test12(colorturno) {
                     while(colores[i123] != "Magenta"){
                     i123++;
                     };
-                    colores.slice(i123, 1);
+                    colores.splice(i123, 1);
                     delete fichasnuevas.magenta;
                     };
                     i123 = 0;
@@ -638,7 +736,7 @@ function test12(colorturno) {
                     while(colores[i123] != "Negro"){
                     i123++;
                     };
-                    colores.slice(i123, 1);
+                    colores.splice(i123, 1);
                     delete fichasnuevas.negro;
                     };
                     i123 = 0;
@@ -655,7 +753,7 @@ function test12(colorturno) {
                         fichasnuevas.verde--;
                     };
                     if (fichasnuevas.magenta % 2 === 1) {
-                        fichasnuevast.magenta--;
+                        fichasnuevas.magenta--;
                     };
                     if (fichasnuevas.negro % 2 === 1) {
                         fichasnuevas.negro--;
@@ -696,6 +794,7 @@ function test12(colorturno) {
                     console.log(fichasnuevas.verde);
                     console.log(fichasnuevas.magenta);
                     console.log(fichasnuevas.negro);
+                    console.log(colores);
                     };
                 }
             else if (fase === "Incorporar"){

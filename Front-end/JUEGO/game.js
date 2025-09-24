@@ -830,6 +830,7 @@ function test12(colorturno) {
 
             };
         };
+
 function test14(pais) {
     if (fase === "Atacar") {
         if (turno === pais.colorfichas && pais.fichas > 1) {
@@ -922,6 +923,7 @@ function test14(pais) {
             };
             i141 = 0;
             };  
+//ganador
 function test17(colour){
     i171 = 0;
     i172 = 0;
@@ -1101,6 +1103,7 @@ function guardarPartida() {
     icarg = 0;
 };
 
+//funcion cargar partida
 function cargarPartida() {    
     getEvent("cargarEstado", (estado) => {  
         turno = estado.turno;

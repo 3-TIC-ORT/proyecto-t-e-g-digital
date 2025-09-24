@@ -1,7 +1,7 @@
 // Declaración de Variables Globales
 let turno = "Rojo";
 let colores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
-let fase = "Atacar";
+let fase = "Incorporar";
 let fases = ["Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
 let currentturn = document.getElementById("currentturn");
@@ -47,12 +47,12 @@ let fnmagenta = 0;
 let fnnegro = 0;
 let fn = [fnrojo, fnazul, fnamarillo, fnverde, fnmagenta, fnnegro];
 let fichasnuevas = {
-    rojo: 0,
-    azul: 0,
-    amarillo: 0,
-    verde: 0,
-    magenta: 0,
-    negro: 0,
+    rojo: 8,
+    azul: 8,
+    amarillo: 8,
+    verde: 8,
+    magenta: 8,
+    negro: 8,
 };
 
 //Declaración de objetivos secretos

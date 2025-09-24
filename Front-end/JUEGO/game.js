@@ -564,12 +564,12 @@ iran.limitrofes.push(india, china, gobi, mongolia, turquia, aral, rusia);
 japon.limitrofes.push(china, kamchatka);
 gobi.limitrofes.push(china, iran, mongolia);
 mongolia.limitrofes.push(china, iran, gobi, siberia, aral);
-kamchatka.limitrofes.push(china, japon, siberia, taimir, alaska);
+kamchatka.limitrofes.push(china, japon, siberia, alaska);
 turquia.limitrofes.push(iran, israel, arabia, rusia, polonia, egipto),
 israel.limitrofes.push(turquia, arabia, egipto),
 arabia.limitrofes.push(turquia, israel);
 siberia.limitrofes.push(china, mongolia, kamchatka, taimir, tartaria, aral);
-taimir.limitrofes.push(kamchatka, siberia, tartaria);
+taimir.limitrofes.push(siberia, tartaria);
 tartaria.limitrofes.push(siberia, taimir, aral);
 aral.limitrofes.push(iran, mongolia, siberia, tartaria, rusia);
 rusia.limitrofes.push(iran, turquia, aral, suecia, polonia);

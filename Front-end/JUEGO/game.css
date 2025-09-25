@@ -522,16 +522,18 @@ a {
 
 .footer {
     display: flex;
-    direction: row;
+    flex-direction: row;
     position: absolute;
     bottom: 1%;
     width: 100%;
     text-align: center;
+    height: 5%;
+    gap: 7%;
 }
 
 .sector{
     display:flex;
-    direction: column;
+    flex-direction: column;
 }
 
 .boton_interaccion {

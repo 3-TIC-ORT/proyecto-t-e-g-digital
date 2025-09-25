@@ -54,6 +54,16 @@ let fichasnuevas = {
     magenta: 8,
     negro: 8,
 };
+let mostrarrojo = document.getElementById("mostrarrojo");
+let cerrarrojo = document.getElementById("cerrarrojo");
+let objetivorojo = document.getElementById("objetivorojo");
+let contenidorojo = document.getElementById("contenidorojo");
+mostrarrojo.addEventListener("click",()=> objetivorojo.showModal());
+cerrarrojo.addEventListener("click",()=> objetivorojo.close());
+let resultadodados = document.getElementById("resultadodados");
+let resolucion = document.getElementById("resolucion");
+let cerrardados = document.getElementById("cerrardados");
+cerrardados.addEventListener("click",()=> resultadodados.close());
 
 //Declaración de objetivos secretos
 let obj1 = {
@@ -646,6 +656,10 @@ while (colores.length > i) {
     };
 };
 i = 0;
+while(objetivos[i].color != "Rojo"){
+    i++;
+};
+contenidorojo.textContent = "Conquistar " + objetivos[i].oceania + " de Oceanía, " + objetivos[i].africa + " de África, " + objetivos[i].sudamerica + " de Sudamérica, " + objetivos[i].asia + " de Asia, " + objetivos[i].europa + " de Europa, " + objetivos[i].norteamerica + " de Norteamérica."
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
@@ -938,6 +952,7 @@ function test17(colour){
     };
 };     
 function test16(color) {
+    resolucion.textContent = "";
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
         dadosatacante = paisseleccionado.fichas - 1;
         dadosdefensor = paisatacado.fichas;
@@ -990,16 +1005,15 @@ function test16(color) {
         i161 = 0;
         while (resultadosatacante.length > i161 && resultadosdefensor.length > i161) {
             if (resultadosdefensor[i161] >= resultadosatacante[i161]) {
-                console.log(resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor");
-                console.log(paisseleccionado.nombre + " pierde una ficha");
+                resolucion.textContent = resolucion.textContent + " " + resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor. " + paisseleccionado.nombre + " pierde una ficha.";
                 paisseleccionado.fichas--;
             } else if (resultadosatacante[i161] > resultadosdefensor[i161]) {
-                console.log(resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor");
-                console.log(paisatacado.nombre + " pierde una ficha");
+                resolucion.textContent = resolucion.textContent + " " + resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor. " + paisatacado.nombre + " pierde una ficha."
                 paisatacado.fichas--;
             };
             i161++;
         };
+        resultadodados.showModal();
         if (paisatacado.fichas === 0) {
             paisatacado.fichas++;
             paisseleccionado.fichas--;

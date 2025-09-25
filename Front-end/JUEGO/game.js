@@ -60,6 +60,36 @@ let objetivorojo = document.getElementById("objetivorojo");
 let contenidorojo = document.getElementById("contenidorojo");
 mostrarrojo.addEventListener("click",()=> objetivorojo.showModal());
 cerrarrojo.addEventListener("click",()=> objetivorojo.close());
+let mostrarazul = document.getElementById("mostrarazul");
+let cerrarazul = document.getElementById("cerrarazul");
+let objetivoazul = document.getElementById("objetivoazul");
+let contenidoazul = document.getElementById("contenidoazul");
+mostrarazul.addEventListener("click",()=> objetivoazul.showModal());
+cerrarazul.addEventListener("click",()=> objetivoazul.close());
+let mostraramarillo = document.getElementById("mostraramarillo");
+let cerramarillo = document.getElementById("cerraramarillo");
+let objetivoamarillo = document.getElementById("objetivoamarillo");
+let contenidoamarillo = document.getElementById("contenidoamarillo");
+mostraramarillo.addEventListener("click",()=> objetivoamarillo.showModal());
+cerraramarillo.addEventListener("click",()=> objetivoamarillo.close());
+let mostrarverde = document.getElementById("mostrarverde");
+let cerrarverde = document.getElementById("cerrarverde");
+let objetivoverde = document.getElementById("objetivoverde");
+let contenidoverde = document.getElementById("contenidoverde");
+mostrarverde.addEventListener("click",()=> objetivoverde.showModal());
+cerrarverde.addEventListener("click",()=> objetivoverde.close());
+let mostrarmagenta = document.getElementById("mostrarmagenta");
+let cerrarmagenta = document.getElementById("cerrarmagenta");
+let objetivomagenta = document.getElementById("objetivomagenta");
+let contenidomagenta = document.getElementById("contenidomagenta");
+mostrarmagenta.addEventListener("click",()=> objetivomagenta.showModal());
+cerrarmagenta.addEventListener("click",()=> objetivomagenta.close());
+let mostrarnegro = document.getElementById("mostrarnegro");
+let cerrarnegro = document.getElementById("cerrarnegro");
+let objetivonegro = document.getElementById("objetivonegro");
+let contenidonegro = document.getElementById("contenidonegro");
+mostrarnegro.addEventListener("click",()=> objetivonegro.showModal());
+cerrarnegro.addEventListener("click",()=> objetivonegro.close());
 let resultadodados = document.getElementById("resultadodados");
 let resolucion = document.getElementById("resolucion");
 let cerrardados = document.getElementById("cerrardados");
@@ -74,6 +104,7 @@ let obj1 = {
     europa: 4,
     norteamerica: 5,
     color: "",
+    string: "Ocupar África, 5 países de América del Norte y 4 países de Europa."
 };
 let obj2 = {
     oceania: 0,
@@ -83,6 +114,7 @@ let obj2 = {
     europa: 7,
     norteamerica: 0,
     color: "",
+    string: "Ocupar América del Sur, 7 países de Europa y 3 países de África."
 };
 let obj3 = {
     oceania: 0,
@@ -92,6 +124,7 @@ let obj3 = {
     europa: 0,
     norteamerica: 0,
     color: "",
+    string: "Ocupar Asia y 2 países de América del Sur"
 };
 let obj4 = {
     oceania: 0,
@@ -101,6 +134,7 @@ let obj4 = {
     europa: 9,
     norteamerica: 0,
     color: "",
+    string: "Ocupar Europa, 4 países de Asia y 2 países de América del Sur.",
 };
 let obj5 = {
     oceania: 2,
@@ -110,6 +144,7 @@ let obj5 = {
     europa: 0,
     norteamerica: 10,
     color: "",
+    string: "Ocupar América del Norte, 2 países de Oceanía y 4 de Asia."
 };
 let obj6 = {
     oceania: 2,
@@ -119,6 +154,7 @@ let obj6 = {
     europa: 3,
     norteamerica: 4,
     color: "",
+    string: "Ocupar 2 países de Oceanía, 2 países de África, 2 países de América del Sur, 3 países de Europa, 4 de América del Norte y 3 de Asia."
 };
 let obj7 = {
     oceania: 4,
@@ -128,6 +164,7 @@ let obj7 = {
     europa: 2,
     norteamerica: 10,
     color: "",
+    string: "Ocupar Oceanía, América del Norte y 2 países de Europa."
 };
 let obj8 = {
     oceania: 0,
@@ -137,6 +174,7 @@ let obj8 = {
     europa: 0,
     norteamerica: 0,
     color: "",
+    string: "Ocupar América del Sur, África y 4 países de Asia."
 };
 let obj9 = {
     oceania: 4,
@@ -146,6 +184,7 @@ let obj9 = {
     europa: 0,
     norteamerica: 5,
     color: "",
+    string: "Ocupar Oceanía, África y 5 países de América del Norte."
 };
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
@@ -656,10 +695,42 @@ while (colores.length > i) {
     };
 };
 i = 0;
-while(objetivos[i].color != "Rojo"){
+while(objetivos[i].color != "Rojo" && objetivos.length > i){
     i++;
 };
-contenidorojo.textContent = "Conquistar " + objetivos[i].oceania + " de Oceanía, " + objetivos[i].africa + " de África, " + objetivos[i].sudamerica + " de Sudamérica, " + objetivos[i].asia + " de Asia, " + objetivos[i].europa + " de Europa, " + objetivos[i].norteamerica + " de Norteamérica."
+if (objetivos[i].color === "Rojo"){
+contenidorojo.textContent = objetivos[i].string;}
+i = 0;
+while(objetivos[i].color != "Azul" && objetivos.length > i){
+    i++;
+};
+if (objetivos[i].color === "Azul"){
+    contenidoazul.textContent = objetivos[i].string;}
+i = 0;
+while(objetivos[i].color != "Amarillo" && objetivos.length > i){
+    i++;
+};
+if (objetivos[i].color === "Amarillo"){
+    contenidoamarillo.textContent = objetivos[i].string;}
+i = 0;
+while(objetivos[i].color != "Verde" && objetivos.length > i){
+    i++;
+};
+if (objetivos[i].color === "Verde"){
+    contenidoverde.textContent = objetivos[i].string;}
+i = 0;
+while(objetivos[i].color != "Magenta" && objetivos.length > i){
+    i++;
+};
+if (objetivos[i].color === "Magenta"){
+    contenidomagenta.textContent = objetivos[i].string;}
+i = 0;
+while(objetivos[i].color != "Negro" && objetivos.length > i){
+    i++;
+};
+if (objetivos[i].color === "Negro"){
+    contenidonegro.textContent = objetivos[i].string;}
+i = 0;
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;

@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #242323;
-    height: 90vh;
+    height: 120vh;
     margin: 0;
     gap: 1%;
 }
@@ -20,7 +20,7 @@ body {
 
 .map-container {
   position: relative;
-  width: 95%;
+  width: 100%;
   height: auto;
   overflow: hidden;
   background-color: #1e1e1e; 

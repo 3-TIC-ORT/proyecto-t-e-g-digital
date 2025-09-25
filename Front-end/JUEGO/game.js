@@ -103,6 +103,8 @@ let resolucion = document.getElementById("resolucion");
 let cerrardados = document.getElementById("cerrardados");
 cerrardados.addEventListener("click",()=> resultadodados.close());
 let instrucciones = document.getElementById("instrucciones");
+let fin = document.getElementById("fin");
+let mensajefinal = document.getElementById("mensajefinal");
 
 //Declaracion de instrucciones
 let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas.";
@@ -711,40 +713,40 @@ while (colores.length > i) {
     };
 };
 i = 0;
-while(objetivos[i].color != "Rojo" && objetivos.length > i){
+while(objetivos.length > i && objetivos[i].color != "Rojo"){
     i++;
 };
-if (objetivos[i].color === "Rojo"){
+if (objetivos.length > i && objetivos[i].color === "Rojo"){
 contenidorojo.textContent = objetivos[i].string;}
 i = 0;
-while(objetivos[i].color != "Azul" && objetivos.length > i){
+while(objetivos.length > i && objetivos[i].color != "Azul"){
     i++;
 };
-if (objetivos[i].color === "Azul"){
+if (objetivos.length > i && objetivos[i].color === "Azul"){
     contenidoazul.textContent = objetivos[i].string;}
 i = 0;
-while(objetivos[i].color != "Amarillo" && objetivos.length > i){
+while(objetivos.length > i && objetivos[i].color != "Amarillo"){
     i++;
 };
-if (objetivos[i].color === "Amarillo"){
+if (objetivos.length > i && objetivos[i].color === "Amarillo"){
     contenidoamarillo.textContent = objetivos[i].string;}
 i = 0;
-while(objetivos[i].color != "Verde" && objetivos.length > i){
+while(objetivos.length > i && objetivos[i].color != "Verde"){
     i++;
 };
-if (objetivos[i].color === "Verde"){
+if (objetivos.length > i && objetivos[i].color === "Verde"){
     contenidoverde.textContent = objetivos[i].string;}
 i = 0;
-while(objetivos[i].color != "Magenta" && objetivos.length > i){
+while(objetivos.length > i && objetivos[i].color != "Magenta"){
     i++;
 };
-if (objetivos[i].color === "Magenta"){
+if (objetivos.length > i && objetivos[i].color === "Magenta"){
     contenidomagenta.textContent = objetivos[i].string;}
 i = 0;
-while(objetivos[i].color != "Negro" && objetivos.length > i){
+while(objetivos.length > i && objetivos[i].color != "Negro"){
     i++;
 };
-if (objetivos[i].color === "Negro"){
+if (objetivos.length > i && objetivos[i].color === "Negro"){
     contenidonegro.textContent = objetivos[i].string;}
 i = 0;
 
@@ -808,50 +810,62 @@ function test12(colorturno) {
                     };
                     i123 = 0;
                     if (fichasnuevas.rojo === 0){
-                    while(colores[i123] != "Rojo"){
+                    while(colores.length > i123 && colores[i123] != "Rojo"){
                     i123++;
                     };
+                    if(colores[i123] === "Rojo"){
                     colores.splice(i123, 1);
+                    };
                     delete fichasnuevas.rojo;
                     };
                     i123 = 0;
                     if (fichasnuevas.azul === 0){
-                    while(colores[i123] != "Azul"){
+                    while(colores.length > i123 && colores[i123] != "Azul"){
                     i123++;
                     };
+                    if(colores[i123] === "Azul"){
                     colores.splice(i123, 1);
+                    }
                     delete fichasnuevas.azul;
                     };
                     i123 = 0;
                     if (fichasnuevas.amarillo === 0){
-                    while(colores[i123] != "Amarillo"){
+                    while(colores.length > i123 && colores[i123] != "Amarillo"){
                     i123++;
                     };
+                    if(colores[i123] === "Amarillo"){
                     colores.splice(i123, 1);
+                    };
                     delete fichasnuevas.amarillo;
                     };
                     i123 = 0;
                     if (fichasnuevas.verde === 0){
-                    while(colores[i123] != "Verde"){
+                    while(colores.length > i123 && colores[i123] != "Verde"){
                     i123++;
                     };
+                    if(colores[i123] === "Verde"){
                     colores.splice(i123, 1);
+                    };
                     delete fichasnuevas.verde;
                     };
                     i123 = 0;
                     if (fichasnuevas.magenta === 0){
-                    while(colores[i123] != "Magenta"){
+                    while(colores.length > i123 && colores[i123] != "Magenta"){
                     i123++;
                     };
+                    if(colores[i123] === "Magenta"){
                     colores.splice(i123, 1);
+                    };
                     delete fichasnuevas.magenta;
                     };
                     i123 = 0;
                     if (fichasnuevas.negro === 0){
-                    while(colores[i123] != "Negro"){
+                    while(colores.length > i123 && colores[i123] != "Negro"){
                     i123++;
                     };
+                    if(colores[i123] === "Negro"){
                     colores.splice(i123, 1);
+                    };
                     delete fichasnuevas.negro;
                     };
                     i123 = 0;
@@ -1057,7 +1071,8 @@ function test17(colour){
         i171++;
     };
     if (i172 >= 30){
-        alert("Ganó el " + colour);
+        mensajefinal.textContent = "Ganó el " + colour;
+        fin.showModal();
     };
     while (objetivos.length > i173 && objetivos[i173].color != colour) {
         i173++;
@@ -1104,8 +1119,10 @@ function test17(colour){
     i174++;
     };
     i174 = 0;
-    if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].isudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
-        alert("Ganó el " + colour);
+    if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].sudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
+        resultadodados.close();
+        mensajefinal.textContent = "Ganó el " + colour;
+        fin.showModal();
     };
 };
 function test16(color) {

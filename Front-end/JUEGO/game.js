@@ -1182,6 +1182,14 @@ function obtenerEstadoJuego() {
       paises: paisesLimpios,
       turno: turno,  
       fase: fase,    
+      obj1: obj1.color,
+      obj2: obj2.color,
+      obj3: obj3.color,
+      obj4: obj4.color,
+      obj5: obj5.color,
+      obj6: obj6.color,
+      obj7: obj7.color,
+      obj8: obj8.color,
     };
   };
 
@@ -1198,13 +1206,20 @@ function cargarPartida() {
         fase = estado.fase;
         currentturn.textContent = "Turno: " + turno;
         currentphase.textContent = "Fase: " + fase;
-
+        obj1 = obj1.color;
+        obj2 = obj2.color;
+        obj3 = obj3.color;
+        obj4 = obj4.color;
+        obj5 = obj5.color;
+        obj6 = obj6.color;
+        obj7 = obj7.color;
+        obj8 = obj8.color;
 
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
             paises[icarg].colorfichas = estado.paises[icarg].color;
             paises[icarg].id.textContent = paises[icarg].nombre + " " + paises[icarg].fichas + " " + paises[icarg].colorfichas;
             icarg++;
-        }
+        };
     })
 }

@@ -45,7 +45,7 @@ let fnamarillo = 0;
 let fnverde = 0;
 let fnmagenta = 0;
 let fnnegro = 0;
-let fn = [fnrojo, fnazul, fnamarillo, fnverde, fnmagenta, fnnegro];
+let reserva = "";
 let fichasnuevas = {
     rojo: 8,
     azul: 8,
@@ -752,6 +752,9 @@ function test12(colorturno) {
             currentphase.textContent = "Fase: " + fase;
                 }
             else if (i121 === colores.length) {
+                reserva = "";
+                reserva = colores.shift();
+                colores.push(reserva);
                 fichasnuevas.rojo = 0;
                 fichasnuevas.azul = 0;
                 fichasnuevas.amarillo = 0;

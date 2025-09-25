@@ -32,3 +32,50 @@ a {
     text-decoration: none;
     }
 
+/* Estilos generales para el contenedor */
+.switch-button {
+    position: relative; /* Para posicionar elementos hijos */
+    display: inline-block;
+    width: 60px; /* Ancho de la barra */
+    height: 34px; /* Alto de la barra */
+  }
+  
+  /* Ocultar el checkbox */
+  .switch-button__checkbox {
+    display: none;
+  }
+  
+  /* Estilizar el fondo del interruptor (la barra) */
+  .switch-button__label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Color de fondo en OFF */
+    border-radius: 34px; /* Bordes redondeados para la barra */
+    transition: .4s; /* Transición suave del color */
+  }
+  
+  /* Crear la bola (el círculo que se desliza) */
+  .switch-button__label::before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white; /* Color de la bola */
+    border-radius: 50%;
+    transition: .4s; /* Transición suave de la posición */
+  }
+  
+  /* Cambiar los estilos cuando el checkbox está checked */
+  .switch-button__checkbox:checked + .switch-button__label {
+    background-color: #2196F3; /* Color de fondo en ON */
+  }
+  
+  .switch-button__checkbox:checked + .switch-button__label::before {
+    transform: translateX(26px); /* Mover la bola a la derecha */
+  }

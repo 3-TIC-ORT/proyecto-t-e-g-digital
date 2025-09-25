@@ -11,7 +11,7 @@
 <body>
     <div class="boton_atras"><a href="../INICIO/inicio.html"> Volver </a></div>
     
-    <select id="playersid"> 
+    <select id="playersid" class="cantJugadores"> 
     <option value="0">Cantidad de Jugadores</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -19,16 +19,13 @@
     <option value="5">5</option>
     <option value="6">6</option>
     </select>
-    <select id="objetivosid">
+    <br>
+    <select id="objetivosid" class="objSecretos">
     <option value="0">Objetivos Secretos</option>
     <option value="1">NO</option>
     <option value="2">SÍ</option>
     </select>
-    <div class="switch-button">
-        <input type="checkbox" id="switch-label" class="switch-button__checkbox">
-        <label for="switch-label" class="switch-button__label"></label>
-      </div>
-
-    <button id="gameready">Siguiente</button>
+    <br>
+    <button id="gameready" class="botonSiguiente">Siguiente</button>
 </body>
 </html>

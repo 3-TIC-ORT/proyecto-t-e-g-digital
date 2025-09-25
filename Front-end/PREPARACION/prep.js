@@ -7,7 +7,7 @@ alert(parseInt(players.value) + " jugadores");
 };
 if(parseInt(objetivos.value)===0){
 msg="SELECCIONAR OBJETIVOS SECRETOS";
-alert(msg);
+alert(msg);     
 };
 if(parseInt(objetivos.value)===1){
 msg="Sin Objetivos Secretos";

@@ -1,34 +1,36 @@
 body {
-    position: relative;
+   position: relative;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: #694b16;
+   background-color: #49453d;
    height: 550px;
 }
 
 .cantJugadores{
-  background-color: rgb(73, 62, 62);
+  background-color: rgb(214, 228, 135);
   width: 25%;
   height: 12%;
   text-align: center;
-  font-size:100%;
+  font-size:135%;
   color: #866834;
 }
 
 .objSecretos {
-  background-color: rgb(73, 62, 62);
+  background-color: rgb(214, 228, 135);
   width: 25%;
   height: 12%;
   text-align: center;
-  font-size: 100%;
+  font-size: 135%;
   color: #866834;
 }
 
 .botonSiguiente {
  width: 15%;
  height: 10%;
+ text-align: center;
+ font-size: 135%;
  color:#866834
 }
 

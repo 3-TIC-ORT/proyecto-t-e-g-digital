@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #242323;
-    height: 120vh;
+    height: 100vh;
     margin: 0;
     gap: 1%;
 }
@@ -20,7 +20,7 @@ body {
 
 .map-container {
   position: relative;
-  width: 100%;
+  width: 95%;
   height: auto;
   overflow: hidden;
   background-color: #1e1e1e; 
@@ -474,7 +474,8 @@ body {
 
 .boton_atras {
     position: absolute;
-    left: 1.5rem;
+    left: 1%;
+    top: 1%;
     z-index: 100;
     font-weight: 400;
     text-transform: uppercase;
@@ -491,7 +492,8 @@ body {
 
 .guardar {
     position: absolute;
-    right: 1.5rem;
+    right: 1%;
+    top: 1%;
     width: 100px;
     z-index: 100;
     font-weight: 400;
@@ -508,10 +510,23 @@ body {
 }
 
 .currentturn {
+    position: absolute;
     color: white;
     background-color: darkgoldenrod;
     width: 120px;
     text-align: center;
+    top: 1%;
+    justify-self: center;
+}
+
+.currentphase {
+    position: absolute;
+    color: white;
+    background-color: darkgoldenrod;
+    width: 120px;
+    text-align: center;
+    top: 4%;
+    justify-self: center;
 }
 
 a {

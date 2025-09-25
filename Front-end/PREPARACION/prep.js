@@ -1,26 +1,29 @@
 let players = document.getElementById("playersid");
+let objetivos = document.getElementById("objetivosid");
+let advertencia = document.getElementById("advertencia");
+let contenidojug = document.getElementById("contenidojug");
+let contenidoobj = document.getElementById("contenidoobj");
+let cerrar = document.getElementById("cerrar");
 function test3 () {
 if (parseInt(players.value) === 0){
-alert("SELECCIONE CANTIDAD DE JUGADORES")
+contenidojug.textContent = "SELECCIONE CANTIDAD DE JUGADORES";
 } else {
-alert(parseInt(players.value) + " jugadores");
+contenidojug.textContent = parseInt(players.value) + " jugadores";
 };
 if(parseInt(objetivos.value)===0){
-msg="SELECCIONAR OBJETIVOS SECRETOS";
-alert(msg);     
+contenidoobj.textContent = "SELECCIONAR OBJETIVOS SECRETOS";  
 };
 if(parseInt(objetivos.value)===1){
-msg="Sin Objetivos Secretos";
-alert(msg);
+contenidoobj.textContent = "Sin Objetivos Secretos";
 };
 if(parseInt(objetivos.value)===2){
-msg="Con Objetivos Secretos";
-alert(msg);
+contenidoobj.textContent ="Con Objetivos Secretos";
 };
+advertencia.showModal();
 if(parseInt(players.value) != 0 && parseInt(objetivos.value) != 0) {
 window.location.href = "../JUEGO/game.html"
 };
 };
-let objetivos = document.getElementById("objetivosid");
 let ready = document.getElementById("gameready");
 ready.addEventListener("click", test3);
+cerrar.addEventListener("click", ()=> advertencia.close());

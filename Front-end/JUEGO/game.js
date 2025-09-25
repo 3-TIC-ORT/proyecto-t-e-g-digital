@@ -102,6 +102,13 @@ let resultadodados = document.getElementById("resultadodados");
 let resolucion = document.getElementById("resolucion");
 let cerrardados = document.getElementById("cerrardados");
 cerrardados.addEventListener("click",()=> resultadodados.close());
+let instrucciones = document.getElementById("instrucciones");
+
+//Declaracion de instrucciones
+let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas.";
+let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo para atacar.";
+let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas.";
+
 
 //Declaración de objetivos secretos
 let obj1 = {
@@ -198,6 +205,7 @@ let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
 connect2Server(3015);
 cargarPartida();
+actualizarInstrucciones();
 
 //declaracion continentes
 let oceania = [];
@@ -739,6 +747,16 @@ while(objetivos[i].color != "Negro" && objetivos.length > i){
 if (objetivos[i].color === "Negro"){
     contenidonegro.textContent = objetivos[i].string;}
 i = 0;
+
+function actualizarInstrucciones(){
+if (fase === "Incorporar") {
+    instrucciones.textContent = incorporarInstruccion;
+} else if (fase === "Atacar") {
+    instrucciones.textContent = atacarInstruccion
+} else if (fase === "Reagrupar") {
+    instrucciones.textContent = reagruparInstruccion;
+}}
+
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
@@ -746,6 +764,7 @@ function test12(colorturno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
+            actualizarInstrucciones();  
         } 
     else if (fase === "Reagrupar"){
         i121 = 0;

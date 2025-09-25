@@ -38,6 +38,14 @@ let i161 = 0;
 let i162 = 0;
 let i171 = 0;
 let i172 = 0;
+let i173 = 0;
+let i174 = 0;
+let ioceania = 0;
+let iafrica = 0;
+let isudamerica = 0;
+let iasia = 0;
+let ieuropa = 0;
+let inorteamerica = 0;
 let icarg = 0;
 let fnrojo = 0;
 let fnazul = 0;
@@ -1015,6 +1023,14 @@ function test14(pais) {
 function test17(colour){
     i171 = 0;
     i172 = 0;
+    i173 = 0;
+    i174 = 0;
+    ioceania = 0;
+    iafrica = 0;
+    isudamerica = 0;
+    iasia = 0;
+    ieuropa = 0;
+    inorteamerica = 0;
     while (paises.length > i171){
         if (paises[i171].colorfichas === colour){
             i172++;
@@ -1024,7 +1040,55 @@ function test17(colour){
     if (i172 >= 30){
         alert("Ganó el " + colour);
     };
-};     
+    while (objetivos.length > i173 && objetivos[i173].color != colour) {
+        i173++;
+    };
+    while (oceania.length > i174){
+        if (oceania[i174].colorfichas === colour){
+            ioceania++;
+        };
+        i174++;
+    };
+    i174 = 0;
+    while (africa.length > i174){
+        if(africa[i174].colorfichas === colour){
+            iafrica++;
+        };
+    i174++;
+    };
+    i174 = 0;
+    while (sudamerica.length > i174){
+        if(sudamerica[i174].colorfichas === colour){
+            isudamerica++;
+        };
+    i174++;
+    };
+    i174 = 0;
+    while (asia.length > i174){
+        if(asia[i174].colorfichas === colour){
+            iasia++;
+        };
+    i174++;
+    };
+    i174 = 0;
+    while (europa.length > i174){
+        if(europa[i174].colorfichas === colour){
+            ieuropa++;
+        };
+    i174++;
+    };
+    i174 = 0;
+    while (norteamerica.length > i174){
+        if(norteamerica[i174].colorfichas === colour){
+            inorteamerica++;
+        };
+    i174++;
+    };
+    i174 = 0;
+    if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].isudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
+        alert("Ganó el " + colour);
+    };
+};
 function test16(color) {
     resolucion.textContent = "";
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {

@@ -539,10 +539,10 @@ body {
     position: absolute;
     color: white;
     background-color: darkgoldenrod;
-    width: 240px;
-    height: 45px;
+    width: 220px;
+    height: 55px;
      font-weight: bold;
-     font-size: 112%;
+     font-size: 95%;
     text-align: center;
     top: 8%;
     justify-self: center;

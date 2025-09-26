@@ -26,6 +26,15 @@ body {
   color: #866834;
 }
 
+.instructor {
+  background-color: rgb(214, 228, 135);
+  width: 25%;
+  height: 12%;
+  text-align: center;
+  font-size: 135%;
+  color: #866834;
+}
+
 .botonSiguiente {
  width: 15%;
  height: 10%;
@@ -57,3 +66,10 @@ a {
     font-style: normal;
     text-decoration: none;
     }
+
+.advertencia {
+text-align: center;
+font-weight: bold;
+font-family:'Times New Roman', Times, serif;
+font-style:inherit ;
+}

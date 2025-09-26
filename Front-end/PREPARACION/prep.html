@@ -10,11 +10,14 @@
 </head>
 <body>
     <div class="boton_atras"><a href="../INICIO/inicio.html"> Volver </a></div>
-    <dialog id="advertencia">
+   
+    <dialog id="advertencia" class="advertencia">
         <div id="contenidojug"></div>
         <div id="contenidoobj"></div>
+        <div id="contenidoins"></div>
         <button id="cerrar">Cerrar</button>
     </dialog>
+
     <select id="playersid" class="cantJugadores"> 
     <option value="0">Cantidad de Jugadores</option>
     <option value="2">2</option>
@@ -28,6 +31,12 @@
     <option value="0">Objetivos Secretos</option>
     <option value="1">NO</option>
     <option value="2">SÍ</option>
+    </select>
+    <br>
+    <select id="instructorid" class="instructor">
+    <option value="0"> Instructor </option>
+    <option value="1"> SI (recomendado)</option>
+    <option value="2"> NO </option>
     </select>
     <br>
     <button id="gameready" class="botonSiguiente">Siguiente</button>

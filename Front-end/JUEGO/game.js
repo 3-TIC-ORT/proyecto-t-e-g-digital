@@ -117,6 +117,11 @@ cerrardados.addEventListener("click",()=> resultadodados.close());
 let instrucciones = document.getElementById("instrucciones");
 let fin = document.getElementById("fin");
 let mensajefinal = document.getElementById("mensajefinal");
+let pasarfichas = document.getElementById("pasarfichas");
+let selectpasarfichas = document.getElementById("selectpasarfichas");
+let cerrarpasarfichas = document.getElementById("cerrarpasarfichas");
+let nuevaopcion = document.createElement("option");
+cerrarpasarfichas.addEventListener("click", ()=> pasarfichas.close());
 
 //Declaracion de instrucciones
 let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas.";
@@ -1203,6 +1208,25 @@ function test17(colour){
         fin.showModal();
     };
 };
+function test18() {
+    if(paisseleccionado.fichas === 2){
+        pasarfichas.showModal();
+    } else if (paisseleccionado.fichas >= 3){
+    nuevaopcion.textContent = "3";
+    nuevaopcion.value = 3;
+    selectpasarfichas.appendChild(nuevaopcion);
+    pasarfichas.showModal();
+    };
+    if(selectpasarfichas.value === 2){
+        paisseleccionado.fichas--;
+        paisatacado.fichas++;
+    } else if (selectpasarfichas.value === 3){
+        paisseleccionado.fichas = paisseleccionado.fichas - 2;
+        paisatacado.fichas = paisatacado.fichas + 2;
+    };
+    paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+    paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
+}
 function test16(color) {
     resolucion.textContent = "";
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
@@ -1271,6 +1295,7 @@ function test16(color) {
             paisseleccionado.fichas--;
             paisatacado.colorfichas = paisseleccionado.colorfichas;
             test17(color);
+            test18();
         };
         paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
         paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;

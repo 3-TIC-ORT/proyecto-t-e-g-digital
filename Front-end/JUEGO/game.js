@@ -66,42 +66,60 @@ let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
 let contenidorojo = document.getElementById("contenidorojo");
-mostrarrojo.addEventListener("click",()=> objetivorojo.showModal());
+mostrarrojo.addEventListener("click", function(){
+    if(turno === "Rojo"){
+        objetivorojo.showModal()};
+    });
 cerrarrojo.addEventListener("click",()=> objetivorojo.close());
 let mostrarazul = document.getElementById("mostrarazul");
 let cerrarazul = document.getElementById("cerrarazul");
 let objetivoazul = document.getElementById("objetivoazul");
 let contenidoazul = document.getElementById("contenidoazul");
-mostrarazul.addEventListener("click",()=> objetivoazul.showModal());
+mostrarazul.addEventListener("click", function(){
+    if(turno === "Azul"){
+        objetivoazul.showModal()};
+    });
 cerrarazul.addEventListener("click",()=> objetivoazul.close());
 let mostraramarillo = document.getElementById("mostraramarillo");
 let cerramarillo = document.getElementById("cerraramarillo");
 let objetivoamarillo = document.getElementById("objetivoamarillo");
 let contenidoamarillo = document.getElementById("contenidoamarillo");
-mostraramarillo.addEventListener("click",()=> objetivoamarillo.showModal());
+mostraramarillo.addEventListener("click", function(){
+    if(turno === "Amarillo"){
+        objetivoamarillo.showModal()};
+    });
 cerraramarillo.addEventListener("click",()=> objetivoamarillo.close());
 let mostrarverde = document.getElementById("mostrarverde");
 let cerrarverde = document.getElementById("cerrarverde");
 let objetivoverde = document.getElementById("objetivoverde");
 let contenidoverde = document.getElementById("contenidoverde");
-mostrarverde.addEventListener("click",()=> objetivoverde.showModal());
+mostrarverde.addEventListener("click", function(){
+    if(turno === "Verde"){
+        objetivoverde.showModal()};
+    });
 cerrarverde.addEventListener("click",()=> objetivoverde.close());
 let mostrarmagenta = document.getElementById("mostrarmagenta");
 let cerrarmagenta = document.getElementById("cerrarmagenta");
 let objetivomagenta = document.getElementById("objetivomagenta");
 let contenidomagenta = document.getElementById("contenidomagenta");
-mostrarmagenta.addEventListener("click",()=> objetivomagenta.showModal());
+mostrarmagenta.addEventListener("click", function(){
+    if(turno === "Magenta"){
+        objetivomagenta.showModal()};
+    });
 cerrarmagenta.addEventListener("click",()=> objetivomagenta.close());
 let mostrarnegro = document.getElementById("mostrarnegro");
 let cerrarnegro = document.getElementById("cerrarnegro");
 let objetivonegro = document.getElementById("objetivonegro");
 let contenidonegro = document.getElementById("contenidonegro");
-mostrarnegro.addEventListener("click",()=> objetivonegro.showModal());
+mostrarnegro.addEventListener("click", function(){
+    if(turno === "Negro"){
+        objetivonegro.showModal()};
+    });
 cerrarnegro.addEventListener("click",()=> objetivonegro.close());
 let resultadodados = document.getElementById("resultadodados");
 let resolucion = document.getElementById("resolucion");
 let cerrardados = document.getElementById("cerrardados");
-cerrardados.addEventListener("click",()=> resultadodados.close());
+cerrardados.addEventListener("click", resultadodados.close());
 let instrucciones = document.getElementById("instrucciones");
 let fin = document.getElementById("fin");
 let mensajefinal = document.getElementById("mensajefinal");

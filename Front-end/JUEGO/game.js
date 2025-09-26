@@ -1,6 +1,7 @@
 // Declaración de Variables Globales
 let turno = "Rojo";
-let colores = ["Rojo", "Azul"];
+let colores = [];
+let listacolores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
 let fase = "Inicio Ronda 1";
 let fases = ["Inicio Ronda 1","Inicio Ronda 2", "Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
@@ -58,12 +59,16 @@ let fichasnuevas = {
     magenta: 5,
     negro: 5,
 };
+let njugadores = localStorage.getItem("njugadores");
+njugadores = parseInt(njugadores);
+let nobjetivos = localStorage.getItem("nobjetivos");
+console.log(nobjetivos);
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
 let contenidorojo = document.getElementById("contenidorojo");
 mostrarrojo.addEventListener("click", function(){
-    if(turno === "Rojo"){
+    if(turno === "Rojo" && nobjetivos === "true"){
         objetivorojo.showModal()};
     });
 cerrarrojo.addEventListener("click",()=> objetivorojo.close());
@@ -72,7 +77,7 @@ let cerrarazul = document.getElementById("cerrarazul");
 let objetivoazul = document.getElementById("objetivoazul");
 let contenidoazul = document.getElementById("contenidoazul");
 mostrarazul.addEventListener("click", function(){
-    if(turno === "Azul"){
+    if(turno === "Azul" && nobjetivos === "true"){
         objetivoazul.showModal()};
     });
 cerrarazul.addEventListener("click",()=> objetivoazul.close());
@@ -81,7 +86,7 @@ let cerramarillo = document.getElementById("cerraramarillo");
 let objetivoamarillo = document.getElementById("objetivoamarillo");
 let contenidoamarillo = document.getElementById("contenidoamarillo");
 mostraramarillo.addEventListener("click", function(){
-    if(turno === "Amarillo"){
+    if(turno === "Amarillo" && nobjetivos === "true"){
         objetivoamarillo.showModal()};
     });
 cerraramarillo.addEventListener("click",()=> objetivoamarillo.close());
@@ -90,7 +95,7 @@ let cerrarverde = document.getElementById("cerrarverde");
 let objetivoverde = document.getElementById("objetivoverde");
 let contenidoverde = document.getElementById("contenidoverde");
 mostrarverde.addEventListener("click", function(){
-    if(turno === "Verde"){
+    if(turno === "Verde" && nobjetivos === "true"){
         objetivoverde.showModal()};
     });
 cerrarverde.addEventListener("click",()=> objetivoverde.close());
@@ -99,7 +104,7 @@ let cerrarmagenta = document.getElementById("cerrarmagenta");
 let objetivomagenta = document.getElementById("objetivomagenta");
 let contenidomagenta = document.getElementById("contenidomagenta");
 mostrarmagenta.addEventListener("click", function(){
-    if(turno === "Magenta"){
+    if(turno === "Magenta" && nobjetivos === "true"){
         objetivomagenta.showModal()};
     });
 cerrarmagenta.addEventListener("click",()=> objetivomagenta.close());
@@ -108,7 +113,7 @@ let cerrarnegro = document.getElementById("cerrarnegro");
 let objetivonegro = document.getElementById("objetivonegro");
 let contenidonegro = document.getElementById("contenidonegro");
 mostrarnegro.addEventListener("click", function(){
-    if(turno === "Negro"){
+    if(turno === "Negro" && nobjetivos === "true"){
         objetivonegro.showModal()};
     });
 cerrarnegro.addEventListener("click",()=> objetivonegro.close());
@@ -710,6 +715,12 @@ let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
 
 //Turno y Fase
+i = 0;
+while(njugadores > i){
+colores.push(listacolores[i]);
+i++;
+};
+i = 0;
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
 while (paises.length > i) {
@@ -726,6 +737,7 @@ paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises
 };
 i = 0;
 i2 = 0;
+if(nobjetivos === "true"){
 while (colores.length > i) {
     randomizador = Math.floor(Math.random() * objetivos.length);
     if (objetivos[randomizador].color === ""){
@@ -733,6 +745,7 @@ while (colores.length > i) {
         i++;
         console.log(objetivos[randomizador]);
     };
+};
 };
 i = 0;
 while(objetivos.length > i && objetivos[i].color != "Rojo"){

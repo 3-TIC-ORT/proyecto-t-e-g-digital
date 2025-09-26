@@ -124,9 +124,11 @@ let nuevaopcion = document.createElement("option");
 cerrarpasarfichas.addEventListener("click", ()=> pasarfichas.close());
 
 //Declaracion de instrucciones
-let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas.";
-let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo para atacar.";
-let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas.";
+let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea el territorio para poner 1 ficha"
+let inicioRonda2 = "Ya sabes como es, ahora tenes 3 fichas a incorporar"
+let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas";
+let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo para atacar";
+let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
 
 
 //Declaración de objetivos secretos
@@ -774,6 +776,12 @@ if (fase === "Incorporar") {
     instrucciones.textContent = atacarInstruccion
 } else if (fase === "Reagrupar") {
     instrucciones.textContent = reagruparInstruccion;
+}
+  else if (fase === "Inicio Ronda 1"){
+      instrucciones.textContent = inicioRonda1;
+  }
+  else if (fase === "Inicio Ronda 2"){
+    instrucciones.textContent = inicioRonda2;
 }}
 
 function test12(colorturno) {

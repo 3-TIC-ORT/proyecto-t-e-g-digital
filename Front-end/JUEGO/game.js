@@ -1,8 +1,8 @@
 // Declaración de Variables Globales
 let turno = "Rojo";
 let colores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
-let fase = "Incorporar";
-let fases = ["Atacar", "Reagrupar", "Incorporar"];
+let fase = "Inicio Ronda 1";
+let fases = ["Inicio Ronda 1","Inicio Ronda 2", "Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
 let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
@@ -17,7 +17,7 @@ let skipamarillo = document.getElementById("pasaamarillo");
 let skipverde = document.getElementById("pasaverde");
 let skipmagenta = document.getElementById("pasamagenta");
 let skipnegro = document.getElementById("pasanegro");
-let botonGuardar = document.getElementById("guardar")
+let botonGuardar = document.getElementById("guardar");
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -47,20 +47,14 @@ let iasia = 0;
 let ieuropa = 0;
 let inorteamerica = 0;
 let icarg = 0;
-let fnrojo = 0;
-let fnazul = 0;
-let fnamarillo = 0;
-let fnverde = 0;
-let fnmagenta = 0;
-let fnnegro = 0;
 let reserva = "";
 let fichasnuevas = {
-    rojo: 8,
-    azul: 8,
-    amarillo: 8,
-    verde: 8,
-    magenta: 8,
-    negro: 8,
+    rojo: 5,
+    azul: 5,
+    amarillo: 5,
+    verde: 5,
+    magenta: 5,
+    negro: 5,
 };
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
@@ -786,6 +780,72 @@ function test12(colorturno) {
             currentphase.textContent = "Fase: " + fase;
             actualizarInstrucciones();  
         } 
+    else if(fase === "Inicio Ronda 1"){
+        i121 = 0;
+        while (colores[i121] != colorturno){
+            i121++;
+        };
+    if (colores[i121] === "Rojo" && fichasnuevas.rojo === 0){
+                i121++;
+                } else if (colores[i121] === "Azul" && fichasnuevas.azul === 0) {
+                i121++;
+                } else if (colores[i121] === "Amarillo" && fichasnuevas.amarillo === 0) {
+                i121++;
+                } else if (colores[i121] === "Verde" && fichasnuevas.verde === 0) {
+                    i121++;
+                } else if (colores[i121] === "Magenta" && fichasnuevas.magenta === 0) {
+                i121++;
+                } else if (colores[i121] === "Negro" && fichasnuevas.negro === 0) {
+                i121++;
+                };
+        if(i121 < colores.length){
+            turno = colores[i121];
+            currentturn.textContent = "Turno: " + turno;
+        } 
+    else if (i121 === colores.length){
+        i121 = 0;
+        fase = "Inicio Ronda 2";
+        turno = colores[i121];
+        currentturn.textContent = "Turno: " + turno;
+        currentphase.textContent = "Fase: " + fase;
+        fichasnuevas.rojo = 3;
+        fichasnuevas.azul = 3;
+        fichasnuevas.amarillo = 3;
+        fichasnuevas.verde = 3;
+        fichasnuevas.magenta = 3;
+        fichasnuevas.negro = 3;
+    };
+    }
+    else if(fase === "Inicio Ronda 2"){
+    i121 = 0;
+       while (colores[i121] != colorturno){
+            i121++;
+        };
+                if (colores[i121] === "Rojo" && fichasnuevas.rojo === 0){
+                i121++;
+                } else if (colores[i121] === "Azul" && fichasnuevas.azul === 0) {
+                i121++;
+                } else if (colores[i121] === "Amarillo" && fichasnuevas.amarillo === 0) {
+                i121++;
+                } else if (colores[i121] === "Verde" && fichasnuevas.verde === 0) {
+                    i121++;
+                } else if (colores[i121] === "Magenta" && fichasnuevas.magenta === 0) {
+                i121++;
+                } else if (colores[i121] === "Negro" && fichasnuevas.negro === 0) {
+                i121++;
+                };
+        if(i121 < colores.length){
+            turno = colores[i121];
+            currentturn.textContent = "Turno: " + turno;
+        }
+        else if (i121 === colores.length){
+        i121 = 0;
+        fase = "Atacar";
+        turno = colores[i121];
+        currentturn.textContent = "Turno: " + turno;
+        currentphase.textContent = "Fase: " + fase;
+    };
+    }
     else if (fase === "Reagrupar"){
         i121 = 0;
             while (colores[i121] != colorturno) {
@@ -1020,7 +1080,7 @@ function test14(pais) {
             paisseleccionado = 0;
         };
     };
-    if (fase === "Incorporar") {
+    if (fase === "Incorporar" || fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2") {
         if (turno === pais.colorfichas){
             if (turno === "Rojo"){
             if (fichasnuevas.rojo > 0){
@@ -1332,6 +1392,7 @@ function cargarPartida() {
         obj6 = obj6.color;
         obj7 = obj7.color;
         obj8 = obj8.color;
+        obj9 = obj9.color;
 
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;

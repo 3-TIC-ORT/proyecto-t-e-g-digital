@@ -119,7 +119,7 @@ cerrarnegro.addEventListener("click",()=> objetivonegro.close());
 let resultadodados = document.getElementById("resultadodados");
 let resolucion = document.getElementById("resolucion");
 let cerrardados = document.getElementById("cerrardados");
-cerrardados.addEventListener("click", resultadodados.close());
+cerrardados.addEventListener("click",()=> resultadodados.close());
 let instrucciones = document.getElementById("instrucciones");
 let fin = document.getElementById("fin");
 let mensajefinal = document.getElementById("mensajefinal");

@@ -1,6 +1,6 @@
 // Declaración de Variables Globales
 let turno = "Rojo";
-let colores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
+let colores = ["Rojo", "Azul"];
 let fase = "Inicio Ronda 1";
 let fases = ["Inicio Ronda 1","Inicio Ronda 2", "Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
@@ -24,6 +24,8 @@ let dado = 0;
 let paisseleccionado = 0;
 let paisatacado = 0;
 let paisreceptor = 0;
+let paisconquistado = 0;
+let paisconquistador = 0;
 let dadosatacante = 0;
 let dadosdefensor = 0;
 let resultadosatacante = [];
@@ -117,11 +119,12 @@ cerrardados.addEventListener("click",()=> resultadodados.close());
 let instrucciones = document.getElementById("instrucciones");
 let fin = document.getElementById("fin");
 let mensajefinal = document.getElementById("mensajefinal");
-let pasarfichas = document.getElementById("pasarfichas");
-let selectpasarfichas = document.getElementById("selectpasarfichas");
-let cerrarpasarfichas = document.getElementById("cerrarpasarfichas");
-let nuevaopcion = document.createElement("option");
-cerrarpasarfichas.addEventListener("click", ()=> pasarfichas.close());
+let pasarfichas1 = document.getElementById("pasarfichas1");
+let selectpasarfichas1 = document.getElementById("selectpasarfichas1");
+let cerrarpasarfichas1 = document.getElementById("cerrarpasarfichas1");
+let pasarfichas2 = document.getElementById("pasarfichas2");
+let selectpasarfichas2 = document.getElementById("selectpasarfichas2");
+let cerrarpasarfichas2 = document.getElementById("cerrarpasarfichas2");
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea el territorio para poner 1 ficha"
@@ -1217,25 +1220,31 @@ function test17(colour){
     };
 };
 function test18() {
-    if(paisseleccionado.fichas === 2){
-        pasarfichas.showModal();
-    } else if (paisseleccionado.fichas >= 3){
-    nuevaopcion.textContent = "3";
-    nuevaopcion.value = 3;
-    selectpasarfichas.appendChild(nuevaopcion);
-    pasarfichas.showModal();
+        if (parseInt(selectpasarfichas1.value) === 2){
+        paisconquistador.fichas--;
+        paisconquistado.fichas++;
     };
-    if(selectpasarfichas.value === 2){
-        paisseleccionado.fichas--;
-        paisatacado.fichas++;
-    } else if (selectpasarfichas.value === 3){
-        paisseleccionado.fichas = paisseleccionado.fichas - 2;
-        paisatacado.fichas = paisatacado.fichas + 2;
+    paisconquistador.id.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
+    paisconquistado.id.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
+    paisconquistado = 0;
+    paisconquistador = 0;
+};
+function test19() {
+    if(parseInt(selectpasarfichas2.value) === 2){
+        paisconquistador.fichas--;
+        paisconquistado.fichas++;
+    } else if (parseInt(selectpasarfichas2.value) === 3){
+        paisconquistador.fichas = paisconquistador.fichas - 2;
+        paisconquistado.fichas = paisconquistado.fichas + 2;
     };
-    paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
-    paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
-}
+    paisconquistador.id.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
+    paisconquistado.id.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
+    paisconquistado = 0;
+    paisconquistador = 0;
+};
 function test16(color) {
+    paisconquistado = 0;
+    paisconquistador = 0;
     resolucion.textContent = "";
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
         dadosatacante = paisseleccionado.fichas - 1;
@@ -1303,8 +1312,18 @@ function test16(color) {
             paisseleccionado.fichas--;
             paisatacado.colorfichas = paisseleccionado.colorfichas;
             test17(color);
-            test18();
+        if(paisseleccionado.fichas === 2){
+        resultadodados.close();
+        paisconquistador = paisseleccionado;
+        paisconquistado = paisatacado;
+        pasarfichas1.showModal();
+        } else if (paisseleccionado.fichas >= 3){
+        resultadodados.close();
+        paisconquistador = paisseleccionado;
+        paisconquistado = paisatacado;
+        pasarfichas2.showModal();
         };
+    };
         paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
         paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
         paisseleccionado = 0;
@@ -1380,6 +1399,10 @@ skipverde.addEventListener("click", () => test12("Verde"));
 skipmagenta.addEventListener("click", () => test12("Magenta"));
 skipnegro.addEventListener("click", () => test12("Negro"));
 botonGuardar.addEventListener("click", guardarPartida);
+cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
+cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());
+cerrarpasarfichas1.addEventListener("click", ()=> test18());
+cerrarpasarfichas2.addEventListener("click", ()=> test19());
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

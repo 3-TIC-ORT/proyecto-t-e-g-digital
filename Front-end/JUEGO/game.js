@@ -22,6 +22,7 @@ let botonGuardar = document.getElementById("guardar");
 let menuPausa = document.getElementById("menuPausa")
 let botonPausa = document.getElementById("pausaid");
 let reanudar = document.getElementById("reanudar");
+let actRapidaIns = document.getElementById("actRapidaIns")
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -1378,21 +1379,31 @@ if (fase === "Incorporar") {
 }
 }
 
+function cambiarInstructor() {
+    let ninstructor = localStorage.getItem("ninstructor");
+    let instructorActivo = (ninstructor === "true" || ninstructor === null);
+    
+    if (instructorActivo) {
+        localStorage.setItem("ninstructor", "false");
+        instrucciones.style.display = "none";
+        console.log("Instructor deshabilitado.");
+    } else {
+        localStorage.setItem("ninstructor", "true");
+        instrucciones.style.display = "block";
+        console.log("Instructor activado.");
+    }
+}
+
 let ninstructor = localStorage.getItem("ninstructor");
 console.log("instructor: " + ninstructor);
-if (ninstructor == true) {
+if (ninstructor == "true") {
     inicioRonda1 = "";
     inicioRonda2 = "";
     incorporarInstruccion = ""; 
     atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
     reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
     instrucciones.style.display = "block"; 
-} else if (ninstructor == false) {
-    inicioRonda1 = "",
-    inicioRonda2 = "",
-    incorporarInstruccion = "",
-    atacarInstruccion = "",
-    reagruparInstruccion = "";
+} else if (ninstructor == "false") {
     instrucciones.style.display = "none"; 
 }
 
@@ -1468,6 +1479,7 @@ cerrarpasarfichas1.addEventListener("click", ()=> test18());
 cerrarpasarfichas2.addEventListener("click", ()=> test19());
 botonPausa.addEventListener("click", ()=> abrirMenuPausa());
 reanudar.addEventListener("click", ()=> menuPausa.close());
+actRapidaIns.addEventListener("click", ()=> cambiarInstructor());
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

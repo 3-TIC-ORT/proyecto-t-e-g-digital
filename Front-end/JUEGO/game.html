@@ -10,7 +10,15 @@
     <link rel="stylesheet" href="../JUEGO/game.css" />
 </head>
 <body>
-        
+    
+    <dialog id="menuPausa" class="menuPausa">
+        <div id="reanudar" class="reanudar"> Reanudar </div>
+        <div id="actRapidaIns" class="actRapidaIns"> Instructor</div>
+        <div id="guardar" type="button" class="guardar"> Guardar </div>
+        <div class="boton_atras"><a href="../INICIO/inicio.html"> Salir </a></div>
+    </dialog>
+
+
     <dialog id="objetivorojo">
         <div id="contenidorojo"></div>
         <button id="cerrarrojo">Cerrar</button>
@@ -61,20 +69,20 @@
     <button><a href="../INICIO/inicio.html">Salir</a></button>
     </dialog>
 
+  
+
     <div class="map-container">
         <img src="../IMAGENES/mapa.png" class="mapa">
 
-        <button id="guardar" type="button" class="guardar"> Guardar </button>
-        <div class="boton_atras"><a href="../INICIO/inicio.html"> Salir </a></div>
-        <div id="currentturn" class="currentturn">
+       <div id="pausaid" class="pausa"><img src="../IMAGENES/pausa.svg" height="65px" alt="pausa"></div>
+    <div id="currentturn" class="currentturn">
             Turno:
         </div>
         <div id="currentphase" class="currentphase">
             Fase:
         </div>
-        <div id="instrucciones" class="instrucciones">
-        </div>
-        <div id="pausaid" class="pausa"><img src="../IMAGENES/pausa.svg" alt="pausa"></div>
+        <div id="instrucciones" class="instrucciones"> 
+    </div>
 
         <div id="rusiaid" class="europa rusia">Rusia</div>
         <div id="alemaniaid" class="europa alemania">Alemania</div>

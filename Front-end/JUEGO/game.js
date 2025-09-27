@@ -19,6 +19,9 @@ let skipverde = document.getElementById("pasaverde");
 let skipmagenta = document.getElementById("pasamagenta");
 let skipnegro = document.getElementById("pasanegro");
 let botonGuardar = document.getElementById("guardar");
+let menuPausa = document.getElementById("menuPausa")
+let botonPausa = document.getElementById("pausaid");
+let reanudar = document.getElementById("reanudar");
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -59,10 +62,16 @@ let fichasnuevas = {
     magenta: 5,
     negro: 5,
 };
+
+function abrirMenuPausa() {
+    menuPausa.showModal();
+}
+
 let njugadores = localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
+console.log("numero de jugadores: " + njugadores)
 let nobjetivos = localStorage.getItem("nobjetivos");
-console.log(nobjetivos);
+console.log("objetivos secretos: " + nobjetivos);
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
@@ -132,10 +141,10 @@ let selectpasarfichas2 = document.getElementById("selectpasarfichas2");
 let cerrarpasarfichas2 = document.getElementById("cerrarpasarfichas2");
 
 //Declaracion de instrucciones
-let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea el territorio para poner 1 ficha"
-let inicioRonda2 = "Ya sabes como es, ahora tenes 3 fichas a incorporar"
+let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner 1 ficha";
+let inicioRonda2 = "Ya sabes como es, ahora tenes 3 fichas a incorporar";
 let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas";
-let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo para atacar";
+let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
 let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
 
 
@@ -712,8 +721,6 @@ norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, 
 //declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
-
-
 //Turno y Fase
 i = 0;
 while(njugadores > i){
@@ -785,21 +792,8 @@ if (objetivos.length > i && objetivos[i].color === "Negro"){
     contenidonegro.textContent = objetivos[i].string;}
 i = 0;
 
-function actualizarInstrucciones(){
-if (fase === "Incorporar") {
-    instrucciones.textContent = incorporarInstruccion;
-} else if (fase === "Atacar") {
-    instrucciones.textContent = atacarInstruccion
-} else if (fase === "Reagrupar") {
-    instrucciones.textContent = reagruparInstruccion;
-}
-  else if (fase === "Inicio Ronda 1"){
-      instrucciones.textContent = inicioRonda1;
-  }
-  else if (fase === "Inicio Ronda 2"){
-    instrucciones.textContent = inicioRonda2;
-}}
 
+//fase
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
@@ -830,6 +824,7 @@ function test12(colorturno) {
         if(i121 < colores.length){
             turno = colores[i121];
             currentturn.textContent = "Turno: " + turno;
+            actualizarInstrucciones();
         } 
     else if (i121 === colores.length){
         i121 = 0;
@@ -1116,6 +1111,7 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.rojo--;
+            actualizarInstrucciones();
             };
             };
             if (turno === "Azul"){
@@ -1123,6 +1119,7 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.azul--;
+            actualizarInstrucciones();
             };
             };
             if (turno === "Amarillo"){
@@ -1130,6 +1127,7 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.amarillo--;
+            actualizarInstrucciones();
             };
             };
             if (turno === "Verde"){
@@ -1137,6 +1135,7 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.verde--;
+            actualizarInstrucciones();
             };
             };
             if (turno === "Magenta"){
@@ -1144,6 +1143,7 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.magenta--;
+            actualizarInstrucciones();
             };
             };
             if (turno === "Negro"){
@@ -1151,6 +1151,7 @@ function test14(pais) {
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.negro--;
+            actualizarInstrucciones();
             };
             };
             paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
@@ -1346,6 +1347,55 @@ function test16(color) {
     };
 };
 
+//instructor
+function actualizarInstrucciones(){
+    let fichasActuales = 0;
+
+if (turno === "Rojo") {
+    fichasActuales = fichasnuevas.rojo;
+ } else if (turno === "Azul") {
+    fichasActuales = fichasnuevas.azul;
+} else if (turno === "Amarillo") {
+fichasActuales = fichasnuevas.amarillo;
+} else if (turno === "Verde") {
+fichasActuales = fichasnuevas.verde;
+} else if (turno === "Magenta") {
+fichasActuales = fichasnuevas.magenta;
+} else if (turno === "Negro") {
+fichasActuales = fichasnuevas.negro;
+}
+
+if (fase === "Incorporar") {
+ instrucciones.textContent = "Te quedan " + fichasActuales + " fichas para incorporar. Clickea el territorio donde quieras ubicarlas.";
+} else if (fase === "Atacar") {
+ instrucciones.textContent = atacarInstruccion
+} else if (fase === "Reagrupar") {
+ instrucciones.textContent = reagruparInstruccion;
+} else if (fase === "Inicio Ronda 1"){
+ instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner 1 ficha";
+} else if (fase === "Inicio Ronda 2"){
+ instrucciones.textContent = "Ya sabes cómo es, ahora tenés " + fichasActuales + " fichas a incorporar";
+}
+}
+
+let ninstructor = localStorage.getItem("ninstructor");
+console.log("instructor: " + ninstructor);
+if (ninstructor == true) {
+    inicioRonda1 = "";
+    inicioRonda2 = "";
+    incorporarInstruccion = ""; 
+    atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
+    reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
+    instrucciones.style.display = "block"; 
+} else if (ninstructor == false) {
+    inicioRonda1 = "",
+    inicioRonda2 = "",
+    incorporarInstruccion = "",
+    atacarInstruccion = "",
+    reagruparInstruccion = "";
+    instrucciones.style.display = "none"; 
+}
+
 // Inicialización del Juego y Event Listeners
 australia.id.addEventListener("click", () => test14(australia));
 sumatra.id.addEventListener("click", () => test14(sumatra));
@@ -1416,6 +1466,8 @@ cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
 cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());
 cerrarpasarfichas1.addEventListener("click", ()=> test18());
 cerrarpasarfichas2.addEventListener("click", ()=> test19());
+botonPausa.addEventListener("click", ()=> abrirMenuPausa());
+reanudar.addEventListener("click", ()=> menuPausa.close());
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

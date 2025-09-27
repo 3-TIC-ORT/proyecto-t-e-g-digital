@@ -8,6 +8,7 @@ let cerrar = document.getElementById("cerrar");
 let contenidoins = document.getElementById("contenidoins");
 let njugadores = null;
 let nobjetivos = null;
+let ninstructor = null;
 function test3 () {
 if (parseInt(players.value) === 0){
 contenidojug.textContent = "SELECCIONE CANTIDAD DE JUGADORES";
@@ -34,9 +35,13 @@ if(parseInt(instructor.value) === 0){
 }
 if(parseInt(instructor.value) === 1){
     contenidoins.textContent = "CON INSTRUCTOR";
+    ninstructor = true;
+    localStorage.setItem("ninstructor", ninstructor);
 }
 if(parseInt(instructor.value) === 2){
     contenidoins.textContent = "SIN INSTRUCTOR";
+    ninstructor = false;
+    localStorage.setItem("ninstructor", ninstructor);
 };
 advertencia.showModal();
 if(parseInt(players.value) != 0 && parseInt(objectives.value) != 0 && parseInt(instructor.value)!= 0) {

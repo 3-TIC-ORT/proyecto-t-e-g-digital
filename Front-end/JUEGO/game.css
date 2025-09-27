@@ -5,7 +5,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #242323;
-    height: 120vh;
     margin: 0;
     gap: 1%;
 }
@@ -20,7 +19,7 @@ body {
 
 .map-container {
   position: relative;
-  width: 100%;
+  width: 98%;
   height: auto;
   overflow: hidden;
   background-color: #1e1e1e; 
@@ -472,41 +471,13 @@ body {
     height: 14%;
 }
 
-.boton_atras {
-    position: absolute;
-    left: 1%;
-    top: 1%;
-    z-index: 100;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #f7f3e9;
-    background-color: #c59a3e;
-    border: 3px solid #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
+.boton_atras {    
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    display: inline-block;
     text-decoration: none;
 }
 
 .guardar {
-    position: absolute;
-    right: 1%;
-    top: 1%;
-    width: 100px;
-    z-index: 100;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #f7f3e9;
-    background-color: #c59a3e;
-    border: 3px solid #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    display: inline-block;
-    text-decoration: none;
 }
 
 .currentturn {
@@ -515,11 +486,11 @@ body {
     background-color: darkgoldenrod;
     width: 140px;
     height: 30px;
-     font-weight: bold;
-     font-size: 112%;
+    font-weight: bold;
+    font-size: 112%;
     text-align: center;
-    top: 1%;
-    justify-self: center;
+    top: 2%;
+    right: 46.5%;
 }
 
 .currentphase {
@@ -527,12 +498,12 @@ body {
     color: white;
     background-color: darkgoldenrod;
     width: 140px;
-    height: 30px;
+    height: 42px;
      font-weight: bold;
      font-size: 112%;
     text-align: center;
-    top: 4%;
-    justify-self: center;
+    top: 6%;
+    right: 46.5%;
 }
 
 .instrucciones {
@@ -544,8 +515,8 @@ body {
      font-weight: bold;
      font-size: 95%;
     text-align: center;
-    top: 8%;
-    justify-self: center;
+    top: 11.5%;
+    right: 44.5%;    
 }
 
 a {
@@ -573,7 +544,7 @@ a {
     border: #f7f3e9;
     height: fit-content;
     width: fit-content;
-    border-width: 1px;
+    border-width: 10px;
     margin: 1%;
 }
 
@@ -589,6 +560,31 @@ a {
 
 .pausa {
 position: absolute;
-left: 5%;
-top: 5%;
+left: 42.8%;
+top: 2.5%;
+}
+
+.reanudar {
+    cursor: pointer;
+}
+
+.actRapidaIns {
+    cursor: pointer;
+}
+
+.menuPausa {
+    justify-self: center;
+    margin-top: 17%;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    font-style:inherit;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    background-color: #c59a3e;
 }

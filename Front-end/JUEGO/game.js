@@ -801,8 +801,8 @@ function test12(colorturno) {
     if (colorturno === turno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
+            actualizarInstrucciones();
             currentphase.textContent = "Fase: " + fase;
-            actualizarInstrucciones();  
         } 
     else if(fase === "Inicio Ronda 1"){
         i121 = 0;
@@ -825,7 +825,6 @@ function test12(colorturno) {
         if(i121 < colores.length){
             turno = colores[i121];
             currentturn.textContent = "Turno: " + turno;
-            actualizarInstrucciones();
         } 
     else if (i121 === colores.length){
         i121 = 0;
@@ -842,6 +841,7 @@ function test12(colorturno) {
     };
     }
     else if(fase === "Inicio Ronda 2"){
+        actualizarInstrucciones();
     i121 = 0;
        while (colores[i121] != colorturno){
             i121++;
@@ -872,6 +872,7 @@ function test12(colorturno) {
     };
     }
     else if (fase === "Reagrupar"){
+        actualizarInstrucciones();
         i121 = 0;
             while (colores[i121] != colorturno) {
                 i121++;
@@ -1030,6 +1031,7 @@ function test12(colorturno) {
                     };
                 }
             else if (fase === "Incorporar"){
+                actualizarInstrucciones();
                 while (colores[i121] != colorturno) {
                     i121++;
                 };
@@ -1063,8 +1065,10 @@ function test12(colorturno) {
             };
         };
 
+//turno
 function test14(pais) {
     if (fase === "Atacar") {
+        actualizarInstrucciones();
         if (turno === pais.colorfichas && pais.fichas > 1) {
             paisseleccionado = pais;
         } else if (turno != pais.colorfichas && paisseleccionado.colorfichas != pais.colorfichas) {
@@ -1078,6 +1082,7 @@ function test14(pais) {
         };
     };
     if (fase === "Reagrupar") {
+        actualizarInstrucciones();
         if (turno === pais.colorfichas && paisseleccionado.colorfichas === pais.colorfichas) {
             i141 = 0;
             while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
@@ -1106,6 +1111,7 @@ function test14(pais) {
         };
     };
     if (fase === "Incorporar" || fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2") {
+        actualizarInstrucciones();
         if (turno === pais.colorfichas){
             if (turno === "Rojo"){
             if (fichasnuevas.rojo > 0){
@@ -1352,7 +1358,7 @@ function test16(color) {
 function actualizarInstrucciones(){
     let fichasActuales = 0;
 
-if (turno === "Rojo") {
+    if (turno === "Rojo") {
     fichasActuales = fichasnuevas.rojo;
  } else if (turno === "Azul") {
     fichasActuales = fichasnuevas.azul;
@@ -1468,8 +1474,8 @@ atacaramarillo.addEventListener("click", () => test16("Amarillo"));
 atacarverde.addEventListener("click", () => test16("Verde"));
 atacarmagenta.addEventListener("click", () => test16("Magenta"));
 atacarnegro.addEventListener("click", () => test16("Negro"));
-skiprojo.addEventListener("click", () => test12("Rojo"));
-skipazul.addEventListener("click", () => test12("Azul"));
+skiprojo.addEventListener("click", () => test12("Rojo"), actualizarInstrucciones());
+skipazul.addEventListener("click", () => test12("Azul"), actualizarInstrucciones());
 skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 skipmagenta.addEventListener("click", () => test12("Magenta"));

@@ -2,5 +2,5 @@
     "liveServer.settings.wait": 1e+99,
     "liveServer.settings.ignoreFiles": [
         "**/Back-end/datos/datos.json"
-    ]
+    ],    
 }

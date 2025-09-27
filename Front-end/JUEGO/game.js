@@ -1386,16 +1386,17 @@ function cambiarInstructor() {
     if (instructorActivo) {
         localStorage.setItem("ninstructor", "false");
         instrucciones.style.display = "none";
-        console.log("Instructor deshabilitado.");
+        actRapidaIns.textContent = "Instructor desactivado";
     } else {
         localStorage.setItem("ninstructor", "true");
         instrucciones.style.display = "block";
-        console.log("Instructor activado.");
+        actRapidaIns.textContent = "Instructor activado";
     }
 }
 
 let ninstructor = localStorage.getItem("ninstructor");
 console.log("instructor: " + ninstructor);
+actRapidaIns.textContent = "Instructor activado";
 if (ninstructor == "true") {
     inicioRonda1 = "";
     inicioRonda2 = "";
@@ -1404,6 +1405,7 @@ if (ninstructor == "true") {
     reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
     instrucciones.style.display = "block"; 
 } else if (ninstructor == "false") {
+    actRapidaIns.textContent = "Instructor desactivado"
     instrucciones.style.display = "none"; 
 }
 

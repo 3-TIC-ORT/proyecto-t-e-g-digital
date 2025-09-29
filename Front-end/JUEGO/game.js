@@ -39,6 +39,9 @@ let dadoreserva = 0;
 let i121 = 0;
 let i122 = 0;
 let i123 = 0;
+let i124 = 0;
+let i125 = 0;
+let i126 = 0;
 let i141 = 0;
 let i142 = 0;
 let i161 = 0;
@@ -47,6 +50,7 @@ let i171 = 0;
 let i172 = 0;
 let i173 = 0;
 let i174 = 0;
+let stop = false;
 let ioceania = 0;
 let iafrica = 0;
 let isudamerica = 0;
@@ -70,67 +74,34 @@ function abrirMenuPausa() {
 
 let njugadores = localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
-console.log("numero de jugadores: " + njugadores)
 let nobjetivos = localStorage.getItem("nobjetivos");
-console.log("objetivos secretos: " + nobjetivos);
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
 let contenidorojo = document.getElementById("contenidorojo");
-mostrarrojo.addEventListener("click", function(){
-    if(turno === "Rojo" && nobjetivos === "true"){
-        objetivorojo.showModal()};
-    });
-cerrarrojo.addEventListener("click",()=> objetivorojo.close());
 let mostrarazul = document.getElementById("mostrarazul");
 let cerrarazul = document.getElementById("cerrarazul");
 let objetivoazul = document.getElementById("objetivoazul");
 let contenidoazul = document.getElementById("contenidoazul");
-mostrarazul.addEventListener("click", function(){
-    if(turno === "Azul" && nobjetivos === "true"){
-        objetivoazul.showModal()};
-    });
-cerrarazul.addEventListener("click",()=> objetivoazul.close());
 let mostraramarillo = document.getElementById("mostraramarillo");
 let cerramarillo = document.getElementById("cerraramarillo");
 let objetivoamarillo = document.getElementById("objetivoamarillo");
 let contenidoamarillo = document.getElementById("contenidoamarillo");
-mostraramarillo.addEventListener("click", function(){
-    if(turno === "Amarillo" && nobjetivos === "true"){
-        objetivoamarillo.showModal()};
-    });
-cerraramarillo.addEventListener("click",()=> objetivoamarillo.close());
 let mostrarverde = document.getElementById("mostrarverde");
 let cerrarverde = document.getElementById("cerrarverde");
 let objetivoverde = document.getElementById("objetivoverde");
 let contenidoverde = document.getElementById("contenidoverde");
-mostrarverde.addEventListener("click", function(){
-    if(turno === "Verde" && nobjetivos === "true"){
-        objetivoverde.showModal()};
-    });
-cerrarverde.addEventListener("click",()=> objetivoverde.close());
 let mostrarmagenta = document.getElementById("mostrarmagenta");
 let cerrarmagenta = document.getElementById("cerrarmagenta");
 let objetivomagenta = document.getElementById("objetivomagenta");
 let contenidomagenta = document.getElementById("contenidomagenta");
-mostrarmagenta.addEventListener("click", function(){
-    if(turno === "Magenta" && nobjetivos === "true"){
-        objetivomagenta.showModal()};
-    });
-cerrarmagenta.addEventListener("click",()=> objetivomagenta.close());
 let mostrarnegro = document.getElementById("mostrarnegro");
 let cerrarnegro = document.getElementById("cerrarnegro");
 let objetivonegro = document.getElementById("objetivonegro");
 let contenidonegro = document.getElementById("contenidonegro");
-mostrarnegro.addEventListener("click", function(){
-    if(turno === "Negro" && nobjetivos === "true"){
-        objetivonegro.showModal()};
-    });
-cerrarnegro.addEventListener("click",()=> objetivonegro.close());
 let resultadodados = document.getElementById("resultadodados");
 let resolucion = document.getElementById("resolucion");
 let cerrardados = document.getElementById("cerrardados");
-cerrardados.addEventListener("click",()=> resultadodados.close());
 let instrucciones = document.getElementById("instrucciones");
 let fin = document.getElementById("fin");
 let mensajefinal = document.getElementById("mensajefinal");
@@ -253,6 +224,37 @@ let sudamerica = [];
 let asia = [];
 let europa = [];
 let norteamerica = [];
+let fnoceania = {
+    fichas: 0,
+    color: "",
+    continente: oceania,
+};
+let fnafrica = {
+    fichas: 0,
+    color: "",
+    continente: africa,
+};
+let fnsudamerica = {
+    fichas: 0,
+    color: "",
+    continente: sudamerica,
+};
+let fnasia = {
+    fichas: 0,
+    color: "",
+    continente: asia,
+};
+let fneuropa = {
+    fichas: 0,
+    color: "",
+    continente: europa,
+};
+let fnnorteamerica = {
+    fichas: 0,
+    color: "",
+    continente: norteamerica,
+};
+let fncontinentes = [fnoceania, fnafrica, fnsudamerica, fnasia, fneuropa, fnnorteamerica];
 
 // Definición de Países y Mapa
 let australia = {
@@ -798,6 +800,10 @@ i = 0;
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
+    i123 = 0;
+    i124 = 0;
+    i125 = 0;
+    i126 = 0;
     if (colorturno === turno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
@@ -892,8 +898,14 @@ function test12(colorturno) {
                 fichasnuevas.azul = 0;
                 fichasnuevas.amarillo = 0;
                 fichasnuevas.verde = 0;
-                fichasnuevas.magenta = 0,
+                fichasnuevas.magenta = 0;
                 fichasnuevas.negro = 0;
+                fnoceania.color = "";
+                fnafrica.color = "";
+                fnsudamerica.color = "";
+                fnasia.color = "";
+                fneuropa.color = "";
+                fnnorteamerica.color = "";
                 i122 = 0;
                 i123 = 0;
                 while (paises.length > i122) {
@@ -1015,6 +1027,81 @@ function test12(colorturno) {
                     if (fichasnuevas.negro < 3) {
                         fichasnuevas.negro = 3;
                     };
+                    while (colores.length > i124){
+                        while (oceania.length > i125){
+                            if(oceania[i125].colorfichas === colores[i124]){
+                                i126++;
+                            };
+                            i125++;
+                        };
+                        if(i126 === oceania.length){
+                            fnoceania.fichas = 2;
+                            fnoceania.color = colores[i124];
+                        };
+                        i125 = 0;
+                        i126 = 0;
+                        while (africa.length > i125){
+                            if(africa[i125].colorfichas === colores[i124]){
+                                i126++;
+                            };
+                            i125++;
+                        };
+                        if(i126 === africa.length){
+                            fnafrica.fichas = 3;
+                            fnafrica.color = colores[i124];
+                        };
+                        i125 = 0;
+                        i126 = 0;
+                        while (sudamerica.length > i125){
+                            if(sudamerica[i125].colorfichas === colores[i124]){
+                                i126++;
+                            };
+                            i125++;
+                        };
+                        if(i126 === sudamerica.length){
+                            fnsudamerica.fichas = 3;
+                            fnsudamerica.color = colores[i124];
+                        };
+                        i125 = 0;
+                        i126 = 0;
+                        while (asia.length > i125){
+                            if(asia[i125].colorfichas === colores[i124]){
+                                i126++;
+                            };
+                            i125++;
+                        };
+                        if(i126 === asia.length){
+                            fnasia.fichas = 7;
+                            fnasia.color = colores[i124];
+                        };
+                        i125 = 0;
+                        i126 = 0;
+                        while (europa.length > i125){
+                            if(europa[i125].colorfichas === colores[i124]){
+                                i126++;
+                            };
+                            i125++;
+                        };
+                        if(i126 === europa.length){
+                            fneuropa.fichas = 5;
+                            fneuropa.color = colores[i124];
+                        };
+                        i125 = 0;
+                        i126 = 0;
+                        while (norteamerica.length > i125){
+                            if(norteamerica[i125].colorfichas === colores[i124]){
+                                i126++;
+                            };
+                            i125++;
+                        };
+                        if(i126 === norteamerica.length){
+                            fnnorteamerica.fichas = 5;
+                            fnnorteamerica.color = colores[i124];
+                        };
+                        i125 = 0;
+                        i126 = 0;
+                        i124++;
+                    };
                     fase = "Incorporar";
                     i121 = 0;
                     i122 = 0;
@@ -1027,14 +1114,24 @@ function test12(colorturno) {
                     console.log(fichasnuevas.verde);
                     console.log(fichasnuevas.magenta);
                     console.log(fichasnuevas.negro);
-                    console.log(colores);
+                    console.log(fncontinentes);
                     };
                 }
             else if (fase === "Incorporar"){
+                stop = false;
+                i121 = 0;
+                i122 = 0;
                 actualizarInstrucciones();
                 while (colores[i121] != colorturno) {
-                    i121++;
+                i121++;
                 };
+                while(fncontinentes.length > i122 && stop === false){
+                    if(fncontinentes[i122].color === colores[i121] && fncontinentes[i122].fichas > 0){
+                        stop = true;
+                    };
+                i122++;
+                };
+                if(stop === false){
                 if (colores[i121] === "Rojo" && fichasnuevas.rojo === 0){
                 i121++;
                 } else if (colores[i121] === "Azul" && fichasnuevas.azul === 0) {
@@ -1048,6 +1145,7 @@ function test12(colorturno) {
                 } else if (colores[i121] === "Negro" && fichasnuevas.negro === 0) {
                 i121++;
                 };
+            };
                 if (i121 < colores.length){
                     turno = colores[i121];
                     currentturn.textContent = "Turno: " + turno;
@@ -1060,13 +1158,16 @@ function test12(colorturno) {
                     currentphase.textContent = "Fase: " + fase;
     
                 };
+                stop = false;
+                i121 = 0;
+                i122 = 0;
             };
-
             };
         };
 
 //turno
 function test14(pais) {
+    i141 = 0;
     if (fase === "Atacar") {
         actualizarInstrucciones();
         if (turno === pais.colorfichas && pais.fichas > 1) {
@@ -1081,6 +1182,7 @@ function test14(pais) {
             };
         };
     };
+    i141 = 0;
     if (fase === "Reagrupar") {
         actualizarInstrucciones();
         if (turno === pais.colorfichas && paisseleccionado.colorfichas === pais.colorfichas) {
@@ -1110,7 +1212,8 @@ function test14(pais) {
             paisseleccionado = 0;
         };
     };
-    if (fase === "Incorporar" || fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2") {
+    i141 = 0;
+    if (fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2") {
         actualizarInstrucciones();
         if (turno === pais.colorfichas){
             if (turno === "Rojo"){
@@ -1155,6 +1258,89 @@ function test14(pais) {
             };
             if (turno === "Negro"){
             if (fichasnuevas.negro > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.negro--;
+            actualizarInstrucciones();
+            };
+            };
+            paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            paisseleccionado = 0;
+            };
+            };
+        i141 = 0;
+        if (fase === "Incorporar") {
+        actualizarInstrucciones();
+        if (turno === pais.colorfichas){
+        while(fncontinentes[i141].continente != pais.continente){
+        i141++;
+        };
+            if (turno === "Rojo"){
+            if(fncontinentes[i141].color === "Rojo" && fncontinentes[i141].fichas > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fncontinentes[i141].fichas--;
+            } else if (fichasnuevas.rojo > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.rojo--;
+            actualizarInstrucciones();
+            };
+            };
+            if (turno === "Azul"){
+            if(fncontinentes[i141].color === "Azul" && fncontinentes[i141].fichas > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fncontinentes[i141].fichas--;
+            } else if (fichasnuevas.azul > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.azul--;
+            actualizarInstrucciones();
+            };
+            };
+            if (turno === "Amarillo"){
+            if(fncontinentes[i141].color === "Amarillo" && fncontinentes[i141].fichas > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fncontinentes[i141].fichas--;
+            } else if (fichasnuevas.amarillo > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.amarillo--;
+            actualizarInstrucciones();
+            };
+            };
+            if (turno === "Verde"){
+            if(fncontinentes[i141].color === "Verde" && fncontinentes[i141].fichas > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fncontinentes[i141].fichas--;
+            } else if (fichasnuevas.verde > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.verde--;
+            actualizarInstrucciones();
+            };
+            };
+            if (turno === "Magenta"){
+            if(fncontinentes[i141].color === "Magenta" && fncontinentes[i141].fichas > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fncontinentes[i141].fichas--;
+            } else if (fichasnuevas.magenta > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fichasnuevas.magenta--;
+            actualizarInstrucciones();
+            };
+            };
+            if (turno === "Negro"){
+            if(fncontinentes[i141].color === "Negro" && fncontinentes[i141].fichas > 0){
+            paisseleccionado = pais;
+            paisseleccionado.fichas++;
+            fncontinentes[i141].fichas--;
+            } else if (fichasnuevas.negro > 0){
             paisseleccionado = pais;
             paisseleccionado.fichas++;
             fichasnuevas.negro--;
@@ -1488,6 +1674,37 @@ cerrarpasarfichas2.addEventListener("click", ()=> test19());
 botonPausa.addEventListener("click", ()=> abrirMenuPausa());
 reanudar.addEventListener("click", ()=> menuPausa.close());
 actRapidaIns.addEventListener("click", ()=> cambiarInstructor());
+mostrarrojo.addEventListener("click", function(){
+    if(turno === "Rojo" && nobjetivos === "true"){
+        objetivorojo.showModal()};
+    });
+cerrarrojo.addEventListener("click",()=> objetivorojo.close());
+mostrarazul.addEventListener("click", function(){
+    if(turno === "Azul" && nobjetivos === "true"){
+        objetivoazul.showModal()};
+    });
+cerrarazul.addEventListener("click",()=> objetivoazul.close());
+mostraramarillo.addEventListener("click", function(){
+    if(turno === "Amarillo" && nobjetivos === "true"){
+        objetivoamarillo.showModal()};
+    });
+cerraramarillo.addEventListener("click",()=> objetivoamarillo.close());
+mostrarverde.addEventListener("click", function(){
+    if(turno === "Verde" && nobjetivos === "true"){
+        objetivoverde.showModal()};
+    });
+cerrarverde.addEventListener("click",()=> objetivoverde.close());
+mostrarmagenta.addEventListener("click", function(){
+    if(turno === "Magenta" && nobjetivos === "true"){
+        objetivomagenta.showModal()};
+    });
+cerrarmagenta.addEventListener("click",()=> objetivomagenta.close());
+mostrarnegro.addEventListener("click", function(){
+    if(turno === "Negro" && nobjetivos === "true"){
+        objetivonegro.showModal()};
+    });
+cerrarnegro.addEventListener("click",()=> objetivonegro.close());
+cerrardados.addEventListener("click",()=> resultadodados.close());
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

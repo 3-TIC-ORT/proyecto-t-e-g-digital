@@ -120,7 +120,7 @@ let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo lim
 let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
 
 
-//Declaración de objetivos secretos
+//Declaración de Objetivos Secretos
 let obj1 = {
     oceania: 0,
     africa: 6,
@@ -217,7 +217,7 @@ connect2Server(3015);
 cargarPartida();
 actualizarInstrucciones();
 
-//declaracion continentes
+//Declaración de Continentes
 let oceania = [];
 let africa = [];
 let sudamerica = [];
@@ -256,7 +256,7 @@ let fnnorteamerica = {
 };
 let fncontinentes = [fnoceania, fnafrica, fnsudamerica, fnasia, fneuropa, fnnorteamerica];
 
-// Definición de Países y Mapa
+//Declaración de Países
 let australia = {
     nombre: "Australia",
     id: document.getElementById("australiaid"),
@@ -658,7 +658,7 @@ let madagascar = {
     limitrofes: [],
 };
 
-//push de limitrofes
+//Push de limitrofes
 australia.limitrofes.push(sumatra, java, borneo, chile);
 sumatra.limitrofes.push(australia, india);
 java.limitrofes.push(australia);
@@ -710,10 +710,11 @@ zaire.limitrofes.push(sahara, etiopia, sudafrica, madagascar);
 sudafrica.limitrofes.push(etiopia, zaire);
 madagascar.limitrofes.push(egipto, zaire);
 
-//declaracion de paises
+//Declaración lista de países
 let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire, sudafrica, madagascar, nuevayork, canada, yukon, terranova, labrador, groenlandia];
 let estadoJuego = paises;
-//push de paises a los continentes
+
+//Push de países a los continentes
 oceania.push(australia, sumatra, java, borneo);
 africa.push(sahara, egipto, etiopia, zaire, sudafrica, madagascar);
 sudamerica.push(chile, peru, argentina, uruguay, brasil, colombia);
@@ -721,18 +722,22 @@ asia.push(india, malasia, china, iran, japon, gobi, mongolia, kamchatka, turquia
 europa.push(rusia, suecia, polonia, alemania, italia, francia, españa, granbretaña, islandia);
 norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, terranova, labrador, groenlandia);
 
-//declaracion de continentes
+//Declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
-//Turno y Fase
+//Numero de jugadores
 i = 0;
 while(njugadores > i){
 colores.push(listacolores[i]);
 i++;
 };
 i = 0;
+
+//Turno y Fase iniciales
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
+
+//Asignar países
 while (paises.length > i) {
 randomizador = Math.floor(Math.random() * paises.length);
 if (i2 === colores.length) {
@@ -747,6 +752,8 @@ paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises
 };
 i = 0;
 i2 = 0;
+
+//Asignar objetivos
 if(nobjetivos === "true"){
 while (colores.length > i) {
     randomizador = Math.floor(Math.random() * objetivos.length);
@@ -796,7 +803,7 @@ if (objetivos.length > i && objetivos[i].color === "Negro"){
 i = 0;
 
 
-//fase
+//Cambio de Turno y Fase
 function test12(colorturno) {
     i121 = 0;
     i122 = 0;
@@ -1165,7 +1172,7 @@ function test12(colorturno) {
             };
         };
 
-//turno
+//Seleccionar país
 function test14(pais) {
     i141 = 0;
     if (fase === "Atacar") {
@@ -1352,8 +1359,9 @@ function test14(pais) {
             };
             };
             i141 = 0;
-            };  
-//ganador
+            };
+
+//Condición de victoria
 function test17(colour){
     i171 = 0;
     i172 = 0;
@@ -1426,6 +1434,8 @@ function test17(colour){
         fin.showModal();
     };
 };
+
+//Dialogs pasar fichas
 function test18() {
         if (parseInt(selectpasarfichas1.value) === 2){
         paisconquistador.fichas--;
@@ -1449,6 +1459,8 @@ function test19() {
     paisconquistado = 0;
     paisconquistador = 0;
 };
+
+//Simular ataques
 function test16(color) {
     paisconquistado = 0;
     paisconquistador = 0;
@@ -1540,7 +1552,7 @@ function test16(color) {
     };
 };
 
-//instructor
+//Instructor
 function actualizarInstrucciones(){
     let fichasActuales = 0;
 
@@ -1601,7 +1613,7 @@ if (ninstructor == "true") {
     instrucciones.style.display = "none"; 
 }
 
-// Inicialización del Juego y Event Listeners
+//Event Listeners x país
 australia.id.addEventListener("click", () => test14(australia));
 sumatra.id.addEventListener("click", () => test14(sumatra));
 java.id.addEventListener("click", () => test14(java));
@@ -1653,7 +1665,7 @@ zaire.id.addEventListener("click", () => test14(zaire));
 sudafrica.id.addEventListener("click", () => test14(sudafrica));
 madagascar.id.addEventListener("click", () => test14(madagascar));
 
-// Event listeners juego
+//Event listeners juego
 atacarrojo.addEventListener("click", () => test16("Rojo"));
 atacarazul.addEventListener("click", () => test16("Azul"));
 atacaramarillo.addEventListener("click", () => test16("Amarillo"));

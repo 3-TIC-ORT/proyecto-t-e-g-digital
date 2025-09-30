@@ -19,10 +19,10 @@ let skipverde = document.getElementById("pasaverde");
 let skipmagenta = document.getElementById("pasamagenta");
 let skipnegro = document.getElementById("pasanegro");
 let botonGuardar = document.getElementById("guardar");
-let menuPausa = document.getElementById("menuPausa")
+let menuPausa = document.getElementById("menuPausa");
 let botonPausa = document.getElementById("pausaid");
 let reanudar = document.getElementById("reanudar");
-let actRapidaIns = document.getElementById("actRapidaIns")
+let actRapidaIns = document.getElementById("actRapidaIns");
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -1274,8 +1274,10 @@ function test14(pais) {
             actualizarInstrucciones();
             };
             };
+            if(paisseleccionado != 0){
             paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             paisseleccionado = 0;
+            };
             };
             };
         i141 = 0;
@@ -1357,8 +1359,10 @@ function test14(pais) {
             actualizarInstrucciones();
             };
             };
+            if(paisseleccionado != 0) {
             paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             paisseleccionado = 0;
+            };
             };
             };
             i141 = 0;

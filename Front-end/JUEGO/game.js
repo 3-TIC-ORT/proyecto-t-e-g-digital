@@ -1724,6 +1724,7 @@ function obtenerEstadoJuego() {
       obj6: obj6.color,
       obj7: obj7.color,
       obj8: obj8.color,
+      obj9: obj9.color,
     };
   };
 
@@ -1749,7 +1750,6 @@ function cargarPartida() {
         obj7 = obj7.color;
         obj8 = obj8.color;
         obj9 = obj9.color;
-
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
             paises[icarg].colorfichas = estado.paises[icarg].color;

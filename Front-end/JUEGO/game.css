@@ -535,7 +535,7 @@ a {
     width: 100%;
     text-align: center;
     height: 5%;
-    gap: 2%;
+    gap: 7%;
 }
 
 .sector{
@@ -585,3 +585,10 @@ top: 2.5%;
     font-style:inherit;
     background-color: #c59a3e;
 }
+
+.rojo{background-color: red;}
+.azul{background-color: blue;}
+.amarillo{background-color: yellow;}
+.verde{background-color: green;}
+.magenta{background-color: magenta;}
+.negro{background-color: black;}

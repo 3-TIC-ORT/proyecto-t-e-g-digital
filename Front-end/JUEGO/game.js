@@ -814,8 +814,8 @@ function test12(colorturno) {
     if (colorturno === turno) {
         if (fase === "Atacar") {
             fase = "Reagrupar";
-            actualizarInstrucciones();
             currentphase.textContent = "Fase: " + fase;
+            
         } 
     else if(fase === "Inicio Ronda 1"){
         i121 = 0;
@@ -875,6 +875,7 @@ function test12(colorturno) {
         if(i121 < colores.length){
             turno = colores[i121];
             currentturn.textContent = "Turno: " + turno;
+            actualizarInstrucciones();
         }
         else if (i121 === colores.length){
         i121 = 0;
@@ -882,6 +883,7 @@ function test12(colorturno) {
         turno = colores[i121];
         currentturn.textContent = "Turno: " + turno;
         currentphase.textContent = "Fase: " + fase;
+        actualizarInstrucciones();
     };
     }
     else if (fase === "Reagrupar"){
@@ -896,6 +898,7 @@ function test12(colorturno) {
             turno = colores[i121];
             currentturn.textContent = "Turno: " + turno;
             currentphase.textContent = "Fase: " + fase;
+            actualizarInstrucciones();  
                 }
             else if (i121 === colores.length) {
                 reserva = "";
@@ -1666,18 +1669,18 @@ sudafrica.id.addEventListener("click", () => test14(sudafrica));
 madagascar.id.addEventListener("click", () => test14(madagascar));
 
 //Event listeners juego
-atacarrojo.addEventListener("click", () => test16("Rojo"));
-atacarazul.addEventListener("click", () => test16("Azul"));
-atacaramarillo.addEventListener("click", () => test16("Amarillo"));
-atacarverde.addEventListener("click", () => test16("Verde"));
-atacarmagenta.addEventListener("click", () => test16("Magenta"));
-atacarnegro.addEventListener("click", () => test16("Negro"));
+atacarrojo.addEventListener("click", () => test16("Rojo"), actualizarInstrucciones());
+atacarazul.addEventListener("click", () => test16("Azul"), actualizarInstrucciones());
+atacaramarillo.addEventListener("click", () => test16("Amarillo"), actualizarInstrucciones());
+atacarverde.addEventListener("click", () => test16("Verde"), actualizarInstrucciones());
+atacarmagenta.addEventListener("click", () => test16("Magenta"), actualizarInstrucciones());
+atacarnegro.addEventListener("click", () => test16("Negro"), actualizarInstrucciones());
 skiprojo.addEventListener("click", () => test12("Rojo"), actualizarInstrucciones());
 skipazul.addEventListener("click", () => test12("Azul"), actualizarInstrucciones());
-skipamarillo.addEventListener("click", () => test12("Amarillo"));
-skipverde.addEventListener("click", () => test12("Verde"));
-skipmagenta.addEventListener("click", () => test12("Magenta"));
-skipnegro.addEventListener("click", () => test12("Negro"));
+skipamarillo.addEventListener("click", () => test12("Amarillo"), actualizarInstrucciones());
+skipverde.addEventListener("click", () => test12("Verde"), actualizarInstrucciones());
+skipmagenta.addEventListener("click", () => test12("Magenta"), actualizarInstrucciones());
+skipnegro.addEventListener("click", () => test12("Negro"), actualizarInstrucciones());
 botonGuardar.addEventListener("click", guardarPartida);
 cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
 cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());

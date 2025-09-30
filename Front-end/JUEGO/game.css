@@ -5,7 +5,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #242323;
-    margin: 2%;
     gap: 1%;
 }
 
@@ -23,8 +22,9 @@ body {
 
 
 .map-container {
-  position: relative;
-  width: 98%;
+display: flex;
+justify-content: center;
+  width: 100%;
   height: auto;
   overflow: hidden;
   background-color: #1e1e1e; 
@@ -414,10 +414,6 @@ body {
     width: 13%;
     height: 9%;
     transform: rotate(-30deg);
-    image-rendering: auto;
-    image-orientation: flip;
-    background-image: image-set('../IMAGENES/oregon.svg');
-    shape-image-threshold: inherit;
 }
 
 .nuevayork{
@@ -499,7 +495,6 @@ body {
     font-size: 112%;
     text-align: center;
     top: 2%;
-    right: 46%;
 }
 
 .currentphase {
@@ -512,20 +507,18 @@ body {
      font-size: 112%;
     text-align: center;
     top: 6%;
-    right: 46%;
 }
 
 .instrucciones {
     position: absolute;
     color: white;
     background-color: darkgoldenrod;
-    width: 220px;
-    height: 55px;
-     font-weight: bold;
-     font-size: 95%;
+    width: 180px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 95%;
     text-align: center;
-    top: 11.5%;
-    right: 44%;    
+    top: 13.5%;
 }
 
 a {
@@ -542,7 +535,7 @@ a {
     width: 100%;
     text-align: center;
     height: 5%;
-    gap: 7%;
+    gap: 2%;
 }
 
 .sector{
@@ -590,10 +583,5 @@ top: 2.5%;
     font-weight: bold;
     font-family:'Times New Roman', Times, serif;
     font-style:inherit;
-    display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
     background-color: #c59a3e;
 }

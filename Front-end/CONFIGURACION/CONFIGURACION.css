@@ -53,32 +53,6 @@ a {
     text-decoration: none;
 }
 
-.musica {
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #242322; 
-    background-color: #c59a3e; 
-    border: 3px solid #ffffff; 
-    padding: 5px 10px;
-    border-radius: 5px; 
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    transition-delay: 50ms;
-}
-
-.barra_volumen {
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #242322; 
-    background-color: #c59a3e; 
-    border: 3px solid #ffffff; 
-    padding: 4px 7px;
-    border-radius: 5px; 
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    transition-delay: 50ms;
-}
-
 .logoMini {
     position: absolute;
     top: 85%; 

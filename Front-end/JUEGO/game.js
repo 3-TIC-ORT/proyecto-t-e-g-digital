@@ -756,6 +756,307 @@ norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, 
 //Declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
+let taustralia = {
+    pais: australia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tsumatra = {
+    pais: sumatra,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tjava = {
+    pais: java,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tborneo = {
+    pais: borneo,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tindia = {
+    pais: india,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tmalasia = {
+    pais: malasia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tchina = {
+    pais: china,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tiran = {
+    pais: iran,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tjapon = {
+    pais: japon,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tgobi = {
+    pais: gobi,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tmongolia = {
+    pais: mongolia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tkamchatka = {
+    pais: kamchatka,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tturquia = {
+    pais: turquia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tisrael = {
+    pais: israel,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tarabia = {
+    pais: arabia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tsiberia = {
+    pais: siberia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let ttaimir = {
+    pais: taimir,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let ttartaria = {
+    pais: tartaria,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let taral = {
+    pais: aral,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let trusia = {
+    pais: rusia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tsuecia = {
+    pais: suecia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tpolonia = {
+    pais: polonia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let talemania = {
+    pais: alemania,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let titalia = {
+    pais: italia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tfrancia = {
+    pais: francia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tespaña = {
+    pais: españa,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tgranbretaña = {
+    pais: granbretaña,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tislandia = {
+    pais: islandia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let talaska = {
+    pais: alaska,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tcanada = {
+    pais: canada,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tyukon = {
+    pais: yukon,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let toregon = {
+    pais: oregon,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tnuevayork = {
+    pais: nuevayork,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tterranova = {
+    pais: terranova,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tlabrador = {
+    pais: labrador,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tgroenlandia = {
+    pais: groenlandia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tcalifornia = {
+    pais: california,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tmexico = {
+    pais: mexico,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tchile = {
+    pais: chile,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tperu = {
+    pais: peru,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let targentina = {
+    pais: argentina,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let turuguay = {
+    pais: uruguay,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tbrasil = {
+    pais: brasil,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tcolombia = {
+    pais: colombia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tsahara = {
+    pais: sahara,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tegipto = {
+    pais: egipto,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tetiopia = {
+    pais: etiopia,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tzaire = {
+    pais: zaire,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tsudafrica = {
+    pais: sudafrica,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+let tmadagascar = {
+    pais: madagascar,
+    fichas: 3,
+    color: "",
+    simbolo: "",
+};
+
 //Numero de jugadores
 i = 0;
 while(njugadores > i){

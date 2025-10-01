@@ -72,11 +72,12 @@ let fichasnuevas = {
     negro: 5,
 };
 
+//menu pausa
 function abrirMenuPausa() {
     menuPausa.showModal();
 }
 
-
+//brillo
 document.addEventListener("DOMContentLoaded", () => {
   let valorBrillo = 1;
   valorBrillo = localStorage.getItem("brillo")
@@ -84,11 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.style.filter = "brightness(" + valorBrillo + ")";
 });
 
+//checkear cargar partida
+let cargarPartidaInicio = true
+cargarPartidaInicio = localStorage.getItem("cargarPartida");
+if (cargarPartidaInicio === "true") {
+    cargarPartida();
+}
+console.log("cargar partida desde inicio:  " + cargarPartidaInicio);
+
+//cantidad jugadores
 let njugadores = 2;
 localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
 let nobjetivos = "true"
 nobjetivos = localStorage.getItem("nobjetivos");
+
+//declaracion (dialogs) 
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
@@ -905,7 +917,7 @@ if (ninstructor == "true") {
     instrucciones.style.display = "none"; 
 };
 
-//Cambio de Turno y Fase
+//cambio de Turno y Fase
 function test12(colorturno) {
     paisseleccionado = 0;
     paisatacado = 0;
@@ -1271,10 +1283,11 @@ function test12(colorturno) {
                 i122 = 0;
             };
             actualizarInstrucciones();
+            guardarPartida();
             };
         };
 
-//Seleccionar país
+//seleccionar pais
 function test14(pais) {
     i141 = 0;
     if (fase === "Atacar") {
@@ -1788,6 +1801,7 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
     icarg = 0;
+    console.log(estado);
 };
 
 //funcion cargar partida
@@ -1816,5 +1830,6 @@ function cargarPartida() {
             paises[icarg].id.textContent = paises[icarg].nombre + " " + paises[icarg].fichas + " " + paises[icarg].colorfichas;
             icarg++;
         };
+        console.log(estado);
     })
 }

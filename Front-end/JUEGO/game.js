@@ -2288,14 +2288,17 @@ function obtenerEstadoJuego() {
 
     let tarjetasLimpias = tpaises.map(t => ({
       nombre: t.nombre,
-      color: t.color,
-      fichas: t.fichas,
       simbolo: t.simbolo,
     }));
   
+    let fncontinentesLimpios = fncontinentes.map(c => ({
+      fichas: c.fichas,
+      color: c.color,
+    }));
+
     return {
       paises: paisesLimpios,
-      tarjetas: tarjetasLimpias,
+      tarjetasLimpias: tarjetasLimpias,
       turno: turno,  
       fase: fase,    
       obj1: obj1.color,
@@ -2310,6 +2313,9 @@ function obtenerEstadoJuego() {
       ninstructor: ninstructor,
       nobjetivos: nobjetivos,
       njugadores: njugadores,
+      fncontinentes: fncontinentesLimpios,
+      fichasnuevas: fichasnuevas,
+      
     };
   };
 
@@ -2338,6 +2344,12 @@ function cargarPartida() {
         obj9 = obj9.color;
         ninstructor = ninstructor;
         nobjetivos = nobjetivos;
+        njugadores = njugadores;
+        fncontinentes = estado.fncontinentes;
+        fichasnuevas = estado.fichasnuevas;
+        
+       
+        icarg = 0;
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
             paises[icarg].colorfichas = estado.paises[icarg].color;

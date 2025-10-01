@@ -220,7 +220,6 @@ let obj9 = {
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
 connect2Server(3015);
-cargarPartida();
 
 //Declaración de Continentes
 let oceania = [];
@@ -900,6 +899,8 @@ if (ninstructor == "true") {
 
 //Cambio de Turno y Fase
 function test12(colorturno) {
+    paisseleccionado = 0;
+    paisatacado = 0;
     i121 = 0;
     i122 = 0;
     i123 = 0;
@@ -1800,7 +1801,7 @@ function cargarPartida() {
         ninstructor = ninstructor;
         nobjetivos = nobjetivos;
         njugadores = njugadores;
-        
+
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
             paises[icarg].colorfichas = estado.paises[icarg].color;

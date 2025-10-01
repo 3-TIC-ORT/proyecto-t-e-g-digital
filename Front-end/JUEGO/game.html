@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../JUEGO/game.css" />
 </head>
 <body>
+
+    <!-- dialogs objetivos -->
     <dialog id="objetivorojo">
         <div id="contenidorojo"></div>
         <button id="cerrarrojo">Cerrar</button>
@@ -34,10 +36,41 @@
         <div id="contenidonegro"></div>
         <button id="cerrarnegro">Cerrar</button>
     </dialog>
+
+    <!--resultado dados -->
     <dialog id="resultadodados">
     <div id="resolucion"></div>
     <button id="cerrardados">Cerrar</button>
     </dialog>
+
+    <!-- dialogs tarjetas -->
+     <dialog id="dialogTrojo">
+        <div id="contenidoTrojo"></div>
+        <button id="cerrarTrojo">Cerrar</button>
+    </dialog>
+    <dialog id="dialogTazul">
+        <div id="contenidoTazul"></div>
+        <button id="cerrarTazul">Cerrar</button>
+    </dialog>
+    <dialog id="dialogTamarillo">
+        <div id="contenidoTamarillo"></div>
+        <button id="cerrarTamarillo">Cerrar</button>
+    </dialog>
+    <dialog id="dialogTverde">
+        <div id="contenidoTverde"></div>
+        <button id="cerrarTverde">Cerrar</button>
+    </dialog>
+    <dialog id="dialogTmagenta">
+        <div id="contenidoTmagenta"></div>
+        <button id="cerrarTmagenta">Cerrar</button>
+    </dialog>
+    <dialog id="dialogTnegro">
+        <div id="contenidoTnegro"></div>
+        <button id="cerrarTnegro">Cerrar</button>
+    </dialog>
+    
+
+    <!-- dialogs reagrupar -->
     <dialog id="pasarfichas1">
     <div>Cuántas fichas querés pasar?</div>
     <select id="selectpasarfichas1">
@@ -57,7 +90,10 @@
     </dialog>
     <dialog id="fin">
     <div id="mensajefinal"></div>
+
     <button><a href="../INICIO/inicio.html">Salir</a></button>
+
+    <!-- menu pausa -->
     </dialog>
         <dialog id="menuPausa" class="menuPausa">
         <div id="reanudar" class="reanudar"> Reanudar </div>
@@ -139,31 +175,37 @@
         <div class="sector rojo">
         <button id="atacarrojo" class="boton_interaccion">Atacar</button>
         <button id="pasarojo" class="boton_interaccion">Pasar Turno</button>
+        <button id="mostrarTrojo" class="boton_interaccion">Mostrar Tarjetas</button>
         <button id="mostrarrojo" class="boton_interaccion">Mostrar Objetivo</button>
         </div>
         <div class="sector azul">
         <button id="atacarazul" class="boton_interaccion">Atacar</button>
         <button id="pasaazul" class="boton_interaccion">Pasar Turno</button>
+        <button id="mostrarTazul" class="boton_interaccion">Mostrar Tarjetas</button>
         <button id="mostrarazul" class="boton_interaccion">Mostrar Objetivo</button>
         </div>
         <div class="sector amarillo">
         <button id="atacaramarillo" class="boton_interaccion">Atacar</button>
         <button id="pasaamarillo" class="boton_interaccion">Pasar Turno</button>
+        <button id="mostrarTamarillo" class="boton_interaccion">Mostrar Tarjetas</button>
         <button id="mostraramarillo" class="boton_interaccion">Mostrar Objetivo</button>
         </div>
         <div class="sector verde">
         <button id="atacarverde" class="boton_interaccion">Atacar</button>
         <button id="pasaverde" class="boton_interaccion">Pasar Turno</button>
+        <button id="mostrarTverde" class="boton_interaccion">Mostrar Tarjetas</button>
         <button id="mostrarverde" class="boton_interaccion">Mostrar Objetivo</button>
         </div>
         <div class="sector magenta">
-            <button id="atacarmagenta" class="boton_interaccion">Atacar</button>
-            <button id="pasamagenta" class="boton_interaccion">Pasar Turno</button>
-            <button id="mostrarmagenta" class="boton_interaccion">Mostrar Objetivo</button>
+        <button id="atacarmagenta" class="boton_interaccion">Atacar</button>
+        <button id="pasamagenta" class="boton_interaccion">Pasar Turno</button>
+        <button id="mostrarTmagenta" class="boton_interaccion">Mostrar Tarjetas</button>
+        <button id="mostrarmagenta" class="boton_interaccion">Mostrar Objetivo</button>
         </div>
         <div class="sector negro">
         <button id="atacarnegro" class="boton_interaccion">Atacar</button>
         <button id="pasanegro" class="boton_interaccion">Pasar Turno</button>
+        <button id="mostrarTnegro" class="boton_interaccion">Mostrar Tarjetas</button>
         <button id="mostrarnegro" class="boton_interaccion">Mostrar Objetivo</button>
         </div>
     </footer>

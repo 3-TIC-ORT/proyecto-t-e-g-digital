@@ -11,3 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("brillo", valorBrillo);
   });
 });
+function resetbrillo() {
+valorBrillo = 1;
+barraBrillo.value = 1;
+document.body.style.filter = "brightness(" + valorBrillo + ")";
+localStorage.setItem("brillo", valorBrillo);
+};
+
+let restablecerBrillo = document.getElementById("restablecerBrillo");
+restablecerBrillo.addEventListener("click", resetbrillo);

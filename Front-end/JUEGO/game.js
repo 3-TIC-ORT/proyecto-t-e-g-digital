@@ -76,9 +76,11 @@ function abrirMenuPausa() {
     menuPausa.showModal();
 }
 
-let njugadores = localStorage.getItem("njugadores");
+let njugadores = 2;
+localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
-let nobjetivos = localStorage.getItem("nobjetivos");
+let nobjetivos = "true"
+nobjetivos = localStorage.getItem("nobjetivos");
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
@@ -866,7 +868,8 @@ texto = ""
 actualizarInstrucciones();
 
 function cambiarInstructor() {
-    let ninstructor = localStorage.getItem("ninstructor");
+    let ninstructor = "true"
+    ninstructor = localStorage.getItem("ninstructor");
     let instructorActivo = (ninstructor === "true" || ninstructor === null);
     
     if (instructorActivo) {
@@ -1458,9 +1461,16 @@ function test17(colour){
         };
         i171++;
     };
+    if(nobjetivos === "false" || nobjetivos === "true"){
     if (i172 >= 30){
         mensajefinal.textContent = "Ganó el " + colour;
         fin.showModal();
+    };
+    } else if(nobjetivos === "dominacion"){
+    if (i172 === 50){
+        mensajefinal.textContent = "Ganó el " + colour;
+        fin.showModal();
+    };
     };
     while (objetivos.length > i173 && objetivos[i173].color != colour) {
         i173++;
@@ -1760,6 +1770,8 @@ function obtenerEstadoJuego() {
       obj8: obj8.color,
       obj9: obj9.color,
       ninstructor: ninstructor,
+      nobjetivos: nobjetivos,
+      njugadores: njugadores,
     };
   };
 
@@ -1786,6 +1798,9 @@ function cargarPartida() {
         obj8 = obj8.color;
         obj9 = obj9.color;
         ninstructor = ninstructor;
+        nobjetivos = nobjetivos;
+        njugadores = njugadores;
+        
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
             paises[icarg].colorfichas = estado.paises[icarg].color;

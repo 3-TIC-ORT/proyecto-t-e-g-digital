@@ -21,12 +21,22 @@ if(parseInt(objectives.value)===0){
 contenidoobj.textContent = "SELECCIONAR OBJETIVOS SECRETOS";  
 };
 if(parseInt(objectives.value)===1){
-contenidoobj.textContent = "SIN OBJETIVOS SECRETOS";
-nobjetivos = false;
+contenidoobj.textContent ="OBJETIVOS SECRETOS";
+nobjetivos = "true";
 localStorage.setItem("nobjetivos", nobjetivos);
 };
 if(parseInt(objectives.value)===2){
-contenidoobj.textContent ="CON OBJETIVOS SECRETOS";
+contenidoobj.textContent = "OBJETIVO COMÚN (30 PAÍSES)";
+nobjetivos = "false";
+localStorage.setItem("nobjetivos", nobjetivos);
+};
+if(parseInt(objectives.value)===3){
+contenidoobj.textContent ="DOMINACIÓN MUNDIAL (50 PAÍSES)";
+nobjetivos = "dominacion";
+localStorage.setItem("nobjetivos", nobjetivos);
+};
+if(parseInt(objectives.value)===2){
+contenidoobj.textContent ="OBJETIVOS SECRETOS";
 nobjetivos = true;
 localStorage.setItem("nobjetivos", nobjetivos);
 };

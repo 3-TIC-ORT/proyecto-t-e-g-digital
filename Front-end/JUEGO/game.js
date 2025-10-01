@@ -36,6 +36,7 @@ let dadosdefensor = 0;
 let resultadosatacante = [];
 let resultadosdefensor = [];
 let dadoreserva = 0;
+let tarjetareserva = 0;
 let i121 = 0;
 let i122 = 0;
 let i123 = 0;
@@ -71,7 +72,14 @@ let fichasnuevas = {
     magenta: 5,
     negro: 5,
 };
-
+let conquista = {
+    rojo: 0,
+    azul: 0,
+    amarillo: 0,
+    verde: 0,
+    magenta: 0,
+    negro:0
+};
 //menu pausa
 function abrirMenuPausa() {
     menuPausa.showModal();
@@ -242,11 +250,7 @@ let obj9 = {
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
 connect2Server(3015);
-<<<<<<< HEAD
 test20();
-=======
-cargarPartida();
->>>>>>> 2be0336a1b889b33f9daac418b27934eb41380f3
 
 //Declaración de Continentes
 let oceania = [];
@@ -766,303 +770,311 @@ let taustralia = {
     pais: australia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tsumatra = {
     pais: sumatra,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tjava = {
     pais: java,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tborneo = {
     pais: borneo,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tindia = {
     pais: india,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tmalasia = {
     pais: malasia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tchina = {
     pais: china,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tiran = {
     pais: iran,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tjapon = {
     pais: japon,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tgobi = {
     pais: gobi,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tmongolia = {
     pais: mongolia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tkamchatka = {
     pais: kamchatka,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tturquia = {
     pais: turquia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tisrael = {
     pais: israel,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tarabia = {
     pais: arabia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tsiberia = {
     pais: siberia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let ttaimir = {
     pais: taimir,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Comodin",
 };
 let ttartaria = {
     pais: tartaria,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let taral = {
     pais: aral,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let trusia = {
     pais: rusia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tsuecia = {
     pais: suecia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tpolonia = {
     pais: polonia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let talemania = {
     pais: alemania,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let titalia = {
     pais: italia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tfrancia = {
     pais: francia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tespaña = {
     pais: españa,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tgranbretaña = {
     pais: granbretaña,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tislandia = {
     pais: islandia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let talaska = {
     pais: alaska,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tcanada = {
     pais: canada,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tyukon = {
     pais: yukon,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let toregon = {
     pais: oregon,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tnuevayork = {
     pais: nuevayork,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tterranova = {
     pais: terranova,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tlabrador = {
     pais: labrador,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tgroenlandia = {
     pais: groenlandia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tcalifornia = {
     pais: california,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tmexico = {
     pais: mexico,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tchile = {
     pais: chile,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tperu = {
     pais: peru,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let targentina = {
     pais: argentina,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Comodin",
 };
 let turuguay = {
     pais: uruguay,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tbrasil = {
     pais: brasil,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tcolombia = {
     pais: colombia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tsahara = {
     pais: sahara,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tegipto = {
     pais: egipto,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "globo",
 };
 let tetiopia = {
     pais: etiopia,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Globo",
 };
 let tzaire = {
     pais: zaire,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 let tsudafrica = {
     pais: sudafrica,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Cañon",
 };
 let tmadagascar = {
     pais: madagascar,
     fichas: 3,
     color: "",
-    simbolo: "",
+    simbolo: "Fragata",
 };
 
+let tpaises = [taustralia, tsumatra, tjava, tborneo, tindia, tmalasia, tchina, tiran, tchile, tperu, targentina, turuguay, tbrasil, tcolombia, tjapon, tgobi, tmongolia, tkamchatka, tturquia, tisrael, tarabia, tsiberia, ttaimir, ttartaria, taral, trusia, tsuecia, talemania, tpolonia, tsahara, tegipto, tetiopia, talaska, tmexico, titalia, tcalifornia, tfrancia, toregon, tespaña, tgranbretaña, tislandia, tzaire, tsudafrica, tmadagascar, tnuevayork, tcanada, tyukon, tterranova, tlabrador, tgroenlandia];
+let mazo = [];
+let tarjetasrojo = [];
+let tarjetasazul = [];
+let tarjetasamarillo = [];
+let tarjetasverde = [];
+let tarjetasmagenta = [];
+let tarjetasnegro = [];
 //Numero de jugadores
 i = 0;
 while(njugadores > i){
@@ -1087,6 +1099,20 @@ i++;
 i2++;
 };
 paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
+};
+i = 0;
+i2 = 0;
+while(tpaises.length > i){
+    randomizador = Math.floor(Math.random() * tpaises.length);
+    i2 = 0;
+    while(mazo.length > i2 && mazo[i2] != tpaises[randomizador]){
+        i2++;
+    };
+    if(mazo[i2] != tpaises[randomizador]){
+        mazo.push(tpaises[randomizador]);
+        i++;
+    };
+i2 = 0;
 };
 i = 0;
 i2 = 0;
@@ -1232,11 +1258,42 @@ function test12(colorturno) {
     i124 = 0;
     i125 = 0;
     i126 = 0;
+    tarjetareserva = 0;
     if (colorturno === turno) {
         if (fase === "Atacar") {
+            if(colorturno === "Rojo" && conquista.rojo === 1){
+                tarjetareserva = mazo.shift();
+                tarjetasrojo.push(tarjetareserva);
+                tarjetareserva = 0; 
+            };
+             if(colorturno === "Azul" && conquista.azul === 1){
+                tarjetareserva = mazo.shift();
+                tarjetasazul.push(tarjetareserva);
+                tarjetareserva = 0; 
+            };
+             if(colorturno === "Amarillo" && conquista.amarillo === 1){
+                tarjetareserva = mazo.shift();
+                tarjetasamarillo.push(tarjetareserva);
+                tarjetareserva = 0; 
+            };
+             if(colorturno === "Verde" && conquista.verde === 1){
+                tarjetareserva = mazo.shift();
+                tarjetasverde.push(tarjetareserva);
+                tarjetareserva = 0; 
+            };
+             if(colorturno === "Magenta" && conquista.magenta === 1){
+                tarjetareserva = mazo.shift();
+                tarjetasmagenta.push(tarjetareserva);
+                tarjetareserva = 0; 
+            };
+             if(colorturno === "Negro" && conquista.negro === 1){
+                tarjetareserva = mazo.shift();
+                tarjetasnegro.push(tarjetareserva);
+                tarjetareserva = 0; 
+            };
+            
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
-            
         } 
     else if(fase === "Inicio Ronda 1"){
         i121 = 0;
@@ -1306,6 +1363,13 @@ function test12(colorturno) {
     }
     else if (fase === "Reagrupar"){
         i121 = 0;
+        conquista.rojo = 0;
+        conquista.azul = 0;
+        conquista.amarillo = 0;
+        conquista.verde = 0;
+        conquista.rojo = 0;
+        conquista.negro = 0;
+        
             while (colores[i121] != colorturno) {
                 i121++;
             };
@@ -1870,6 +1934,26 @@ function test19() {
     paisconquistado = 0;
     paisconquistador = 0;
 };
+function test21(color){
+if(color === "Rojo" && conquista.rojo === 0){
+    conquista.rojo = 1;
+};
+if(color === "Azul" && conquista.azul === 0){
+    conquista.azul = 1;
+};
+if(color === "Amarillo" && conquista.amarillo === 0){
+    conquista.amarillo = 1;
+};
+if(color === "Verde" && conquista.verde === 0){
+    conquista.verde = 1;
+};
+if(color === "Magenta" && conquista.magenta === 0){
+    conquista.magenta = 1;
+};
+if(color === "Negro" && conquista.negro === 0){
+    conquista.negro = 1;
+};
+};
 
 //Simular ataques
 function test16(color) {
@@ -1942,6 +2026,7 @@ function test16(color) {
             paisseleccionado.fichas--;
             paisatacado.colorfichas = paisseleccionado.colorfichas;
             test17(color);
+            test21(color);
         if(paisseleccionado.fichas === 2){
         resultadodados.close();
         paisconquistador = paisseleccionado;

@@ -50,6 +50,7 @@ let i171 = 0;
 let i172 = 0;
 let i173 = 0;
 let i174 = 0;
+let icarg = 0;
 let iactins1 = 0;
 let iactins2 = 0;
 let iactins3 = [];
@@ -61,7 +62,6 @@ let isudamerica = 0;
 let iasia = 0;
 let ieuropa = 0;
 let inorteamerica = 0;
-let icarg = 0;
 let reserva = "";
 let fichasnuevas = {
     rojo: 5,
@@ -88,10 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
 //checkear cargar partida
 let cargarPartidaInicio = true
 cargarPartidaInicio = localStorage.getItem("cargarPartida");
+function test20() { 
 if (cargarPartidaInicio === "true") {
     cargarPartida();
 }
 console.log("cargar partida desde inicio:  " + cargarPartidaInicio);
+}
 
 //cantidad jugadores
 let njugadores = 2;
@@ -240,7 +242,11 @@ let obj9 = {
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
 connect2Server(3015);
+<<<<<<< HEAD
+test20();
+=======
 cargarPartida();
+>>>>>>> 2be0336a1b889b33f9daac418b27934eb41380f3
 
 //Declaración de Continentes
 let oceania = [];
@@ -2069,9 +2075,17 @@ function obtenerEstadoJuego() {
       fichas: p.fichas,
       color: p.colorfichas,
     }));
+
+    let tarjetasLimpias = tarjetas.map(p => ({
+      nombre: p.nombre,
+      color: t.color,
+      fichas: t.fichas,
+      simbolo: simbolo,
+    }));
   
     return {
       paises: paisesLimpios,
+      tarjetas: tarjetasLimpias,
       turno: turno,  
       fase: fase,    
       obj1: obj1.color,

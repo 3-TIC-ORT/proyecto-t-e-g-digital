@@ -8,11 +8,6 @@ body {
     gap: 1%;
 }
 
-.footer {
-    gap: 10px;
-    margin: -3%;
-}
-
 .oceania { background-color: darkcyan; }
 .sudamerica { background-color: seagreen; }
 .asia { background-color: darkslategray; }
@@ -535,7 +530,8 @@ a {
     width: 100%;
     text-align: center;
     height: 5%;
-    gap: 7%;
+    justify-content: space-evenly;
+    margin: -3%;
 }
 
 .sector{

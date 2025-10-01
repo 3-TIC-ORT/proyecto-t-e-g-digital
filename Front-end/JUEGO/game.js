@@ -50,6 +50,10 @@ let i171 = 0;
 let i172 = 0;
 let i173 = 0;
 let i174 = 0;
+let iactins1 = 0;
+let iactins2 = 0;
+let iactins3 = [];
+let texto = "";
 let stop = false;
 let ioceania = 0;
 let iafrica = 0;
@@ -227,31 +231,37 @@ let fnoceania = {
     fichas: 0,
     color: "",
     continente: oceania,
+    string: "Oceanía"
 };
 let fnafrica = {
     fichas: 0,
     color: "",
     continente: africa,
+    string: "África"
 };
 let fnsudamerica = {
     fichas: 0,
     color: "",
     continente: sudamerica,
+    string: "Sudamérica"
 };
 let fnasia = {
     fichas: 0,
     color: "",
     continente: asia,
+    string: "Asia"
 };
 let fneuropa = {
     fichas: 0,
     color: "",
     continente: europa,
+    string: "Europa"
 };
 let fnnorteamerica = {
     fichas: 0,
     color: "",
     continente: norteamerica,
+    string: "Norteamérica"
 };
 let fncontinentes = [fnoceania, fnafrica, fnsudamerica, fnasia, fneuropa, fnnorteamerica];
 
@@ -805,8 +815,11 @@ i = 0;
 function actualizarInstrucciones(){
     let fichasActuales = 0;
 
-    if (turno === "Rojo") {
-    fichasActuales = fichasnuevas.rojo;
+if (turno === "Rojo") {
+iactins1 = 0;
+iactins2 = 0;
+iactins3 = [];
+fichasActuales = fichasnuevas.rojo;
  } else if (turno === "Azul") {
     fichasActuales = fichasnuevas.azul;
 } else if (turno === "Amarillo") {
@@ -818,9 +831,24 @@ fichasActuales = fichasnuevas.magenta;
 } else if (turno === "Negro") {
 fichasActuales = fichasnuevas.negro;
 };
-
+while(fncontinentes.length > iactins1){
+    if(fncontinentes[iactins1].color === turno){
+    iactins3.push(iactins1);
+    };
+iactins1++;
+};
+if (iactins3.length > 0){
+    while(iactins3.length > iactins2){
+        texto = texto + " y " + fncontinentes[iactins3[iactins2]].fichas + " fichas de " + fncontinentes[iactins3[iactins2]].string;
+        iactins2++;
+    };
+};
 if (fase === "Incorporar") {
+if (texto === ""){
  instrucciones.textContent = "Te quedan " + fichasActuales + " fichas para incorporar. Clickea el territorio donde quieras ubicarlas.";
+} else {
+    instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
+}
 } else if (fase === "Atacar") {
  instrucciones.textContent = atacarInstruccion
 } else if (fase === "Reagrupar") {
@@ -830,6 +858,10 @@ if (fase === "Incorporar") {
 } else if (fase === "Inicio Ronda 2"){
  instrucciones.textContent = "Ya sabes cómo es, ahora tenés " + fichasActuales + " fichas a incorporar";
 };
+iactins1 = 0;
+iactins2 = 0;
+iactins3 = [];
+texto = ""
 };
 actualizarInstrucciones();
 
@@ -1475,10 +1507,12 @@ function test17(colour){
     i174++;
     };
     i174 = 0;
-    if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].sudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
+    if(nobjetivos === "true"){
+        if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].sudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
         resultadodados.close();
         mensajefinal.textContent = "Ganó el " + colour;
         fin.showModal();
+    };
     };
 };
 

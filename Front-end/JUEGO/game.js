@@ -242,7 +242,11 @@ let obj9 = {
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
 connect2Server(3015);
+<<<<<<< HEAD
 test20();
+=======
+cargarPartida();
+>>>>>>> 2be0336a1b889b33f9daac418b27934eb41380f3
 
 //Declaración de Continentes
 let oceania = [];
@@ -890,8 +894,7 @@ texto = ""
 actualizarInstrucciones();
 
 function cambiarInstructor() {
-    let ninstructor = "true"
-    ninstructor = localStorage.getItem("ninstructor");
+    let ninstructor = localStorage.getItem("ninstructor");
     let instructorActivo = (ninstructor === "true" || ninstructor === null);
     
     if (instructorActivo) {
@@ -922,8 +925,6 @@ if (ninstructor == "true") {
 
 //cambio de Turno y Fase
 function test12(colorturno) {
-    paisseleccionado = 0;
-    paisatacado = 0;
     i121 = 0;
     i122 = 0;
     i123 = 0;
@@ -1486,16 +1487,9 @@ function test17(colour){
         };
         i171++;
     };
-    if(nobjetivos === "false" || nobjetivos === "true"){
     if (i172 >= 30){
         mensajefinal.textContent = "Ganó el " + colour;
         fin.showModal();
-    };
-    } else if(nobjetivos === "dominacion"){
-    if (i172 === 50){
-        mensajefinal.textContent = "Ganó el " + colour;
-        fin.showModal();
-    };
     };
     while (objetivos.length > i173 && objetivos[i173].color != colour) {
         i173++;
@@ -1803,8 +1797,6 @@ function obtenerEstadoJuego() {
       obj8: obj8.color,
       obj9: obj9.color,
       ninstructor: ninstructor,
-      nobjetivos: nobjetivos,
-      njugadores: njugadores,
     };
   };
 
@@ -1832,9 +1824,6 @@ function cargarPartida() {
         obj8 = obj8.color;
         obj9 = obj9.color;
         ninstructor = ninstructor;
-        nobjetivos = nobjetivos;
-        njugadores = njugadores;
-
         while (estado.paises.length > icarg) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
             paises[icarg].colorfichas = estado.paises[icarg].color;

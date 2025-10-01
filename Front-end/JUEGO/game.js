@@ -76,6 +76,14 @@ function abrirMenuPausa() {
     menuPausa.showModal();
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  let valorBrillo = 1;
+  valorBrillo = localStorage.getItem("brillo")
+  valorBrillo = parseFloat(valorBrillo);
+  document.body.style.filter = "brightness(" + valorBrillo + ")";
+});
+
 let njugadores = 2;
 localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);

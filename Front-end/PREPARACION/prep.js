@@ -61,3 +61,12 @@ window.location.href = "../JUEGO/game.html"
 let ready = document.getElementById("gameready");
 ready.addEventListener("click", test3);
 cerrar.addEventListener("click", ()=> advertencia.close());
+
+document.addEventListener("DOMContentLoaded", () => {
+  let valorBrillo = 1;
+  valorBrillo = localStorage.getItem("brillo")
+  valorBrillo = parseFloat(valorBrillo);
+  document.body.style.filter = "brightness(" + valorBrillo + ")";
+
+});
+console.log("Brillo " + valorBrillo)

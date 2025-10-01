@@ -1,10 +1,13 @@
-function cambiarBrillo() {
+document.addEventListener("DOMContentLoaded", () => {
   let barraBrillo = document.getElementById("barraBrillo");
-  let valorBrillo = barraBrillo.value;
+
+  let valorBrillo = localStorage.getItem("brillo") || 1;
+  barraBrillo.value = valorBrillo;
   document.body.style.filter = "brightness(" + valorBrillo + ")";
-}
-document.addEventListener("DOMContentLoaded", cargarDOM)
-    
-  function cargarDOM () {
-  barraBrillo.addEventListener("input", cambiarBrillo);
-};
+
+  barraBrillo.addEventListener("input", () => {
+    let valorBrillo = barraBrillo.value;
+    document.body.style.filter = "brightness(" + valorBrillo + ")";
+    localStorage.setItem("brillo", valorBrillo);
+  });
+});

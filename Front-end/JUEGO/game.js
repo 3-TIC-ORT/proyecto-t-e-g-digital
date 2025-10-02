@@ -218,6 +218,12 @@ let canjearamarillo = document.getElementById("canjearamarillo");
 let canjearverde = document.getElementById("canjearverde");
 let canjearmagenta = document.getElementById("canjearmagenta");
 let canjearnegro = document.getElementById("canjearnegro");
+let restablecer1 = document.getElementById("restablecer1");
+let restablecer2 = document.getElementById("restablecer2");
+let restablecer3 = document.getElementById("restablecer3");
+let restablecer4 = document.getElementById("restablecer4");
+let restablecer5 = document.getElementById("restablecer5");
+let restablecer6 = document.getElementById("restablecer6");
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner 1 ficha";
@@ -2708,7 +2714,32 @@ canjearamarillo.addEventListener("click",()=> test24("Amarillo"));
 canjearverde.addEventListener("click",()=> test24("Verde"));
 canjearmagenta.addEventListener("click",()=> test24("Magenta"));
 canjearnegro.addEventListener("click",()=> test24("Negro"));
-
+restablecer1.addEventListener("click", function(){
+    tselect1 = 0;
+    tselect2 = 0;
+    tselect3 = 0;
+});
+restablecer2.addEventListener("click", function(){
+    tselect1 = 0;
+    tselect2 = 0;
+    tselect3 = 0;
+});restablecer3.addEventListener("click", function(){
+    tselect1 = 0;
+    tselect2 = 0;
+    tselect3 = 0;
+});restablecer4.addEventListener("click", function(){
+    tselect1 = 0;
+    tselect2 = 0;
+    tselect3 = 0;
+});restablecer5.addEventListener("click", function(){
+    tselect1 = 0;
+    tselect2 = 0;
+    tselect3 = 0;
+});restablecer6.addEventListener("click", function(){
+    tselect1 = 0;
+    tselect2 = 0;
+    tselect3 = 0;
+});
 //funcion guardar partida
 function obtenerEstadoJuego() {
     let paisesLimpios = paises.map(p => ({

@@ -52,8 +52,8 @@ let i172 = 0;
 let i173 = 0;
 let i174 = 0;
 let i221 = 0;
-let i222 = 0;
-let i223 = 0;
+let i241 = 0;
+let i242 = 0;
 let icarg = 0;
 let iactins1 = 0;
 let iactins2 = 0;
@@ -103,7 +103,6 @@ function test20() {
 if (cargarPartidaInicio === "true") {
     cargarPartida();
 }
-console.log("cargar partida desde inicio:  " + cargarPartidaInicio);
 }
 
 //cantidad jugadores
@@ -204,6 +203,21 @@ let docTamarillo = [contenidoTamarillo1, contenidoTamarillo2, contenidoTamarillo
 let docTverde = [contenidoTverde1, contenidoTverde2, contenidoTverde3, contenidoTverde4, contenidoTverde5];
 let docTmagenta = [contenidoTmagenta1, contenidoTmagenta2, contenidoTmagenta3, contenidoTmagenta4, contenidoTmagenta5];
 let docTnegro = [contenidoTnegro1, contenidoTnegro2, contenidoTnegro3, contenidoTnegro4, contenidoTnegro5];
+let tselect1 = 0;
+let tselect2 = 0;
+let tselect3 = 0;
+let canjesrojo = 0;
+let canjesazul = 0;
+let canjesamarillo = 0;
+let canjesverde = 0;
+let canjesmagenta = 0;
+let canjesnegro = 0;
+let canjearrojo = document.getElementById("canjearrojo");
+let canjearazul = document.getElementById("canjearazul");
+let canjearamarillo = document.getElementById("canjearamarillo");
+let canjearverde = document.getElementById("canjearverde");
+let canjearmagenta = document.getElementById("canjearmagenta");
+let canjearnegro = document.getElementById("canjearnegro");
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner 1 ficha";
@@ -1097,7 +1111,7 @@ let tegipto = {
     pais: egipto,
     fichas: 3,
     color: "",
-    simbolo: "globo",
+    simbolo: "Globo",
 };
 let tetiopia = {
     pais: etiopia,
@@ -1181,7 +1195,6 @@ while (colores.length > i) {
     if (objetivos[randomizador].color === ""){
         objetivos[randomizador].color = colores[i];
         i++;
-        console.log(objetivos[randomizador]);
     };
 };
 };
@@ -1293,7 +1306,6 @@ function cambiarInstructor() {
 };
 
 let ninstructor = localStorage.getItem("ninstructor");
-console.log("instructor: " + ninstructor);
 actRapidaIns.textContent = "Instructor activado";
 if (ninstructor == "true") {
     inicioRonda1 = "";
@@ -1354,6 +1366,280 @@ while(tarjetasnegro.length > i221){
 i221 = 0;
 };
 
+function test23(tarjeta){
+if(tarjeta.color === turno && fase === "Incorporar"){
+if(tselect1 === 0){
+    tselect1 = tarjeta;
+} else if(tselect1 != 0 && tselect1 != tarjeta && tselect2 === 0){
+    tselect2 = tarjeta
+} else if(tselect1 != 0 && tselect1 != tarjeta && tselect2 != 0 && tselect2 != tarjeta && tselect3 === 0){
+    tselect3 = tarjeta;
+} else if(tselect1 != 0 && tselect1 != tarjeta && tselect2 != 0 && tselect2 != tarjeta && tselect3!=0 && tselect3 != tarjeta){
+    tselect1 = tarjeta;
+    tselect2 = 0;
+    tselect3 = 0;
+};
+};
+};
+
+function test25(color){
+    if(color === "Rojo"){
+    if(2 >= canjesrojo){
+    fichasnuevas.rojo = fichasnuevas.rojo + 4 + 3 * canjesrojo;
+    } else if (canjesrojo > 2){
+    fichasnuevas.rojo = fichasnuevas.rojo + 10 + 5 * (canjesrojo-2);
+    };
+    canjesrojo++;
+    while(tarjetasrojo[i241] != tselect1){
+        i241++;
+    };
+    tarjetasrojo[i241].color = "";
+    tarjetasrojo[i241].fichas = 3;
+    tarjetareserva = tarjetasrojo.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+while(tarjetasrojo[i241] != tselect2){
+        i241++;
+    };
+    tarjetasrojo[i241].color = "";
+    tarjetasrojo[i241].fichas = 3;
+    tarjetareserva = tarjetasrojo.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(tarjetasrojo[i241] != tselect3){
+        i241++;
+    };
+    tarjetasrojo[i241].color = "";
+    tarjetasrojo[i241].fichas = 3;
+    tarjetareserva = tarjetasrojo.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(docTrojo.length > i241){
+        docTrojo[i241].textContent = "";
+        i241++;
+    };
+    i241 = 0;
+} else if(color === "Azul"){
+    if(2 >= canjesazul){
+    fichasnuevas.azul = fichasnuevas.azul + 4 + 3 * canjesazul;
+    } else if (canjesazul > 2){
+    fichasnuevas.azul = fichasnuevas.azul + 10 + 5 * (canjesazul-2);
+    };
+    canjesazul++;
+    while(tarjetasazul[i241] != tselect1){
+        i241++;
+    };
+    tarjetasazul[i241].color = "";
+    tarjetasazul[i241].fichas = 3;
+    tarjetareserva = tarjetasazul.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+while(tarjetasazul[i241] != tselect2){
+        i241++;
+    };
+    tarjetasazul[i241].color = "";
+    tarjetasazul[i241].fichas = 3;
+    tarjetareserva = tarjetasazul.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(tarjetasazul[i241] != tselect3){
+        i241++;
+    };
+    tarjetasazul[i241].color = "";
+    tarjetasazul[i241].fichas = 3;
+    tarjetareserva = tarjetasazul.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(docTazul.length > i241){
+    docTazul[i241].textContent = "";
+    i241++;
+    };
+    i241 = 0;
+}  else if(color === "Amarillo"){
+    if(2 >= canjesamarillo){
+    fichasnuevas.amarillo = fichasnuevas.amarillo + 4 + 3 * canjesamarillo;
+    } else if (canjesamarillo > 2){
+    fichasnuevas.amarillo = fichasnuevas.amarillo + 10 + 5 * (canjesamarillo-2);
+    };
+    canjesamarillo++;
+    while(tarjetasamarillo[i241] != tselect1){
+        i241++;
+    };
+    tarjetasamarillo[i241].color = "";
+    tarjetasamarillo[i241].fichas = 3;
+    tarjetareserva = tarjetasamarillo.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+while(tarjetasamarillo[i241] != tselect2){
+        i241++;
+    };
+    tarjetasamarillo[i241].color = "";
+    tarjetasamarillo[i241].fichas = 3;
+    tarjetareserva = tarjetasamarillo.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(tarjetasamarillo[i241] != tselect3){
+        i241++;
+    };
+    tarjetasamarillo[i241].color = "";
+    tarjetasamarillo[i241].fichas = 3;
+    tarjetareserva = tarjetasamarillo.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(docTamarillo.length > i241){
+    docTamarillo[i241].textContent = "";
+    i241++;
+    };
+    i241 = 0;
+}  else if(color === "Verde"){
+    if(2 >= canjesverde){
+    fichasnuevas.verde = fichasnuevas.verde + 4 + 3 * canjesverde;
+    } else if (canjesverde > 2){
+    fichasnuevas.verde = fichasnuevas.verde + 10 + 5 * (canjesverde-2);
+    };
+    canjesverde++;
+    while(tarjetasverde[i241] != tselect1){
+        i241++;
+    };
+    tarjetasverde[i241].color = "";
+    tarjetasverde[i241].fichas = 3;
+    tarjetareserva = tarjetasverde.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+while(tarjetasverde[i241] != tselect2){
+        i241++;
+    };
+    tarjetasverde[i241].color = "";
+    tarjetasverde[i241].fichas = 3;
+    tarjetareserva = tarjetasverde.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(tarjetasverde[i241] != tselect3){
+        i241++;
+    };
+    tarjetasverde[i241].color = "";
+    tarjetasverde[i241].fichas = 3;
+    tarjetareserva = tarjetasverde.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(docTverde.length > i241){
+    docTverde[i241].textContent = "";
+    i241++;
+    };
+    i241 = 0;
+}  else if(color === "Magenta"){
+    if(2 >= canjesmagenta){
+    fichasnuevas.magenta = fichasnuevas.magenta + 4 + 3 * canjesmagenta;
+    } else if (canjesmagenta > 2){
+    fichasnuevas.magenta = fichasnuevas.magenta + 10 + 5 * (canjesmagenta-2);
+    };
+    canjesmagenta++;
+    while(tarjetasmagenta[i241] != tselect1){
+        i241++;
+    };
+    tarjetasmagenta[i241].color = "";
+    tarjetasmagenta[i241].fichas = 3;
+    tarjetareserva = tarjetasmagenta.splice(i241, 1);
+    mazo.push(tarjetasmagenta);
+    tarjetareserva = 0;
+    i241 = 0;
+while(tarjetasmagenta[i241] != tselect2){
+        i241++;
+    };
+    tarjetasmagenta[i241].color = "";
+    tarjetasmagenta[i241].fichas = 3;
+    tarjetareserva = tarjetasmagenta.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(tarjetasmagenta[i241] != tselect3){
+        i241++;
+    };
+    tarjetasmagenta[i241].color = "";
+    tarjetasmagenta[i241].fichas = 3;
+    tarjetareserva = tarjetasmagenta.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(docTmagenta.length > i241){
+    docTmagenta[i241].textContent = "";
+    i241++;
+    };
+    i241 = 0;
+}  else if(color === "Negro"){
+    if(2 >= canjesnegro){
+    fichasnuevas.negro = fichasnuevas.negro + 4 + 3 * canjesnegro;
+    } else if (canjesnegro > 2){
+    fichasnuevas.negro = fichasnuevas.negro + 10 + 5 * (canjesnegro-2);
+    };
+    canjesnegro++;
+    while(tarjetasnegro[i241] != tselect1){
+        i241++;
+    };
+    tarjetasnegro[i241].color = "";
+    tarjetasnegro[i241].fichas = 3;
+    tarjetareserva = tarjetasnegro.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+while(tarjetasnegro[i241] != tselect2){
+        i241++;
+    };
+    tarjetasnegro[i241].color = "";
+    tarjetasnegro[i241].fichas = 3;
+    tarjetareserva = tarjetasnegro.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(tarjetasnegro[i241] != tselect3){
+        i241++;
+    };
+    tarjetasnegro[i241].color = "";
+    tarjetasnegro[i241].fichas = 3;
+    tarjetareserva = tarjetasnegro.splice(i241, 1);
+    mazo.push(tarjetareserva);
+    tarjetareserva = 0;
+    i241 = 0;
+    while(docTnegro.length > i241){
+    docTnegro[i241].textContent = "";
+    i241++;
+    };
+    i241 = 0;
+}
+tselect1 = 0;
+tselect2 = 0;
+tselect3 = 0;
+
+test22(color);
+actualizarInstrucciones();
+}
+
+function test24(color){
+if(color === turno && fase === "Incorporar"){
+if(tselect1 != 0 && tselect2 != 0 && tselect3 != 0){
+if(tselect1.simbolo === "Comodin" || tselect2.simbolo === "Comodin" || tselect3.simbolo === "Comodin"){
+test25(color);
+} else if (tselect1.simbolo === tselect2.simbolo && tselect2.simbolo === tselect3.simbolo){
+test25(color);
+} else if (tselect1.simbolo != tselect2.simbolo && tselect2.simbolo != tselect3.simbolo && tselect3.simbolo != tselect1.simbolo){
+test25(color);
+};
+};
+};
+};
+
 //cambio de Turno y Fase
 function test12(colorturno) {
     i121 = 0;
@@ -1401,12 +1687,6 @@ function test12(colorturno) {
                 tarjetasnegro.push(tarjetareserva);
                 tarjetareserva = 0; 
             };
-            console.log(tarjetasrojo);
-            console.log(tarjetasazul);
-            console.log(tarjetasamarillo);
-            console.log(tarjetasverde);
-            console.log(tarjetasmagenta);
-            console.log(tarjetasnegro);
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
         } 
@@ -1822,13 +2102,6 @@ function test12(colorturno) {
                     turno = colores[i121];
                     currentturn.textContent = "Turno: " + turno;
                     currentphase.textContent = "Fase: " + fase;
-                    console.log(fichasnuevas.rojo);
-                    console.log(fichasnuevas.azul);
-                    console.log(fichasnuevas.amarillo);
-                    console.log(fichasnuevas.verde);
-                    console.log(fichasnuevas.magenta);
-                    console.log(fichasnuevas.negro);
-                    console.log(fncontinentes);
                     };
                 }
             else if (fase === "Incorporar"){
@@ -1877,6 +2150,9 @@ function test12(colorturno) {
             };
             actualizarInstrucciones();
             guardarPartida();
+            tselect1 = 0;
+            tselect2 = 0;
+            tselect3 = 0;
             };
         };
 
@@ -2076,10 +2352,19 @@ function test17(colour){
         };
         i171++;
     };
+    if(nobjetivos === "true" || nobjetivos === "false"){
     if (i172 >= 30){
         mensajefinal.textContent = "Ganó el " + colour;
         fin.showModal();
     };
+    };
+    if(nobjetivos === "dominacion"){
+    if (i172 === 50){
+        mensajefinal.textContent = "Ganó el " + colour;
+        fin.showModal();
+    };
+    };
+    if(nobjetivos === "true"){
     while (objetivos.length > i173 && objetivos[i173].color != colour) {
         i173++;
     };
@@ -2125,13 +2410,12 @@ function test17(colour){
     i174++;
     };
     i174 = 0;
-    if(nobjetivos === "true"){
         if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].sudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
         resultadodados.close();
         mensajefinal.textContent = "Ganó el " + colour;
         fin.showModal();
     };
-    };
+};
 };
 
 //Dialogs pasar fichas
@@ -2388,6 +2672,42 @@ mostrarTmagenta.addEventListener("click",()=> dialogTmagenta.showModal());
 cerrarTmagenta.addEventListener("click",()=> dialogTmagenta.close());
 mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
 cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
+contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));
+contenidoTrojo2.addEventListener("click",()=> test23(tarjetasrojo[1]));
+contenidoTrojo3.addEventListener("click",()=> test23(tarjetasrojo[2]));
+contenidoTrojo4.addEventListener("click",()=> test23(tarjetasrojo[3]));
+contenidoTrojo5.addEventListener("click",()=> test23(tarjetasrojo[4]));
+contenidoTazul1.addEventListener("click",()=> test23(tarjetasazul[0]));
+contenidoTazul2.addEventListener("click",()=> test23(tarjetasazul[1]));
+contenidoTazul3.addEventListener("click",()=> test23(tarjetasazul[2]));
+contenidoTazul4.addEventListener("click",()=> test23(tarjetasazul[3]));
+contenidoTazul5.addEventListener("click",()=> test23(tarjetasazul[4]));
+contenidoTamarillo1.addEventListener("click",()=> test23(tarjetasamarillo[0]));
+contenidoTamarillo2.addEventListener("click",()=> test23(tarjetasamarillo[1]));
+contenidoTamarillo3.addEventListener("click",()=> test23(tarjetasamarillo[2]));
+contenidoTamarillo4.addEventListener("click",()=> test23(tarjetasamarillo[3]));
+contenidoTamarillo5.addEventListener("click",()=> test23(tarjetasamarillo[4]));
+contenidoTverde1.addEventListener("click",()=> test23(tarjetasverde[0]));
+contenidoTverde2.addEventListener("click",()=> test23(tarjetasverde[1]));
+contenidoTverde3.addEventListener("click",()=> test23(tarjetasverde[2]));
+contenidoTverde4.addEventListener("click",()=> test23(tarjetasverde[3]));
+contenidoTverde5.addEventListener("click",()=> test23(tarjetasverde[4]));
+contenidoTmagenta1.addEventListener("click",()=> test23(tarjetasmagenta[0]));
+contenidoTmagenta2.addEventListener("click",()=> test23(tarjetasmagenta[1]));
+contenidoTmagenta3.addEventListener("click",()=> test23(tarjetasmagenta[2]));
+contenidoTmagenta4.addEventListener("click",()=> test23(tarjetasmagenta[3]));
+contenidoTmagenta5.addEventListener("click",()=> test23(tarjetasmagenta[4]));
+contenidoTnegro1.addEventListener("click",()=> test23(tarjetasnegro[0]));
+contenidoTnegro2.addEventListener("click",()=> test23(tarjetasnegro[1]));
+contenidoTnegro3.addEventListener("click",()=> test23(tarjetasnegro[2]));
+contenidoTnegro4.addEventListener("click",()=> test23(tarjetasnegro[3]));
+contenidoTnegro5.addEventListener("click",()=> test23(tarjetasnegro[4]));
+canjearrojo.addEventListener("click",()=> test24("Rojo"));
+canjearazul.addEventListener("click",()=> test24("Azul"));
+canjearamarillo.addEventListener("click",()=> test24("Amarillo"));
+canjearverde.addEventListener("click",()=> test24("Verde"));
+canjearmagenta.addEventListener("click",()=> test24("Magenta"));
+canjearnegro.addEventListener("click",()=> test24("Negro"));
 
 //funcion guardar partida
 function obtenerEstadoJuego() {
@@ -2434,7 +2754,6 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
     icarg = 0;
-    console.log(estado);
 };
 
 //funcion cargar partida
@@ -2467,6 +2786,5 @@ function cargarPartida() {
             paises[icarg].id.textContent = paises[icarg].nombre + " " + paises[icarg].fichas + " " + paises[icarg].colorfichas;
             icarg++;
         };
-        console.log(estado);
     })
 }

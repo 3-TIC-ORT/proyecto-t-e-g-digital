@@ -51,6 +51,9 @@ let i171 = 0;
 let i172 = 0;
 let i173 = 0;
 let i174 = 0;
+let i221 = 0;
+let i222 = 0;
+let i223 = 0;
 let icarg = 0;
 let iactins1 = 0;
 let iactins2 = 0;
@@ -105,7 +108,7 @@ console.log("cargar partida desde inicio:  " + cargarPartidaInicio);
 
 //cantidad jugadores
 let njugadores = 2;
-localStorage.getItem("njugadores");
+njugadores = localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
 let nobjetivos = "true"
 nobjetivos = localStorage.getItem("nobjetivos");
@@ -117,6 +120,48 @@ let mostrarTamarillo = document.getElementById("mostrarTamarillo");
 let mostrarTverde = document.getElementById("mostrarTverde");
 let mostrarTmagenta = document.getElementById("mostrarTmagenta");
 let mostrarTnegro = document.getElementById("mostrarTnegro");
+let dialogTrojo = document.getElementById("dialogTrojo");
+let dialogTazul = document.getElementById("dialogTazul");
+let dialogTamarillo = document.getElementById("dialogTamarillo");
+let dialogTverde = document.getElementById("dialogTverde");
+let dialogTmagenta = document.getElementById("dialogTmagenta");
+let dialogTnegro = document.getElementById("dialogTnegro");
+let cerrarTrojo = document.getElementById("cerrarTrojo");
+let cerrarTazul = document.getElementById("cerrarTazul");
+let cerrarTamarillo = document.getElementById("cerrarTamarillo");
+let cerrarTverde = document.getElementById("cerrarTverde");
+let cerrarTmagenta = document.getElementById("cerrarTmagenta");
+let cerrarTnegro = document.getElementById("cerrarTnegro");
+let contenidoTrojo1 = document.getElementById("contenidoTrojo1");
+let contenidoTrojo2 = document.getElementById("contenidoTrojo2");
+let contenidoTrojo3 = document.getElementById("contenidoTrojo3");
+let contenidoTrojo4 = document.getElementById("contenidoTrojo4");
+let contenidoTrojo5 = document.getElementById("contenidoTrojo5");
+let contenidoTazul1 = document.getElementById("contenidoTazul1");
+let contenidoTazul2 = document.getElementById("contenidoTazul2");
+let contenidoTazul3 = document.getElementById("contenidoTazul3");
+let contenidoTazul4 = document.getElementById("contenidoTazul4");
+let contenidoTazul5 = document.getElementById("contenidoTazul5");
+let contenidoTamarillo1 = document.getElementById("contenidoTamarillo1");
+let contenidoTamarillo2 = document.getElementById("contenidoTamarillo2");
+let contenidoTamarillo3 = document.getElementById("contenidoTamarillo3");
+let contenidoTamarillo4 = document.getElementById("contenidoTamarillo4");
+let contenidoTamarillo5 = document.getElementById("contenidoTamarillo5");
+let contenidoTverde1 = document.getElementById("contenidoTverde1");
+let contenidoTverde2 = document.getElementById("contenidoTverde2");
+let contenidoTverde3 = document.getElementById("contenidoTverde3");
+let contenidoTverde4 = document.getElementById("contenidoTverde4");
+let contenidoTverde5 = document.getElementById("contenidoTverde5");
+let contenidoTmagenta1 = document.getElementById("contenidoTmagenta1");
+let contenidoTmagenta2 = document.getElementById("contenidoTmagenta2");
+let contenidoTmagenta3 = document.getElementById("contenidoTmagenta3");
+let contenidoTmagenta4 = document.getElementById("contenidoTmagenta4");
+let contenidoTmagenta5 = document.getElementById("contenidoTmagenta5");
+let contenidoTnegro1 = document.getElementById("contenidoTnegro1");
+let contenidoTnegro2 = document.getElementById("contenidoTnegro2");
+let contenidoTnegro3 = document.getElementById("contenidoTnegro3");
+let contenidoTnegro4 = document.getElementById("contenidoTnegro4");
+let contenidoTnegro5 = document.getElementById("contenidoTnegro5");
 let mostrarrojo = document.getElementById("mostrarrojo");
 let cerrarrojo = document.getElementById("cerrarrojo");
 let objetivorojo = document.getElementById("objetivorojo");
@@ -126,7 +171,7 @@ let cerrarazul = document.getElementById("cerrarazul");
 let objetivoazul = document.getElementById("objetivoazul");
 let contenidoazul = document.getElementById("contenidoazul");
 let mostraramarillo = document.getElementById("mostraramarillo");
-let cerramarillo = document.getElementById("cerraramarillo");
+let cerraramarillo = document.getElementById("cerraramarillo");
 let objetivoamarillo = document.getElementById("objetivoamarillo");
 let contenidoamarillo = document.getElementById("contenidoamarillo");
 let mostrarverde = document.getElementById("mostrarverde");
@@ -153,6 +198,12 @@ let cerrarpasarfichas1 = document.getElementById("cerrarpasarfichas1");
 let pasarfichas2 = document.getElementById("pasarfichas2");
 let selectpasarfichas2 = document.getElementById("selectpasarfichas2");
 let cerrarpasarfichas2 = document.getElementById("cerrarpasarfichas2");
+let docTrojo = [contenidoTrojo1, contenidoTrojo2, contenidoTrojo3, contenidoTrojo4, contenidoTrojo5];
+let docTazul = [contenidoTazul1, contenidoTazul2, contenidoTazul3, contenidoTazul4, contenidoTazul5];
+let docTamarillo = [contenidoTamarillo1, contenidoTamarillo2, contenidoTamarillo3, contenidoTamarillo4, contenidoTamarillo5];
+let docTverde = [contenidoTverde1, contenidoTverde2, contenidoTverde3, contenidoTverde4, contenidoTverde5];
+let docTmagenta = [contenidoTmagenta1, contenidoTmagenta2, contenidoTmagenta3, contenidoTmagenta4, contenidoTmagenta5];
+let docTnegro = [contenidoTnegro1, contenidoTnegro2, contenidoTnegro3, contenidoTnegro4, contenidoTnegro5];
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner 1 ficha";
@@ -1256,6 +1307,53 @@ if (ninstructor == "true") {
     instrucciones.style.display = "none"; 
 };
 
+//Actualizar dialogs tarjetas
+function test22(color){
+i221 = 0;
+if(color === "Rojo"){
+while(tarjetasrojo.length > i221){
+    docTrojo[i221].textContent = tarjetasrojo[i221].pais.nombre + " " + tarjetasrojo[i221].simbolo;
+    i221++;
+};
+};
+i221 = 0;
+if(color === "Azul"){
+while(tarjetasazul.length > i221){
+    docTazul[i221].textContent = tarjetasazul[i221].pais.nombre + " " + tarjetasazul[i221].simbolo;
+    i221++;
+};
+};
+i221 = 0;
+if(color === "Amarillo"){
+while(tarjetasamarillo.length > i221){
+    docTamarillo[i221].textContent = tarjetasamarillo[i221].pais.nombre + " " + tarjetasamarillo[i221].simbolo;
+    i221++;
+};
+};
+i221 = 0;
+if(color === "Verde"){
+while(tarjetasverde.length > i221){
+    docTverde[i221].textContent = tarjetasverde[i221].pais.nombre + " " + tarjetasverde[i221].simbolo;
+    i221++;
+};
+};
+i221 = 0;
+if(color === "Magenta"){
+while(tarjetasmagenta.length > i221){
+    docTmagenta[i221].textContent = tarjetasmagenta[i221].pais.nombre + " " + tarjetasmagenta[i221].simbolo;
+    i221++;
+};
+};
+i221 = 0;
+if(color === "Negro"){
+while(tarjetasnegro.length > i221){
+    docTnegro[i221].textContent = tarjetasnegro[i221].pais.nombre + " " + tarjetasnegro[i221].simbolo;
+    i221++;
+};
+};
+i221 = 0;
+};
+
 //cambio de Turno y Fase
 function test12(colorturno) {
     i121 = 0;
@@ -1267,37 +1365,37 @@ function test12(colorturno) {
     tarjetareserva = 0;
     if (colorturno === turno) {
         if (fase === "Atacar") {
-            if(colorturno === "Rojo" && conquista.rojo === 1){
+            if(colorturno === "Rojo" && conquista.rojo === 1 && tarjetasrojo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Rojo"
                 tarjetasrojo.push(tarjetareserva);
                 tarjetareserva = 0; 
             };
-             if(colorturno === "Azul" && conquista.azul === 1){
+             if(colorturno === "Azul" && conquista.azul === 1 && tarjetasazul.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Azul"
                 tarjetasazul.push(tarjetareserva);
                 tarjetareserva = 0; 
             };
-             if(colorturno === "Amarillo" && conquista.amarillo === 1){
+             if(colorturno === "Amarillo" && conquista.amarillo === 1 && tarjetasamarillo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Amarillo"
                 tarjetasamarillo.push(tarjetareserva);
                 tarjetareserva = 0; 
             };
-             if(colorturno === "Verde" && conquista.verde === 1){
+             if(colorturno === "Verde" && conquista.verde === 1 && tarjetasverde.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Verde"
                 tarjetasverde.push(tarjetareserva);
                 tarjetareserva = 0; 
             };
-             if(colorturno === "Magenta" && conquista.magenta === 1){
+             if(colorturno === "Magenta" && conquista.magenta === 1 && tarjetasmagenta.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Magenta"
                 tarjetasmagenta.push(tarjetareserva);
                 tarjetareserva = 0; 
             };
-             if(colorturno === "Negro" && conquista.negro === 1){
+             if(colorturno === "Negro" && conquista.negro === 1 && tarjetasnegro.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Negro"
                 tarjetasnegro.push(tarjetareserva);
@@ -1387,6 +1485,7 @@ function test12(colorturno) {
         conquista.verde = 0;
         conquista.rojo = 0;
         conquista.negro = 0;
+        test22(colorturno);
         if(colorturno === "Rojo"){
             while (tarjetasrojo.length > i121){
                 if(tarjetasrojo[i121].fichas > 0){
@@ -2277,6 +2376,18 @@ mostrarnegro.addEventListener("click", function(){
     });
 cerrarnegro.addEventListener("click",()=> objetivonegro.close());
 cerrardados.addEventListener("click",()=> resultadodados.close());
+mostrarTrojo.addEventListener("click",()=> dialogTrojo.showModal());
+cerrarTrojo.addEventListener("click",()=> dialogTrojo.close());
+mostrarTazul.addEventListener("click",()=> dialogTazul.showModal());
+cerrarTazul.addEventListener("click",()=> dialogTazul.close());
+mostrarTamarillo.addEventListener("click",()=> dialogTamarillo.showModal());
+cerrarTamarillo.addEventListener("click",()=> dialogTamarillo.close());
+mostrarTverde.addEventListener("click",()=> dialogTverde.showModal());
+cerrarTverde.addEventListener("click",()=> dialogTverde.close());
+mostrarTmagenta.addEventListener("click",()=> dialogTmagenta.showModal());
+cerrarTmagenta.addEventListener("click",()=> dialogTmagenta.close());
+mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
+cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
 
 //funcion guardar partida
 function obtenerEstadoJuego() {

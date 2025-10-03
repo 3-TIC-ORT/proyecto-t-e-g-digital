@@ -100,7 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //checkear cargar partida
 let cargarPartidaInicio = true
-cargarPartidaInicio = localStorage.getItem("cargarPartida");
+let cargartest = localStorage.getItem("cargarPartida")
+if(cargartest != "null"){
+cargarPartidaInicio = localStorage.getItem("cargarPartida");};
 function test20() { 
 if (cargarPartidaInicio === "true") {
     cargarPartida();
@@ -2876,69 +2878,76 @@ function cargarPartida() {
         fase = estado.fase;
         currentturn.textContent = "Turno: " + turno;
         currentphase.textContent = "Fase: " + fase;
-        obj1 = obj1.color;
-        obj2 = obj2.color;
-        obj3 = obj3.color;
-        obj4 = obj4.color;
-        obj5 = obj5.color;
-        obj6 = obj6.color;
-        obj7 = obj7.color;
-        obj8 = obj8.color;
-        obj9 = obj9.color;
+
+        obj1.color = estado.obj1;
+        obj2.color = estado.obj2;
+        obj3.color = estado.obj3;
+        obj4.color = estado.obj4;
+        obj5.color = estado.obj5;
+        obj6.color = estado.obj6;
+        obj7.color = estado.obj7;
+        obj8.color = estado.obj8;
+        obj9.color = estado.obj9;
+
         fncontinentes = estado.fncontinentes;
         fichasnuevas = estado.fichasnuevas;
-        ninstructor = ninstructor;
-        nobjetivos = nobjetivos;
-        njugadores = njugadores;
-        canjesrojo = Arrcanjes.canjesrojo;
-        canjesazul = Arrcanjes.canjesazul;
-        canjesamarillo = Arrcanjes.canjesamarillo;
-        canjesverde = Arrcanjes.canjesverde;
-        canjesmagenta = Arrcanjes.canjesmagenta;
-        canjesnegro = Arrcanjes.canjesnegro;
+
+        ninstructor = estado.ninstructor;
+        nobjetivos = estado.nobjetivos;
+        njugadores = estado.njugadores;
+        canjesrojo = estado.Arrcanjes.canjesrojo
+        canjesazul = estado.Arrcanjes.canjesazul;
+        canjesamarillo = estado.Arrcanjes.canjesamarillo;
+        canjesverde = estado.Arrcanjes.canjesverde;
+        canjesmagenta = estado.Arrcanjes.canjesmagenta;
+        canjesnegro = estado.Arrcanjes.canjesnegro;
         tarjetasLimpias = estado.tarjetasLimpias;
        
-        icarg = 0;
-        while (estado.paises.length > icarg) {
-            paises[icarg].fichas = estado.paises[icarg].fichas;
-            paises[icarg].colorfichas = estado.paises[icarg].color;
-            paises[icarg].id.textContent = paises[icarg].nombre + " " + paises[icarg].fichas + " " + paises[icarg].colorfichas;
-            icarg++;
-        };
-
-        tarjetasrojo = [];
-        tarjetasazul = [];
-        tarjetasamarillo = [];
-        tarjetasverde = [];
-        tarjetasmagenta = [];
-        tarjetasnegro = [];
-
-       icarg2 = 0;
-       while (tpaises.length > icarg2) {
-        tpaises[icarg2].fichas = estado.tarjetasLimpias[icarg2].fichas;
-        tpaises[icarg2].color = estado.tarjetasLimpias[icarg2].color;
-        tpaises[icarg2].simbolo = estado.tarjetasLimpias[icarg2].simbolo;
-        if(tpaises[icarg2].color === "Rojo"){
-          tarjetasrojo.push(tpaises[icarg2]); 
-        } else if(tpaises[icarg2].color === "Azul"){
-            tarjetasazul.push(tpaises[icarg2]); 
-        } else if(tpaises[icarg2].color === "Amarillo"){
-            tarjetasamarillo.push(tpaises[icarg2]);
-        } else if(tpaises[icarg2].color === "Verde"){
-            tarjetasverde.push(tpaises[icarg2]);
-        } else if(tpaises[icarg2].color === "Magenta"){
-            tarjetasmagenta.push(tpaises[icarg2]);
-        } else if(tpaises[icarg2].color === "Negro"){
-            tarjetasnegro.push(tpaises[icarg2]);
-        } 
-        icarg2++;
-       }
-
-      test22("Rojo");
-      test22("Azul");
-      test22("Amarillo");
-      test22("Verde");
-      test22("Magenta");
-      test22("Negro");
+        for (let i = 0; i < estado.paises.length; i++) {
+            paises[i].fichas = estado.paises[i].fichas;
+            paises[i].colorfichas = estado.paises[i].color;
+            paises[i].id.textContent =
+              paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
+          }
+          
+          tarjetasrojo = [];
+          tarjetasazul = [];
+          tarjetasamarillo = [];
+          tarjetasverde = [];
+          tarjetasmagenta = [];
+          tarjetasnegro = [];
+          mazo = [];
+          
+          icarg2 = 0;
+          while (tpaises.length > icarg2) {
+            tpaises[icarg2].fichas = estado.tarjetasLimpias[icarg2].fichas;
+            tpaises[icarg2].color = estado.tarjetasLimpias[icarg2].color;
+            tpaises[icarg2].simbolo = estado.tarjetasLimpias[icarg2].simbolo;
+          
+            if (tpaises[icarg2].color === "Rojo") {
+              tarjetasrojo.push(tpaises[icarg2]);
+            } else if (tpaises[icarg2].color === "Azul") {
+              tarjetasazul.push(tpaises[icarg2]);
+            } else if (tpaises[icarg2].color === "Amarillo") {
+              tarjetasamarillo.push(tpaises[icarg2]);
+            } else if (tpaises[icarg2].color === "Verde") {
+              tarjetasverde.push(tpaises[icarg2]);
+            } else if (tpaises[icarg2].color === "Magenta") {
+              tarjetasmagenta.push(tpaises[icarg2]);
+            } else if (tpaises[icarg2].color === "Negro") {
+              tarjetasnegro.push(tpaises[icarg2]);
+            } else {
+              mazo.push(tpaises[icarg2]);
+            }
+          
+            icarg2++;
+          }
+          
+          test22("Rojo");
+          test22("Azul");
+          test22("Amarillo");
+          test22("Verde");
+          test22("Magenta");
+          test22("Negro");
     });
-}
+}    

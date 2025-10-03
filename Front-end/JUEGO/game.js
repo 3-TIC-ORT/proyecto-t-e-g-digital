@@ -2808,6 +2808,14 @@ function obtenerEstadoJuego() {
       color: c.color,
     }));
 
+    let Arrcanjes = {
+        canjesrojo: canjesrojo,
+        canjesazul: canjesazul,
+        canjesamarillo: canjesamarillo,
+        canjesverde: canjesverde,
+        canjesmagenta: canjesmagenta,
+        canjesnegro: canjesnegro,
+    }
     return {
       turno: turno,  
       fase: fase, 
@@ -2826,7 +2834,8 @@ function obtenerEstadoJuego() {
       obj9: obj9.color,
       ninstructor: ninstructor,
       nobjetivos: nobjetivos,
-      njugadores: njugadores,      
+      njugadores: njugadores,
+      Arrcanjes: Arrcanjes,
     };
   };
 
@@ -2852,13 +2861,18 @@ function cargarPartida() {
         obj7 = obj7.color;
         obj8 = obj8.color;
         obj9 = obj9.color;
-        tarjetasLimpias = estado.tarjetasLimpias;
         fncontinentes = estado.fncontinentes;
         fichasnuevas = estado.fichasnuevas;
         ninstructor = ninstructor;
         nobjetivos = nobjetivos;
         njugadores = njugadores;
-               
+        canjesrojo = Arrcanjes.canjesrojo;
+        canjesazul = Arrcanjes.canjesazul;
+        canjesamarillo = Arrcanjes.canjesamarillo;
+        canjesverde = Arrcanjes.canjesverde;
+        canjesmagenta = Arrcanjes.canjesmagenta;
+        canjesnegro = Arrcanjes.canjesnegro;
+        tarjetasLimpias = estado.tarjetasLimpias;
        
         icarg = 0;
         while (estado.paises.length > icarg) {
@@ -2868,30 +2882,34 @@ function cargarPartida() {
             icarg++;
         };
 
+        tarjetasrojo = [];
+        tarjetasazul = [];
+        tarjetasamarillo = [];
+        tarjetasverde = [];
+        tarjetasmagenta = [];
+        tarjetasnegro = [];
+
        icarg2 = 0;
        while (tpaises.length > icarg2) {
         tpaises[icarg2].fichas = estado.tarjetasLimpias[icarg2].fichas;
         tpaises[icarg2].color = estado.tarjetasLimpias[icarg2].color;
         tpaises[icarg2].simbolo = estado.tarjetasLimpias[icarg2].simbolo;
-        tpaises[icarg2].pais.id.textContent = tpaises[icarg2].pais.nombre + " " + tpaises[icarg2].simbolo + " " + tpaises[icarg2].color + " " + tpaises[icarg2].fichas;
+        if(tpaises[icarg2].color === "Rojo"){
+          tarjetasrojo.push(tpaises[icarg2]); 
+        } else if(tpaises[icarg2].color === "Azul"){
+            tarjetasazul.push(tpaises[icarg2]); 
+        } else if(tpaises[icarg2].color === "Amarillo"){
+            tarjetasamarillo.push(tpaises[icarg2]);
+        } else if(tpaises[icarg2].color === "Verde"){
+            tarjetasverde.push(tpaises[icarg2]);
+        } else if(tpaises[icarg2].color === "Magenta"){
+            tarjetasmagenta.push(tpaises[icarg2]);
+        } else if(tpaises[icarg2].color === "Negro"){
+            tarjetasnegro.push(tpaises[icarg2]);
+        } 
         icarg2++;
        }
-       
-       tarjetasrojo = [];
-       tarjetasazul = [];
-       tarjetasamarillo = [];
-       tarjetasverde = [];
-       tarjetasmagenta = [];
-       tarjetasnegro = [];
 
-       tpaises.forEach(b => {
-        if (b.color === "Rojo") tarjetasrojo.push(b);
-        else if (b.color === "Azul") tarjetasazul.push(b);
-        else if (b.color === "Amarillo") tarjetasamarillo.push(b);
-        else if (b.color === "Verde") tarjetasverde.push(b);
-        else if (b.color === "Magenta") tarjetasmagenta.push(b);
-        else if (b.color === "Negro") tarjetasnegro.push(b);
-      } );
       test22("Rojo");
       test22("Azul");
       test22("Amarillo");
@@ -2900,4 +2918,3 @@ function cargarPartida() {
       test22("Negro");
     });
 }
-console.log(tgobi.color);

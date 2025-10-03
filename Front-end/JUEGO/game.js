@@ -83,6 +83,7 @@ let conquista = {
     magenta: 0,
     negro:0
 };
+
 //menu pausa
 function abrirMenuPausa() {
     menuPausa.showModal();
@@ -102,15 +103,40 @@ cargarPartidaInicio = localStorage.getItem("cargarPartida");
 function test20() { 
 if (cargarPartidaInicio === "true") {
     cargarPartida();
-}
-}
+};
+};
 
-//cantidad jugadores
+//cantidad jugadores y test
 let njugadores = 2;
 njugadores = localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
-let nobjetivos = "true"
+let njugadoresTest = njugadores;
+if(njugadoresTest === null) { 
+        njugadores = 2
+    };
+
+let nobjetivos = "true";
 nobjetivos = localStorage.getItem("nobjetivos");
+if (nobjetivos === null) {
+    nobjetivos = "true"
+}
+
+//resaltar borde
+function resaltarborde(tarjeta) {
+    if (tarjeta.classList.contains("bordeAmarillo")) {
+        tarjeta.classList.remove("bordeAmarillo");
+    } else { 
+  tpaises.forEach(t => {
+    if (t.pais && t.pais.id) {
+      t.pais.id.classList.remove("bordeAmarillo");
+    };
+  });
+ 
+  if (tarjeta && tarjeta.classList) {
+    tarjeta.classList.add("bordeAmarillo");
+  };
+};
+}
 
 //declaracion (dialogs) 
 let mostrarTrojo = document.getElementById("mostrarTrojo");
@@ -2678,36 +2704,38 @@ mostrarTmagenta.addEventListener("click",()=> dialogTmagenta.showModal());
 cerrarTmagenta.addEventListener("click",()=> dialogTmagenta.close());
 mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
 cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
-contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));
-contenidoTrojo2.addEventListener("click",()=> test23(tarjetasrojo[1]));
-contenidoTrojo3.addEventListener("click",()=> test23(tarjetasrojo[2]));
-contenidoTrojo4.addEventListener("click",()=> test23(tarjetasrojo[3]));
-contenidoTrojo5.addEventListener("click",()=> test23(tarjetasrojo[4]));
-contenidoTazul1.addEventListener("click",()=> test23(tarjetasazul[0]));
-contenidoTazul2.addEventListener("click",()=> test23(tarjetasazul[1]));
-contenidoTazul3.addEventListener("click",()=> test23(tarjetasazul[2]));
-contenidoTazul4.addEventListener("click",()=> test23(tarjetasazul[3]));
-contenidoTazul5.addEventListener("click",()=> test23(tarjetasazul[4]));
-contenidoTamarillo1.addEventListener("click",()=> test23(tarjetasamarillo[0]));
-contenidoTamarillo2.addEventListener("click",()=> test23(tarjetasamarillo[1]));
-contenidoTamarillo3.addEventListener("click",()=> test23(tarjetasamarillo[2]));
-contenidoTamarillo4.addEventListener("click",()=> test23(tarjetasamarillo[3]));
-contenidoTamarillo5.addEventListener("click",()=> test23(tarjetasamarillo[4]));
-contenidoTverde1.addEventListener("click",()=> test23(tarjetasverde[0]));
-contenidoTverde2.addEventListener("click",()=> test23(tarjetasverde[1]));
-contenidoTverde3.addEventListener("click",()=> test23(tarjetasverde[2]));
-contenidoTverde4.addEventListener("click",()=> test23(tarjetasverde[3]));
-contenidoTverde5.addEventListener("click",()=> test23(tarjetasverde[4]));
-contenidoTmagenta1.addEventListener("click",()=> test23(tarjetasmagenta[0]));
-contenidoTmagenta2.addEventListener("click",()=> test23(tarjetasmagenta[1]));
-contenidoTmagenta3.addEventListener("click",()=> test23(tarjetasmagenta[2]));
-contenidoTmagenta4.addEventListener("click",()=> test23(tarjetasmagenta[3]));
-contenidoTmagenta5.addEventListener("click",()=> test23(tarjetasmagenta[4]));
-contenidoTnegro1.addEventListener("click",()=> test23(tarjetasnegro[0]));
-contenidoTnegro2.addEventListener("click",()=> test23(tarjetasnegro[1]));
-contenidoTnegro3.addEventListener("click",()=> test23(tarjetasnegro[2]));
-contenidoTnegro4.addEventListener("click",()=> test23(tarjetasnegro[3]));
-contenidoTnegro5.addEventListener("click",()=> test23(tarjetasnegro[4]));
+
+//event listeners tarjetas (no hay forma de que escriba mas event listeners que funciones)
+contenidoTrojo1.addEventListener("click",()=> { test23(tarjetasrojo[0]); resaltarborde(contenidoTrojo1); });
+contenidoTrojo2.addEventListener("click",()=> { test23(tarjetasrojo[1]); resaltarborde(contenidoTrojo2); });
+contenidoTrojo3.addEventListener("click",()=> { test23(tarjetasrojo[2]); resaltarborde(contenidoTrojo3); });
+contenidoTrojo4.addEventListener("click",()=> { test23(tarjetasrojo[3]); resaltarborde(contenidoTrojo4); });
+contenidoTrojo5.addEventListener("click",()=> { test23(tarjetasrojo[4]); resaltarborde(contenidoTrojo5); });
+contenidoTazul1.addEventListener("click",()=> { test23(tarjetasazul[0]); resaltarborde(contenidoTazul1); });
+contenidoTazul2.addEventListener("click",()=> { test23(tarjetasazul[1]); resaltarborde(contenidoTazul2); });
+contenidoTazul3.addEventListener("click",()=> { test23(tarjetasazul[2]); resaltarborde(contenidoTazul3); });
+contenidoTazul4.addEventListener("click",()=> { test23(tarjetasazul[3]); resaltarborde(contenidoTazul4); });
+contenidoTazul5.addEventListener("click",()=> { test23(tarjetasazul[4]); resaltarborde(contenidoTazul5); });
+contenidoTamarillo1.addEventListener("click",()=> { test23(tarjetasamarillo[0]); resaltarborde(contenidoTamarillo1); });
+contenidoTamarillo2.addEventListener("click",()=> { test23(tarjetasamarillo[1]); resaltarborde(contenidoTamarillo2); });
+contenidoTamarillo3.addEventListener("click",()=> { test23(tarjetasamarillo[2]); resaltarborde(contenidoTamarillo3); });
+contenidoTamarillo4.addEventListener("click",()=> { test23(tarjetasamarillo[3]); resaltarborde(contenidoTamarillo4); });
+contenidoTamarillo5.addEventListener("click",()=> { test23(tarjetasamarillo[4]); resaltarborde(contenidoTamarillo5); });
+contenidoTverde1.addEventListener("click",()=> { test23(tarjetasverde[0]); resaltarborde(contenidoTverde1); });
+contenidoTverde2.addEventListener("click",()=> { test23(tarjetasverde[1]); resaltarborde(contenidoTverde2); });
+contenidoTverde3.addEventListener("click",()=> { test23(tarjetasverde[2]); resaltarborde(contenidoTverde3); });
+contenidoTverde4.addEventListener("click",()=> { test23(tarjetasverde[3]); resaltarborde(contenidoTverde4); });
+contenidoTverde5.addEventListener("click",()=> { test23(tarjetasverde[4]); resaltarborde(contenidoTverde5); });
+contenidoTmagenta1.addEventListener("click",()=> { test23(tarjetasmagenta[0]); resaltarborde(contenidoTmagenta1); });
+contenidoTmagenta2.addEventListener("click",()=> { test23(tarjetasmagenta[1]); resaltarborde(contenidoTmagenta2); });
+contenidoTmagenta3.addEventListener("click",()=> { test23(tarjetasmagenta[2]); resaltarborde(contenidoTmagenta3); });
+contenidoTmagenta4.addEventListener("click",()=> { test23(tarjetasmagenta[3]); resaltarborde(contenidoTmagenta4); });
+contenidoTmagenta5.addEventListener("click",()=> { test23(tarjetasmagenta[4]); resaltarborde(contenidoTmagenta5); });
+contenidoTnegro1.addEventListener("click",()=> { test23(tarjetasnegro[0]); resaltarborde(contenidoTnegro1); });
+contenidoTnegro2.addEventListener("click",()=> { test23(tarjetasnegro[1]); resaltarborde(contenidoTnegro2); });
+contenidoTnegro3.addEventListener("click",()=> { test23(tarjetasnegro[2]); resaltarborde(contenidoTnegro3); });
+contenidoTnegro4.addEventListener("click",()=> { test23(tarjetasnegro[3]); resaltarborde(contenidoTnegro4); });
+contenidoTnegro5.addEventListener("click",()=> { test23(tarjetasnegro[4]); resaltarborde(contenidoTnegro5); });
 canjearrojo.addEventListener("click",()=> test24("Rojo"));
 canjearazul.addEventListener("click",()=> test24("Azul"));
 canjearamarillo.addEventListener("click",()=> test24("Amarillo"));
@@ -2749,8 +2777,10 @@ function obtenerEstadoJuego() {
     }));
 
     let tarjetasLimpias = tpaises.map(t => ({
-      nombre: t.nombre,
+      pais: t.pais.nombre,
       simbolo: t.simbolo,
+      color: t.color,
+      fichas: t.fichas,
     }));
   
     let fncontinentesLimpios = fncontinentes.map(c => ({
@@ -2759,10 +2789,12 @@ function obtenerEstadoJuego() {
     }));
 
     return {
-      paises: paisesLimpios,
-      tarjetasLimpias: tarjetasLimpias,
       turno: turno,  
-      fase: fase,    
+      fase: fase, 
+      paises: paisesLimpios,
+      tarjetas: tarjetasLimpias,
+      fncontinentes: fncontinentesLimpios,
+      fichasnuevas: fichasnuevas,
       obj1: obj1.color,
       obj2: obj2.color,
       obj3: obj3.color,
@@ -2774,10 +2806,7 @@ function obtenerEstadoJuego() {
       obj9: obj9.color,
       ninstructor: ninstructor,
       nobjetivos: nobjetivos,
-      njugadores: njugadores,
-      fncontinentes: fncontinentesLimpios,
-      fichasnuevas: fichasnuevas,
-      
+      njugadores: njugadores,      
     };
   };
 
@@ -2803,12 +2832,13 @@ function cargarPartida() {
         obj7 = obj7.color;
         obj8 = obj8.color;
         obj9 = obj9.color;
+        tarjetas = estado.tarjetasLimpias;
+        fncontinentes = estado.fncontinentes;
+        fichasnuevas = estado.fichasnuevas;
         ninstructor = ninstructor;
         nobjetivos = nobjetivos;
         njugadores = njugadores;
-        fncontinentes = estado.fncontinentes;
-        fichasnuevas = estado.fichasnuevas;
-        
+               
        
         icarg = 0;
         while (estado.paises.length > icarg) {

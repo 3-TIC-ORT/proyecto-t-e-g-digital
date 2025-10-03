@@ -583,6 +583,10 @@ top: 2.5%;
     background-color: #c59a3e;
 }
 
+.bordeAmarillo {
+  border: 3px solid yellow;
+}
+
 .rojo{background-color: red;}
 .azul{background-color: blue;}
 .amarillo{background-color: yellow;}

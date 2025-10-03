@@ -55,6 +55,7 @@ let i221 = 0;
 let i241 = 0;
 let i242 = 0;
 let icarg = 0;
+let icarg2 = 0;
 let iactins1 = 0;
 let iactins2 = 0;
 let iactins3 = [];
@@ -2811,7 +2812,7 @@ function obtenerEstadoJuego() {
       turno: turno,  
       fase: fase, 
       paises: paisesLimpios,
-      tarjetas: tarjetasLimpias,
+      tarjetasLimpias: tarjetasLimpias,
       fncontinentes: fncontinentesLimpios,
       fichasnuevas: fichasnuevas,
       obj1: obj1.color,
@@ -2851,7 +2852,7 @@ function cargarPartida() {
         obj7 = obj7.color;
         obj8 = obj8.color;
         obj9 = obj9.color;
-        tarjetas = estado.tarjetasLimpias;
+        tarjetasLimpias = estado.tarjetasLimpias;
         fncontinentes = estado.fncontinentes;
         fichasnuevas = estado.fichasnuevas;
         ninstructor = ninstructor;
@@ -2866,5 +2867,37 @@ function cargarPartida() {
             paises[icarg].id.textContent = paises[icarg].nombre + " " + paises[icarg].fichas + " " + paises[icarg].colorfichas;
             icarg++;
         };
-    })
+
+       icarg2 = 0;
+       while (tpaises.length > icarg2) {
+        tpaises[icarg2].fichas = estado.tarjetasLimpias[icarg2].fichas;
+        tpaises[icarg2].color = estado.tarjetasLimpias[icarg2].color;
+        tpaises[icarg2].simbolo = estado.tarjetasLimpias[icarg2].simbolo;
+        tpaises[icarg2].pais.id.textContent = tpaises[icarg2].pais.nombre + " " + tpaises[icarg2].simbolo + " " + tpaises[icarg2].color + " " + tpaises[icarg2].fichas;
+        icarg2++;
+       }
+       
+       tarjetasrojo = [];
+       tarjetasazul = [];
+       tarjetasamarillo = [];
+       tarjetasverde = [];
+       tarjetasmagenta = [];
+       tarjetasnegro = [];
+
+       tpaises.forEach(b => {
+        if (b.color === "Rojo") tarjetasrojo.push(b);
+        else if (b.color === "Azul") tarjetasazul.push(b);
+        else if (b.color === "Amarillo") tarjetasamarillo.push(b);
+        else if (b.color === "Verde") tarjetasverde.push(b);
+        else if (b.color === "Magenta") tarjetasmagenta.push(b);
+        else if (b.color === "Negro") tarjetasnegro.push(b);
+      } );
+      test22("Rojo");
+      test22("Azul");
+      test22("Amarillo");
+      test22("Verde");
+      test22("Magenta");
+      test22("Negro");
+    });
 }
+console.log(tgobi.color);

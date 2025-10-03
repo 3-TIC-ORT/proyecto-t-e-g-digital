@@ -43,11 +43,11 @@ a {
 }
 
 .cuadro {
-    width: 800px;
-    height: 500px;
+    width: 70%;
+    height: fit-content;
     background-color: #CDCDCD;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.45rem;
 }
 
 .caja_cuadro {

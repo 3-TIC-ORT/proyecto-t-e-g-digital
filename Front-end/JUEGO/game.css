@@ -521,6 +521,7 @@ a {
     color: black;
     font-style: normal;
     text-decoration: none;
+    outline: none;
 }
 
 .footer {

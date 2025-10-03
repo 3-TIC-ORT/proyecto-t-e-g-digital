@@ -122,23 +122,6 @@ if (nobjetivos === null) {
     nobjetivos = "true"
 }
 
-//resaltar borde
-function resaltarborde(tarjeta) {
-    if (tarjeta.classList.contains("bordeAmarillo")) {
-        tarjeta.classList.remove("bordeAmarillo");
-    } else { 
-  tpaises.forEach(t => {
-    if (t.pais && t.pais.id) {
-      t.pais.id.classList.remove("bordeAmarillo");
-    };
-  });
- 
-  if (tarjeta && tarjeta.classList) {
-    tarjeta.classList.add("bordeAmarillo");
-  };
-};
-}
-
 //declaracion (dialogs) 
 let mostrarTrojo = document.getElementById("mostrarTrojo");
 let mostrarTazul = document.getElementById("mostrarTazul");
@@ -1358,13 +1341,27 @@ i221 = 0;
 if(color === "Rojo"){
 while(tarjetasrojo.length > i221){
     docTrojo[i221].textContent = tarjetasrojo[i221].pais.nombre + " " + tarjetasrojo[i221].simbolo;
+    if (tselect1 === tarjetasrojo[i221] || tselect2 === tarjetasrojo[i221] || tselect3 === tarjetasrojo[i221]){
+        if(!docTrojo[i221].classList.contains("bordeAmarillo")){
+        docTrojo[i221].classList.add("bordeAmarillo");};
+    } else if (tselect1 != tarjetasrojo[i221] && tselect2 != tarjetasrojo[i221] && tselect3 != tarjetasrojo[i221]){
+        if(docTrojo[i221].classList.contains("bordeAmarillo")){
+            docTrojo[i221].classList.remove("bordeAmarillo");};
+    };   
     i221++;
-};
+    };
 };
 i221 = 0;
 if(color === "Azul"){
 while(tarjetasazul.length > i221){
     docTazul[i221].textContent = tarjetasazul[i221].pais.nombre + " " + tarjetasazul[i221].simbolo;
+    if (tselect1 === tarjetasazul[i221] || tselect2 === tarjetasazul[i221] || tselect3 === tarjetasazul[i221]){
+        if(!docTazul[i221].classList.contains("bordeAmarillo")){
+        docTazul[i221].classList.add("bordeAmarillo");};
+    } else if (tselect1 != tarjetasazul[i221] && tselect2 != tarjetasazul[i221] && tselect3 != tarjetasazul[i221]){
+        if(docTazul[i221].classList.contains("bordeAmarillo")){
+            docTazul[i221].classList.remove("bordeAmarillo");};
+    };   
     i221++;
 };
 };
@@ -1372,6 +1369,13 @@ i221 = 0;
 if(color === "Amarillo"){
 while(tarjetasamarillo.length > i221){
     docTamarillo[i221].textContent = tarjetasamarillo[i221].pais.nombre + " " + tarjetasamarillo[i221].simbolo;
+    if (tselect1 === tarjetasamarillo[i221] || tselect2 === tarjetasamarillo[i221] || tselect3 === tarjetasamarillo[i221]){
+        if(!docTamarillo[i221].classList.contains("bordeAmarillo")){
+        docTamarillo[i221].classList.add("bordeAmarillo");};
+    } else if (tselect1 != tarjetasamarillo[i221] && tselect2 != tarjetasamarillo[i221] && tselect3 != tarjetasamarillo[i221]){
+        if(docTamarillo[i221].classList.contains("bordeAmarillo")){
+            docTamarillo[i221].classList.remove("bordeAmarillo");};
+    };   
     i221++;
 };
 };
@@ -1379,6 +1383,13 @@ i221 = 0;
 if(color === "Verde"){
 while(tarjetasverde.length > i221){
     docTverde[i221].textContent = tarjetasverde[i221].pais.nombre + " " + tarjetasverde[i221].simbolo;
+    if (tselect1 === tarjetasverde[i221] || tselect2 === tarjetasverde[i221] || tselect3 === tarjetasverde[i221]){
+        if(!docTverde[i221].classList.contains("bordeAmarillo")){
+        docTverde[i221].classList.add("bordeAmarillo");};
+    } else if (tselect1 != tarjetasverde[i221] && tselect2 != tarjetasverde[i221] && tselect3 != tarjetasverde[i221]){
+        if(docTverde[i221].classList.contains("bordeAmarillo")){
+            docTverde[i221].classList.remove("bordeAmarillo");};
+    };   
     i221++;
 };
 };
@@ -1412,6 +1423,7 @@ if(tselect1 === 0){
     tselect2 = 0;
     tselect3 = 0;
 };
+test22(turno);
 };
 };
 
@@ -2205,6 +2217,12 @@ function test12(colorturno) {
             tselect1 = 0;
             tselect2 = 0;
             tselect3 = 0;
+            test22("Rojo");
+            test22("Azul");
+            test22("Amarillo");
+            test22("Verde");
+            test22("Magenta");
+            test22("Negro");
             };
         };
 
@@ -2726,36 +2744,36 @@ mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
 cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
 
 //event listeners tarjetas (no hay forma de que escriba mas event listeners que funciones)
-contenidoTrojo1.addEventListener("click",()=> { test23(tarjetasrojo[0]); resaltarborde(contenidoTrojo1); });
-contenidoTrojo2.addEventListener("click",()=> { test23(tarjetasrojo[1]); resaltarborde(contenidoTrojo2); });
-contenidoTrojo3.addEventListener("click",()=> { test23(tarjetasrojo[2]); resaltarborde(contenidoTrojo3); });
-contenidoTrojo4.addEventListener("click",()=> { test23(tarjetasrojo[3]); resaltarborde(contenidoTrojo4); });
-contenidoTrojo5.addEventListener("click",()=> { test23(tarjetasrojo[4]); resaltarborde(contenidoTrojo5); });
-contenidoTazul1.addEventListener("click",()=> { test23(tarjetasazul[0]); resaltarborde(contenidoTazul1); });
-contenidoTazul2.addEventListener("click",()=> { test23(tarjetasazul[1]); resaltarborde(contenidoTazul2); });
-contenidoTazul3.addEventListener("click",()=> { test23(tarjetasazul[2]); resaltarborde(contenidoTazul3); });
-contenidoTazul4.addEventListener("click",()=> { test23(tarjetasazul[3]); resaltarborde(contenidoTazul4); });
-contenidoTazul5.addEventListener("click",()=> { test23(tarjetasazul[4]); resaltarborde(contenidoTazul5); });
-contenidoTamarillo1.addEventListener("click",()=> { test23(tarjetasamarillo[0]); resaltarborde(contenidoTamarillo1); });
-contenidoTamarillo2.addEventListener("click",()=> { test23(tarjetasamarillo[1]); resaltarborde(contenidoTamarillo2); });
-contenidoTamarillo3.addEventListener("click",()=> { test23(tarjetasamarillo[2]); resaltarborde(contenidoTamarillo3); });
-contenidoTamarillo4.addEventListener("click",()=> { test23(tarjetasamarillo[3]); resaltarborde(contenidoTamarillo4); });
-contenidoTamarillo5.addEventListener("click",()=> { test23(tarjetasamarillo[4]); resaltarborde(contenidoTamarillo5); });
-contenidoTverde1.addEventListener("click",()=> { test23(tarjetasverde[0]); resaltarborde(contenidoTverde1); });
-contenidoTverde2.addEventListener("click",()=> { test23(tarjetasverde[1]); resaltarborde(contenidoTverde2); });
-contenidoTverde3.addEventListener("click",()=> { test23(tarjetasverde[2]); resaltarborde(contenidoTverde3); });
-contenidoTverde4.addEventListener("click",()=> { test23(tarjetasverde[3]); resaltarborde(contenidoTverde4); });
-contenidoTverde5.addEventListener("click",()=> { test23(tarjetasverde[4]); resaltarborde(contenidoTverde5); });
-contenidoTmagenta1.addEventListener("click",()=> { test23(tarjetasmagenta[0]); resaltarborde(contenidoTmagenta1); });
-contenidoTmagenta2.addEventListener("click",()=> { test23(tarjetasmagenta[1]); resaltarborde(contenidoTmagenta2); });
-contenidoTmagenta3.addEventListener("click",()=> { test23(tarjetasmagenta[2]); resaltarborde(contenidoTmagenta3); });
-contenidoTmagenta4.addEventListener("click",()=> { test23(tarjetasmagenta[3]); resaltarborde(contenidoTmagenta4); });
-contenidoTmagenta5.addEventListener("click",()=> { test23(tarjetasmagenta[4]); resaltarborde(contenidoTmagenta5); });
-contenidoTnegro1.addEventListener("click",()=> { test23(tarjetasnegro[0]); resaltarborde(contenidoTnegro1); });
-contenidoTnegro2.addEventListener("click",()=> { test23(tarjetasnegro[1]); resaltarborde(contenidoTnegro2); });
-contenidoTnegro3.addEventListener("click",()=> { test23(tarjetasnegro[2]); resaltarborde(contenidoTnegro3); });
-contenidoTnegro4.addEventListener("click",()=> { test23(tarjetasnegro[3]); resaltarborde(contenidoTnegro4); });
-contenidoTnegro5.addEventListener("click",()=> { test23(tarjetasnegro[4]); resaltarborde(contenidoTnegro5); });
+contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));
+contenidoTrojo2.addEventListener("click",()=> test23(tarjetasrojo[1]));
+contenidoTrojo3.addEventListener("click",()=> test23(tarjetasrojo[2]));
+contenidoTrojo4.addEventListener("click",()=> test23(tarjetasrojo[3]));
+contenidoTrojo5.addEventListener("click",()=> test23(tarjetasrojo[4]));
+contenidoTazul1.addEventListener("click",()=> test23(tarjetasazul[0]));
+contenidoTazul2.addEventListener("click",()=> test23(tarjetasazul[1]));
+contenidoTazul3.addEventListener("click",()=> test23(tarjetasazul[2]));
+contenidoTazul4.addEventListener("click",()=> test23(tarjetasazul[3]));
+contenidoTazul5.addEventListener("click",()=> test23(tarjetasazul[4]));
+contenidoTamarillo1.addEventListener("click",()=> test23(tarjetasamarillo[0]));
+contenidoTamarillo2.addEventListener("click",()=> test23(tarjetasamarillo[1]));
+contenidoTamarillo3.addEventListener("click",()=> test23(tarjetasamarillo[2]));
+contenidoTamarillo4.addEventListener("click",()=> test23(tarjetasamarillo[3]));
+contenidoTamarillo5.addEventListener("click",()=> test23(tarjetasamarillo[4]));
+contenidoTverde1.addEventListener("click",()=> test23(tarjetasverde[0]));
+contenidoTverde2.addEventListener("click",()=> test23(tarjetasverde[1]));
+contenidoTverde3.addEventListener("click",()=> test23(tarjetasverde[2]));
+contenidoTverde4.addEventListener("click",()=> test23(tarjetasverde[3]));
+contenidoTverde5.addEventListener("click",()=> test23(tarjetasverde[4]));
+contenidoTmagenta1.addEventListener("click",()=> test23(tarjetasmagenta[0]));
+contenidoTmagenta2.addEventListener("click",()=> test23(tarjetasmagenta[1]));
+contenidoTmagenta3.addEventListener("click",()=> test23(tarjetasmagenta[2]));
+contenidoTmagenta4.addEventListener("click",()=> test23(tarjetasmagenta[3]));
+contenidoTmagenta5.addEventListener("click",()=> test23(tarjetasmagenta[4]));
+contenidoTnegro1.addEventListener("click",()=> test23(tarjetasnegro[0]));
+contenidoTnegro2.addEventListener("click",()=> test23(tarjetasnegro[1]));
+contenidoTnegro3.addEventListener("click",()=> test23(tarjetasnegro[2]));
+contenidoTnegro4.addEventListener("click",()=> test23(tarjetasnegro[3]));
+contenidoTnegro5.addEventListener("click",()=> test23(tarjetasnegro[4]));
 canjearrojo.addEventListener("click",()=> test24("Rojo"));
 canjearazul.addEventListener("click",()=> test24("Azul"));
 canjearamarillo.addEventListener("click",()=> test24("Amarillo"));
@@ -2766,27 +2784,33 @@ restablecer1.addEventListener("click", function(){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    test22("Rojo");
 });
 restablecer2.addEventListener("click", function(){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    test22("Azul");
 });restablecer3.addEventListener("click", function(){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    test22("Amarillo");
 });restablecer4.addEventListener("click", function(){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    test22("Verde");
 });restablecer5.addEventListener("click", function(){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    test22("Magenta");
 });restablecer6.addEventListener("click", function(){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    test22("Negro");
 });
 //funcion guardar partida
 function obtenerEstadoJuego() {

@@ -1427,7 +1427,8 @@ function test25(color){
     };
     tarjetasrojo[i241].color = "";
     tarjetasrojo[i241].fichas = 3;
-    tarjetareserva = tarjetasrojo.splice(i241, 1);
+    tarjetareserva = tarjetasrojo[i241];
+    tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1436,7 +1437,8 @@ while(tarjetasrojo[i241] != tselect2){
     };
     tarjetasrojo[i241].color = "";
     tarjetasrojo[i241].fichas = 3;
-    tarjetareserva = tarjetasrojo.splice(i241, 1);
+    tarjetareserva = tarjetasrojo[i241];
+    tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1445,7 +1447,8 @@ while(tarjetasrojo[i241] != tselect2){
     };
     tarjetasrojo[i241].color = "";
     tarjetasrojo[i241].fichas = 3;
-    tarjetareserva = tarjetasrojo.splice(i241, 1);
+    tarjetareserva = tarjetasrojo[i241];
+    tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1466,7 +1469,8 @@ while(tarjetasrojo[i241] != tselect2){
     };
     tarjetasazul[i241].color = "";
     tarjetasazul[i241].fichas = 3;
-    tarjetareserva = tarjetasazul.splice(i241, 1);
+    tarjetareserva = tarjetasazul[i241];
+    tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1475,7 +1479,8 @@ while(tarjetasazul[i241] != tselect2){
     };
     tarjetasazul[i241].color = "";
     tarjetasazul[i241].fichas = 3;
-    tarjetareserva = tarjetasazul.splice(i241, 1);
+    tarjetareserva = tarjetasazul[i241];
+    tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1484,7 +1489,8 @@ while(tarjetasazul[i241] != tselect2){
     };
     tarjetasazul[i241].color = "";
     tarjetasazul[i241].fichas = 3;
-    tarjetareserva = tarjetasazul.splice(i241, 1);
+    tarjetareserva = tarjetasazul[i241];
+    tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1505,7 +1511,8 @@ while(tarjetasazul[i241] != tselect2){
     };
     tarjetasamarillo[i241].color = "";
     tarjetasamarillo[i241].fichas = 3;
-    tarjetareserva = tarjetasamarillo.splice(i241, 1);
+    tarjetareserva = tarjetasamarillo[i241];
+    tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1514,7 +1521,8 @@ while(tarjetasamarillo[i241] != tselect2){
     };
     tarjetasamarillo[i241].color = "";
     tarjetasamarillo[i241].fichas = 3;
-    tarjetareserva = tarjetasamarillo.splice(i241, 1);
+    tarjetareserva = tarjetasamarillo[i241];
+    tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1523,7 +1531,8 @@ while(tarjetasamarillo[i241] != tselect2){
     };
     tarjetasamarillo[i241].color = "";
     tarjetasamarillo[i241].fichas = 3;
-    tarjetareserva = tarjetasamarillo.splice(i241, 1);
+    tarjetareserva = tarjetasamarillo[i241];
+    tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1544,7 +1553,8 @@ while(tarjetasamarillo[i241] != tselect2){
     };
     tarjetasverde[i241].color = "";
     tarjetasverde[i241].fichas = 3;
-    tarjetareserva = tarjetasverde.splice(i241, 1);
+    tarjetareserva = tarjetasverde[i241];
+    tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1553,7 +1563,8 @@ while(tarjetasverde[i241] != tselect2){
     };
     tarjetasverde[i241].color = "";
     tarjetasverde[i241].fichas = 3;
-    tarjetareserva = tarjetasverde.splice(i241, 1);
+    tarjetareserva = tarjetasverde[i241];
+    tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1562,7 +1573,8 @@ while(tarjetasverde[i241] != tselect2){
     };
     tarjetasverde[i241].color = "";
     tarjetasverde[i241].fichas = 3;
-    tarjetareserva = tarjetasverde.splice(i241, 1);
+     tarjetareserva = tarjetasverde[i241];
+    tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1583,7 +1595,8 @@ while(tarjetasverde[i241] != tselect2){
     };
     tarjetasmagenta[i241].color = "";
     tarjetasmagenta[i241].fichas = 3;
-    tarjetareserva = tarjetasmagenta.splice(i241, 1);
+    tarjetareserva = tarjetasmagenta[i241];
+    tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetasmagenta);
     tarjetareserva = 0;
     i241 = 0;
@@ -1592,7 +1605,8 @@ while(tarjetasmagenta[i241] != tselect2){
     };
     tarjetasmagenta[i241].color = "";
     tarjetasmagenta[i241].fichas = 3;
-    tarjetareserva = tarjetasmagenta.splice(i241, 1);
+    tarjetareserva = tarjetasmagenta[i241];
+    tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1601,7 +1615,8 @@ while(tarjetasmagenta[i241] != tselect2){
     };
     tarjetasmagenta[i241].color = "";
     tarjetasmagenta[i241].fichas = 3;
-    tarjetareserva = tarjetasmagenta.splice(i241, 1);
+    tarjetareserva = tarjetasmagenta[i241];
+    tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1622,7 +1637,8 @@ while(tarjetasmagenta[i241] != tselect2){
     };
     tarjetasnegro[i241].color = "";
     tarjetasnegro[i241].fichas = 3;
-    tarjetareserva = tarjetasnegro.splice(i241, 1);
+    tarjetareserva = tarjetasnegro[i241];
+    tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1631,7 +1647,8 @@ while(tarjetasnegro[i241] != tselect2){
     };
     tarjetasnegro[i241].color = "";
     tarjetasnegro[i241].fichas = 3;
-    tarjetareserva = tarjetasnegro.splice(i241, 1);
+    tarjetareserva = tarjetasnegro[i241];
+    tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1640,7 +1657,8 @@ while(tarjetasnegro[i241] != tselect2){
     };
     tarjetasnegro[i241].color = "";
     tarjetasnegro[i241].fichas = 3;
-    tarjetareserva = tarjetasnegro.splice(i241, 1);
+    tarjetareserva = tarjetasnegro[i241];
+    tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
@@ -1656,6 +1674,7 @@ tselect3 = 0;
 
 test22(color);
 actualizarInstrucciones();
+console.log(mazo);
 }
 
 function test24(color){

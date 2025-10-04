@@ -656,541 +656,318 @@ top: 2.5%;
 .magenta{background-color: magenta;}
 .negro{background-color: black;}
 
-
-
-.ficharusia {
-    position: absolute;
-    top: 9%;
-    right: 26%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-30deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaalemania {
-    position: absolute;
-    top: 38%;
-    right: 33%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-10deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichasuecia {
-    position: absolute;
-    top: 13%;
-    right: 36%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichapolonia {
-    position: absolute;
-    top: 37%;
-    right: 28%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-20deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaitalia {
-    position: absolute;
-    top: 51%;
-    right: 33%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-10deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichafrancia {
-    position: absolute;
-    top: 44.5%;
-    right: 37.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-30deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaespaña{
-    position: absolute;
-    top: 52%;
-    right: 44.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-10deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichagranbretaña{
-    position: absolute;
-    top: 30%;
-    right: 43%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(25deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaislandia{
-    position: absolute;
-    top: 27%;
-    right: 54%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaalaska {
-    position: absolute;
-    top: 27%;
-    right: 94%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichacanada {
-    position: absolute;
-    top: 3%;
-    right: 80%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichayukon{
-    position: absolute;
-    top: 16%;
-    right: 87.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaoregon{
-    position: absolute;
-    top: 36%;
-    right: 83%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-30deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichanuevayork{
-    position: absolute;
-    top: 32%;
-    right: 72%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(20deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaterranova{
-    position: absolute;
-    top: 26%;
-    right: 71%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(20deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichalabrador{
-    position: absolute;
-    top: 17%;
-    right: 71%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichagroenlandia{
-    position: absolute;
-    top: 4%;
-    right: 62%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichacalifornia{
-    position: absolute;
-    top: 41%;
-    right: 77%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-20deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichamexico {
-    position: absolute;
-    top: 48%;
-    right: 72%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(30deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichachile {
-    position: absolute;
-    top: 74%;
-    right: 68%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaperu {
-    position: absolute;
-    top: 65%;
-    right: 65%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaargentina {
-    position: absolute;
-    top: 74%;
-    right: 64%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(10deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichauruguay {
-    position: absolute;
-    top: 74%;
-    right: 57.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichabrasil {
-    position: absolute;
-    top: 60%;
-    right: 55.5%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichacolombia {
-    position: absolute;
-    top: 57%;
-    right: 65%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichasahara {
-    position: absolute;
-    top: 69%;
-    right: 35%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaegipto {
-    position: absolute;
-    top: 69%;
-    right: 22%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(20deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaetiopia {
-    position: absolute;
-    top: 75%;
-    right: 24%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichazaire {
-    position: absolute;
-    top: 80%;
-    right: 30%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichasudafrica {
-    position: absolute;
-    top: 86%;
-    right: 26.5%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichamadagascar {
-    position: absolute;
-    top: 79%;
-    right: 19%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichairan {
-    position: absolute;
-    top: 22%;
-    right: 20%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-35deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichajapon {
-    position: absolute;
-    top: 14%;
-    right: 2%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(40deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichagobi {
-    position: absolute;
-    top: 31%;
-    right: 13.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-25deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichamongolia {
-    position: absolute;
-    top: 21%;
-    right: 15.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichakamchatka {
-    position: absolute;
-    top: 6%;
-    right: 11%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-20deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaturquia {
+.ficha{
+    display: flex;
     position: absolute;
     top: 45%;
-    right: 20%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-20deg);
-    border-radius: 100%;
-    z-index: 10;
+    right: 45%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    border: 1px solid white;
 }
 
-.fichaisrael {
+.faustralia {
     position: absolute;
-    top: 52%;
-    right: 21%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-20deg);
-    border-radius: 100%;
-    z-index: 10;
+    top: 77%;
+    right: 5%;
 }
 
-.fichaarabia {
-    position: absolute;
-    top: 56%;
-    right: 18%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-25deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichasiberia {
-    position: absolute;
-    top: 15%;
-    right: 16%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-10deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichataimir {
-    position: absolute;
-    top: 5%;
-    right: 17.5%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichatartaria {
-    position: absolute;
-    top: 3%;
-    right: 22%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaaral {
-    position: absolute;
-    top: 9%;
-    right: 25%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichachina {
-    position: absolute;
-    top: 15%;
-    right: 8%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichamalasia {
-    position: absolute;
-    top: 43%;
-    right: 3%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaindia {
-    position: absolute;
-    top: 48%;
-    right: 11%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(15deg);
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichasumatra {
+.fsumatra {
     position: absolute;
     top: 63%;
     right: 14%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-30deg);
-    border-radius: 100%;
-    z-index: 10;
 }
 
-.fichajava {
-    position: absolute;
-    top: 54%;
-    right: 2%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
-}
-
-.fichaborneo {
+.fborneo {
     position: absolute;
     top: 55%;
     right: 7%;
-    width: 3%;
-    height: 3%;
-    transform: rotate(-15deg);
-    border-radius: 100%;
-    z-index: 10;
 }
 
-.fichaaustralia {
+.fjava {
     position: absolute;
-    top: 72%;
+    top: 54%;
     right: 2%;
-    width: 3%;
-    height: 3%;
-    border-radius: 100%;
-    z-index: 10;
+}
+
+
+.fchile {
+    position: absolute;
+    top: 74%;
+    right: 68%;
+}
+
+.fperu {
+    position: absolute;
+    top: 65%;
+    right: 65%;
+}
+
+.fargentina {
+    position: absolute;
+    top: 74%;
+    right: 64%;
+}
+
+.furuguay {
+    position: absolute;
+    top: 74%;
+    right: 57.5%;
+}
+
+.fbrasil {
+    position: absolute;
+    top: 60%;
+    right: 55.5%;
+}
+
+.fcolombia {
+    position: absolute;
+    top: 57%;
+    right: 65%;
+}
+
+.findia {
+    position: absolute;
+    top: 48%;
+    right: 11%;
+}
+
+.fmalasia {
+    position: absolute;
+    top: 43%;
+    right: 3%;
+}
+
+.fchina {
+    position: absolute;
+    top: 15%;
+    right: 8%;
+}
+
+.firan {
+    position: absolute;
+    top: 22%;
+    right: 20%;
+}
+
+.fjapon {
+    position: absolute;
+    top: 14%;
+    right: 2%;
+}
+
+.fgobi {
+    position: absolute;
+    top: 31%;
+    right: 13.5%;
+}
+
+.fmongolia {
+    position: absolute;
+    top: 21%;
+    right: 15.5%;
+}
+
+.fkamchatka {
+    position: absolute;
+    top: 6%;
+    right: 11%;
+}
+
+.fturquia {
+    position: absolute;
+    top: 45%;
+    right: 20%;
+}
+
+.fisrael {
+    position: absolute;
+    top: 52%;
+    right: 21%;
+}
+
+.farabia {
+    position: absolute;
+    top: 56%;
+    right: 18%;
+}
+
+.fsiberia {
+    position: absolute;
+    top: 15%;
+    right: 16%;
+}
+
+.ftaimir {
+    position: absolute;
+    top: 5%;
+    right: 17.5%;
+}
+
+.ftartaria {
+    position: absolute;
+    top: 3%;
+    right: 22%;
+}
+
+.faral {
+    position: absolute;
+    top: 9%;
+    right: 25%;
+}
+
+.frusia {
+    position: absolute;
+    top: 9%;
+    right: 26%;
+}
+
+.fsuecia {
+    position: absolute;
+    top: 13%;
+    right: 36%;
+}
+
+.fpolonia {
+    position: absolute;
+    top: 37%;
+    right: 28%;
+}
+
+.falemania {
+    position: absolute;
+    top: 38%;
+    right: 33%;
+}
+
+.fitalia {
+    position: absolute;
+    top: 51%;
+    right: 33%;
+}
+
+.ffrancia {
+    position: absolute;
+    top: 44.5%;
+    right: 37.5%;
+}
+
+.fespaña{
+    position: absolute;
+    top: 52%;
+    right: 44.5%;
+}
+
+.fgranbretaña{
+    position: absolute;
+    top: 30%;
+    right: 43%;
+}
+
+.fislandia{
+    position: absolute;
+    top: 27%;
+    right: 54%;
+}
+
+.fsahara {
+    position: absolute;
+    top: 69%;
+    right: 35%;
+}
+
+.fegipto {
+    position: absolute;
+    top: 69%;
+    right: 22%;
+}
+
+.fetiopia {
+    position: absolute;
+    top: 75%;
+    right: 24%;
+}
+
+.fzaire {
+    position: absolute;
+    top: 80%;
+    right: 30%;
+}
+
+.fsudafrica {
+    position: absolute;
+    top: 86%;
+    right: 26.5%;
+}
+
+.fmadagascar {
+    position: absolute;
+    top: 79%;
+    right: 19%;
+}
+
+.fmexico {
+    position: absolute;
+    top: 48%;
+    right: 72%;
+}
+
+.fcalifornia{
+    position: absolute;
+    top: 41%;
+    right: 77%;
+}
+
+.foregon{
+    position: absolute;
+    top: 36%;
+    right: 83%;
+}
+
+.fnuevayork{
+    position: absolute;
+    top: 32%;
+    right: 72%;
+}
+
+.fterranova{
+    position: absolute;
+    top: 26%;
+    right: 71%;
+}
+
+.flabrador{
+    position: absolute;
+    top: 17%;
+    right: 71%;
+}
+
+.fgroenlandia{
+    position: absolute;
+    top: 4%;
+    right: 62%;
+}
+
+.fcanada {
+    position: absolute;
+    top: 3%;
+    right: 80%;
+}
+
+.fyukon{
+    position: absolute;
+    top: 16%;
+    right: 87.5%;
+}
+
+.falaska {
+    position: absolute;
+    top: 27%;
+    right: 94%;
 }

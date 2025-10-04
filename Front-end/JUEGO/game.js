@@ -260,61 +260,6 @@ let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fich
 let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
 let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
 
-//declaracion de divs fichas
-let fichasrusia = document.getElementById("fichasrusiaid");
-let fichasalemania = document.getElementById("fichasalemaniaid");
-let fichassuecia = document.getElementById("fichassueciaid");
-let fichaspolonia = document.getElementById("fichaspoloniaid");
-let fichasitalia = document.getElementById("fichasitaliaid");
-let fichasfrancia = document.getElementById("fichasfranciaid");
-let fichasespaña = document.getElementById("fichasespañaid");
-let fichasgranbretaña = document.getElementById("fichasgranbretañaid");
-let fichasislandia = document.getElementById("fichasislandiaid");
-let fichasiran = document.getElementById("fichasiranid");
-let fichasjapon = document.getElementById("fichasjaponid");
-let fichasgobi = document.getElementById("fichasgobiid");
-let fichasmongolia = document.getElementById("fichasmongoliaid");
-let fichaskamchatka = document.getElementById("fichaskamchatkaid");
-let fichasturquia = document.getElementById("fichasturquiaid");
-let fichasisrael = document.getElementById("fichasisraelid");
-let fichasarabia = document.getElementById("fichasarabiaid");
-let fichassiberia = document.getElementById("fichassiberiaid");
-let fichastaimir = document.getElementById("fichastaimirid");
-let fichastartaria = document.getElementById("fichastartariaid");
-let fichasaral = document.getElementById("fichasaralid");
-let fichaschina = document.getElementById("fichaschinaid");
-let fichasmalasia = document.getElementById("fichasmalasiaid");
-let fichasindia = document.getElementById("fichasindiaid");
-let fichassumatra = document.getElementById("fichassumatraid");
-let fichasjava = document.getElementById("fichasjavaid");
-let fichasborneo = document.getElementById("fichasborneoid");
-let fichasaustralia = document.getElementById("fichasaustraliaid");
-let fichasalaska = document.getElementById("fichasalaskaid");
-let fichascanada = document.getElementById("fichascanadaid");
-let fichasyukon = document.getElementById("fichasyukonid");
-let fichasoregon = document.getElementById("fichasoregonid");
-let fichasnuevayork = document.getElementById("fichasnuevayorkid");
-let fichasterranova = document.getElementById("fichasterranovaid");
-let fichaslabrador = document.getElementById("fichaslabradorid");
-let fichasgroenlandia = document.getElementById("fichasgroenlandiaid");
-let fichascalifornia = document.getElementById("fichascaliforniaid");
-let fichasmexico = document.getElementById("fichasmexicoid");
-let fichaschile = document.getElementById("fichaschileid");
-let fichasperu = document.getElementById("fichasperuid");
-let fichasargentina = document.getElementById("fichasargentinaid");
-let fichasuruguay = document.getElementById("fichasuruguayid");
-let fichascolombia = document.getElementById("fichascolombiaid");
-let fichasbrasil = document.getElementById("fichasbrasilid");
-let fichassahara = document.getElementById("fichassaharaid");
-let fichasegipto = document.getElementById("fichasegiptoid");
-let fichasetiopia = document.getElementById("fichasetiopiaid");
-let fichaszaire = document.getElementById("fichaszaireid");
-let fichassudafrica = document.getElementById("fichassudafricaid");
-let fichasmadagascar = document.getElementById("fichasmadagascarid");
-
-
-
-
 //Declaración de Objetivos Secretos
 let obj1 = {
     oceania: 0,
@@ -459,7 +404,8 @@ let fncontinentes = [fnoceania, fnafrica, fnsudamerica, fnasia, fneuropa, fnnort
 //Declaración de Países
 let australia = {
     nombre: "Australia",
-    id: document.getElementById("australiaid"),
+    id: document.getElementById("fichasaustraliaid"),
+    idsvg: document.getElementById("australiaid"),
     continente: oceania,
     fichas: 1,
     colorfichas: "",
@@ -467,7 +413,8 @@ let australia = {
 };
 let sumatra = {
     nombre: "Sumatra",
-    id: document.getElementById("sumatraid"),
+    id: document.getElementById("fichassumatraid"),
+    idsvg: document.getElementById("sumatraid"),
     continente: oceania,
     fichas: 1,
     colorfichas: "",
@@ -476,7 +423,8 @@ let sumatra = {
 let java = {
     nombre: "Java",
     continente: oceania,
-    id: document.getElementById("javaid"),
+    id: document.getElementById("fichasjavaid"),
+    idsvg: document.getElementById("javaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -484,7 +432,8 @@ let java = {
 let borneo = {
     nombre: "Borneo",
     continente: oceania,
-    id: document.getElementById("borneoid"),
+    id: document.getElementById("fichasborneoid"),
+    idsvg: document.getElementById("borneoid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -492,7 +441,8 @@ let borneo = {
 let india = {
     nombre: "India",
     continente: asia,
-    id: document.getElementById("indiaid"),
+    id: document.getElementById("fichasindiaid"),
+    idsvg: document.getElementById("indiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -500,7 +450,8 @@ let india = {
 let malasia = {
     nombre: "Malasia",
     continente: asia,
-    id: document.getElementById("malasiaid"),
+    id: document.getElementById("fichasmalasiaid"),
+    idsvg: document.getElementById("malasiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -508,7 +459,8 @@ let malasia = {
 let china = {
     nombre: "China",
     continente: asia,
-    id: document.getElementById("chinaid"),
+    id: document.getElementById("fichaschinaid"),
+    idsvg: document.getElementById("chinaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -516,7 +468,8 @@ let china = {
 let iran = {
     nombre: "Irán",
     continente: asia,
-    id: document.getElementById("iranid"),
+    id: document.getElementById("fichasiranid"),
+    idsvg: document.getElementById("iranid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -524,7 +477,8 @@ let iran = {
 let japon = {
     nombre: "Japón",
     continente: asia,
-    id: document.getElementById("japonid"),
+    id: document.getElementById("fichasjaponid"),
+    idsvg: document.getElementById("japonid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -532,7 +486,8 @@ let japon = {
 let gobi = {
     nombre: "Gobi",
     continente: asia,
-    id: document.getElementById("gobiid"),
+    id: document.getElementById("fichasgobiid"),
+    idsvg: document.getElementById("gobiid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -540,7 +495,8 @@ let gobi = {
 let mongolia = {
     nombre: "Mongolia",
     continente: asia,
-    id: document.getElementById("mongoliaid"),
+    id: document.getElementById("fichasmongoliaid"),
+    idsvg: document.getElementById("mongoliaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -548,7 +504,8 @@ let mongolia = {
 let kamchatka = {
     nombre: "Kamchatka",
     continente: asia,
-    id: document.getElementById("kamchatkaid"),
+    id: document.getElementById("fichaskamchatkaid"),
+    idsvg: document.getElementById("kamchatkaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -556,7 +513,8 @@ let kamchatka = {
 let turquia = {
     nombre: "Turquía",
     continente: asia,
-    id: document.getElementById("turquiaid"),
+    id: document.getElementById("fichasturquiaid"),
+    idsvg: document.getElementById("turquiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -564,7 +522,8 @@ let turquia = {
 let israel = {
     nombre: "Israel",
     continente: asia,
-    id: document.getElementById("israelid"),
+    id: document.getElementById("fichasisraelid"),
+    idsvg: document.getElementById("israelid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -572,7 +531,8 @@ let israel = {
 let arabia = {
     nombre:"Arabia",
     continente: asia,
-    id: document.getElementById("arabiaid"),
+    id: document.getElementById("fichasarabiaid"),
+    idsvg: document.getElementById("arabiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -580,7 +540,8 @@ let arabia = {
 let siberia = {
     nombre:"Siberia",
     continente: asia,
-    id: document.getElementById("siberiaid"),
+    id: document.getElementById("fichassiberiaid"),
+    idsvg: document.getElementById("siberiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -588,7 +549,8 @@ let siberia = {
 let taimir = {
     nombre:"Taimir",
     continente: asia,
-    id: document.getElementById("taimirid"),
+    id: document.getElementById("fichastaimirid"),
+    idsvg: document.getElementById("taimirid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -596,7 +558,8 @@ let taimir = {
 let tartaria = {
     nombre:"Tartaria",
     continente: asia,
-    id: document.getElementById("tartariaid"),
+    id: document.getElementById("fichastartariaid"),
+    idsvg: document.getElementById("tartariaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -604,7 +567,8 @@ let tartaria = {
 let aral = {
     nombre:"Aral",
     continente: asia,
-    id: document.getElementById("aralid"),
+    id: document.getElementById("fichasaralid"),
+    idsvg: document.getElementById("aralid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -612,7 +576,8 @@ let aral = {
 let rusia = {
     nombre:"Rusia",
     continente: europa,
-    id: document.getElementById("rusiaid"),
+    id: document.getElementById("fichasrusiaid"),
+    idsvg: document.getElementById("rusiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -620,7 +585,8 @@ let rusia = {
 let suecia = {
     nombre:"Suecia",
     continente: europa,
-    id: document.getElementById("sueciaid"),
+    id: document.getElementById("fichassueciaid"),
+    idsvg: document.getElementById("sueciaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -628,7 +594,8 @@ let suecia = {
 let polonia = {
     nombre:"Polonia",
     continente: europa,
-    id: document.getElementById("poloniaid"),
+    id: document.getElementById("fichaspoloniaid"),
+    idsvg: document.getElementById("poloniaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -636,7 +603,8 @@ let polonia = {
 let alemania = {
     nombre:"Alemania",
     continente: europa,
-    id: document.getElementById("alemaniaid"),
+    id: document.getElementById("fichasalemaniaid"),
+    idsvg: document.getElementById("alemaniaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -644,7 +612,8 @@ let alemania = {
 let italia = {
     nombre:"Italia",
     continente: europa,
-    id: document.getElementById("italiaid"),
+    id: document.getElementById("fichasitaliaid"),
+    idsvg: document.getElementById("italiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -652,7 +621,8 @@ let italia = {
 let francia = {
     nombre:"Francia",
     continente: europa,
-    id: document.getElementById("franciaid"),
+    id: document.getElementById("fichasfranciaid"),
+    idsvg: document.getElementById("franciaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -660,7 +630,8 @@ let francia = {
 let españa = {
     nombre:"España",
     continente: europa,
-    id: document.getElementById("españaid"),
+    id: document.getElementById("fichasespañaid"),
+    idsvg: document.getElementById("españaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -668,7 +639,8 @@ let españa = {
 let granbretaña = {
     nombre:"Gran Bretaña",
     continente: europa,
-    id: document.getElementById("granbretañaid"),
+    id: document.getElementById("fichasgranbretañaid"),
+    idsvg: document.getElementById("granbretañaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -676,7 +648,8 @@ let granbretaña = {
 let islandia = {
     nombre:"Islandia",
     continente: europa,
-    id: document.getElementById("islandiaid"),
+    id: document.getElementById("fichasislandiaid"),
+    idsvg: document.getElementById("islandiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -684,7 +657,8 @@ let islandia = {
 let alaska = {
     nombre:"Alaska",
     continente: norteamerica,
-    id: document.getElementById("alaskaid"),
+    id: document.getElementById("fichasalaskaid"),
+    idsvg: document.getElementById("alaskaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -692,7 +666,8 @@ let alaska = {
 let canada = {
     nombre: "Canadá",
     continente: norteamerica,
-    id: document.getElementById("canadaid"),
+    id: document.getElementById("fichascanadaid"),
+    idsvg: document.getElementById("canadaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -700,7 +675,8 @@ let canada = {
 let yukon = {
     nombre:"Yukon",
     continente: norteamerica,
-    id: document.getElementById("yukonid"),
+    id: document.getElementById("fichasyukonid"),
+    idsvg: document.getElementById("yukonid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -708,7 +684,8 @@ let yukon = {
 let oregon = {
     nombre:"Oregon",
     continente: norteamerica,
-    id: document.getElementById("oregonid"),
+    id: document.getElementById("fichasoregonid"),
+    idsvg: document.getElementById("oregonid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -716,7 +693,8 @@ let oregon = {
 let nuevayork = {
     nombre:"Nueva York",
     continente: norteamerica,
-    id: document.getElementById("nuevayorkid"),
+    id: document.getElementById("fichasnuevayorkid"),
+    idsvg: document.getElementById("nuevayorkid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -724,7 +702,8 @@ let nuevayork = {
 let terranova = {
     nombre:"Terranova",
     continente: norteamerica,
-    id: document.getElementById("terranovaid"),
+    id: document.getElementById("fichasterranovaid"),
+    idsvg: document.getElementById("terranovaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -732,7 +711,8 @@ let terranova = {
 let labrador = {
     nombre:"Labrador",
     continente: norteamerica,
-    id: document.getElementById("labradorid"),
+    id: document.getElementById("fichaslabradorid"),
+    idsvg: document.getElementById("labradorid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -740,7 +720,8 @@ let labrador = {
 let groenlandia = {
     nombre:"Groenlandia",
     continente: norteamerica,
-    id: document.getElementById("groenlandiaid"),
+    id: document.getElementById("fichasgroenlandiaid"),
+    idsvg: document.getElementById("groenlandiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -748,7 +729,8 @@ let groenlandia = {
 let california = {
     nombre:"California",
     continente: norteamerica,
-    id: document.getElementById("californiaid"),
+    id: document.getElementById("fichascaliforniaid"),
+    idsvg: document.getElementById("californiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -756,7 +738,8 @@ let california = {
 let mexico = {
     nombre:"México",
     continente: norteamerica,
-    id: document.getElementById("mexicoid"),
+    id: document.getElementById("fichasmexicoid"),
+    idsvg: document.getElementById("mexicoid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -764,7 +747,8 @@ let mexico = {
 let chile = {
     nombre: "Chile",
     continente: sudamerica,
-    id: document.getElementById("chileid"),
+    id: document.getElementById("fichaschileid"),
+    idsvg: document.getElementById("chileid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -772,7 +756,8 @@ let chile = {
 let peru = {
     nombre: "Perú",
     continente: sudamerica,
-    id: document.getElementById("peruid"),
+    id: document.getElementById("fichasperuid"),
+    idsvg: document.getElementById("peruid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -780,7 +765,8 @@ let peru = {
 let argentina = {
     nombre: "Argentina",
     continente: sudamerica,
-    id: document.getElementById("argentinaid"),
+    id: document.getElementById("fichasargentinaid"),
+    idsvg: document.getElementById("argentinaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -788,7 +774,8 @@ let argentina = {
 let uruguay = {
     nombre: "Uruguay",
     continente: sudamerica,
-    id: document.getElementById("uruguayid"),
+    id: document.getElementById("fichasuruguayid"),
+    idsvg: document.getElementById("uruguayid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -796,7 +783,8 @@ let uruguay = {
 let brasil = {
     nombre: "Brasil",
     continente: sudamerica,
-    id: document.getElementById("brasilid"),
+    id: document.getElementById("fichasbrasilid"),
+    idsvg: document.getElementById("brasilid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -804,7 +792,8 @@ let brasil = {
 let colombia = {
     nombre: "Colombia",
     continente: sudamerica,
-    id: document.getElementById("colombiaid"),
+    id: document.getElementById("fichascolombiaid"),
+    idsvg: document.getElementById("colombiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -812,7 +801,8 @@ let colombia = {
 let sahara = {
     nombre: "Sahara",
     continente: africa,
-    id: document.getElementById("saharaid"),
+    id: document.getElementById("fichassaharaid"),
+    idsvg: document.getElementById("saharaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -820,7 +810,8 @@ let sahara = {
 let egipto = {
     nombre: "Egipto",
     continente: africa,
-    id: document.getElementById("egiptoid"),
+    id: document.getElementById("fichasegiptoid"),
+    idsvg: document.getElementById("egiptoid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -828,7 +819,8 @@ let egipto = {
 let etiopia = {
     nombre: "Etiopía",
     continente: africa,
-    id: document.getElementById("etiopiaid"),
+    id: document.getElementById("fichasetiopiaid"),
+    idsvg: document.getElementById("etiopiaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -836,7 +828,8 @@ let etiopia = {
 let zaire = {
     nombre: "Zaire",
     continente: africa,
-    id: document.getElementById("zaireid"),
+    id: document.getElementById("fichaszaireid"),
+    idsvg: document.getElementById("zaireid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -844,7 +837,8 @@ let zaire = {
 let sudafrica = {
     nombre: "Sudáfrica",
     continente: africa,
-    id: document.getElementById("sudafricaid"),
+    id: document.getElementById("fichassudafricaid"),
+    idsvg: document.getElementById("sudafricaid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -852,7 +846,8 @@ let sudafrica = {
 let madagascar = {
     nombre: "Madagascar",
     continente: africa,
-    id: document.getElementById("madagascarid"),
+    id: document.getElementById("fichasmadagascarid"),
+    idsvg: document.getElementById("madagascarid"),
     fichas: 1,
     colorfichas: "",
     limitrofes: [],
@@ -911,7 +906,6 @@ sudafrica.limitrofes.push(etiopia, zaire);
 madagascar.limitrofes.push(egipto, zaire);
 
 //Declaración lista de países
-let fichasPaises = [fichasrusia, fichasalemania, fichassuecia, fichaspolonia, fichasitalia, fichasfrancia, fichasespaña, fichasgranbretaña, fichasislandia, fichasalaska, fichascanada, fichasyukon, fichasoregon, fichasnuevayork, fichasterranova, fichaslabrador, fichasgroenlandia, fichascalifornia, fichasmexico, fichaschile, fichasperu, fichasargentina, fichascolombia, fichasbrasil, fichasuruguay, fichassahara, fichasegipto, fichasetiopia, fichaszaire, fichassudafrica, fichasmadagascar, fichasiran, fichasjapon, fichasgobi, fichasmongolia, fichaskamchatka, fichasturquia, fichasisrael, fichasarabia, fichassiberia, fichastaimir, fichastartaria, fichasaral, fichaschina, fichasmalasia, fichasindia,fichassumatra,fichasjava,fichasborneo,fichasaustralia];
 let paises = [rusia, alemania, suecia, polonia, italia, francia, españa, granbretaña, islandia, alaska, canada, yukon, oregon, nuevayork, terranova, labrador, groenlandia, california, mexico, chile, peru, argentina, colombia, brasil, uruguay, sahara, egipto, etiopia, zaire, sudafrica, madagascar, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, china, malasia, india, sumatra, java, borneo, australia];
 let estadoJuego = paises;
 
@@ -1258,7 +1252,8 @@ paises[randomizador].colorfichas = colores[i2];
 i++;
 i2++;
 };
-paises[randomizador].id.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
+paises[randomizador].idsvg.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
+test26();
 };
 i = 0;
 i2 = 0;
@@ -1826,7 +1821,6 @@ function test12(colorturno) {
             };
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
-            test26();
         } 
     else if(fase === "Inicio Ronda 1"){
         i121 = 0;
@@ -1912,7 +1906,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122] === tarjetasrojo[i121].pais && paises[i122].colorfichas === tarjetasrojo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasrojo[i121].fichas;
-                    paises[i122].id.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     tarjetasrojo[i121].fichas = 0;
                 };
                 };
@@ -1930,7 +1924,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasazul[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasazul[i121].fichas;
-                    paises[i122].id.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     tarjetasazul[i121].fichas = 0;
                 };
                 };
@@ -1948,7 +1942,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasamarillo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasamarillo[i121].fichas;
-                    paises[i122].id.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     tarjetasamarillo[i121].fichas = 0;
                 };
                 };
@@ -1966,7 +1960,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasverde[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasverde[i121].fichas;
-                    paises[i122].id.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     tarjetasverde[i121].fichas = 0;
                 };
                 };
@@ -1984,7 +1978,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasmagenta[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasmagenta[i121].fichas;
-                    paises[i122].id.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     tarjetasmagenta[i121].fichas = 0;
                 };
                 };
@@ -2002,7 +1996,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasnegro[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasnegro[i121].fichas;
-                    paises[i122].id.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     tarjetasnegro[i121].fichas = 0;
                 };
                 };
@@ -2339,8 +2333,8 @@ function test14(pais) {
         if (paisreceptor === pais) {
             paisseleccionado.fichas--;
             paisreceptor.fichas++;
-            paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
-            paisreceptor.id.textContent = paisreceptor.nombre + " " + paisreceptor.fichas + " " + paisreceptor.colorfichas;
+            paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            paisreceptor.idsvg.textContent = paisreceptor.nombre + " " + paisreceptor.fichas + " " + paisreceptor.colorfichas;
             paisreceptor = 0;
             paisseleccionado = 0;
         };
@@ -2391,7 +2385,7 @@ function test14(pais) {
             };
             };
             if(paisseleccionado != 0){
-            paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             paisseleccionado = 0;
             };
             };
@@ -2469,7 +2463,7 @@ function test14(pais) {
             };
             };
             if(paisseleccionado != 0) {
-            paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             paisseleccionado = 0;
             };
             };
@@ -2568,8 +2562,8 @@ function test18() {
         paisconquistador.fichas--;
         paisconquistado.fichas++;
     };
-    paisconquistador.id.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
-    paisconquistado.id.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
+    paisconquistador.idsvg.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
+    paisconquistado.idsvg.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2581,8 +2575,8 @@ function test19() {
         paisconquistador.fichas = paisconquistador.fichas - 2;
         paisconquistado.fichas = paisconquistado.fichas + 2;
     };
-    paisconquistador.id.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
-    paisconquistado.id.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
+    paisconquistador.idsvg.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
+    paisconquistado.idsvg.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2610,22 +2604,24 @@ if(color === "Negro" && conquista.negro === 0){
 function test26() {
     i261 = 0;
 
-    for (i261 < fichasPaises.length; i261++;) {
-         if (fichasPaises[i261].colorfichas === "Rojo") {
-            fichasPaises[i261].id.style.backgroundColor = "red";
-        } else if (fichasPaises[i261].colorfichas === "Azul") {
-            fichasPaises[i261].id.style.backgroundColor = "blue";
-        } else if (fichasPaises[i261].colorfichas === "Amarillo") {
-            fichasPaises[i261].id.style.backgroundColor = "yellow"; 
-        } else if (fichasPaises[i261].colorfichas === "Verde") {
-            fichasPaises[i261].id.style.backgroundColor = "green";
-        } else if (fichasPaises[i261].colorfichas === "Magenta") {
-            fichasPaises[i261].id.style.backgroundColor = "magenta";
-        } else if (fichasPaises[i261].colorfichas === "Negro") {
-            fichasPaises[i261].id.style.backgroundColor = "black";
+    while (i261 < paises.length) {
+         if (paises[i261].colorfichas === "Rojo") {
+            paises[i261].id.style.backgroundColor = "red";
+        } else if (paises[i261].colorfichas === "Azul") {
+            paises[i261].id.style.backgroundColor = "blue";
+        } else if (paises[i261].colorfichas === "Amarillo") {
+            paises[i261].id.style.backgroundColor = "yellow"; 
+        } else if (paises[i261].colorfichas === "Verde") {
+            paises[i261].id.style.backgroundColor = "green";
+        } else if (paises[i261].colorfichas === "Magenta") {
+            paises[i261].id.style.backgroundColor = "magenta";
+        } else if (paises[i261].colorfichas === "Negro") {
+            paises[i261].id.style.backgroundColor = "black";
         }   
+    i261++;
     }
-}
+};
+
 //Simular ataques
 function test16(color) {
     paisconquistado = 0;
@@ -2710,8 +2706,8 @@ function test16(color) {
         pasarfichas2.showModal();
         };
     };
-        paisseleccionado.id.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
-        paisatacado.id.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
+        paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+        paisatacado.idsvg.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
         paisseleccionado = 0;
         paisatacado = 0;
         resultadosatacante = [];
@@ -2720,56 +2716,56 @@ function test16(color) {
 };
 
 //Event Listeners x país
-australia.id.addEventListener("click", () => test14(australia));
-sumatra.id.addEventListener("click", () => test14(sumatra));
-java.id.addEventListener("click", () => test14(java));
-borneo.id.addEventListener("click", () => test14(borneo));
-india.id.addEventListener("click", () => test14(india));
-malasia.id.addEventListener("click", () => test14(malasia));
-china.id.addEventListener("click", () => test14(china));
-iran.id.addEventListener("click", () => test14(iran));
-japon.id.addEventListener("click", () => test14(japon));
-gobi.id.addEventListener("click", () => test14(gobi));
-mongolia.id.addEventListener("click", () => test14(mongolia));
-kamchatka.id.addEventListener("click", () => test14(kamchatka));
-turquia.id.addEventListener("click", () => test14(turquia));
-israel.id.addEventListener("click", () => test14(israel));
-arabia.id.addEventListener("click", () => test14(arabia));
-siberia.id.addEventListener("click", () => test14(siberia));
-taimir.id.addEventListener("click", () => test14(taimir));
-tartaria.id.addEventListener("click", () => test14(tartaria));
-aral.id.addEventListener("click", () => test14(aral));
-rusia.id.addEventListener("click", () => test14(rusia));
-suecia.id.addEventListener("click", () => test14(suecia));
-polonia.id.addEventListener("click", () => test14(polonia));
-alemania.id.addEventListener("click", () => test14(alemania));
-italia.id.addEventListener("click", () => test14(italia));
-francia.id.addEventListener("click", () => test14(francia));
-españa.id.addEventListener("click", ()=> test14(españa));
-granbretaña.id.addEventListener("click", ()=> test14(granbretaña));
-islandia.id.addEventListener("click", () => test14(islandia));
-alaska.id.addEventListener("click", () => test14(alaska));
-canada.id.addEventListener("click", () => test14(canada));
-yukon.id.addEventListener("click", () => test14(yukon));
-oregon.id.addEventListener("click", () => test14(oregon));
-nuevayork.id.addEventListener("click", () => test14(nuevayork));
-terranova.id.addEventListener("click", () => test14(terranova));
-labrador.id.addEventListener("click", () => test14(labrador));
-groenlandia.id.addEventListener("click", () => test14(groenlandia));
-california.id.addEventListener("click", () => test14(california));
-mexico.id.addEventListener("click", () => test14(mexico));
-chile.id.addEventListener("click", () => test14(chile));
-peru.id.addEventListener("click", () => test14(peru));
-argentina.id.addEventListener("click", () => test14(argentina));
-uruguay.id.addEventListener("click", () => test14(uruguay));
-brasil.id.addEventListener("click", () => test14(brasil));
-colombia.id.addEventListener("click", () => test14(colombia));
-sahara.id.addEventListener("click", () => test14(sahara));
-egipto.id.addEventListener("click", () => test14(egipto));
-etiopia.id.addEventListener("click", () => test14(etiopia));
-zaire.id.addEventListener("click", () => test14(zaire));
-sudafrica.id.addEventListener("click", () => test14(sudafrica));
-madagascar.id.addEventListener("click", () => test14(madagascar));
+australia.idsvg.addEventListener("click", () => test14(australia));
+sumatra.idsvg.addEventListener("click", () => test14(sumatra));
+java.idsvg.addEventListener("click", () => test14(java));
+borneo.idsvg.addEventListener("click", () => test14(borneo));
+india.idsvg.addEventListener("click", () => test14(india));
+malasia.idsvg.addEventListener("click", () => test14(malasia));
+china.idsvg.addEventListener("click", () => test14(china));
+iran.idsvg.addEventListener("click", () => test14(iran));
+japon.idsvg.addEventListener("click", () => test14(japon));
+gobi.idsvg.addEventListener("click", () => test14(gobi));
+mongolia.idsvg.addEventListener("click", () => test14(mongolia));
+kamchatka.idsvg.addEventListener("click", () => test14(kamchatka));
+turquia.idsvg.addEventListener("click", () => test14(turquia));
+israel.idsvg.addEventListener("click", () => test14(israel));
+arabia.idsvg.addEventListener("click", () => test14(arabia));
+siberia.idsvg.addEventListener("click", () => test14(siberia));
+taimir.idsvg.addEventListener("click", () => test14(taimir));
+tartaria.idsvg.addEventListener("click", () => test14(tartaria));
+aral.idsvg.addEventListener("click", () => test14(aral));
+rusia.idsvg.addEventListener("click", () => test14(rusia));
+suecia.idsvg.addEventListener("click", () => test14(suecia));
+polonia.idsvg.addEventListener("click", () => test14(polonia));
+alemania.idsvg.addEventListener("click", () => test14(alemania));
+italia.idsvg.addEventListener("click", () => test14(italia));
+francia.idsvg.addEventListener("click", () => test14(francia));
+españa.idsvg.addEventListener("click", ()=> test14(españa));
+granbretaña.idsvg.addEventListener("click", ()=> test14(granbretaña));
+islandia.idsvg.addEventListener("click", () => test14(islandia));
+alaska.idsvg.addEventListener("click", () => test14(alaska));
+canada.idsvg.addEventListener("click", () => test14(canada));
+yukon.idsvg.addEventListener("click", () => test14(yukon));
+oregon.idsvg.addEventListener("click", () => test14(oregon));
+nuevayork.idsvg.addEventListener("click", () => test14(nuevayork));
+terranova.idsvg.addEventListener("click", () => test14(terranova));
+labrador.idsvg.addEventListener("click", () => test14(labrador));
+groenlandia.idsvg.addEventListener("click", () => test14(groenlandia));
+california.idsvg.addEventListener("click", () => test14(california));
+mexico.idsvg.addEventListener("click", () => test14(mexico));
+chile.idsvg.addEventListener("click", () => test14(chile));
+peru.idsvg.addEventListener("click", () => test14(peru));
+argentina.idsvg.addEventListener("click", () => test14(argentina));
+uruguay.idsvg.addEventListener("click", () => test14(uruguay));
+brasil.idsvg.addEventListener("click", () => test14(brasil));
+colombia.idsvg.addEventListener("click", () => test14(colombia));
+sahara.idsvg.addEventListener("click", () => test14(sahara));
+egipto.idsvg.addEventListener("click", () => test14(egipto));
+etiopia.idsvg.addEventListener("click", () => test14(etiopia));
+zaire.idsvg.addEventListener("click", () => test14(zaire));
+sudafrica.idsvg.addEventListener("click", () => test14(sudafrica));
+madagascar.idsvg.addEventListener("click", () => test14(madagascar));
 
 //Event listeners juego
 atacarrojo.addEventListener("click", () => test16("Rojo"));
@@ -3000,7 +2996,7 @@ function cargarPartida() {
         for (let i = 0; i < estado.paises.length; i++) {
             paises[i].fichas = estado.paises[i].fichas;
             paises[i].colorfichas = estado.paises[i].color;
-            paises[i].id.textContent =
+            paises[i].idsvg.textContent =
               paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
           }
           

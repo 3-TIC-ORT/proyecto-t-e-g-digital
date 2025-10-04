@@ -1373,6 +1373,7 @@ iactins3 = [];
 texto = ""
 };
 actualizarInstrucciones();
+test26(paises);
 
 function cambiarInstructor() {
     let ninstructor = localStorage.getItem("ninstructor");
@@ -1476,6 +1477,7 @@ while(tarjetasnegro.length > i221){
 };
 };
 i221 = 0;
+test26();
 };
 
 function test23(tarjeta){
@@ -1754,6 +1756,7 @@ tselect2 = 0;
 tselect3 = 0;
 
 test22(color);
+test26(paises);
 actualizarInstrucciones();
 console.log(mazo);
 }
@@ -1913,6 +1916,7 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
+            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1931,6 +1935,7 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
+            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1949,6 +1954,7 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
+            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1967,6 +1973,7 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
+            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1985,6 +1992,7 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
+            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -2003,6 +2011,7 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
+            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -2282,6 +2291,7 @@ function test12(colorturno) {
             };
             actualizarInstrucciones();
             guardarPartida();
+            test26(paises);
             tselect1 = 0;
             tselect2 = 0;
             tselect3 = 0;
@@ -2469,6 +2479,7 @@ function test14(pais) {
             };
             };
             actualizarInstrucciones();
+            test26(paises);
             i141 = 0;
             };
 

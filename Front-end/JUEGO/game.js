@@ -54,6 +54,7 @@ let i174 = 0;
 let i221 = 0;
 let i241 = 0;
 let i242 = 0;
+let i261 = 0;
 let icarg = 0;
 let icarg2 = 0;
 let iactins1 = 0;
@@ -122,7 +123,7 @@ let nobjetivos = "true";
 nobjetivos = localStorage.getItem("nobjetivos");
 if (nobjetivos === null) {
     nobjetivos = "true"
-}
+};
 
 //declaracion (dialogs) 
 let mostrarTrojo = document.getElementById("mostrarTrojo");
@@ -243,6 +244,60 @@ let inicioRonda2 = "Ya sabes como es, ahora tenes 3 fichas a incorporar";
 let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas";
 let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
 let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
+
+//declaracion de divs fichas
+let fichasrusia = document.getElementById("fichasrusiaid");
+let fichasalemania = document.getElementById("fichasalemaniaid");
+let fichassuecia = document.getElementById("fichassueciaid");
+let fichaspolonia = document.getElementById("fichaspoloniaid");
+let fichasitalia = document.getElementById("fichasitaliaid");
+let fichasfrancia = document.getElementById("fichasfranciaid");
+let fichasespaña = document.getElementById("fichasespañaid");
+let fichasgranbretaña = document.getElementById("fichasgranbretañaid");
+let fichasislandia = document.getElementById("fichasislandiaid");
+let fichasiran = document.getElementById("fichasiranid");
+let fichasjapon = document.getElementById("fichasjaponid");
+let fichasgobi = document.getElementById("fichasgobiid");
+let fichasmongolia = document.getElementById("fichasmongoliaid");
+let fichaskamchatka = document.getElementById("fichaskamchatkaid");
+let fichasturquia = document.getElementById("fichasturquiaid");
+let fichasisrael = document.getElementById("fichasisraelid");
+let fichasarabia = document.getElementById("fichasarabiaid");
+let fichassiberia = document.getElementById("fichassiberiaid");
+let fichastaimir = document.getElementById("fichastaimirid");
+let fichastartaria = document.getElementById("fichastartariaid");
+let fichasaral = document.getElementById("fichasaralid");
+let fichaschina = document.getElementById("fichaschinaid");
+let fichasmalasia = document.getElementById("fichasmalasiaid");
+let fichasindia = document.getElementById("fichasindiaid");
+let fichassumatra = document.getElementById("fichassumatraid");
+let fichasjava = document.getElementById("fichasjavaid");
+let fichasborneo = document.getElementById("fichasborneoid");
+let fichasaustralia = document.getElementById("fichasaustraliaid");
+let fichasalaska = document.getElementById("fichasalaskaid");
+let fichascanada = document.getElementById("fichascanadaid");
+let fichasyukon = document.getElementById("fichasyukonid");
+let fichasoregon = document.getElementById("fichasoregonid");
+let fichasnuevayork = document.getElementById("fichasnuevayorkid");
+let fichasterranova = document.getElementById("fichasterranovaid");
+let fichaslabrador = document.getElementById("fichaslabradorid");
+let fichasgroenlandia = document.getElementById("fichasgroenlandiaid");
+let fichascalifornia = document.getElementById("fichascaliforniaid");
+let fichasmexico = document.getElementById("fichasmexicoid");
+let fichaschile = document.getElementById("fichaschileid");
+let fichasperu = document.getElementById("fichasperuid");
+let fichasargentina = document.getElementById("fichasargentinaid");
+let fichasuruguay = document.getElementById("fichasuruguayid");
+let fichascolombia = document.getElementById("fichascolombiaid");
+let fichasbrasil = document.getElementById("fichasbrasilid");
+let fichassahara = document.getElementById("fichassaharaid");
+let fichasegipto = document.getElementById("fichasegiptoid");
+let fichasetiopia = document.getElementById("fichasetiopiaid");
+let fichaszaire = document.getElementById("fichaszaireid");
+let fichassudafrica = document.getElementById("fichassudafricaid");
+let fichasmadagascar = document.getElementById("fichasmadagascarid");
+
+
 
 
 //Declaración de Objetivos Secretos
@@ -841,7 +896,8 @@ sudafrica.limitrofes.push(etiopia, zaire);
 madagascar.limitrofes.push(egipto, zaire);
 
 //Declaración lista de países
-let paises = [australia, sumatra, java, borneo, india, malasia, china, iran, chile, peru, argentina, uruguay, brasil, colombia, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, rusia, suecia, alemania, polonia, sahara, egipto, etiopia, alaska, mexico, italia, california, francia, oregon, españa, granbretaña, islandia, zaire, sudafrica, madagascar, nuevayork, canada, yukon, terranova, labrador, groenlandia];
+let fichasPaises = [fichasrusia, fichasalemania, fichassuecia, fichaspolonia, fichasitalia, fichasfrancia, fichasespaña, fichasgranbretaña, fichasislandia, fichasalaska, fichascanada, fichasyukon, fichasoregon, fichasnuevayork, fichasterranova, fichaslabrador, fichasgroenlandia, fichascalifornia, fichasmexico, fichaschile, fichasperu, fichasargentina, fichascolombia, fichasbrasil, fichasuruguay, fichassahara, fichasegipto, fichasetiopia, fichaszaire, fichassudafrica, fichasmadagascar, fichasiran, fichasjapon, fichasgobi, fichasmongolia, fichaskamchatka, fichasturquia, fichasisrael, fichasarabia, fichassiberia, fichastaimir, fichastartaria, fichasaral, fichaschina, fichasmalasia, fichasindia,fichassumatra,fichasjava,fichasborneo,fichasaustralia];
+let paises = [rusia, alemania, suecia, polonia, italia, francia, españa, granbretaña, islandia, alaska, canada, yukon, oregon, nuevayork, terranova, labrador, groenlandia, california, mexico, chile, peru, argentina, colombia, brasil, uruguay, sahara, egipto, etiopia, zaire, sudafrica, madagascar, iran, japon, gobi, mongolia, kamchatka, turquia, israel, arabia, siberia, taimir, tartaria, aral, china, malasia, india, sumatra, java, borneo, australia];
 let estadoJuego = paises;
 
 //Push de países a los continentes
@@ -1755,6 +1811,7 @@ function test12(colorturno) {
             };
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
+            test26();
         } 
     else if(fase === "Inicio Ronda 1"){
         i121 = 0;
@@ -2535,6 +2592,25 @@ if(color === "Negro" && conquista.negro === 0){
 };
 };
 
+function test26() {
+    i261 = 0;
+
+    for (i261 < fichasPaises.length; i261++;) {
+         if (fichasPaises[i261].colorfichas === "Rojo") {
+            fichasPaises[i261].id.style.backgroundColor = "red";
+        } else if (fichasPaises[i261].colorfichas === "Azul") {
+            fichasPaises[i261].id.style.backgroundColor = "blue";
+        } else if (fichasPaises[i261].colorfichas === "Amarillo") {
+            fichasPaises[i261].id.style.backgroundColor = "yellow"; 
+        } else if (fichasPaises[i261].colorfichas === "Verde") {
+            fichasPaises[i261].id.style.backgroundColor = "green";
+        } else if (fichasPaises[i261].colorfichas === "Magenta") {
+            fichasPaises[i261].id.style.backgroundColor = "magenta";
+        } else if (fichasPaises[i261].colorfichas === "Negro") {
+            fichasPaises[i261].id.style.backgroundColor = "black";
+        }   
+    }
+}
 //Simular ataques
 function test16(color) {
     paisconquistado = 0;
@@ -2949,5 +3025,8 @@ function cargarPartida() {
           test22("Verde");
           test22("Magenta");
           test22("Negro");
+
+          test26();
+          actualizarInstrucciones();
     });
 }    

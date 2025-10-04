@@ -480,6 +480,9 @@ justify-content: center;
 .guardar {
     cursor: pointer;
 }
+.guardar:hover {
+    transform: scale(1.1);
+}
 
 .currentturn {
     position: absolute;
@@ -572,6 +575,10 @@ top: 2.5%;
     cursor: pointer;
 }
 
+.actRapidaIns:hover {
+    transform: scale(1.1);
+}
+
 .menuPausa {
     justify-self: center;
     margin-top: 17%;
@@ -602,8 +609,27 @@ top: 2.5%;
     cursor: pointer;
 }
 
+.atrasConfig:hover {
+    transform: scale(1.1);
+}
+
+.reanudar:hover {
+    transform: scale(1.1);
+}
+
 .configuracion {
     cursor: pointer;
+}
+
+.configuracion:hover {
+    transform: scale(1.1);
+}
+
+.salir {
+    cursor: pointer;
+}
+.salir:hover {
+    transform: scale(1.1);
 }
 
 .labelBrillo {

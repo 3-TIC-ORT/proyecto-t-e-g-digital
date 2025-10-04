@@ -3043,8 +3043,5 @@ function cargarPartida() {
           test22("Verde");
           test22("Magenta");
           test22("Negro");
-
-          test26();
-          actualizarInstrucciones();
     });
 }    

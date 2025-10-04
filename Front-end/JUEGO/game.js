@@ -20,9 +20,12 @@ let skipmagenta = document.getElementById("pasamagenta");
 let skipnegro = document.getElementById("pasanegro");
 let botonGuardar = document.getElementById("guardar");
 let menuPausa = document.getElementById("menuPausa");
+let menuConfig = document.getElementById("menuConfig");
 let botonPausa = document.getElementById("pausaid");
 let reanudar = document.getElementById("reanudar");
 let actRapidaIns = document.getElementById("actRapidaIns");
+let configuracion = document.getElementById("configuracion");
+let atrasConfig = document.getElementById("atrasConfig");
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -91,12 +94,24 @@ function abrirMenuPausa() {
     menuPausa.showModal();
 }
 
+//menu config
+function abrirMenuConfig() {
+    menuConfig.showModal();
+}
+
 //brillo
 document.addEventListener("DOMContentLoaded", () => {
-  let valorBrillo = 1;
-  valorBrillo = localStorage.getItem("brillo")
-  valorBrillo = parseFloat(valorBrillo);
+  let barraBrillo = document.getElementById("barraBrillo");
+
+  let valorBrillo = localStorage.getItem("brillo") || 1;
+  barraBrillo.value = valorBrillo;
   document.body.style.filter = "brightness(" + valorBrillo + ")";
+
+  barraBrillo.addEventListener("input", () => {
+    let valorBrillo = barraBrillo.value;
+    document.body.style.filter = "brightness(" + valorBrillo + ")";
+    localStorage.setItem("brillo", valorBrillo);
+  });
 });
 
 //checkear cargar partida
@@ -2816,6 +2831,9 @@ mostrarTmagenta.addEventListener("click",()=> dialogTmagenta.showModal());
 cerrarTmagenta.addEventListener("click",()=> dialogTmagenta.close());
 mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
 cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
+
+configuracion.addEventListener("click", ()=> abrirMenuConfig());
+atrasConfig.addEventListener("click", ()=> menuConfig.close());
 
 //event listeners tarjetas (no hay forma de que escriba mas event listeners que funciones)
 contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));

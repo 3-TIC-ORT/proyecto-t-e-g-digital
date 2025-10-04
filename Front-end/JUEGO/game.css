@@ -584,6 +584,41 @@ top: 2.5%;
     background-color: #c59a3e;
 }
 
+.menuConfig {
+    justify-self: center;
+    margin-top: 17%;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    font-style:inherit;
+    background-color: #c59a3e;
+}
+
+.atrasConfig {
+    justify-self:flex-start;
+    cursor: pointer;
+}
+
+.configuracion {
+    cursor: pointer;
+}
+
+.labelBrillo {
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-style:inherit;
+}
+
+.barraBrillo {
+    width: 60%;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
 .bordeAmarillo {
   border: 3px solid yellow;
 }

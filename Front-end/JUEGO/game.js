@@ -1253,7 +1253,7 @@ i++;
 i2++;
 };
 paises[randomizador].idsvg.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
-test26();
+test26(paises[randomizador]);
 };
 i = 0;
 i2 = 0;
@@ -1373,7 +1373,6 @@ iactins3 = [];
 texto = ""
 };
 actualizarInstrucciones();
-test26(paises);
 
 function cambiarInstructor() {
     let ninstructor = localStorage.getItem("ninstructor");
@@ -1477,7 +1476,6 @@ while(tarjetasnegro.length > i221){
 };
 };
 i221 = 0;
-test26();
 };
 
 function test23(tarjeta){
@@ -1756,7 +1754,6 @@ tselect2 = 0;
 tselect3 = 0;
 
 test22(color);
-test26(paises);
 actualizarInstrucciones();
 console.log(mazo);
 }
@@ -1910,13 +1907,13 @@ function test12(colorturno) {
                 if(paises[i122] === tarjetasrojo[i121].pais && paises[i122].colorfichas === tarjetasrojo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasrojo[i121].fichas;
                     paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    test26(paises[i122]);
                     tarjetasrojo[i121].fichas = 0;
                 };
                 };
                 i121++;
                 i122 = 0;
             };
-            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1929,13 +1926,13 @@ function test12(colorturno) {
                 if(paises[i122].colorfichas === tarjetasazul[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasazul[i121].fichas;
                     paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    test26(paises[i122]);
                     tarjetasazul[i121].fichas = 0;
                 };
                 };
                 i121++;
                 i122 = 0;
             };
-            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1948,13 +1945,13 @@ function test12(colorturno) {
                 if(paises[i122].colorfichas === tarjetasamarillo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasamarillo[i121].fichas;
                     paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    test26(paises[i122]);
                     tarjetasamarillo[i121].fichas = 0;
                 };
                 };
                 i121++;
                 i122 = 0;
             };
-            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1967,13 +1964,13 @@ function test12(colorturno) {
                 if(paises[i122].colorfichas === tarjetasverde[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasverde[i121].fichas;
                     paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    test26(paises[i122]);
                     tarjetasverde[i121].fichas = 0;
                 };
                 };
                 i121++;
                 i122 = 0;
             };
-            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -1986,13 +1983,13 @@ function test12(colorturno) {
                 if(paises[i122].colorfichas === tarjetasmagenta[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasmagenta[i121].fichas;
                     paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    test26(paises[i122]);
                     tarjetasmagenta[i121].fichas = 0;
                 };
                 };
                 i121++;
                 i122 = 0;
             };
-            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -2005,13 +2002,13 @@ function test12(colorturno) {
                 if(paises[i122].colorfichas === tarjetasnegro[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasnegro[i121].fichas;
                     paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
+                    test26(paises[i122]);
                     tarjetasnegro[i121].fichas = 0;
                 };
                 };
                 i121++;
                 i122 = 0;
             };
-            test26(paises);
         };
         i121 = 0;
         i122 = 0;
@@ -2291,7 +2288,6 @@ function test12(colorturno) {
             };
             actualizarInstrucciones();
             guardarPartida();
-            test26(paises);
             tselect1 = 0;
             tselect2 = 0;
             tselect3 = 0;
@@ -2345,6 +2341,8 @@ function test14(pais) {
             paisreceptor.fichas++;
             paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             paisreceptor.idsvg.textContent = paisreceptor.nombre + " " + paisreceptor.fichas + " " + paisreceptor.colorfichas;
+            test26(paisseleccionado);
+            test26(paisreceptor);
             paisreceptor = 0;
             paisseleccionado = 0;
         };
@@ -2396,6 +2394,7 @@ function test14(pais) {
             };
             if(paisseleccionado != 0){
             paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            test26(paisseleccionado);
             paisseleccionado = 0;
             };
             };
@@ -2474,12 +2473,12 @@ function test14(pais) {
             };
             if(paisseleccionado != 0) {
             paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
+            test26(paisseleccionado);
             paisseleccionado = 0;
             };
             };
             };
             actualizarInstrucciones();
-            test26(paises);
             i141 = 0;
             };
 
@@ -2575,6 +2574,8 @@ function test18() {
     };
     paisconquistador.idsvg.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
     paisconquistado.idsvg.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
+    test26(paisconquistador);
+    test26(paisconquistado);
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2588,6 +2589,8 @@ function test19() {
     };
     paisconquistador.idsvg.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
     paisconquistado.idsvg.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
+    test26(paisconquistador);
+    test26(paisconquistado);
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2612,25 +2615,27 @@ if(color === "Negro" && conquista.negro === 0){
 };
 };
 
-function test26() {
-    i261 = 0;
-
-    while (i261 < paises.length) {
-         if (paises[i261].colorfichas === "Rojo") {
-            paises[i261].id.style.backgroundColor = "red";
-        } else if (paises[i261].colorfichas === "Azul") {
-            paises[i261].id.style.backgroundColor = "blue";
-        } else if (paises[i261].colorfichas === "Amarillo") {
-            paises[i261].id.style.backgroundColor = "yellow"; 
-        } else if (paises[i261].colorfichas === "Verde") {
-            paises[i261].id.style.backgroundColor = "green";
-        } else if (paises[i261].colorfichas === "Magenta") {
-            paises[i261].id.style.backgroundColor = "magenta";
-        } else if (paises[i261].colorfichas === "Negro") {
-            paises[i261].id.style.backgroundColor = "black";
-        }   
-    i261++;
-    }
+function test26(pais) {
+         if (pais.colorfichas === "Rojo") {
+            pais.id.style.backgroundColor = "red";
+            pais.id.style.color = "black";
+        } else if (pais.colorfichas === "Azul") {
+            pais.id.style.backgroundColor = "blue";
+            pais.id.style.color = "black";
+        } else if (pais.colorfichas === "Amarillo") {
+            pais.id.style.backgroundColor = "yellow"; 
+            pais.id.style.color = "black";
+        } else if (pais.colorfichas === "Verde") {
+            pais.id.style.backgroundColor = "green";
+            pais.id.style.color = "black";
+        } else if (pais.colorfichas === "Magenta") {
+            pais.id.style.backgroundColor = "magenta";
+            pais.id.style.color = "black";
+        } else if (pais.colorfichas === "Negro") {
+            pais.id.style.backgroundColor = "black";
+            pais.id.style.color = "white";
+        };
+        pais.id.textContent = pais.fichas;
 };
 
 //Simular ataques
@@ -2719,6 +2724,8 @@ function test16(color) {
     };
         paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
         paisatacado.idsvg.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
+        test26(paisseleccionado);
+        test26(paisatacado);
         paisseleccionado = 0;
         paisatacado = 0;
         resultadosatacante = [];
@@ -2777,6 +2784,56 @@ etiopia.idsvg.addEventListener("click", () => test14(etiopia));
 zaire.idsvg.addEventListener("click", () => test14(zaire));
 sudafrica.idsvg.addEventListener("click", () => test14(sudafrica));
 madagascar.idsvg.addEventListener("click", () => test14(madagascar));
+australia.id.addEventListener("click", () => test14(australia));
+sumatra.id.addEventListener("click", () => test14(sumatra));
+java.id.addEventListener("click", () => test14(java));
+borneo.id.addEventListener("click", () => test14(borneo));
+india.id.addEventListener("click", () => test14(india));
+malasia.id.addEventListener("click", () => test14(malasia));
+china.id.addEventListener("click", () => test14(china));
+iran.id.addEventListener("click", () => test14(iran));
+japon.id.addEventListener("click", () => test14(japon));
+gobi.id.addEventListener("click", () => test14(gobi));
+mongolia.id.addEventListener("click", () => test14(mongolia));
+kamchatka.id.addEventListener("click", () => test14(kamchatka));
+turquia.id.addEventListener("click", () => test14(turquia));
+israel.id.addEventListener("click", () => test14(israel));
+arabia.id.addEventListener("click", () => test14(arabia));
+siberia.id.addEventListener("click", () => test14(siberia));
+taimir.id.addEventListener("click", () => test14(taimir));
+tartaria.id.addEventListener("click", () => test14(tartaria));
+aral.id.addEventListener("click", () => test14(aral));
+rusia.id.addEventListener("click", () => test14(rusia));
+suecia.id.addEventListener("click", () => test14(suecia));
+polonia.id.addEventListener("click", () => test14(polonia));
+alemania.id.addEventListener("click", () => test14(alemania));
+italia.id.addEventListener("click", () => test14(italia));
+francia.id.addEventListener("click", () => test14(francia));
+españa.id.addEventListener("click", ()=> test14(españa));
+granbretaña.id.addEventListener("click", ()=> test14(granbretaña));
+islandia.id.addEventListener("click", () => test14(islandia));
+alaska.id.addEventListener("click", () => test14(alaska));
+canada.id.addEventListener("click", () => test14(canada));
+yukon.id.addEventListener("click", () => test14(yukon));
+oregon.id.addEventListener("click", () => test14(oregon));
+nuevayork.id.addEventListener("click", () => test14(nuevayork));
+terranova.id.addEventListener("click", () => test14(terranova));
+labrador.id.addEventListener("click", () => test14(labrador));
+groenlandia.id.addEventListener("click", () => test14(groenlandia));
+california.id.addEventListener("click", () => test14(california));
+mexico.id.addEventListener("click", () => test14(mexico));
+chile.id.addEventListener("click", () => test14(chile));
+peru.id.addEventListener("click", () => test14(peru));
+argentina.id.addEventListener("click", () => test14(argentina));
+uruguay.id.addEventListener("click", () => test14(uruguay));
+brasil.id.addEventListener("click", () => test14(brasil));
+colombia.id.addEventListener("click", () => test14(colombia));
+sahara.id.addEventListener("click", () => test14(sahara));
+egipto.id.addEventListener("click", () => test14(egipto));
+etiopia.id.addEventListener("click", () => test14(etiopia));
+zaire.id.addEventListener("click", () => test14(zaire));
+sudafrica.id.addEventListener("click", () => test14(sudafrica));
+madagascar.id.addEventListener("click", () => test14(madagascar));
 
 //Event listeners juego
 atacarrojo.addEventListener("click", () => test16("Rojo"));
@@ -3007,7 +3064,6 @@ function cargarPartida() {
         for (let i = 0; i < estado.paises.length; i++) {
             paises[i].fichas = estado.paises[i].fichas;
             paises[i].colorfichas = estado.paises[i].color;
-            paises[i].idsvg.textContent =
               paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
           }
           

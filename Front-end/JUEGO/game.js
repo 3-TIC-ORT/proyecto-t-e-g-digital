@@ -2502,21 +2502,16 @@ function test17(colour){
         };
         i171++;
     };
-    if(localStorage.getItem("nobjetivos" === "true")) {
-       let dominacionSimple = "Objetivos secretos"
-    } else if(localStorage.getItem("nobjetivos" === "false")) {
-        dominacionSimple = "Dominacion simple"
-    }
     if(nobjetivos === "true" || nobjetivos === "false"){
     if (i172 >= 30){
-        mensajefinal.textContent = "Ganó el " + colour + <br> "Jugadores: " + njugadores</br> + <br> dominacionSimple </br>;
+        mensajefinal.textContent = "Ganó el " + colour;
 
         fin.showModal();
     };
     };
     if(nobjetivos === "dominacion"){
     if (i172 === 50){
-        mensajefinal.textContent = "Ganó el " + colour + <br> "Jugadores: " + njugadores</br> + <br> "Objetivo: dominacion mundial" </br>;
+        mensajefinal.textContent = "Ganó el " + colour;
         fin.showModal();
     };
     };

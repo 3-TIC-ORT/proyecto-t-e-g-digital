@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //checkear cargar partida
-let cargarPartidaInicio = true
+let cargarPartidaInicio = "false"
 let cargartest = localStorage.getItem("cargarPartida")
 if(cargartest != "null"){
 cargarPartidaInicio = localStorage.getItem("cargarPartida");};
@@ -124,6 +124,8 @@ if (cargarPartidaInicio === "true") {
     cargarPartida();
 };
 };
+localStorage.setItem("cargarPartida", true);
+
 
 //cantidad jugadores y test
 let njugadores = 2;

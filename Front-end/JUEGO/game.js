@@ -1254,7 +1254,6 @@ paises[randomizador].colorfichas = colores[i2];
 i++;
 i2++;
 };
-paises[randomizador].idsvg.textContent = paises[randomizador].nombre + " " + paises[randomizador].fichas + " " + paises[randomizador].colorfichas;
 test26(paises[randomizador]);
 };
 i = 0;
@@ -1908,7 +1907,6 @@ function test12(colorturno) {
                     };
                 if(paises[i122] === tarjetasrojo[i121].pais && paises[i122].colorfichas === tarjetasrojo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasrojo[i121].fichas;
-                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     test26(paises[i122]);
                     tarjetasrojo[i121].fichas = 0;
                 };
@@ -1927,7 +1925,6 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasazul[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasazul[i121].fichas;
-                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     test26(paises[i122]);
                     tarjetasazul[i121].fichas = 0;
                 };
@@ -1946,7 +1943,6 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasamarillo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasamarillo[i121].fichas;
-                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     test26(paises[i122]);
                     tarjetasamarillo[i121].fichas = 0;
                 };
@@ -1965,8 +1961,6 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasverde[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasverde[i121].fichas;
-                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
-                    test26(paises[i122]);
                     tarjetasverde[i121].fichas = 0;
                 };
                 };
@@ -1984,7 +1978,6 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasmagenta[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasmagenta[i121].fichas;
-                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     test26(paises[i122]);
                     tarjetasmagenta[i121].fichas = 0;
                 };
@@ -2003,7 +1996,6 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasnegro[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasnegro[i121].fichas;
-                    paises[i122].idsvg.textContent = paises[i122].nombre + " " + paises[i122].fichas + " " + paises[i122].colorfichas;
                     test26(paises[i122]);
                     tarjetasnegro[i121].fichas = 0;
                 };
@@ -2341,8 +2333,6 @@ function test14(pais) {
         if (paisreceptor === pais) {
             paisseleccionado.fichas--;
             paisreceptor.fichas++;
-            paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
-            paisreceptor.idsvg.textContent = paisreceptor.nombre + " " + paisreceptor.fichas + " " + paisreceptor.colorfichas;
             test26(paisseleccionado);
             test26(paisreceptor);
             paisreceptor = 0;
@@ -2395,7 +2385,6 @@ function test14(pais) {
             };
             };
             if(paisseleccionado != 0){
-            paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             test26(paisseleccionado);
             paisseleccionado = 0;
             };
@@ -2474,7 +2463,6 @@ function test14(pais) {
             };
             };
             if(paisseleccionado != 0) {
-            paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
             test26(paisseleccionado);
             paisseleccionado = 0;
             };
@@ -2575,8 +2563,6 @@ function test18() {
         paisconquistador.fichas--;
         paisconquistado.fichas++;
     };
-    paisconquistador.idsvg.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
-    paisconquistado.idsvg.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
     test26(paisconquistador);
     test26(paisconquistado);
     paisconquistado = 0;
@@ -2590,8 +2576,6 @@ function test19() {
         paisconquistador.fichas = paisconquistador.fichas - 2;
         paisconquistado.fichas = paisconquistado.fichas + 2;
     };
-    paisconquistador.idsvg.textContent = paisconquistador.nombre + " " + paisconquistador.fichas + " " + paisconquistador.colorfichas;
-    paisconquistado.idsvg.textContent = paisconquistado.nombre + " " + paisconquistado.fichas + " " + paisconquistado.colorfichas;
     test26(paisconquistador);
     test26(paisconquistado);
     paisconquistado = 0;
@@ -2725,8 +2709,6 @@ function test16(color) {
         pasarfichas2.showModal();
         };
     };
-        paisseleccionado.idsvg.textContent = paisseleccionado.nombre + " " + paisseleccionado.fichas + " " + paisseleccionado.colorfichas;
-        paisatacado.idsvg.textContent = paisatacado.nombre + " " + paisatacado.fichas + " " + paisatacado.colorfichas;
         test26(paisseleccionado);
         test26(paisatacado);
         paisseleccionado = 0;

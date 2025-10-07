@@ -1,4 +1,4 @@
-// Declaración de Variables Globales
+// Declaración de Variables
 let turno = "Rojo";
 let colores = [];
 let listacolores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
@@ -89,6 +89,8 @@ let conquista = {
     negro:0
 };
 
+connect2Server(3015);
+
 //menu pausa
 function abrirMenuPausa() {
     menuPausa.showModal();
@@ -115,17 +117,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //checkear cargar partida
-let cargarPartidaInicio = "false"
-let cargartest = localStorage.getItem("cargarPartida")
-if(cargartest != "null"){
-cargarPartidaInicio = localStorage.getItem("cargarPartida");};
-function test20() { 
-if (cargarPartidaInicio === "true") {
+window.onload = () => {
+let checkCargar = localStorage.getItem("cargarPartidaInicio");
+console.log("cargar partida de inicio?: " + checkCargar);
+if (checkCargar === "true") {
     cargarPartida();
+} else {
+    localStorage.setItem("cargarPartidaInicio", "false");
+}; 
 };
-};
-localStorage.setItem("cargarPartida", true);
-
 
 //cantidad jugadores y test
 let njugadores = 2;
@@ -356,8 +356,7 @@ let obj9 = {
 };
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
-connect2Server(3015);
-test20();
+
 
 //Declaración de Continentes
 let oceania = [];
@@ -2889,7 +2888,7 @@ skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 skipmagenta.addEventListener("click", () => test12("Magenta"));
 skipnegro.addEventListener("click", () => test12("Negro"));
-botonGuardar.addEventListener("click", guardarPartida);
+botonGuardar.addEventListener("click", guardarPartida());
 cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
 cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());
 cerrarpasarfichas1.addEventListener("click", ()=> test18());
@@ -3013,6 +3012,7 @@ restablecer2.addEventListener("click", function(){
     tselect3 = 0;
     test22("Negro");
 });
+
 //funcion guardar partida
 function obtenerEstadoJuego() {
     let paisesLimpios = paises.map(p => ({
@@ -3091,7 +3091,7 @@ function cargarPartida() {
         fncontinentes = estado.fncontinentes;
         fichasnuevas = estado.fichasnuevas;
 
-        ninstructor = estado.ninstructor;
+         ninstructor = estado.ninstructor;
         nobjetivos = estado.nobjetivos;
         njugadores = estado.njugadores;
         canjesrojo = estado.Arrcanjes.canjesrojo
@@ -3105,6 +3105,7 @@ function cargarPartida() {
         for (let i = 0; i < estado.paises.length; i++) {
             paises[i].fichas = estado.paises[i].fichas;
             paises[i].colorfichas = estado.paises[i].color;
+            paises[i].id.textContent =
               paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
           }
           

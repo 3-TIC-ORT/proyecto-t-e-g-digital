@@ -2,11 +2,11 @@ let newGame = document.getElementById("newGame");
 let cargarGame = document.getElementById("cargarGame");
 
 function nuevaPartida() {
-  localStorage.setItem("cargarPartida", "false");
+  localStorage.setItem("cargarPartidaInicio", "false");
 }
 
 function cargarPartida() {
-  localStorage.setItem("cargarPartida", "true");
+  localStorage.setItem("cargarPartidaInicio", "true");
 }
 
 newGame.addEventListener("click", () => nuevaPartida());

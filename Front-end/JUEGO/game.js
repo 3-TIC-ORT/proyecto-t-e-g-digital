@@ -61,6 +61,7 @@ let i242 = 0;
 let i261 = 0;
 let icarg = 0;
 let icarg2 = 0;
+let icarg3 = 0;
 let iactins1 = 0;
 let iactins2 = 0;
 let iactins3 = [];
@@ -354,7 +355,7 @@ let obj9 = {
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
 connect2Server(3099);
-
+actualizarInstrucciones;  
 
 //Declaración de Continentes
 let oceania = [];
@@ -1321,12 +1322,12 @@ i = 0;
 
 //Instructor
 function actualizarInstrucciones(){
-    let fichasActuales = 0;
-
-if (turno === "Rojo") {
+let fichasActuales = 0;
 iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
+if(fase === "Incoporar" || fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2"){
+if (turno === "Rojo") {
 fichasActuales = fichasnuevas.rojo;
  } else if (turno === "Azul") {
     fichasActuales = fichasnuevas.azul;
@@ -1339,6 +1340,8 @@ fichasActuales = fichasnuevas.magenta;
 } else if (turno === "Negro") {
 fichasActuales = fichasnuevas.negro;
 };
+};
+console.log(fichasActuales);
 while(fncontinentes.length > iactins1){
     if(fncontinentes[iactins1].color === turno){
     iactins3.push(iactins1);
@@ -1364,14 +1367,13 @@ if (texto === ""){
 } else if (fase === "Inicio Ronda 1"){
  instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner 1 ficha";
 } else if (fase === "Inicio Ronda 2"){
- instrucciones.textContent = "Ya sabes cómo es, ahora tenés " + fichasActuales + " fichas a incorporar";
+ instrucciones.textContent = "Ahora tenés " + fichasActuales + " fichas para incorporar";
 };
 iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
 texto = ""
 };
-actualizarInstrucciones();
 
 function cambiarInstructor() {
     let ninstructor = localStorage.getItem("ninstructor");
@@ -1929,6 +1931,7 @@ function test12(colorturno) {
         turno = colores[i121];
         currentturn.textContent = "Turno: " + turno;
         currentphase.textContent = "Fase: " + fase;
+        localStorage.setItem("cargarPartidaInicio", "true");
     };
     }
     else if (fase === "Reagrupar"){
@@ -2886,8 +2889,8 @@ skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 skipmagenta.addEventListener("click", () => test12("Magenta"));
 skipnegro.addEventListener("click", () => test12("Negro"));
-botonGuardar.addEventListener("click", guardarPartida);
-botonCargar.addEventListener("click", cargarPartida)
+botonGuardar.addEventListener("click",()=> guardarPartida());
+botonCargar.addEventListener("click",()=> cargarPartida())
 cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
 cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());
 cerrarpasarfichas1.addEventListener("click", ()=> test18());
@@ -3056,6 +3059,7 @@ function obtenerEstadoJuego() {
       obj7: obj7.color,
       obj8: obj8.color,
       obj9: obj9.color,
+      Acolores: colores,
       ninstructor: ninstructor,
       nobjetivos: nobjetivos,
       njugadores: njugadores,
@@ -3067,6 +3071,8 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
     icarg = 0;
+    console.log("partida guardada")
+    console.log(estado.paises);
 };
 
 //funcion cargar partida
@@ -3089,6 +3095,7 @@ function cargarPartida() {
 
         fncontinentes = estado.fncontinentes;
         fichasnuevas = estado.fichasnuevas;
+        console.log(fichasnuevas);
 
         ninstructor = estado.ninstructor;
         nobjetivos = estado.nobjetivos;
@@ -3107,8 +3114,6 @@ function cargarPartida() {
             paises[icarg].colorfichas = estado.paises[icarg].color;
             paises[icarg].id.textContent = estado.paises[icarg].fichas;
           }
-          
-          console.log(estado.paises.fichas);
 
           tarjetasrojo = [];
           tarjetasazul = [];
@@ -3149,14 +3154,23 @@ function cargarPartida() {
           test22("Verde");
           test22("Magenta");
           test22("Negro");
-
-          test26("Rojo");
-          test26("Azul");
-          test26("Amarillo");
-          test26("Verde");
-          test26("Magenta");
-          test26("Negro");
+        
+          icarg3 = 0;
+          while (paises.length > icarg3) {
+            test26(paises[icarg3]);
+            icarg3++;
+          }
         
     });
-    console.log("partida cargada")
-}   
+    actualizarInstrucciones();
+    console.log("partida cargada");
+};
+
+
+//cargar al reiniciar pagina
+window.onload = function() {
+    if(localStorage.getItem("cargarPartidaInicio") === "true") {
+    cargarPartida();    
+    actualizarInstrucciones();
+    }};
+actualizarInstrucciones();

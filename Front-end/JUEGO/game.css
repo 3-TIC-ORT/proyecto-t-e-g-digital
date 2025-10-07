@@ -645,7 +645,45 @@ transform: scale(1.1);
 }
 
 .bordeAmarillo {
-  border: 3px solid yellow;
+  border: 3px solid black;
+}
+
+.tarjeta {
+  background-color: burlywood;
+  width: 60px;
+  height: 80px;
+}
+
+.dialogdados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.containertarjetas{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.containerdados{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.containeratacante{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.containerdefensor{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .rojo{background-color: red;}

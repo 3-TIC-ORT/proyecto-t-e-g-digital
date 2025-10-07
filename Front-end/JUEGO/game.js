@@ -216,7 +216,8 @@ let cerrarnegro = document.getElementById("cerrarnegro");
 let objetivonegro = document.getElementById("objetivonegro");
 let contenidonegro = document.getElementById("contenidonegro");
 let resultadodados = document.getElementById("resultadodados");
-let resolucion = document.getElementById("resolucion");
+let dresultadosatacante = document.getElementById("dresultadosatacante");
+let dresultadosdefensor = document.getElementById("dresultadosdefensor");
 let cerrardados = document.getElementById("cerrardados");
 let instrucciones = document.getElementById("instrucciones");
 let fin = document.getElementById("fin");
@@ -1410,6 +1411,9 @@ i221 = 0;
 if(color === "Rojo"){
 while(tarjetasrojo.length > i221){
     docTrojo[i221].textContent = tarjetasrojo[i221].pais.nombre + " " + tarjetasrojo[i221].simbolo;
+    if(docTrojo[i221].textContent != "" && !docTrojo[i221].classList.contains("tarjeta")){
+        docTrojo[i221].classList.add("tarjeta");
+    };
     if (tselect1 === tarjetasrojo[i221] || tselect2 === tarjetasrojo[i221] || tselect3 === tarjetasrojo[i221]){
         if(!docTrojo[i221].classList.contains("bordeAmarillo")){
         docTrojo[i221].classList.add("bordeAmarillo");};
@@ -1424,6 +1428,9 @@ i221 = 0;
 if(color === "Azul"){
 while(tarjetasazul.length > i221){
     docTazul[i221].textContent = tarjetasazul[i221].pais.nombre + " " + tarjetasazul[i221].simbolo;
+    if(docTazul[i221].textContent != "" && !docTazul[i221].classList.contains("tarjeta")){
+    docTazul[i221].classList.add("tarjeta");
+    };
     if (tselect1 === tarjetasazul[i221] || tselect2 === tarjetasazul[i221] || tselect3 === tarjetasazul[i221]){
         if(!docTazul[i221].classList.contains("bordeAmarillo")){
         docTazul[i221].classList.add("bordeAmarillo");};
@@ -1438,6 +1445,9 @@ i221 = 0;
 if(color === "Amarillo"){
 while(tarjetasamarillo.length > i221){
     docTamarillo[i221].textContent = tarjetasamarillo[i221].pais.nombre + " " + tarjetasamarillo[i221].simbolo;
+    if(docTverde[i221].textContent != "" && !docTverde[i221].classList.contains("tarjeta")){
+    docTverde[i221].classList.add("tarjeta");
+    };    
     if (tselect1 === tarjetasamarillo[i221] || tselect2 === tarjetasamarillo[i221] || tselect3 === tarjetasamarillo[i221]){
         if(!docTamarillo[i221].classList.contains("bordeAmarillo")){
         docTamarillo[i221].classList.add("bordeAmarillo");};
@@ -1452,6 +1462,9 @@ i221 = 0;
 if(color === "Verde"){
 while(tarjetasverde.length > i221){
     docTverde[i221].textContent = tarjetasverde[i221].pais.nombre + " " + tarjetasverde[i221].simbolo;
+    if(docTamarillo[i221].textContent != "" && !docTamarillo[i221].classList.contains("tarjeta")){
+    docTamarillo[i221].classList.add("tarjeta");
+    };    
     if (tselect1 === tarjetasverde[i221] || tselect2 === tarjetasverde[i221] || tselect3 === tarjetasverde[i221]){
         if(!docTverde[i221].classList.contains("bordeAmarillo")){
         docTverde[i221].classList.add("bordeAmarillo");};
@@ -1466,6 +1479,16 @@ i221 = 0;
 if(color === "Magenta"){
 while(tarjetasmagenta.length > i221){
     docTmagenta[i221].textContent = tarjetasmagenta[i221].pais.nombre + " " + tarjetasmagenta[i221].simbolo;
+    if(docTmagenta[i221].textContent != "" && !docTmagenta[i221].classList.contains("tarjeta")){
+    docTmagenta[i221].classList.add("tarjeta");
+    };
+    if (tselect1 === tarjetasmagenta[i221] || tselect2 === tarjetasmagenta[i221] || tselect3 === tarjetasmagenta[i221]){
+    if(!docTmagenta[i221].classList.contains("bordeAmarillo")){
+    docTmagenta[i221].classList.add("bordeAmarillo");};
+    } else if (tselect1 != tarjetasmagenta[i221] && tselect2 != tarjetasmagenta[i221] && tselect3 != tarjetasmagenta[i221]){
+    if(docTmagenta[i221].classList.contains("bordeAmarillo")){
+    docTmagenta[i221].classList.remove("bordeAmarillo");};
+    };
     i221++;
 };
 };
@@ -1473,6 +1496,16 @@ i221 = 0;
 if(color === "Negro"){
 while(tarjetasnegro.length > i221){
     docTnegro[i221].textContent = tarjetasnegro[i221].pais.nombre + " " + tarjetasnegro[i221].simbolo;
+    if(docTnegro[i221].textContent != "" && !docTnegro[i221].classList.contains("tarjeta")){
+    docTnegro[i221].classList.add("tarjeta");
+    };
+    if (tselect1 === tarjetasnegro[i221] || tselect2 === tarjetasnegro[i221] || tselect3 === tarjetasnegro[i221]){
+    if(!docTnegro[i221].classList.contains("bordeAmarillo")){
+    docTnegro[i221].classList.add("bordeAmarillo");};
+    } else if (tselect1 != tarjetasnegro[i221] && tselect2 != tarjetasnegro[i221] && tselect3 != tarjetasnegro[i221]){
+    if(docTnegro[i221].classList.contains("bordeAmarillo")){
+    docTnegro[i221].classList.remove("bordeAmarillo");};
+    };      
     i221++;
 };
 };
@@ -1536,6 +1569,8 @@ while(tarjetasrojo[i241] != tselect2){
     i241 = 0;
     while(docTrojo.length > i241){
         docTrojo[i241].textContent = "";
+        docTrojo[i241].classList.remove("tarjeta");
+        docTrojo[i241].classList.remove("bordeAmarillo");
         i241++;
     };
     i241 = 0;
@@ -1578,6 +1613,8 @@ while(tarjetasazul[i241] != tselect2){
     i241 = 0;
     while(docTazul.length > i241){
     docTazul[i241].textContent = "";
+    docTazul[i241].classList.remove("tarjeta");
+    docTazul[i241].classList.remove("bordeAmarillo");
     i241++;
     };
     i241 = 0;
@@ -1620,6 +1657,8 @@ while(tarjetasamarillo[i241] != tselect2){
     i241 = 0;
     while(docTamarillo.length > i241){
     docTamarillo[i241].textContent = "";
+    docTamarillo[i241].classList.remove("tarjeta");
+    docTamarillo[i241].classList.remove("bordeAmarillo");    
     i241++;
     };
     i241 = 0;
@@ -1662,6 +1701,8 @@ while(tarjetasverde[i241] != tselect2){
     i241 = 0;
     while(docTverde.length > i241){
     docTverde[i241].textContent = "";
+    docTverde[i241].classList.remove("tarjeta");
+    docTverde[i241].classList.remove("bordeAmarillo");    
     i241++;
     };
     i241 = 0;
@@ -1704,6 +1745,8 @@ while(tarjetasmagenta[i241] != tselect2){
     i241 = 0;
     while(docTmagenta.length > i241){
     docTmagenta[i241].textContent = "";
+    docTmagenta[i241].classList.remove("tarjeta");
+    docTmagenta[i241].classList.remove("bordeAmarillo");    
     i241++;
     };
     i241 = 0;
@@ -1746,6 +1789,8 @@ while(tarjetasnegro[i241] != tselect2){
     i241 = 0;
     while(docTnegro.length > i241){
     docTnegro[i241].textContent = "";
+    docTnegro[i241].classList.remove("tarjeta");
+    docTnegro[i241].classList.remove("bordeAmarillo");    
     i241++;
     };
     i241 = 0;
@@ -2627,9 +2672,12 @@ function test26(pais) {
 
 //Simular ataques
 function test16(color) {
+    i161 = 0;
+    i162 = 0;
     paisconquistado = 0;
     paisconquistador = 0;
-    resolucion.textContent = "";
+    dresultadosatacante.textContent = "";
+    dresultadosdefensor.textContent = "";
     if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
         dadosatacante = paisseleccionado.fichas - 1;
         dadosdefensor = paisatacado.fichas;
@@ -2679,13 +2727,21 @@ function test16(color) {
                 };
             };
         };
+        while(resultadosatacante.length > i162){
+            dresultadosatacante.textContent = dresultadosatacante.textContent + resultadosatacante[i162] + " ";
+            i162++;
+        };
+        i162 = 0;
+        while(resultadosdefensor.length > i162){
+            dresultadosdefensor.textContent = dresultadosdefensor.textContent + resultadosdefensor[i162] + " ";
+            i162++;
+        };
+        i162 = 0;
         i161 = 0;
         while (resultadosatacante.length > i161 && resultadosdefensor.length > i161) {
             if (resultadosdefensor[i161] >= resultadosatacante[i161]) {
-                resolucion.textContent = resolucion.textContent + " " + resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor. " + paisseleccionado.nombre + " pierde una ficha.";
                 paisseleccionado.fichas--;
             } else if (resultadosatacante[i161] > resultadosdefensor[i161]) {
-                resolucion.textContent = resolucion.textContent + " " + resultadosatacante[i161] + " atacante vs " + resultadosdefensor[i161] + " defensor. " + paisatacado.nombre + " pierde una ficha."
                 paisatacado.fichas--;
             };
             i161++;

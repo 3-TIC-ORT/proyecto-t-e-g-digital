@@ -1269,6 +1269,7 @@ while(tpaises.length > i){
     };
 i2 = 0;
 };
+console.log(mazo);
 i = 0;
 i2 = 0;
 
@@ -1444,8 +1445,8 @@ i221 = 0;
 if(color === "Amarillo"){
 while(tarjetasamarillo.length > i221){
     docTamarillo[i221].textContent = tarjetasamarillo[i221].pais.nombre + " " + tarjetasamarillo[i221].simbolo;
-    if(docTverde[i221].textContent != "" && !docTverde[i221].classList.contains("tarjeta")){
-    docTverde[i221].classList.add("tarjeta");
+    if(docTamarillo[i221].textContent != "" && !docTamarillo[i221].classList.contains("tarjeta")){
+    docTamarillo[i221].classList.add("tarjeta");
     };    
     if (tselect1 === tarjetasamarillo[i221] || tselect2 === tarjetasamarillo[i221] || tselect3 === tarjetasamarillo[i221]){
         if(!docTamarillo[i221].classList.contains("bordeAmarillo")){
@@ -1461,8 +1462,8 @@ i221 = 0;
 if(color === "Verde"){
 while(tarjetasverde.length > i221){
     docTverde[i221].textContent = tarjetasverde[i221].pais.nombre + " " + tarjetasverde[i221].simbolo;
-    if(docTamarillo[i221].textContent != "" && !docTamarillo[i221].classList.contains("tarjeta")){
-    docTamarillo[i221].classList.add("tarjeta");
+    if(docTverde[i221].textContent != "" && !docTverde[i221].classList.contains("tarjeta")){
+    docTverde[i221].classList.add("tarjeta");
     };    
     if (tselect1 === tarjetasverde[i221] || tselect2 === tarjetasverde[i221] || tselect3 === tarjetasverde[i221]){
         if(!docTverde[i221].classList.contains("bordeAmarillo")){
@@ -1719,7 +1720,7 @@ while(tarjetasverde[i241] != tselect2){
     tarjetasmagenta[i241].fichas = 3;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
-    mazo.push(tarjetasmagenta);
+    mazo.push(tarjetareserva);
     tarjetareserva = 0;
     i241 = 0;
 while(tarjetasmagenta[i241] != tselect2){
@@ -2006,6 +2007,7 @@ function test12(colorturno) {
                     };
                 if(paises[i122].colorfichas === tarjetasverde[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasverde[i121].fichas;
+                    test26(paises[i122]);
                     tarjetasverde[i121].fichas = 0;
                 };
                 };

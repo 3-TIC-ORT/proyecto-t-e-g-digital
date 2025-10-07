@@ -19,6 +19,7 @@ let skipverde = document.getElementById("pasaverde");
 let skipmagenta = document.getElementById("pasamagenta");
 let skipnegro = document.getElementById("pasanegro");
 let botonGuardar = document.getElementById("guardar");
+let botonCargar = document.getElementById("cargar")
 let menuPausa = document.getElementById("menuPausa");
 let menuConfig = document.getElementById("menuConfig");
 let botonPausa = document.getElementById("pausaid");
@@ -89,7 +90,7 @@ let conquista = {
     negro:0
 };
 
-connect2Server(3015);
+
 
 //menu pausa
 function abrirMenuPausa() {
@@ -116,16 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//checkear cargar partida
-window.onload = () => {
-let checkCargar = localStorage.getItem("cargarPartidaInicio");
-console.log("cargar partida de inicio?: " + checkCargar);
+//checkear cargar partida (7/10)
+let checkCargar = localStorage.getItem("cargarPartidaInicio")
+console.log("cargamos de inicio?: " + checkCargar);
 if (checkCargar === "true") {
-    cargarPartida();
-} else {
-    localStorage.setItem("cargarPartidaInicio", "false");
-}; 
-};
+    cargarPartida;
+}
 
 //cantidad jugadores y test
 let njugadores = 2;
@@ -356,6 +353,7 @@ let obj9 = {
 };
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
+connect2Server(3099);
 
 
 //Declaración de Continentes
@@ -2890,7 +2888,8 @@ skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 skipmagenta.addEventListener("click", () => test12("Magenta"));
 skipnegro.addEventListener("click", () => test12("Negro"));
-botonGuardar.addEventListener("click", guardarPartida());
+botonGuardar.addEventListener("click", guardarPartida);
+botonCargar.addEventListener("click", cargarPartida)
 cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
 cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());
 cerrarpasarfichas1.addEventListener("click", ()=> test18());
@@ -3093,7 +3092,7 @@ function cargarPartida() {
         fncontinentes = estado.fncontinentes;
         fichasnuevas = estado.fichasnuevas;
 
-         ninstructor = estado.ninstructor;
+        ninstructor = estado.ninstructor;
         nobjetivos = estado.nobjetivos;
         njugadores = estado.njugadores;
         canjesrojo = estado.Arrcanjes.canjesrojo
@@ -3103,14 +3102,16 @@ function cargarPartida() {
         canjesmagenta = estado.Arrcanjes.canjesmagenta;
         canjesnegro = estado.Arrcanjes.canjesnegro;
         tarjetasLimpias = estado.tarjetasLimpias;
+        paisesLimpios = estado.paises;
        
-        for (let i = 0; i < estado.paises.length; i++) {
-            paises[i].fichas = estado.paises[i].fichas;
-            paises[i].colorfichas = estado.paises[i].color;
-            paises[i].id.textContent =
-              paises[i].nombre + " " + paises[i].fichas + " " + paises[i].colorfichas;
+         for (let icarg = 0; icarg < estado.paises.length; icarg++) {
+            paises[icarg].fichas = estado.paises[icarg].fichas;
+            paises[icarg].colorfichas = estado.paises[icarg].color;
+            paises[icarg].id.textContent = estado.paises[icarg].fichas;
           }
           
+          console.log(estado.paises.fichas);
+
           tarjetasrojo = [];
           tarjetasazul = [];
           tarjetasamarillo = [];
@@ -3150,5 +3151,14 @@ function cargarPartida() {
           test22("Verde");
           test22("Magenta");
           test22("Negro");
+
+          test26("Rojo");
+          test26("Azul");
+          test26("Amarillo");
+          test26("Verde");
+          test26("Magenta");
+          test26("Negro");
+        
     });
-}    
+    console.log("partida cargada")
+}   

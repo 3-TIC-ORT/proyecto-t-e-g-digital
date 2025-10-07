@@ -90,7 +90,7 @@ let conquista = {
     magenta: 0,
     negro:0
 };
-
+let ultimatarjeta = null; 
 
 
 //menu pausa
@@ -253,10 +253,13 @@ let restablecer3 = document.getElementById("restablecer3");
 let restablecer4 = document.getElementById("restablecer4");
 let restablecer5 = document.getElementById("restablecer5");
 let restablecer6 = document.getElementById("restablecer6");
+let dnuevatarjeta = document.getElementById("dnuevatarjeta");
+let cnuevatarjeta = document.getElementById("cnuevatarjeta");
+let cerrarnuevatarjeta = document.getElementById("cerrarnuevatarjeta");
 
 //Declaracion de instrucciones
-let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner 1 ficha";
-let inicioRonda2 = "Ya sabes como es, ahora tenes 3 fichas a incorporar";
+let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner una ficha";
+let inicioRonda2 = "Ahora tenes 3 fichas a incorporar";
 let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas";
 let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
 let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
@@ -354,8 +357,7 @@ let obj9 = {
 };
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
-connect2Server(3099);
-actualizarInstrucciones;  
+connect2Server(3099);  
 
 //Declaración de Continentes
 let oceania = [];
@@ -1269,7 +1271,6 @@ while(tpaises.length > i){
     };
 i2 = 0;
 };
-console.log(mazo);
 i = 0;
 i2 = 0;
 
@@ -1327,11 +1328,10 @@ let fichasActuales = 0;
 iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
-if(fase === "Incoporar" || fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2"){
 if (turno === "Rojo") {
 fichasActuales = fichasnuevas.rojo;
  } else if (turno === "Azul") {
-    fichasActuales = fichasnuevas.azul;
+fichasActuales = fichasnuevas.azul;
 } else if (turno === "Amarillo") {
 fichasActuales = fichasnuevas.amarillo;
 } else if (turno === "Verde") {
@@ -1341,8 +1341,7 @@ fichasActuales = fichasnuevas.magenta;
 } else if (turno === "Negro") {
 fichasActuales = fichasnuevas.negro;
 };
-};
-console.log(fichasActuales);
+if(fase === "Incorporar"){
 while(fncontinentes.length > iactins1){
     if(fncontinentes[iactins1].color === turno){
     iactins3.push(iactins1);
@@ -1355,18 +1354,17 @@ if (iactins3.length > 0){
         iactins2++;
     };
 };
-if (fase === "Incorporar") {
 if (texto === ""){
  instrucciones.textContent = "Te quedan " + fichasActuales + " fichas para incorporar. Clickea el territorio donde quieras ubicarlas.";
 } else {
-    instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
-}
+ instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
+};
 } else if (fase === "Atacar") {
  instrucciones.textContent = atacarInstruccion
 } else if (fase === "Reagrupar") {
  instrucciones.textContent = reagruparInstruccion;
 } else if (fase === "Inicio Ronda 1"){
- instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner 1 ficha";
+ instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner una ficha";
 } else if (fase === "Inicio Ronda 2"){
  instrucciones.textContent = "Ahora tenés " + fichasActuales + " fichas para incorporar";
 };
@@ -1801,7 +1799,6 @@ tselect3 = 0;
 
 test22(color);
 actualizarInstrucciones();
-console.log(mazo);
 }
 
 function test24(color){
@@ -1833,36 +1830,42 @@ function test12(colorturno) {
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Rojo"
                 tarjetasrojo.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
             };
              if(colorturno === "Azul" && conquista.azul === 1 && tarjetasazul.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Azul"
                 tarjetasazul.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
             };
              if(colorturno === "Amarillo" && conquista.amarillo === 1 && tarjetasamarillo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Amarillo"
                 tarjetasamarillo.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
             };
              if(colorturno === "Verde" && conquista.verde === 1 && tarjetasverde.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Verde"
                 tarjetasverde.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
             };
              if(colorturno === "Magenta" && conquista.magenta === 1 && tarjetasmagenta.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Magenta"
                 tarjetasmagenta.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
             };
              if(colorturno === "Negro" && conquista.negro === 1 && tarjetasnegro.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Negro"
                 tarjetasnegro.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
             };
             fase = "Reagrupar";
@@ -1938,14 +1941,12 @@ function test12(colorturno) {
     else if (fase === "Reagrupar"){
         i121 = 0;
         i122 = 0;
-        conquista.rojo = 0;
-        conquista.azul = 0;
-        conquista.amarillo = 0;
-        conquista.verde = 0;
-        conquista.rojo = 0;
-        conquista.negro = 0;
         test22(colorturno);
         if(colorturno === "Rojo"){
+            if(conquista.rojo = 1 && tarjetasrojo[tarjetasrojo.length - 1] === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasrojo.length > i121){
                 if(tarjetasrojo[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasrojo[i121].pais){
@@ -1963,7 +1964,11 @@ function test12(colorturno) {
         };
         i121 = 0;
         i122 = 0;
-                if(colorturno === "Azul"){
+        if(colorturno === "Azul"){
+            if(conquista.azul = 1 && tarjetasazul[tarjetasazul.length - 1] === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasazul.length > i121){
                 if(tarjetasazul[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasazul[i121].pais){
@@ -1982,6 +1987,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Amarillo"){
+            if(conquista.amarillo = 1 && tarjetasamarillo[tarjetasamarillo.length - 1] === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };            
             while (tarjetasamarillo.length > i121){
                 if(tarjetasamarillo[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasamarillo[i121].pais){
@@ -2000,6 +2009,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Verde"){
+            if(conquista.verde = 1 && tarjetasverde[tarjetasverde.length - 1] === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasverde.length > i121){
                 if(tarjetasverde[i121].fichas > 0){
                     while(paises.length > i122 && paises.length > i122 && paises[i122] != tarjetasverde[i121].pais){
@@ -2018,6 +2031,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Magenta"){
+            if(conquista.magenta = 1 && tarjetasmagenta[tarjetasmagenta.length - 1] === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasmagenta.length > i121){
                 if(tarjetasmagenta[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasmagenta[i121].pais){
@@ -2036,6 +2053,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
          if(colorturno === "Negro"){
+            if(conquista.negro = 1 && tarjetasnegro[tarjetasnegro.length - 1] === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasnegro.length > i121){
                 if(tarjetasnegro[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasnegro[i121].pais){
@@ -2053,6 +2074,12 @@ function test12(colorturno) {
         };
         i121 = 0;
         i122 = 0;
+        conquista.rojo = 0;
+        conquista.azul = 0;
+        conquista.amarillo = 0;
+        conquista.verde = 0;
+        conquista.magenta = 0;
+        conquista.negro = 0;
             while (colores[i121] != colorturno) {
                 i121++;
             };
@@ -2691,13 +2718,11 @@ function test16(color) {
         };
         while (dadosatacante > 0) {
             dado = Math.floor(Math.random() * 6) + 1;
-            console.log(dado + " dado atacante");
             resultadosatacante.push(dado);
             dadosatacante--;
         };
         while (dadosdefensor > 0) {
             dado = Math.floor(Math.random() * 6) + 1;
-            console.log(dado + " dado defensor");
             resultadosdefensor.push(dado);
             dadosdefensor--;
         };
@@ -2943,6 +2968,7 @@ mostrarTmagenta.addEventListener("click",()=> dialogTmagenta.showModal());
 cerrarTmagenta.addEventListener("click",()=> dialogTmagenta.close());
 mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
 cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
+cerrarnuevatarjeta.addEventListener("click",()=> dnuevatarjeta.close());
 
 configuracion.addEventListener("click", ()=> abrirMenuConfig());
 atrasConfig.addEventListener("click", ()=> menuConfig.close());

@@ -1826,47 +1826,71 @@ function test12(colorturno) {
     tarjetareserva = 0;
     if (colorturno === turno) {
         if (fase === "Atacar") {
-            if(colorturno === "Rojo" && conquista.rojo === 1 && tarjetasrojo.length < 5){
+            if(colorturno === "Rojo" && conquista.rojo === 1){
+            if(tarjetasrojo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Rojo"
                 tarjetasrojo.push(tarjetareserva);
                 ultimatarjeta = tarjetareserva;
-                tarjetareserva = 0; 
+                tarjetareserva = 0;
+            } else if(tarjetasrojo.length === 5){
+                conquista.rojo = 0;
             };
-             if(colorturno === "Azul" && conquista.azul === 1 && tarjetasazul.length < 5){
+            };
+             if(colorturno === "Azul" && conquista.azul === 1){
+                if(tarjetasazul.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Azul"
                 tarjetasazul.push(tarjetareserva);
                 ultimatarjeta = tarjetareserva;
-                tarjetareserva = 0; 
+                tarjetareserva = 0;
+                } else if(tarjetasazul.length === 5){
+                    conquista.azul = 0;
+                };
             };
-             if(colorturno === "Amarillo" && conquista.amarillo === 1 && tarjetasamarillo.length < 5){
+             if(colorturno === "Amarillo" && conquista.amarillo === 1){
+                if(tarjetasamarillo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Amarillo"
                 tarjetasamarillo.push(tarjetareserva);
                 ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
+                } else if(tarjetasamarillo.length === 5){
+                    conquista.amarillo = 0;
+                };
             };
-             if(colorturno === "Verde" && conquista.verde === 1 && tarjetasverde.length < 5){
+             if(colorturno === "Verde" && conquista.verde === 1){
+                if(tarjetasverde.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Verde"
                 tarjetasverde.push(tarjetareserva);
                 ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
+                } else if(tarjetasverde.length === 5){
+                    conquista.verde = 0;
+                };
             };
-             if(colorturno === "Magenta" && conquista.magenta === 1 && tarjetasmagenta.length < 5){
+             if(colorturno === "Magenta" && conquista.magenta === 1){
+                if(tarjetasmagenta.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Magenta"
                 tarjetasmagenta.push(tarjetareserva);
                 ultimatarjeta = tarjetareserva;
-                tarjetareserva = 0; 
+                tarjetareserva = 0;
+                } else if(tarjetasmagenta.length === 5){
+                    conquista.magenta = 0;
+                };
             };
-             if(colorturno === "Negro" && conquista.negro === 1 && tarjetasnegro.length < 5){
+             if(colorturno === "Negro" && conquista.negro === 1){
+                if(tarjetasnegro.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Negro"
                 tarjetasnegro.push(tarjetareserva);
                 ultimatarjeta = tarjetareserva;
                 tarjetareserva = 0; 
+                } else if(tarjetasnegro.length === 5){
+                    conquista.negro = 0
+                };
             };
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
@@ -1943,7 +1967,7 @@ function test12(colorturno) {
         i122 = 0;
         test22(colorturno);
         if(colorturno === "Rojo"){
-            if(conquista.rojo = 1 && tarjetasrojo[tarjetasrojo.length - 1] === ultimatarjeta){
+            if(conquista.rojo === 1 && tarjetasrojo[tarjetasrojo.length - 1] === ultimatarjeta){
                 cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
             };
@@ -1965,7 +1989,7 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Azul"){
-            if(conquista.azul = 1 && tarjetasazul[tarjetasazul.length - 1] === ultimatarjeta){
+            if(conquista.azul === 1 && tarjetasazul[tarjetasazul.length - 1] === ultimatarjeta){
                 cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
             };
@@ -1987,7 +2011,7 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Amarillo"){
-            if(conquista.amarillo = 1 && tarjetasamarillo[tarjetasamarillo.length - 1] === ultimatarjeta){
+            if(conquista.amarillo === 1 && tarjetasamarillo[tarjetasamarillo.length - 1] === ultimatarjeta){
                 cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
             };            
@@ -2009,7 +2033,7 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Verde"){
-            if(conquista.verde = 1 && tarjetasverde[tarjetasverde.length - 1] === ultimatarjeta){
+            if(conquista.verde === 1 && tarjetasverde[tarjetasverde.length - 1] === ultimatarjeta){
                 cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
             };
@@ -2031,7 +2055,7 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Magenta"){
-            if(conquista.magenta = 1 && tarjetasmagenta[tarjetasmagenta.length - 1] === ultimatarjeta){
+            if(conquista.magenta === 1 && tarjetasmagenta[tarjetasmagenta.length - 1] === ultimatarjeta){
                 cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
             };
@@ -2053,7 +2077,7 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
          if(colorturno === "Negro"){
-            if(conquista.negro = 1 && tarjetasnegro[tarjetasnegro.length - 1] === ultimatarjeta){
+            if(conquista.negro === 1 && tarjetasnegro[tarjetasnegro.length - 1] === ultimatarjeta){
                 cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
             };
@@ -2132,7 +2156,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Rojo"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.rojo;
                     };
                     i123 = 0;
                     if (fichasnuevas.azul === 0){
@@ -2142,7 +2165,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Azul"){
                     colores.splice(i123, 1);
                     }
-                    delete fichasnuevas.azul;
                     };
                     i123 = 0;
                     if (fichasnuevas.amarillo === 0){
@@ -2152,7 +2174,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Amarillo"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.amarillo;
                     };
                     i123 = 0;
                     if (fichasnuevas.verde === 0){
@@ -2162,7 +2183,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Verde"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.verde;
                     };
                     i123 = 0;
                     if (fichasnuevas.magenta === 0){
@@ -2172,7 +2192,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Magenta"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.magenta;
                     };
                     i123 = 0;
                     if (fichasnuevas.negro === 0){
@@ -2182,7 +2201,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Negro"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.negro;
                     };
                     i123 = 0;
                     if (fichasnuevas.rojo % 2 === 1) {

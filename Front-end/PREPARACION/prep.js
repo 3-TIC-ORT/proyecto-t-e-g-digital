@@ -11,7 +11,7 @@ let nobjetivos = null;
 let ninstructor = null;
 function test3 () {
 if (parseInt(players.value) === 0){
-contenidojug.textContent = "SELECCIONE CANTIDAD DE JUGADORES";
+contenidojug.textContent = "SELECCIONAR CANTIDAD DE JUGADORES";
 } else {
 contenidojug.textContent = parseInt(players.value) + " JUGADORES";
 njugadores = parseInt(players.value);

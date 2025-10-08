@@ -925,301 +925,301 @@ let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
 let taustralia = {
     pais: australia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tsumatra = {
     pais: sumatra,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tjava = {
     pais: java,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tborneo = {
     pais: borneo,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tindia = {
     pais: india,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tmalasia = {
     pais: malasia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tchina = {
     pais: china,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tiran = {
     pais: iran,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tjapon = {
     pais: japon,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tgobi = {
     pais: gobi,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tmongolia = {
     pais: mongolia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tkamchatka = {
     pais: kamchatka,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tturquia = {
     pais: turquia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tisrael = {
     pais: israel,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tarabia = {
     pais: arabia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tsiberia = {
     pais: siberia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let ttaimir = {
     pais: taimir,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Comodin",
 };
 let ttartaria = {
     pais: tartaria,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let taral = {
     pais: aral,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let trusia = {
     pais: rusia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tsuecia = {
     pais: suecia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tpolonia = {
     pais: polonia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let talemania = {
     pais: alemania,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let titalia = {
     pais: italia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tfrancia = {
     pais: francia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tespaña = {
     pais: españa,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tgranbretaña = {
     pais: granbretaña,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tislandia = {
     pais: islandia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let talaska = {
     pais: alaska,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tcanada = {
     pais: canada,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tyukon = {
     pais: yukon,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let toregon = {
     pais: oregon,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tnuevayork = {
     pais: nuevayork,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tterranova = {
     pais: terranova,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tlabrador = {
     pais: labrador,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tgroenlandia = {
     pais: groenlandia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tcalifornia = {
     pais: california,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tmexico = {
     pais: mexico,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tchile = {
     pais: chile,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tperu = {
     pais: peru,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let targentina = {
     pais: argentina,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Comodin",
 };
 let turuguay = {
     pais: uruguay,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tbrasil = {
     pais: brasil,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tcolombia = {
     pais: colombia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tsahara = {
     pais: sahara,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tegipto = {
     pais: egipto,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tetiopia = {
     pais: etiopia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tzaire = {
     pais: zaire,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tsudafrica = {
     pais: sudafrica,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tmadagascar = {
     pais: madagascar,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
@@ -1539,7 +1539,7 @@ function test25(color){
         i241++;
     };
     tarjetasrojo[i241].color = "";
-    tarjetasrojo[i241].fichas = 3;
+    tarjetasrojo[i241].fichas = 2;
     tarjetareserva = tarjetasrojo[i241];
     tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1549,7 +1549,7 @@ while(tarjetasrojo[i241] != tselect2){
         i241++;
     };
     tarjetasrojo[i241].color = "";
-    tarjetasrojo[i241].fichas = 3;
+    tarjetasrojo[i241].fichas = 2;
     tarjetareserva = tarjetasrojo[i241];
     tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1559,7 +1559,7 @@ while(tarjetasrojo[i241] != tselect2){
         i241++;
     };
     tarjetasrojo[i241].color = "";
-    tarjetasrojo[i241].fichas = 3;
+    tarjetasrojo[i241].fichas = 2;
     tarjetareserva = tarjetasrojo[i241];
     tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1583,7 +1583,7 @@ while(tarjetasrojo[i241] != tselect2){
         i241++;
     };
     tarjetasazul[i241].color = "";
-    tarjetasazul[i241].fichas = 3;
+    tarjetasazul[i241].fichas = 2;
     tarjetareserva = tarjetasazul[i241];
     tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1593,7 +1593,7 @@ while(tarjetasazul[i241] != tselect2){
         i241++;
     };
     tarjetasazul[i241].color = "";
-    tarjetasazul[i241].fichas = 3;
+    tarjetasazul[i241].fichas = 2;
     tarjetareserva = tarjetasazul[i241];
     tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1603,7 +1603,7 @@ while(tarjetasazul[i241] != tselect2){
         i241++;
     };
     tarjetasazul[i241].color = "";
-    tarjetasazul[i241].fichas = 3;
+    tarjetasazul[i241].fichas = 2;
     tarjetareserva = tarjetasazul[i241];
     tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1627,7 +1627,7 @@ while(tarjetasazul[i241] != tselect2){
         i241++;
     };
     tarjetasamarillo[i241].color = "";
-    tarjetasamarillo[i241].fichas = 3;
+    tarjetasamarillo[i241].fichas = 2;
     tarjetareserva = tarjetasamarillo[i241];
     tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1637,7 +1637,7 @@ while(tarjetasamarillo[i241] != tselect2){
         i241++;
     };
     tarjetasamarillo[i241].color = "";
-    tarjetasamarillo[i241].fichas = 3;
+    tarjetasamarillo[i241].fichas = 2;
     tarjetareserva = tarjetasamarillo[i241];
     tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1647,7 +1647,7 @@ while(tarjetasamarillo[i241] != tselect2){
         i241++;
     };
     tarjetasamarillo[i241].color = "";
-    tarjetasamarillo[i241].fichas = 3;
+    tarjetasamarillo[i241].fichas = 2;
     tarjetareserva = tarjetasamarillo[i241];
     tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1671,7 +1671,7 @@ while(tarjetasamarillo[i241] != tselect2){
         i241++;
     };
     tarjetasverde[i241].color = "";
-    tarjetasverde[i241].fichas = 3;
+    tarjetasverde[i241].fichas = 2;
     tarjetareserva = tarjetasverde[i241];
     tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1681,7 +1681,7 @@ while(tarjetasverde[i241] != tselect2){
         i241++;
     };
     tarjetasverde[i241].color = "";
-    tarjetasverde[i241].fichas = 3;
+    tarjetasverde[i241].fichas = 2;
     tarjetareserva = tarjetasverde[i241];
     tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1691,7 +1691,7 @@ while(tarjetasverde[i241] != tselect2){
         i241++;
     };
     tarjetasverde[i241].color = "";
-    tarjetasverde[i241].fichas = 3;
+    tarjetasverde[i241].fichas = 2;
      tarjetareserva = tarjetasverde[i241];
     tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1715,7 +1715,7 @@ while(tarjetasverde[i241] != tselect2){
         i241++;
     };
     tarjetasmagenta[i241].color = "";
-    tarjetasmagenta[i241].fichas = 3;
+    tarjetasmagenta[i241].fichas = 2;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1725,7 +1725,7 @@ while(tarjetasmagenta[i241] != tselect2){
         i241++;
     };
     tarjetasmagenta[i241].color = "";
-    tarjetasmagenta[i241].fichas = 3;
+    tarjetasmagenta[i241].fichas = 2;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1735,7 +1735,7 @@ while(tarjetasmagenta[i241] != tselect2){
         i241++;
     };
     tarjetasmagenta[i241].color = "";
-    tarjetasmagenta[i241].fichas = 3;
+    tarjetasmagenta[i241].fichas = 2;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1759,7 +1759,7 @@ while(tarjetasmagenta[i241] != tselect2){
         i241++;
     };
     tarjetasnegro[i241].color = "";
-    tarjetasnegro[i241].fichas = 3;
+    tarjetasnegro[i241].fichas = 2;
     tarjetareserva = tarjetasnegro[i241];
     tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1769,7 +1769,7 @@ while(tarjetasnegro[i241] != tselect2){
         i241++;
     };
     tarjetasnegro[i241].color = "";
-    tarjetasnegro[i241].fichas = 3;
+    tarjetasnegro[i241].fichas = 2;
     tarjetareserva = tarjetasnegro[i241];
     tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1779,7 +1779,7 @@ while(tarjetasnegro[i241] != tselect2){
         i241++;
     };
     tarjetasnegro[i241].color = "";
-    tarjetasnegro[i241].fichas = 3;
+    tarjetasnegro[i241].fichas = 2;
     tarjetareserva = tarjetasnegro[i241];
     tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);

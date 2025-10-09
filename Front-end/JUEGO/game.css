@@ -680,8 +680,14 @@ transform: scale(1.1);
 
 .tarjeta {
   background-color: burlywood;
-  width: 60px;
-  height: 80px;
+  width: 80px;
+  height: 110px;
+}
+
+.dialogtarjetas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .dialogdados{

@@ -61,6 +61,7 @@ let i241 = 0;
 let i242 = 0;
 let i261 = 0;
 let icarg = 0;
+let icarg1 = 0;
 let icarg2 = 0;
 let icarg3 = 0;
 let iactins1 = 0;
@@ -125,7 +126,7 @@ let checkCargar = localStorage.getItem("cargarPartidaInicio")
 console.log("cargamos de inicio?: " + checkCargar);
 if (checkCargar === "true") {
     cargarPartida;
-}
+};
 
 //cantidad jugadores y test
 let njugadores = 2;
@@ -1325,7 +1326,7 @@ if (objetivos.length > i && objetivos[i].color === "Negro"){
 i = 0;
 
 //Instructor
-function actualizarInstrucciones(){
+function actualizarInstrucciones(faseactual){
 let fichasActuales = 0;
 iactins1 = 0;
 iactins2 = 0;
@@ -1343,7 +1344,7 @@ fichasActuales = fichasnuevas.magenta;
 } else if (turno === "Negro") {
 fichasActuales = fichasnuevas.negro;
 };
-if(fase === "Incorporar"){
+if(faseactual === "Incorporar"){
 while(fncontinentes.length > iactins1){
     if(fncontinentes[iactins1].color === turno){
     iactins3.push(iactins1);
@@ -1361,19 +1362,20 @@ if (texto === ""){
 } else {
  instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
 };
-} else if (fase === "Atacar") {
+} else if (faseactual === "Atacar") {
  instrucciones.textContent = atacarInstruccion
-} else if (fase === "Reagrupar") {
+} else if (faseactual === "Reagrupar") {
  instrucciones.textContent = reagruparInstruccion;
-} else if (fase === "Inicio Ronda 1"){
+} else if (faseactual === "Inicio Ronda 1"){
  instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner una ficha";
-} else if (fase === "Inicio Ronda 2"){
+} else if (faseactual === "Inicio Ronda 2"){
  instrucciones.textContent = "Ahora tenés " + fichasActuales + " fichas para incorporar";
 };
 iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
 texto = ""
+console.log(fase);
 };
 
 function cambiarInstructor() {
@@ -1800,7 +1802,7 @@ tselect2 = 0;
 tselect3 = 0;
 
 test22(color);
-actualizarInstrucciones();
+actualizarInstrucciones(fase);
 }
 
 function test24(color){
@@ -2389,7 +2391,7 @@ function test12(colorturno) {
                 i121 = 0;
                 i122 = 0;
             };
-            actualizarInstrucciones();
+            actualizarInstrucciones(fase);
             guardarPartida();
             tselect1 = 0;
             tselect2 = 0;
@@ -2590,7 +2592,7 @@ function test14(pais) {
             };
             };
             };
-            actualizarInstrucciones();
+            actualizarInstrucciones(fase);
             i141 = 0;
             };
 
@@ -3168,8 +3170,13 @@ function cargarPartida() {
         obj7.color = estado.obj7;
         obj8.color = estado.obj8;
         obj9.color = estado.obj9;
-
-        fncontinentes = estado.fncontinentes;
+        icarg1 = 0;
+        while(estado.fncontinentes.length > icarg1){
+        fncontinentes[icarg1].fichas = estado.fncontinentes.fichas;
+        fncontinentes[icarg1].color = estado.fncontinentes.color;
+        icarg1++
+        };
+        icarg1 = 0;
         fichasnuevas = estado.fichasnuevas;
         console.log(fichasnuevas);
 
@@ -3236,9 +3243,8 @@ function cargarPartida() {
             test26(paises[icarg3]);
             icarg3++;
           }
-        
+        actualizarInstrucciones(estado.fase);
     });
-    actualizarInstrucciones();
     console.log("partida cargada");
 };
 
@@ -3246,7 +3252,8 @@ function cargarPartida() {
 //cargar al reiniciar pagina
 window.onload = function() {
     if(localStorage.getItem("cargarPartidaInicio") === "true") {
-    cargarPartida();    
-    actualizarInstrucciones();
+    cargarPartida();
+    instrucciones.textContent = "";
+    actualizarInstrucciones(fase);
     }};
-actualizarInstrucciones();
+actualizarInstrucciones(fase);

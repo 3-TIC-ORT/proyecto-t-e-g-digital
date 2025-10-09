@@ -64,6 +64,7 @@ let icarg = 0;
 let icarg1 = 0;
 let icarg2 = 0;
 let icarg3 = 0;
+let icarg4 = 0;
 let iactins1 = 0;
 let iactins2 = 0;
 let iactins3 = [];
@@ -1234,7 +1235,8 @@ let tarjetasazul = [];
 let tarjetasamarillo = [];
 let tarjetasverde = [];
 let tarjetasmagenta = [];
-let tarjetasnegro = [];
+let tarjetasnegro = []; 
+let mazoreserva = [];
 //Numero de jugadores
 i = 0;
 while(njugadores > i){
@@ -3141,7 +3143,7 @@ function obtenerEstadoJuego() {
       fase: fase, 
       paises: paisesLimpios,
       tarjetasLimpias: tarjetasLimpias,
-      fncontinentes: fncontinentesLimpios,
+      fncontinentesLimpios: fncontinentesLimpios,
       fichasnuevas: fichasnuevas,
       obj1: obj1.color,
       obj2: obj2.color,
@@ -3166,8 +3168,7 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
     icarg = 0;
-    console.log("partida guardada")
-    console.log(estado.paises);
+    console.log("partida guardada");
 };
 
 //funcion cargar partida
@@ -3189,8 +3190,8 @@ function cargarPartida() {
         obj9.color = estado.obj9;
         icarg1 = 0;
         while(fncontinentes.length > icarg1){
-        fncontinentes[icarg1].fichas = estado.fncontinentes.fichas;
-        fncontinentes[icarg1].color = estado.fncontinentes.color;
+        fncontinentes[icarg1].fichas = estado.fncontinentesLimpios[icarg1].fichas;
+        fncontinentes[icarg1].color = estado.fncontinentesLimpios[icarg1].color;
         icarg1++
         };
         icarg1 = 0;
@@ -3229,6 +3230,7 @@ function cargarPartida() {
           tarjetasmagenta = [];
           tarjetasnegro = [];
           mazo = [];
+          mazoreserva = [];
 
           icarg2 = 0;
           while (tpaises.length > icarg2) {
@@ -3249,11 +3251,17 @@ function cargarPartida() {
             } else if (tpaises[icarg2].color === "Negro") {
               tarjetasnegro.push(tpaises[icarg2]);
             } else {
-              mazo.push(tpaises[icarg2]);
+              mazoreserva.push(tpaises[icarg2]);
             }
           
             icarg2++;
           }
+          randomizador = 0;
+          while(mazoreserva.length > 0){
+          randomizador = Math.floor(Math.random() * mazoreserva.length);
+          mazo.push(mazoreserva[randomizador]);
+          mazoreserva.splice(randomizador, 1);
+          };
           
           test22("Rojo");
           test22("Azul");

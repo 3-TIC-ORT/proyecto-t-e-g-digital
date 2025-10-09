@@ -47,6 +47,7 @@ let i123 = 0;
 let i124 = 0;
 let i125 = 0;
 let i126 = 0;
+let i127 = 0;
 let i141 = 0;
 let i142 = 0;
 let i161 = 0;
@@ -91,7 +92,8 @@ let conquista = {
     negro:0
 };
 let ultimatarjeta = null; 
-
+copiapaises = [];
+copiapais = null;
 
 //menu pausa
 function abrirMenuPausa() {
@@ -1823,7 +1825,10 @@ function test12(colorturno) {
     i124 = 0;
     i125 = 0;
     i126 = 0;
+    i127 = 0;
     tarjetareserva = 0;
+    copiapais = null;
+    copiapaises = [];
     if (colorturno === turno) {
         if (fase === "Atacar") {
             if(colorturno === "Rojo" && conquista.rojo === 1){
@@ -1892,6 +1897,18 @@ function test12(colorturno) {
                     conquista.negro = 0
                 };
             };
+            while(paises.length > i127){
+            copiapais = {
+            nombre: paises[i127].nombre,
+            fichas: paises[i127].fichas,
+            colorfichas: paises[i127].colorfichas
+            }
+            copiapaises.push(copiapais);
+            i127++;
+            };
+            copiapaises = JSON.parse(JSON.stringify(copiapaises));
+            console.log(copiapaises);
+            i127= 0;
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
         } 
@@ -2389,6 +2406,7 @@ function test12(colorturno) {
 //seleccionar pais
 function test14(pais) {
     i141 = 0;
+    i142 = 0;
     if (fase === "Atacar") {
         if (turno === pais.colorfichas && pais.fichas > 1) {
             paisseleccionado = pais;
@@ -2419,10 +2437,22 @@ function test14(pais) {
                 i141++;
             };
             if (pais.limitrofes[i141] != paisseleccionado && pais.fichas > 1) {
+                while(copiapaises.length > i142 && copiapaises[i142].nombre != pais.nombre){
+                    i142++;
+                };
+                if(copiapaises[i142].nombre === pais.nombre && copiapaises[i142].fichas > 1){
                 paisseleccionado = pais;
+                };
             };
         };
+        i142 = 0;
         if (paisreceptor === pais) {
+            while(copiapaises.length > i142 && copiapaises[i142].nombre != paisseleccionado.nombre){
+            i142++;
+            };
+            if(copiapaises[i142].nombre === paisseleccionado.nombre){
+            copiapaises[i142].fichas--;
+            };
             paisseleccionado.fichas--;
             paisreceptor.fichas++;
             test26(paisseleccionado);

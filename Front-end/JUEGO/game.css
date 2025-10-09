@@ -8,12 +8,42 @@ body {
     gap: 1%;
 }
 
-.oceania { background-color: transparent; }
-.sudamerica { background-color: transparent; }
-.asia { background-color: transparent; }
-.europa { background-color: transparent; }
-.africa { background-color: transparent; }
-.norteamerica { background-color: transparent; }
+.oceania {
+    background-color: transparent;
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.sudamerica { 
+    background-color: transparent;
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.asia { 
+    background-color: transparent; 
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.europa { 
+    background-color: transparent; 
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.africa {
+    background-color: transparent;
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.norteamerica {
+    background-color: transparent;
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
+}
 
 
 .map-container {

@@ -10,17 +10,18 @@
     width: fit-content;
     height: fit-content;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
     text-transform: uppercase;
     color: #f7f3e9; 
     background-color: #c59a3e; 
-    border: 3px solid #ffffff; 
+    border: 3px solid #000000; 
     padding: 5px 10px;
     border-radius: 5px; 
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     display: inline-block;
+    font-family: "Tiro Bangla", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .botones_inicio:hover {

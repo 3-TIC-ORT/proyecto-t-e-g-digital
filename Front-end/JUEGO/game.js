@@ -1837,72 +1837,6 @@ function test12(colorturno) {
     copiapaises = [];
     if (colorturno === turno) {
         if (fase === "Atacar") {
-            if(colorturno === "Rojo" && conquista.rojo === 1){
-            if(tarjetasrojo.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Rojo"
-                tarjetasrojo.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0;
-            } else if(tarjetasrojo.length === 5){
-                conquista.rojo = 0;
-            };
-            };
-             if(colorturno === "Azul" && conquista.azul === 1){
-                if(tarjetasazul.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Azul"
-                tarjetasazul.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0;
-                } else if(tarjetasazul.length === 5){
-                    conquista.azul = 0;
-                };
-            };
-             if(colorturno === "Amarillo" && conquista.amarillo === 1){
-                if(tarjetasamarillo.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Amarillo"
-                tarjetasamarillo.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0; 
-                } else if(tarjetasamarillo.length === 5){
-                    conquista.amarillo = 0;
-                };
-            };
-             if(colorturno === "Verde" && conquista.verde === 1){
-                if(tarjetasverde.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Verde"
-                tarjetasverde.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0; 
-                } else if(tarjetasverde.length === 5){
-                    conquista.verde = 0;
-                };
-            };
-             if(colorturno === "Magenta" && conquista.magenta === 1){
-                if(tarjetasmagenta.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Magenta"
-                tarjetasmagenta.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0;
-                } else if(tarjetasmagenta.length === 5){
-                    conquista.magenta = 0;
-                };
-            };
-             if(colorturno === "Negro" && conquista.negro === 1){
-                if(tarjetasnegro.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Negro"
-                tarjetasnegro.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0; 
-                } else if(tarjetasnegro.length === 5){
-                    conquista.negro = 0
-                };
-            };
             while(paises.length > i127){
             copiapais = {
             nombre: paises[i127].nombre,
@@ -1988,6 +1922,72 @@ function test12(colorturno) {
     else if (fase === "Reagrupar"){
         i121 = 0;
         i122 = 0;
+         if(colorturno === "Rojo" && conquista.rojo === 1){
+            if(tarjetasrojo.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Rojo"
+                tarjetasrojo.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0;
+            } else if(tarjetasrojo.length === 5){
+                conquista.rojo = 0;
+            };
+            };
+             if(colorturno === "Azul" && conquista.azul === 1){
+                if(tarjetasazul.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Azul"
+                tarjetasazul.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0;
+                } else if(tarjetasazul.length === 5){
+                    conquista.azul = 0;
+                };
+            };
+             if(colorturno === "Amarillo" && conquista.amarillo === 1){
+                if(tarjetasamarillo.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Amarillo"
+                tarjetasamarillo.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0; 
+                } else if(tarjetasamarillo.length === 5){
+                    conquista.amarillo = 0;
+                };
+            };
+             if(colorturno === "Verde" && conquista.verde === 1){
+                if(tarjetasverde.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Verde"
+                tarjetasverde.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0; 
+                } else if(tarjetasverde.length === 5){
+                    conquista.verde = 0;
+                };
+            };
+             if(colorturno === "Magenta" && conquista.magenta === 1){
+                if(tarjetasmagenta.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Magenta"
+                tarjetasmagenta.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0;
+                } else if(tarjetasmagenta.length === 5){
+                    conquista.magenta = 0;
+                };
+            };
+             if(colorturno === "Negro" && conquista.negro === 1){
+                if(tarjetasnegro.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Negro"
+                tarjetasnegro.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0; 
+                } else if(tarjetasnegro.length === 5){
+                    conquista.negro = 0
+                };
+            };
         test22(colorturno);
         if(colorturno === "Rojo"){
             if(conquista.rojo === 1 && tarjetasrojo[tarjetasrojo.length - 1].pais.nombre === ultimatarjeta){

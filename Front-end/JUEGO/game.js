@@ -3161,6 +3161,7 @@ function obtenerEstadoJuego() {
       Arrcanjes: Arrcanjes,
       objconquistas: objconquistas, 
       ultimatarjeta: ultimatarjeta,
+      copiapaises: copiapaises,
     };
   };
 
@@ -3216,6 +3217,7 @@ function cargarPartida() {
         conquista.magenta = estado.objconquistas.conquistasmagenta;
         conquista.negro = estado.objconquistas.conquistasnegro; 
         ultimatarjeta = estado.ultimatarjeta;
+        copiapaises = estado.copiapaises;
        
          for (let icarg = 0; icarg < estado.paises.length; icarg++) {
             paises[icarg].fichas = estado.paises[icarg].fichas;

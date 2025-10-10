@@ -24,6 +24,14 @@
     font-style: normal;
 }
 
+.logoMini {
+    position: absolute;
+    top: 85%; 
+    right: 92%; 
+    height: 68px; 
+    width: 70px; 
+}
+
 .botones_inicio:hover {
     background-color: #f7f3e9; 
     color: #c59a3e; 

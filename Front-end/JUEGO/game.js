@@ -3119,6 +3119,7 @@ function obtenerEstadoJuego() {
     let fncontinentesLimpios = fncontinentes.map(c => ({
       fichas: c.fichas,
       color: c.color,
+      continente: c.continente,
     }));
 
     let Arrcanjes = {
@@ -3194,6 +3195,7 @@ function cargarPartida() {
         while(fncontinentes.length > icarg1){
         fncontinentes[icarg1].fichas = estado.fncontinentesLimpios[icarg1].fichas;
         fncontinentes[icarg1].color = estado.fncontinentesLimpios[icarg1].color;
+        fncontinentes[icarg1].continente = estado.fncontinentesLimpios[icarg1].continente;
         icarg1++
         };
         icarg1 = 0;

@@ -4,12 +4,13 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: #49453d;
-   height: 550px;
+   background-color: #363636;
+   height: 80vh;
+   padding: auto;
 }
 
 .cantJugadores{
-  background-color: rgb(214, 228, 135);
+  background-color: rgb(214, 218, 195);
   width: 25%;
   height: 12%;
   text-align: center;
@@ -21,7 +22,7 @@ body {
 }
 
 .objSecretos {
-  background-color: rgb(214, 228, 135);
+  background-color: rgb(214, 218, 195);
   width: 25%;
   height: 12%;
   text-align: center;
@@ -33,7 +34,7 @@ body {
 }
 
 .instructor {
-  background-color: rgb(214, 228, 135);
+  background-color: rgb(214, 218, 195);
   width: 25%;
   height: 12%;
   text-align: center;
@@ -75,6 +76,13 @@ body {
     font-style: normal;
 }
 
+.boton_atras:hover {
+    background-color: #f7f3e9; 
+    color: #c59a3e; 
+    border: 3px solid #c59a3e;
+    transform: scale(1.2);
+}
+
 a {
     color: black;
     font-style: normal;
@@ -84,6 +92,17 @@ a {
 .advertencia {
 text-align: center;
 font-weight: bold;
+padding: 10px;
+background-color: #9b9386;
+color: rgb(200, 201, 185);
 font-family:'Times New Roman', Times, serif;
 font-style:inherit ;
+}
+
+.logoMini {
+  position: absolute;
+  top: 85%; 
+  right: 92%; 
+  height: 68px; 
+  width: 70px; 
 }

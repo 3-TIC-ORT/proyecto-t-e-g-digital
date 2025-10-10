@@ -1,5 +1,6 @@
 let newGame = document.getElementById("newGame");
 let cargarGame = document.getElementById("cargarGame");
+let valorBrillo = 1;
 
 function nuevaPartida() {
   localStorage.setItem("cargarPartidaInicio", "false");
@@ -13,7 +14,7 @@ newGame.addEventListener("click", () => nuevaPartida());
 cargarGame.addEventListener("click", () => cargarPartida());
 
 document.addEventListener("DOMContentLoaded", () => {
-  let valorBrillo = 1;
+  valorBrillo = 1;
   valorBrillo = localStorage.getItem("brillo")
   valorBrillo = parseFloat(valorBrillo);
   document.body.style.filter = "brightness(" + valorBrillo + ")";

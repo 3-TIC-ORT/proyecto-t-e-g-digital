@@ -47,6 +47,7 @@ let i123 = 0;
 let i124 = 0;
 let i125 = 0;
 let i126 = 0;
+let i127 = 0;
 let i141 = 0;
 let i142 = 0;
 let i161 = 0;
@@ -60,8 +61,10 @@ let i241 = 0;
 let i242 = 0;
 let i261 = 0;
 let icarg = 0;
+let icarg1 = 0;
 let icarg2 = 0;
 let icarg3 = 0;
+let icarg4 = 0;
 let iactins1 = 0;
 let iactins2 = 0;
 let iactins3 = [];
@@ -90,8 +93,9 @@ let conquista = {
     magenta: 0,
     negro:0
 };
-
-
+let ultimatarjeta = null; 
+copiapaises = [];
+copiapais = null;
 
 //menu pausa
 function abrirMenuPausa() {
@@ -123,7 +127,7 @@ let checkCargar = localStorage.getItem("cargarPartidaInicio")
 console.log("cargamos de inicio?: " + checkCargar);
 if (checkCargar === "true") {
     cargarPartida;
-}
+};
 
 //cantidad jugadores y test
 let njugadores = 2;
@@ -253,10 +257,13 @@ let restablecer3 = document.getElementById("restablecer3");
 let restablecer4 = document.getElementById("restablecer4");
 let restablecer5 = document.getElementById("restablecer5");
 let restablecer6 = document.getElementById("restablecer6");
+let dnuevatarjeta = document.getElementById("dnuevatarjeta");
+let cnuevatarjeta = document.getElementById("cnuevatarjeta");
+let cerrarnuevatarjeta = document.getElementById("cerrarnuevatarjeta");
 
 //Declaracion de instrucciones
-let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner 1 ficha";
-let inicioRonda2 = "Ya sabes como es, ahora tenes 3 fichas a incorporar";
+let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner una ficha";
+let inicioRonda2 = "Ahora tenes 3 fichas a incorporar";
 let incorporarInstruccion = "Clickea el territorio donde quieras incorporar fichas";
 let atacarInstruccion = "Selecciona un territorio propio y luego uno enemigo limitrofe para atacar";
 let reagruparInstruccion = "Selecciona dos territorios propios limitrofes para reagrupar fichas";
@@ -354,8 +361,7 @@ let obj9 = {
 };
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
-connect2Server(3099);
-actualizarInstrucciones;  
+connect2Server(3099);  
 
 //Declaración de Continentes
 let oceania = [];
@@ -923,301 +929,301 @@ let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
 let taustralia = {
     pais: australia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tsumatra = {
     pais: sumatra,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tjava = {
     pais: java,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tborneo = {
     pais: borneo,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tindia = {
     pais: india,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tmalasia = {
     pais: malasia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tchina = {
     pais: china,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tiran = {
     pais: iran,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tjapon = {
     pais: japon,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tgobi = {
     pais: gobi,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tmongolia = {
     pais: mongolia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tkamchatka = {
     pais: kamchatka,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tturquia = {
     pais: turquia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tisrael = {
     pais: israel,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tarabia = {
     pais: arabia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tsiberia = {
     pais: siberia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let ttaimir = {
     pais: taimir,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Comodin",
 };
 let ttartaria = {
     pais: tartaria,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let taral = {
     pais: aral,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let trusia = {
     pais: rusia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tsuecia = {
     pais: suecia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tpolonia = {
     pais: polonia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let talemania = {
     pais: alemania,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let titalia = {
     pais: italia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tfrancia = {
     pais: francia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tespaña = {
     pais: españa,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tgranbretaña = {
     pais: granbretaña,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tislandia = {
     pais: islandia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let talaska = {
     pais: alaska,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tcanada = {
     pais: canada,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tyukon = {
     pais: yukon,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let toregon = {
     pais: oregon,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tnuevayork = {
     pais: nuevayork,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tterranova = {
     pais: terranova,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tlabrador = {
     pais: labrador,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tgroenlandia = {
     pais: groenlandia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tcalifornia = {
     pais: california,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tmexico = {
     pais: mexico,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tchile = {
     pais: chile,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tperu = {
     pais: peru,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let targentina = {
     pais: argentina,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Comodin",
 };
 let turuguay = {
     pais: uruguay,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tbrasil = {
     pais: brasil,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tcolombia = {
     pais: colombia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tsahara = {
     pais: sahara,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tegipto = {
     pais: egipto,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tetiopia = {
     pais: etiopia,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Globo",
 };
 let tzaire = {
     pais: zaire,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
 let tsudafrica = {
     pais: sudafrica,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Cañon",
 };
 let tmadagascar = {
     pais: madagascar,
-    fichas: 3,
+    fichas: 2,
     color: "",
     simbolo: "Fragata",
 };
@@ -1229,7 +1235,8 @@ let tarjetasazul = [];
 let tarjetasamarillo = [];
 let tarjetasverde = [];
 let tarjetasmagenta = [];
-let tarjetasnegro = [];
+let tarjetasnegro = []; 
+let mazoreserva = [];
 //Numero de jugadores
 i = 0;
 while(njugadores > i){
@@ -1242,7 +1249,8 @@ i = 0;
 currentturn.textContent = "Turno: " + turno;
 currentphase.textContent = "Fase: " + fase;
 
-//Asignar países
+//Asignar países 
+if(checkCargar = "false"){
 while (paises.length > i) {
 randomizador = Math.floor(Math.random() * paises.length);
 if (i2 === colores.length) {
@@ -1254,6 +1262,7 @@ i++;
 i2++;
 };
 test26(paises[randomizador]);
+};
 };
 i = 0;
 i2 = 0;
@@ -1269,7 +1278,6 @@ while(tpaises.length > i){
     };
 i2 = 0;
 };
-console.log(mazo);
 i = 0;
 i2 = 0;
 
@@ -1322,16 +1330,15 @@ if (objetivos.length > i && objetivos[i].color === "Negro"){
 i = 0;
 
 //Instructor
-function actualizarInstrucciones(){
+function actualizarInstrucciones(faseactual){
 let fichasActuales = 0;
 iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
-if(fase === "Incoporar" || fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2"){
 if (turno === "Rojo") {
 fichasActuales = fichasnuevas.rojo;
  } else if (turno === "Azul") {
-    fichasActuales = fichasnuevas.azul;
+fichasActuales = fichasnuevas.azul;
 } else if (turno === "Amarillo") {
 fichasActuales = fichasnuevas.amarillo;
 } else if (turno === "Verde") {
@@ -1341,8 +1348,7 @@ fichasActuales = fichasnuevas.magenta;
 } else if (turno === "Negro") {
 fichasActuales = fichasnuevas.negro;
 };
-};
-console.log(fichasActuales);
+if(faseactual === "Incorporar"){
 while(fncontinentes.length > iactins1){
     if(fncontinentes[iactins1].color === turno){
     iactins3.push(iactins1);
@@ -1355,25 +1361,25 @@ if (iactins3.length > 0){
         iactins2++;
     };
 };
-if (fase === "Incorporar") {
 if (texto === ""){
  instrucciones.textContent = "Te quedan " + fichasActuales + " fichas para incorporar. Clickea el territorio donde quieras ubicarlas.";
 } else {
-    instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
-}
-} else if (fase === "Atacar") {
+ instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
+};
+} else if (faseactual === "Atacar") {
  instrucciones.textContent = atacarInstruccion
-} else if (fase === "Reagrupar") {
+} else if (faseactual === "Reagrupar") {
  instrucciones.textContent = reagruparInstruccion;
-} else if (fase === "Inicio Ronda 1"){
- instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner 1 ficha";
-} else if (fase === "Inicio Ronda 2"){
+} else if (faseactual === "Inicio Ronda 1"){
+ instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner una ficha";
+} else if (faseactual === "Inicio Ronda 2"){
  instrucciones.textContent = "Ahora tenés " + fichasActuales + " fichas para incorporar";
 };
 iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
 texto = ""
+console.log(fase);
 };
 
 function cambiarInstructor() {
@@ -1541,7 +1547,7 @@ function test25(color){
         i241++;
     };
     tarjetasrojo[i241].color = "";
-    tarjetasrojo[i241].fichas = 3;
+    tarjetasrojo[i241].fichas = 2;
     tarjetareserva = tarjetasrojo[i241];
     tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1551,7 +1557,7 @@ while(tarjetasrojo[i241] != tselect2){
         i241++;
     };
     tarjetasrojo[i241].color = "";
-    tarjetasrojo[i241].fichas = 3;
+    tarjetasrojo[i241].fichas = 2;
     tarjetareserva = tarjetasrojo[i241];
     tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1561,7 +1567,7 @@ while(tarjetasrojo[i241] != tselect2){
         i241++;
     };
     tarjetasrojo[i241].color = "";
-    tarjetasrojo[i241].fichas = 3;
+    tarjetasrojo[i241].fichas = 2;
     tarjetareserva = tarjetasrojo[i241];
     tarjetasrojo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1585,7 +1591,7 @@ while(tarjetasrojo[i241] != tselect2){
         i241++;
     };
     tarjetasazul[i241].color = "";
-    tarjetasazul[i241].fichas = 3;
+    tarjetasazul[i241].fichas = 2;
     tarjetareserva = tarjetasazul[i241];
     tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1595,7 +1601,7 @@ while(tarjetasazul[i241] != tselect2){
         i241++;
     };
     tarjetasazul[i241].color = "";
-    tarjetasazul[i241].fichas = 3;
+    tarjetasazul[i241].fichas = 2;
     tarjetareserva = tarjetasazul[i241];
     tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1605,7 +1611,7 @@ while(tarjetasazul[i241] != tselect2){
         i241++;
     };
     tarjetasazul[i241].color = "";
-    tarjetasazul[i241].fichas = 3;
+    tarjetasazul[i241].fichas = 2;
     tarjetareserva = tarjetasazul[i241];
     tarjetasazul.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1629,7 +1635,7 @@ while(tarjetasazul[i241] != tselect2){
         i241++;
     };
     tarjetasamarillo[i241].color = "";
-    tarjetasamarillo[i241].fichas = 3;
+    tarjetasamarillo[i241].fichas = 2;
     tarjetareserva = tarjetasamarillo[i241];
     tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1639,7 +1645,7 @@ while(tarjetasamarillo[i241] != tselect2){
         i241++;
     };
     tarjetasamarillo[i241].color = "";
-    tarjetasamarillo[i241].fichas = 3;
+    tarjetasamarillo[i241].fichas = 2;
     tarjetareserva = tarjetasamarillo[i241];
     tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1649,7 +1655,7 @@ while(tarjetasamarillo[i241] != tselect2){
         i241++;
     };
     tarjetasamarillo[i241].color = "";
-    tarjetasamarillo[i241].fichas = 3;
+    tarjetasamarillo[i241].fichas = 2;
     tarjetareserva = tarjetasamarillo[i241];
     tarjetasamarillo.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1673,7 +1679,7 @@ while(tarjetasamarillo[i241] != tselect2){
         i241++;
     };
     tarjetasverde[i241].color = "";
-    tarjetasverde[i241].fichas = 3;
+    tarjetasverde[i241].fichas = 2;
     tarjetareserva = tarjetasverde[i241];
     tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1683,7 +1689,7 @@ while(tarjetasverde[i241] != tselect2){
         i241++;
     };
     tarjetasverde[i241].color = "";
-    tarjetasverde[i241].fichas = 3;
+    tarjetasverde[i241].fichas = 2;
     tarjetareserva = tarjetasverde[i241];
     tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1693,7 +1699,7 @@ while(tarjetasverde[i241] != tselect2){
         i241++;
     };
     tarjetasverde[i241].color = "";
-    tarjetasverde[i241].fichas = 3;
+    tarjetasverde[i241].fichas = 2;
      tarjetareserva = tarjetasverde[i241];
     tarjetasverde.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1717,7 +1723,7 @@ while(tarjetasverde[i241] != tselect2){
         i241++;
     };
     tarjetasmagenta[i241].color = "";
-    tarjetasmagenta[i241].fichas = 3;
+    tarjetasmagenta[i241].fichas = 2;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1727,7 +1733,7 @@ while(tarjetasmagenta[i241] != tselect2){
         i241++;
     };
     tarjetasmagenta[i241].color = "";
-    tarjetasmagenta[i241].fichas = 3;
+    tarjetasmagenta[i241].fichas = 2;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1737,7 +1743,7 @@ while(tarjetasmagenta[i241] != tselect2){
         i241++;
     };
     tarjetasmagenta[i241].color = "";
-    tarjetasmagenta[i241].fichas = 3;
+    tarjetasmagenta[i241].fichas = 2;
     tarjetareserva = tarjetasmagenta[i241];
     tarjetasmagenta.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1761,7 +1767,7 @@ while(tarjetasmagenta[i241] != tselect2){
         i241++;
     };
     tarjetasnegro[i241].color = "";
-    tarjetasnegro[i241].fichas = 3;
+    tarjetasnegro[i241].fichas = 2;
     tarjetareserva = tarjetasnegro[i241];
     tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1771,7 +1777,7 @@ while(tarjetasnegro[i241] != tselect2){
         i241++;
     };
     tarjetasnegro[i241].color = "";
-    tarjetasnegro[i241].fichas = 3;
+    tarjetasnegro[i241].fichas = 2;
     tarjetareserva = tarjetasnegro[i241];
     tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1781,7 +1787,7 @@ while(tarjetasnegro[i241] != tselect2){
         i241++;
     };
     tarjetasnegro[i241].color = "";
-    tarjetasnegro[i241].fichas = 3;
+    tarjetasnegro[i241].fichas = 2;
     tarjetareserva = tarjetasnegro[i241];
     tarjetasnegro.splice(i241, 1);
     mazo.push(tarjetareserva);
@@ -1800,8 +1806,7 @@ tselect2 = 0;
 tselect3 = 0;
 
 test22(color);
-actualizarInstrucciones();
-console.log(mazo);
+actualizarInstrucciones(fase);
 }
 
 function test24(color){
@@ -1826,45 +1831,90 @@ function test12(colorturno) {
     i124 = 0;
     i125 = 0;
     i126 = 0;
+    i127 = 0;
     tarjetareserva = 0;
+    copiapais = null;
+    copiapaises = [];
     if (colorturno === turno) {
         if (fase === "Atacar") {
-            if(colorturno === "Rojo" && conquista.rojo === 1 && tarjetasrojo.length < 5){
+            if(colorturno === "Rojo" && conquista.rojo === 1){
+            if(tarjetasrojo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Rojo"
                 tarjetasrojo.push(tarjetareserva);
-                tarjetareserva = 0; 
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0;
+            } else if(tarjetasrojo.length === 5){
+                conquista.rojo = 0;
             };
-             if(colorturno === "Azul" && conquista.azul === 1 && tarjetasazul.length < 5){
+            };
+             if(colorturno === "Azul" && conquista.azul === 1){
+                if(tarjetasazul.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Azul"
                 tarjetasazul.push(tarjetareserva);
-                tarjetareserva = 0; 
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0;
+                } else if(tarjetasazul.length === 5){
+                    conquista.azul = 0;
+                };
             };
-             if(colorturno === "Amarillo" && conquista.amarillo === 1 && tarjetasamarillo.length < 5){
+             if(colorturno === "Amarillo" && conquista.amarillo === 1){
+                if(tarjetasamarillo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Amarillo"
                 tarjetasamarillo.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
                 tarjetareserva = 0; 
+                } else if(tarjetasamarillo.length === 5){
+                    conquista.amarillo = 0;
+                };
             };
-             if(colorturno === "Verde" && conquista.verde === 1 && tarjetasverde.length < 5){
+             if(colorturno === "Verde" && conquista.verde === 1){
+                if(tarjetasverde.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Verde"
                 tarjetasverde.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
                 tarjetareserva = 0; 
+                } else if(tarjetasverde.length === 5){
+                    conquista.verde = 0;
+                };
             };
-             if(colorturno === "Magenta" && conquista.magenta === 1 && tarjetasmagenta.length < 5){
+             if(colorturno === "Magenta" && conquista.magenta === 1){
+                if(tarjetasmagenta.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Magenta"
                 tarjetasmagenta.push(tarjetareserva);
-                tarjetareserva = 0; 
+                ultimatarjeta = tarjetareserva.pais.nombre;
+                tarjetareserva = 0;
+                } else if(tarjetasmagenta.length === 5){
+                    conquista.magenta = 0;
+                };
             };
-             if(colorturno === "Negro" && conquista.negro === 1 && tarjetasnegro.length < 5){
+             if(colorturno === "Negro" && conquista.negro === 1){
+                if(tarjetasnegro.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Negro"
                 tarjetasnegro.push(tarjetareserva);
+                ultimatarjeta = tarjetareserva.pais.nombre;
                 tarjetareserva = 0; 
+                } else if(tarjetasnegro.length === 5){
+                    conquista.negro = 0
+                };
             };
+            while(paises.length > i127){
+            copiapais = {
+            nombre: paises[i127].nombre,
+            fichas: paises[i127].fichas,
+            colorfichas: paises[i127].colorfichas
+            }
+            copiapaises.push(copiapais);
+            i127++;
+            };
+            copiapaises = JSON.parse(JSON.stringify(copiapaises));
+            console.log(copiapaises);
+            i127= 0;
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
         } 
@@ -1938,14 +1988,12 @@ function test12(colorturno) {
     else if (fase === "Reagrupar"){
         i121 = 0;
         i122 = 0;
-        conquista.rojo = 0;
-        conquista.azul = 0;
-        conquista.amarillo = 0;
-        conquista.verde = 0;
-        conquista.rojo = 0;
-        conquista.negro = 0;
         test22(colorturno);
         if(colorturno === "Rojo"){
+            if(conquista.rojo === 1 && tarjetasrojo[tarjetasrojo.length - 1].pais.nombre === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasrojo.length > i121){
                 if(tarjetasrojo[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasrojo[i121].pais){
@@ -1963,7 +2011,11 @@ function test12(colorturno) {
         };
         i121 = 0;
         i122 = 0;
-                if(colorturno === "Azul"){
+        if(colorturno === "Azul"){
+            if(conquista.azul === 1 && tarjetasazul[tarjetasazul.length - 1].pais.nombre === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasazul.length > i121){
                 if(tarjetasazul[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasazul[i121].pais){
@@ -1982,6 +2034,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Amarillo"){
+            if(conquista.amarillo === 1 && tarjetasamarillo[tarjetasamarillo.length - 1].pais.nombre === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };            
             while (tarjetasamarillo.length > i121){
                 if(tarjetasamarillo[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasamarillo[i121].pais){
@@ -2000,6 +2056,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Verde"){
+            if(conquista.verde === 1 && tarjetasverde[tarjetasverde.length - 1].pais.nombre === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasverde.length > i121){
                 if(tarjetasverde[i121].fichas > 0){
                     while(paises.length > i122 && paises.length > i122 && paises[i122] != tarjetasverde[i121].pais){
@@ -2018,6 +2078,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Magenta"){
+            if(conquista.magenta === 1 && tarjetasmagenta[tarjetasmagenta.length - 1].pais.nombre === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasmagenta.length > i121){
                 if(tarjetasmagenta[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasmagenta[i121].pais){
@@ -2036,6 +2100,10 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
          if(colorturno === "Negro"){
+            if(conquista.negro === 1 && tarjetasnegro[tarjetasnegro.length - 1].pais.nombre === ultimatarjeta){
+                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                dnuevatarjeta.showModal();
+            };
             while (tarjetasnegro.length > i121){
                 if(tarjetasnegro[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasnegro[i121].pais){
@@ -2053,6 +2121,12 @@ function test12(colorturno) {
         };
         i121 = 0;
         i122 = 0;
+        conquista.rojo = 0;
+        conquista.azul = 0;
+        conquista.amarillo = 0;
+        conquista.verde = 0;
+        conquista.magenta = 0;
+        conquista.negro = 0;
             while (colores[i121] != colorturno) {
                 i121++;
             };
@@ -2105,7 +2179,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Rojo"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.rojo;
                     };
                     i123 = 0;
                     if (fichasnuevas.azul === 0){
@@ -2115,7 +2188,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Azul"){
                     colores.splice(i123, 1);
                     }
-                    delete fichasnuevas.azul;
                     };
                     i123 = 0;
                     if (fichasnuevas.amarillo === 0){
@@ -2125,7 +2197,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Amarillo"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.amarillo;
                     };
                     i123 = 0;
                     if (fichasnuevas.verde === 0){
@@ -2135,7 +2206,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Verde"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.verde;
                     };
                     i123 = 0;
                     if (fichasnuevas.magenta === 0){
@@ -2145,7 +2215,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Magenta"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.magenta;
                     };
                     i123 = 0;
                     if (fichasnuevas.negro === 0){
@@ -2155,7 +2224,6 @@ function test12(colorturno) {
                     if(colores[i123] === "Negro"){
                     colores.splice(i123, 1);
                     };
-                    delete fichasnuevas.negro;
                     };
                     i123 = 0;
                     if (fichasnuevas.rojo % 2 === 1) {
@@ -2327,7 +2395,7 @@ function test12(colorturno) {
                 i121 = 0;
                 i122 = 0;
             };
-            actualizarInstrucciones();
+            actualizarInstrucciones(fase);
             guardarPartida();
             tselect1 = 0;
             tselect2 = 0;
@@ -2344,6 +2412,7 @@ function test12(colorturno) {
 //seleccionar pais
 function test14(pais) {
     i141 = 0;
+    i142 = 0;
     if (fase === "Atacar") {
         if (turno === pais.colorfichas && pais.fichas > 1) {
             paisseleccionado = pais;
@@ -2374,10 +2443,22 @@ function test14(pais) {
                 i141++;
             };
             if (pais.limitrofes[i141] != paisseleccionado && pais.fichas > 1) {
+                while(copiapaises.length > i142 && copiapaises[i142].nombre != pais.nombre){
+                    i142++;
+                };
+                if(copiapaises[i142].nombre === pais.nombre && copiapaises[i142].fichas > 1){
                 paisseleccionado = pais;
+                };
             };
         };
+        i142 = 0;
         if (paisreceptor === pais) {
+            while(copiapaises.length > i142 && copiapaises[i142].nombre != paisseleccionado.nombre){
+            i142++;
+            };
+            if(copiapaises[i142].nombre === paisseleccionado.nombre){
+            copiapaises[i142].fichas--;
+            };
             paisseleccionado.fichas--;
             paisreceptor.fichas++;
             test26(paisseleccionado);
@@ -2515,7 +2596,8 @@ function test14(pais) {
             };
             };
             };
-            actualizarInstrucciones();
+            actualizarInstrucciones(fase);
+            guardarPartida();
             i141 = 0;
             };
 
@@ -2612,6 +2694,7 @@ function test18() {
     };
     test26(paisconquistador);
     test26(paisconquistado);
+    guardarPartida();
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2625,6 +2708,7 @@ function test19() {
     };
     test26(paisconquistador);
     test26(paisconquistado);
+    guardarPartida();
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2691,13 +2775,11 @@ function test16(color) {
         };
         while (dadosatacante > 0) {
             dado = Math.floor(Math.random() * 6) + 1;
-            console.log(dado + " dado atacante");
             resultadosatacante.push(dado);
             dadosatacante--;
         };
         while (dadosdefensor > 0) {
             dado = Math.floor(Math.random() * 6) + 1;
-            console.log(dado + " dado defensor");
             resultadosdefensor.push(dado);
             dadosdefensor--;
         };
@@ -2769,6 +2851,7 @@ function test16(color) {
     };
         test26(paisseleccionado);
         test26(paisatacado);
+        guardarPartida();
         paisseleccionado = 0;
         paisatacado = 0;
         resultadosatacante = [];
@@ -2943,6 +3026,7 @@ mostrarTmagenta.addEventListener("click",()=> dialogTmagenta.showModal());
 cerrarTmagenta.addEventListener("click",()=> dialogTmagenta.close());
 mostrarTnegro.addEventListener("click",()=> dialogTnegro.showModal());
 cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
+cerrarnuevatarjeta.addEventListener("click",()=> dnuevatarjeta.close());
 
 configuracion.addEventListener("click", ()=> abrirMenuConfig());
 atrasConfig.addEventListener("click", ()=> menuConfig.close());
@@ -3045,12 +3129,21 @@ function obtenerEstadoJuego() {
         canjesmagenta: canjesmagenta,
         canjesnegro: canjesnegro,
     }
+
+    let objconquistas = {
+        conquistasrojo: conquista.rojo,
+        conquistasazul: conquista.azul,
+        conquistasamarillo: conquista.amarillo,
+        conquistasverde: conquista.verde,
+        conquistasmagenta: conquista.magenta,
+        conquistasnegro: conquista.negro,
+    };
     return {
       turno: turno,  
       fase: fase, 
       paises: paisesLimpios,
       tarjetasLimpias: tarjetasLimpias,
-      fncontinentes: fncontinentesLimpios,
+      fncontinentesLimpios: fncontinentesLimpios,
       fichasnuevas: fichasnuevas,
       obj1: obj1.color,
       obj2: obj2.color,
@@ -3066,6 +3159,8 @@ function obtenerEstadoJuego() {
       nobjetivos: nobjetivos,
       njugadores: njugadores,
       Arrcanjes: Arrcanjes,
+      objconquistas: objconquistas, 
+      ultimatarjeta: ultimatarjeta,
     };
   };
 
@@ -3073,8 +3168,7 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
     icarg = 0;
-    console.log("partida guardada")
-    console.log(estado.paises);
+    console.log("partida guardada");
 };
 
 //funcion cargar partida
@@ -3094,10 +3188,16 @@ function cargarPartida() {
         obj7.color = estado.obj7;
         obj8.color = estado.obj8;
         obj9.color = estado.obj9;
-
-        fncontinentes = estado.fncontinentes;
+        icarg1 = 0;
+        
+        while(fncontinentes.length > icarg1){
+        fncontinentes[icarg1].fichas = estado.fncontinentesLimpios[icarg1].fichas;
+        fncontinentes[icarg1].color = estado.fncontinentesLimpios[icarg1].color;
+        icarg1++
+        };
+        icarg1 = 0;
         fichasnuevas = estado.fichasnuevas;
-        console.log(fichasnuevas);
+        console.log(fncontinentes);
 
         ninstructor = estado.ninstructor;
         nobjetivos = estado.nobjetivos;
@@ -3110,6 +3210,13 @@ function cargarPartida() {
         canjesnegro = estado.Arrcanjes.canjesnegro;
         tarjetasLimpias = estado.tarjetasLimpias;
         paisesLimpios = estado.paises;
+        conquista.rojo = estado.objconquistas.conquistasrojo;
+        conquista.azul = estado.objconquistas.conquistasazul;
+        conquista.amarillo = estado.objconquistas.conquistasamarillo;
+        conquista.verde = estado.objconquistas.conquistasverde;
+        conquista.magenta = estado.objconquistas.conquistasmagenta;
+        conquista.negro = estado.objconquistas.conquistasnegro; 
+        ultimatarjeta = estado.ultimatarjeta;
        
          for (let icarg = 0; icarg < estado.paises.length; icarg++) {
             paises[icarg].fichas = estado.paises[icarg].fichas;
@@ -3124,7 +3231,8 @@ function cargarPartida() {
           tarjetasmagenta = [];
           tarjetasnegro = [];
           mazo = [];
-          
+          mazoreserva = [];
+
           icarg2 = 0;
           while (tpaises.length > icarg2) {
             tpaises[icarg2].fichas = estado.tarjetasLimpias[icarg2].fichas;
@@ -3144,11 +3252,17 @@ function cargarPartida() {
             } else if (tpaises[icarg2].color === "Negro") {
               tarjetasnegro.push(tpaises[icarg2]);
             } else {
-              mazo.push(tpaises[icarg2]);
+              mazoreserva.push(tpaises[icarg2]);
             }
           
             icarg2++;
           }
+          randomizador = 0;
+          while(mazoreserva.length > 0){
+          randomizador = Math.floor(Math.random() * mazoreserva.length);
+          mazo.push(mazoreserva[randomizador]);
+          mazoreserva.splice(randomizador, 1);
+          };
           
           test22("Rojo");
           test22("Azul");
@@ -3162,9 +3276,8 @@ function cargarPartida() {
             test26(paises[icarg3]);
             icarg3++;
           }
-        
+        actualizarInstrucciones(estado.fase);
     });
-    actualizarInstrucciones();
     console.log("partida cargada");
 };
 
@@ -3172,7 +3285,8 @@ function cargarPartida() {
 //cargar al reiniciar pagina
 window.onload = function() {
     if(localStorage.getItem("cargarPartidaInicio") === "true") {
-    cargarPartida();    
-    actualizarInstrucciones();
+    cargarPartida();
+    instrucciones.textContent = "";
+    actualizarInstrucciones(fase);
     }};
-actualizarInstrucciones();
+actualizarInstrucciones(fase);

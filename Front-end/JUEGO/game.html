@@ -6,6 +6,9 @@
     <title>JUEGO</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.1/soquetic-client.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
     <script src="../JUEGO/game.js" defer></script>
     <link rel="stylesheet" href="../JUEGO/game.css" />
 </head>
@@ -56,18 +59,23 @@
 
     <!-- dialogs tarjetas -->
      <dialog id="dialogTrojo">
+        <div class="dialogtarjetas">
         <div class="containertarjetas">
-        <div  id="contenidoTrojo1"></div>
+        <div id="contenidoTrojo1"></div>
         <div id="contenidoTrojo2"></div>
         <div id="contenidoTrojo3"></div>
         <div id="contenidoTrojo4"></div>
         <div id="contenidoTrojo5"></div>
         </div>
+        <div>
         <button id="canjearrojo">Canjear</button>
         <button id="restablecer1">Restablecer</button>
         <button id="cerrarTrojo">Cerrar</button>
+    </div>
+    </div>
     </dialog>
     <dialog id="dialogTazul">
+        <div class="dialogtarjetas">
         <div class="containertarjetas">
         <div id="contenidoTazul1"></div>
         <div id="contenidoTazul2"></div>
@@ -75,11 +83,15 @@
         <div id="contenidoTazul4"></div>
         <div id="contenidoTazul5"></div>
         </div>
+        <div>
         <button id="canjearazul">Canjear</button>
         <button id="restablecer2">Restablecer</button>
         <button id="cerrarTazul">Cerrar</button>
+    </div>
+    </div>
     </dialog>
     <dialog id="dialogTamarillo">
+        <div class="dialogtarjetas">
         <div class="containertarjetas">
         <div id="contenidoTamarillo1"></div>
         <div id="contenidoTamarillo2"></div>
@@ -87,11 +99,15 @@
         <div id="contenidoTamarillo4"></div>
         <div id="contenidoTamarillo5"></div>
         </div>
+        <div>
         <button id="canjearamarillo">Canjear</button>
         <button id="restablecer3">Restablecer</button>
         <button id="cerrarTamarillo">Cerrar</button>
+    </div>
+    </div>
     </dialog>
     <dialog id="dialogTverde">
+        <div class="dialogtarjetas">
         <div class="containertarjetas">
         <div id="contenidoTverde1"></div>
         <div id="contenidoTverde2"></div>
@@ -99,11 +115,15 @@
         <div id="contenidoTverde4"></div>
         <div id="contenidoTverde5"></div>
         </div>
+        <div>
         <button id="canjearverde">Canjear</button>
         <button id="restablecer4">Restablecer</button>
         <button id="cerrarTverde">Cerrar</button>
+    </div>
+    </div>
     </dialog>
     <dialog id="dialogTmagenta">
+        <div class="dialogtarjetas">
         <div class="containertarjetas">
         <div id="contenidoTmagenta1"></div>
         <div id="contenidoTmagenta2"></div>
@@ -111,11 +131,15 @@
         <div id="contenidoTmagenta4"></div>
         <div id="contenidoTmagenta5"></div>
         </div>
+        <div>
         <button id="canjearmagenta">Canjear</button>
         <button id="restablecer5">Restablecer</button>
         <button id="cerrarTmagenta">Cerrar</button>
+    </div>
+    </div>
     </dialog>
     <dialog id="dialogTnegro">
+        <div class="dialogtarjetas">
         <div class="containertarjetas">
         <div id="contenidoTnegro1"></div>
         <div id="contenidoTnegro2"></div>
@@ -123,11 +147,18 @@
         <div id="contenidoTnegro4"></div>
         <div id="contenidoTnegro5"></div>
         </div>
+        <div>
         <button id="canjearnegro">Canjear</button>
         <button id="restablecer6">Restablecer</button>
         <button id="cerrarTnegro">Cerrar</button>
+    </div>
+    </div>
     </dialog>
     
+    <dialog id="dnuevatarjeta">
+    <div id="cnuevatarjeta"></div>
+    <button id="cerrarnuevatarjeta">Cerrar</button>
+    </dialog>
 
     <!-- dialogs reagrupar -->
     <dialog id="pasarfichas1">

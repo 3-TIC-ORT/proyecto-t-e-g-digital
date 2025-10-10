@@ -14,10 +14,10 @@ newGame.addEventListener("click", () => nuevaPartida());
 cargarGame.addEventListener("click", () => cargarPartida());
 
 document.addEventListener("DOMContentLoaded", () => {
-  valorBrillo = 1;
+  if(localStorage.getItem("brillo") != "null"){
   valorBrillo = localStorage.getItem("brillo")
   valorBrillo = parseFloat(valorBrillo);
+  };
   document.body.style.filter = "brightness(" + valorBrillo + ")";
 
 });
-console.log("Brillo " + valorBrillo)

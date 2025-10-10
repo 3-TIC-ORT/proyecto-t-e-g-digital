@@ -93,7 +93,6 @@ let conquista = {
     magenta: 0,
     negro:0
 };
-let ultimatarjeta = null; 
 copiapaises = [];
 copiapais = null;
 
@@ -108,13 +107,15 @@ function abrirMenuConfig() {
 }
 
 //brillo
+  let valorBrillo = 1;
 document.addEventListener("DOMContentLoaded", () => {
   let barraBrillo = document.getElementById("barraBrillo");
-
-  let valorBrillo = localStorage.getItem("brillo") || 1;
+if(localStorage.getItem("brillo") != "null"){
+  valorBrillo = localStorage.getItem("brillo");
+  valorBrillo = parseFloat(valorBrillo);
+};
   barraBrillo.value = valorBrillo;
   document.body.style.filter = "brightness(" + valorBrillo + ")";
-
   barraBrillo.addEventListener("input", () => {
     let valorBrillo = barraBrillo.value;
     document.body.style.filter = "brightness(" + valorBrillo + ")";
@@ -124,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //checkear cargar partida (7/10)
 let checkCargar = localStorage.getItem("cargarPartidaInicio")
-console.log("cargamos de inicio?: " + checkCargar);
 if (checkCargar === "true") {
     cargarPartida;
 };
@@ -1379,7 +1379,6 @@ iactins1 = 0;
 iactins2 = 0;
 iactins3 = [];
 texto = ""
-console.log(fase);
 };
 
 function cambiarInstructor() {
@@ -1847,7 +1846,6 @@ function test12(colorturno) {
             i127++;
             };
             copiapaises = JSON.parse(JSON.stringify(copiapaises));
-            console.log(copiapaises);
             i127= 0;
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
@@ -1922,78 +1920,17 @@ function test12(colorturno) {
     else if (fase === "Reagrupar"){
         i121 = 0;
         i122 = 0;
-         if(colorturno === "Rojo" && conquista.rojo === 1){
+        if(colorturno === "Rojo"){
+            if(conquista.rojo === 1){
             if(tarjetasrojo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Rojo"
                 tarjetasrojo.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0;
-            } else if(tarjetasrojo.length === 5){
-                conquista.rojo = 0;
-            };
-            };
-             if(colorturno === "Azul" && conquista.azul === 1){
-                if(tarjetasazul.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Azul"
-                tarjetasazul.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0;
-                } else if(tarjetasazul.length === 5){
-                    conquista.azul = 0;
-                };
-            };
-             if(colorturno === "Amarillo" && conquista.amarillo === 1){
-                if(tarjetasamarillo.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Amarillo"
-                tarjetasamarillo.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0; 
-                } else if(tarjetasamarillo.length === 5){
-                    conquista.amarillo = 0;
-                };
-            };
-             if(colorturno === "Verde" && conquista.verde === 1){
-                if(tarjetasverde.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Verde"
-                tarjetasverde.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0; 
-                } else if(tarjetasverde.length === 5){
-                    conquista.verde = 0;
-                };
-            };
-             if(colorturno === "Magenta" && conquista.magenta === 1){
-                if(tarjetasmagenta.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Magenta"
-                tarjetasmagenta.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0;
-                } else if(tarjetasmagenta.length === 5){
-                    conquista.magenta = 0;
-                };
-            };
-             if(colorturno === "Negro" && conquista.negro === 1){
-                if(tarjetasnegro.length < 5){
-                tarjetareserva = mazo.shift();
-                tarjetareserva.color = "Negro"
-                tarjetasnegro.push(tarjetareserva);
-                ultimatarjeta = tarjetareserva.pais.nombre;
-                tarjetareserva = 0; 
-                } else if(tarjetasnegro.length === 5){
-                    conquista.negro = 0
-                };
-            };
-        test22(colorturno);
-        if(colorturno === "Rojo"){
-            if(conquista.rojo === 1 && tarjetasrojo[tarjetasrojo.length - 1].pais.nombre === ultimatarjeta){
-                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+                cnuevatarjeta.textContent = "Se añadió " + tarjetareserva.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
+                tarjetareserva = 0;
             };
+        };
             while (tarjetasrojo.length > i121){
                 if(tarjetasrojo[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasrojo[i121].pais){
@@ -2008,20 +1945,23 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
-        };
-        i121 = 0;
-        i122 = 0;
-        if(colorturno === "Azul"){
-            if(conquista.azul === 1 && tarjetasazul[tarjetasazul.length - 1].pais.nombre === ultimatarjeta){
-                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+        } else if(colorturno === "Azul"){
+            if(conquista.azul === 1){
+            if(tarjetasazul.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Azul"
+                tarjetasazul.push(tarjetareserva);
+                cnuevatarjeta.textContent = "Se añadió " + tarjetareserva.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
+                tarjetareserva = 0;
             };
+        };
             while (tarjetasazul.length > i121){
                 if(tarjetasazul[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasazul[i121].pais){
                         i122++;
                     };
-                if(paises[i122].colorfichas === tarjetasazul[i121].color){
+                if(paises[i122] === tarjetasazul[i121].pais && paises[i122].colorfichas === tarjetasazul[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasazul[i121].fichas;
                     test26(paises[i122]);
                     tarjetasazul[i121].fichas = 0;
@@ -2030,20 +1970,23 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
-        };
-        i121 = 0;
-        i122 = 0;
-        if(colorturno === "Amarillo"){
-            if(conquista.amarillo === 1 && tarjetasamarillo[tarjetasamarillo.length - 1].pais.nombre === ultimatarjeta){
-                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+        } else if(colorturno === "Amarillo"){
+            if(conquista.amarillo === 1){
+            if(tarjetasamarillo.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Amarillo"
+                tarjetasamarillo.push(tarjetareserva);
+                cnuevatarjeta.textContent = "Se añadió " + tarjetareserva.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
-            };            
+                tarjetareserva = 0;
+            };
+        };
             while (tarjetasamarillo.length > i121){
                 if(tarjetasamarillo[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasamarillo[i121].pais){
                         i122++;
                     };
-                if(paises[i122].colorfichas === tarjetasamarillo[i121].color){
+                if(paises[i122] === tarjetasamarillo[i121].pais && paises[i122].colorfichas === tarjetasamarillo[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasamarillo[i121].fichas;
                     test26(paises[i122]);
                     tarjetasamarillo[i121].fichas = 0;
@@ -2052,20 +1995,23 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
-        };
-        i121 = 0;
-        i122 = 0;
-        if(colorturno === "Verde"){
-            if(conquista.verde === 1 && tarjetasverde[tarjetasverde.length - 1].pais.nombre === ultimatarjeta){
-                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+        } else if(colorturno === "Verde"){
+            if(conquista.verde === 1){
+            if(tarjetasverde.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Verde"
+                tarjetasverde.push(tarjetareserva);
+                cnuevatarjeta.textContent = "Se añadió " + tarjetareserva.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
+                tarjetareserva = 0;
             };
+        };
             while (tarjetasverde.length > i121){
                 if(tarjetasverde[i121].fichas > 0){
-                    while(paises.length > i122 && paises.length > i122 && paises[i122] != tarjetasverde[i121].pais){
+                    while(paises.length > i122 && paises[i122] != tarjetasverde[i121].pais){
                         i122++;
                     };
-                if(paises[i122].colorfichas === tarjetasverde[i121].color){
+                if(paises[i122] === tarjetasverde[i121].pais && paises[i122].colorfichas === tarjetasverde[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasverde[i121].fichas;
                     test26(paises[i122]);
                     tarjetasverde[i121].fichas = 0;
@@ -2074,20 +2020,23 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
-        };
-        i121 = 0;
-        i122 = 0;
-        if(colorturno === "Magenta"){
-            if(conquista.magenta === 1 && tarjetasmagenta[tarjetasmagenta.length - 1].pais.nombre === ultimatarjeta){
-                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+        } else if(colorturno === "Magenta"){
+            if(conquista.magenta === 1){
+            if(tarjetasmagenta.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Magenta"
+                tarjetasmagenta.push(tarjetareserva);
+                cnuevatarjeta.textContent = "Se añadió " + tarjetareserva.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
+                tarjetareserva = 0;
             };
+        };
             while (tarjetasmagenta.length > i121){
                 if(tarjetasmagenta[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasmagenta[i121].pais){
                         i122++;
                     };
-                if(paises[i122].colorfichas === tarjetasmagenta[i121].color){
+                if(paises[i122] === tarjetasmagenta[i121].pais && paises[i122].colorfichas === tarjetasmagenta[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasmagenta[i121].fichas;
                     test26(paises[i122]);
                     tarjetasmagenta[i121].fichas = 0;
@@ -2096,20 +2045,23 @@ function test12(colorturno) {
                 i121++;
                 i122 = 0;
             };
-        };
-        i121 = 0;
-        i122 = 0;
-         if(colorturno === "Negro"){
-            if(conquista.negro === 1 && tarjetasnegro[tarjetasnegro.length - 1].pais.nombre === ultimatarjeta){
-                cnuevatarjeta.textContent = "Se añadió " + ultimatarjeta + " a tus tarjetas."
+        } else if(colorturno === "Negro"){
+            if(conquista.negro === 1){
+            if(tarjetasnegro.length < 5){
+                tarjetareserva = mazo.shift();
+                tarjetareserva.color = "Negro"
+                tarjetasnegro.push(tarjetareserva);
+                cnuevatarjeta.textContent = "Se añadió " + tarjetareserva.pais.nombre + " a tus tarjetas."
                 dnuevatarjeta.showModal();
+                tarjetareserva = 0;
             };
+        };
             while (tarjetasnegro.length > i121){
                 if(tarjetasnegro[i121].fichas > 0){
                     while(paises.length > i122 && paises[i122] != tarjetasnegro[i121].pais){
                         i122++;
                     };
-                if(paises[i122].colorfichas === tarjetasnegro[i121].color){
+                if(paises[i122] === tarjetasnegro[i121].pais && paises[i122].colorfichas === tarjetasnegro[i121].color){
                     paises[i122].fichas = paises[i122].fichas + tarjetasnegro[i121].fichas;
                     test26(paises[i122]);
                     tarjetasnegro[i121].fichas = 0;
@@ -2119,6 +2071,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
         };
+        test22(colorturno);
         i121 = 0;
         i122 = 0;
         conquista.rojo = 0;
@@ -3119,7 +3072,6 @@ function obtenerEstadoJuego() {
     let fncontinentesLimpios = fncontinentes.map(c => ({
       fichas: c.fichas,
       color: c.color,
-      continente: c.continente,
     }));
 
     let Arrcanjes = {
@@ -3161,7 +3113,6 @@ function obtenerEstadoJuego() {
       njugadores: njugadores,
       Arrcanjes: Arrcanjes,
       objconquistas: objconquistas, 
-      ultimatarjeta: ultimatarjeta,
       copiapaises: copiapaises,
     };
   };
@@ -3170,7 +3121,6 @@ function guardarPartida() {
     let estado = obtenerEstadoJuego();
     postEvent("guardarEstado", estado);
     icarg = 0;
-    console.log("partida guardada");
 };
 
 //funcion cargar partida
@@ -3195,12 +3145,10 @@ function cargarPartida() {
         while(fncontinentes.length > icarg1){
         fncontinentes[icarg1].fichas = estado.fncontinentesLimpios[icarg1].fichas;
         fncontinentes[icarg1].color = estado.fncontinentesLimpios[icarg1].color;
-        fncontinentes[icarg1].continente = estado.fncontinentesLimpios[icarg1].continente;
         icarg1++
         };
         icarg1 = 0;
         fichasnuevas = estado.fichasnuevas;
-        console.log(fncontinentes);
 
         ninstructor = estado.ninstructor;
         nobjetivos = estado.nobjetivos;
@@ -3219,7 +3167,6 @@ function cargarPartida() {
         conquista.verde = estado.objconquistas.conquistasverde;
         conquista.magenta = estado.objconquistas.conquistasmagenta;
         conquista.negro = estado.objconquistas.conquistasnegro; 
-        ultimatarjeta = estado.ultimatarjeta;
         copiapaises = estado.copiapaises;
        
          for (let icarg = 0; icarg < estado.paises.length; icarg++) {
@@ -3282,7 +3229,6 @@ function cargarPartida() {
           }
         actualizarInstrucciones(estado.fase);
     });
-    console.log("partida cargada");
 };
 
 

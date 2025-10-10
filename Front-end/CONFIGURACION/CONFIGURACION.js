@@ -1,7 +1,10 @@
+
+let valorBrillo = 1;
 document.addEventListener("DOMContentLoaded", () => {
   let barraBrillo = document.getElementById("barraBrillo");
-
-  let valorBrillo = localStorage.getItem("brillo") || 1;
+  if(localStorage.getItem("brillo") != "null"){
+  valorBrillo = localStorage.getItem("brillo");
+  };
   barraBrillo.value = valorBrillo;
   document.body.style.filter = "brightness(" + valorBrillo + ")";
 

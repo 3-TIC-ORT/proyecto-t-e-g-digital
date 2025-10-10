@@ -3207,6 +3207,7 @@ icarg5 = 0;
         conquista.magenta = estado.objconquistas.conquistasmagenta;
         conquista.negro = estado.objconquistas.conquistasnegro; 
         copiapaises = estado.copiapaises;
+        colores = estado.Acolores;
        
          for (let icarg = 0; icarg < estado.paises.length; icarg++) {
             paises[icarg].fichas = estado.paises[icarg].fichas;

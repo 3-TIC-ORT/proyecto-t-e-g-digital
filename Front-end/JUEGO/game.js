@@ -65,6 +65,7 @@ let icarg1 = 0;
 let icarg2 = 0;
 let icarg3 = 0;
 let icarg4 = 0;
+let icarg5 = 0;
 let iactins1 = 0;
 let iactins2 = 0;
 let iactins3 = [];
@@ -3140,6 +3141,44 @@ function cargarPartida() {
         obj7.color = estado.obj7;
         obj8.color = estado.obj8;
         obj9.color = estado.obj9;
+        icarg5 = 0;
+while(objetivos.length > icarg5 && objetivos[icarg5].color != "Rojo"){
+    icarg5++;
+};
+if (objetivos.length > icarg5 && objetivos[icarg5].color === "Rojo"){
+contenidorojo.textContent = objetivos[icarg5].string;}
+icarg5 = 0;
+while(objetivos.length > icarg5 && objetivos[icarg5].color != "Azul"){
+    icarg5++;
+};
+if (objetivos.length > icarg5 && objetivos[icarg5].color === "Azul"){
+    contenidoazul.textContent = objetivos[icarg5].string;}
+icarg5 = 0;
+while(objetivos.length > icarg5 && objetivos[icarg5].color != "Amarillo"){
+    icarg5++;
+};
+if (objetivos.length > icarg5 && objetivos[icarg5].color === "Amarillo"){
+    contenidoamarillo.textContent = objetivos[icarg5].string;}
+icarg5 = 0;
+while(objetivos.length > icarg5 && objetivos[icarg5].color != "Verde"){
+    icarg5++;
+};
+if (objetivos.length > icarg5 && objetivos[icarg5].color === "Verde"){
+    contenidoverde.textContent = objetivos[icarg5].string;}
+icarg5 = 0;
+while(objetivos.length > icarg5 && objetivos[icarg5].color != "Magenta"){
+    icarg5++;
+};
+if (objetivos.length > icarg5 && objetivos[icarg5].color === "Magenta"){
+    contenidomagenta.textContent = objetivos[icarg5].string;}
+icarg5 = 0;
+while(objetivos.length > icarg5 && objetivos[icarg5].color != "Negro"){
+    icarg5++;
+};
+if (objetivos.length > icarg5 && objetivos[icarg5].color === "Negro"){
+    contenidonegro.textContent = objetivos[icarg5].string;}
+icarg5 = 0;
+
         icarg1 = 0;
         
         while(fncontinentes.length > icarg1){

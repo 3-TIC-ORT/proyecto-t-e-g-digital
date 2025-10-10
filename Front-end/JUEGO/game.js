@@ -60,6 +60,8 @@ let i221 = 0;
 let i241 = 0;
 let i242 = 0;
 let i261 = 0;
+let i271 = 0;
+let i272 = 0;
 let icarg = 0;
 let icarg1 = 0;
 let icarg2 = 0;
@@ -94,8 +96,10 @@ let conquista = {
     magenta: 0,
     negro:0
 };
-copiapaises = [];
-copiapais = null;
+let copiapaises = [];
+let copiapais = null;
+let npaises = 0;
+let coloratacado = null;
 
 //menu pausa
 function abrirMenuPausa() {
@@ -130,7 +134,7 @@ if (checkCargar === "true") {
     cargarPartida;
 };
 
-//cantidad jugadores y test
+//cantidad jugadores
 let njugadores = 2;
 njugadores = localStorage.getItem("njugadores");
 njugadores = parseInt(njugadores);
@@ -139,10 +143,11 @@ if(njugadoresTest === null) {
         njugadores = 2
     };
 
-let nobjetivos = "true";
+//Condición de victoria
+let nobjetivos = "false";
 nobjetivos = localStorage.getItem("nobjetivos");
 if (nobjetivos === null) {
-    nobjetivos = "true"
+    nobjetivos = "false"
 };
 
 //declaracion (dialogs) 
@@ -928,6 +933,7 @@ norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, 
 //Declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
 
+//Declaración tarjetas de países
 let taustralia = {
     pais: australia,
     fichas: 2,
@@ -1238,6 +1244,7 @@ let tarjetasverde = [];
 let tarjetasmagenta = [];
 let tarjetasnegro = []; 
 let mazoreserva = [];
+
 //Numero de jugadores
 i = 0;
 while(njugadores > i){
@@ -1267,6 +1274,8 @@ test26(paises[randomizador]);
 };
 i = 0;
 i2 = 0;
+
+//Mezclar tarjetas países
 while(tpaises.length > i){
     randomizador = Math.floor(Math.random() * tpaises.length);
     i2 = 0;
@@ -1518,6 +1527,7 @@ while(tarjetasnegro.length > i221){
 i221 = 0;
 };
 
+//Seleccionar tarjeta
 function test23(tarjeta){
 if(tarjeta.color === turno && fase === "Incorporar"){
 if(tselect1 === 0){
@@ -1535,6 +1545,7 @@ test22(turno);
 };
 };
 
+//Ejecutar canjes
 function test25(color){
     if(color === "Rojo"){
     if(2 >= canjesrojo){
@@ -1922,7 +1933,7 @@ function test12(colorturno) {
         i121 = 0;
         i122 = 0;
         if(colorturno === "Rojo"){
-            if(conquista.rojo === 1){
+            if((2 >= canjesrojo && conquista.rojo >= 1) || (canjesrojo >= 3 && conquista.rojo >= 2)){
             if(tarjetasrojo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Rojo"
@@ -1947,7 +1958,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
         } else if(colorturno === "Azul"){
-            if(conquista.azul === 1){
+            if((2 >= canjesazul && conquista.azul >= 1) || (canjesazul >= 3 && conquista.azul >= 2)){
             if(tarjetasazul.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Azul"
@@ -1972,7 +1983,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
         } else if(colorturno === "Amarillo"){
-            if(conquista.amarillo === 1){
+            if((2 >= canjesamarillo && conquista.amarillo >= 1) || (canjesamarillo >= 3 && conquista.amarillo >= 2)){
             if(tarjetasamarillo.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Amarillo"
@@ -1997,7 +2008,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
         } else if(colorturno === "Verde"){
-            if(conquista.verde === 1){
+            if((2 >= canjesverde && conquista.verde >= 1) || (canjesverde >= 3 && conquista.verde >= 2)){
             if(tarjetasverde.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Verde"
@@ -2022,7 +2033,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
         } else if(colorturno === "Magenta"){
-            if(conquista.magenta === 1){
+            if((2 >= canjesmagenta && conquista.magenta >= 1) || (canjesmagenta >= 3 && conquista.magenta >= 2)){
             if(tarjetasmagenta.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Magenta"
@@ -2047,7 +2058,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
         } else if(colorturno === "Negro"){
-            if(conquista.negro === 1){
+            if((2 >= canjesnegro && conquista.negro >= 1) || (canjesnegro >= 3 && conquista.negro >= 2)){
             if(tarjetasnegro.length < 5){
                 tarjetareserva = mazo.shift();
                 tarjetareserva.color = "Negro"
@@ -2125,61 +2136,6 @@ function test12(colorturno) {
                     }
                     i122++;
                     };
-                    i123 = 0;
-                    if (fichasnuevas.rojo === 0){
-                    while(colores.length > i123 && colores[i123] != "Rojo"){
-                    i123++;
-                    };
-                    if(colores[i123] === "Rojo"){
-                    colores.splice(i123, 1);
-                    };
-                    };
-                    i123 = 0;
-                    if (fichasnuevas.azul === 0){
-                    while(colores.length > i123 && colores[i123] != "Azul"){
-                    i123++;
-                    };
-                    if(colores[i123] === "Azul"){
-                    colores.splice(i123, 1);
-                    }
-                    };
-                    i123 = 0;
-                    if (fichasnuevas.amarillo === 0){
-                    while(colores.length > i123 && colores[i123] != "Amarillo"){
-                    i123++;
-                    };
-                    if(colores[i123] === "Amarillo"){
-                    colores.splice(i123, 1);
-                    };
-                    };
-                    i123 = 0;
-                    if (fichasnuevas.verde === 0){
-                    while(colores.length > i123 && colores[i123] != "Verde"){
-                    i123++;
-                    };
-                    if(colores[i123] === "Verde"){
-                    colores.splice(i123, 1);
-                    };
-                    };
-                    i123 = 0;
-                    if (fichasnuevas.magenta === 0){
-                    while(colores.length > i123 && colores[i123] != "Magenta"){
-                    i123++;
-                    };
-                    if(colores[i123] === "Magenta"){
-                    colores.splice(i123, 1);
-                    };
-                    };
-                    i123 = 0;
-                    if (fichasnuevas.negro === 0){
-                    while(colores.length > i123 && colores[i123] != "Negro"){
-                    i123++;
-                    };
-                    if(colores[i123] === "Negro"){
-                    colores.splice(i123, 1);
-                    };
-                    };
-                    i123 = 0;
                     if (fichasnuevas.rojo % 2 === 1) {
                         fichasnuevas.rojo--;
                     };
@@ -2555,7 +2511,7 @@ function test14(pais) {
             i141 = 0;
             };
 
-//Condición de victoria
+//Checkear ganador
 function test17(colour){
     i171 = 0;
     i172 = 0;
@@ -2666,27 +2622,30 @@ function test19() {
     paisconquistado = 0;
     paisconquistador = 0;
 };
+
+//Conquistas por turno
 function test21(color){
-if(color === "Rojo" && conquista.rojo === 0){
-    conquista.rojo = 1;
+if(color === "Rojo"){
+    conquista.rojo++;
 };
-if(color === "Azul" && conquista.azul === 0){
-    conquista.azul = 1;
+if(color === "Azul"){
+    conquista.azul++;
 };
-if(color === "Amarillo" && conquista.amarillo === 0){
-    conquista.amarillo = 1;
+if(color === "Amarillo"){
+    conquista.amarillo++;
 };
-if(color === "Verde" && conquista.verde === 0){
-    conquista.verde = 1;
+if(color === "Verde"){
+    conquista.verde++;
 };
-if(color === "Magenta" && conquista.magenta === 0){
-    conquista.magenta = 1;
+if(color === "Magenta"){
+    conquista.magenta++;
 };
-if(color === "Negro" && conquista.negro === 0){
-    conquista.negro = 1;
+if(color === "Negro"){
+    conquista.negro++;
 };
 };
 
+//Actualizar país
 function test26(pais) {
          if (pais.colorfichas === "Rojo") {
             pais.id.style.backgroundColor = "red";
@@ -2708,6 +2667,29 @@ function test26(pais) {
             pais.id.style.color = "white";
         };
         pais.id.textContent = pais.fichas;
+};
+
+function test27(color){
+    i271 = 0;
+    i272 = 0;
+    npaises = 0;
+    while(paises.length > i271){
+        if(paises[i271].colorfichas === color){
+            npaises++;
+        };
+        i271++;
+    };
+    if (npaises === 0){
+    while(colores.length > i272 && colores[i272] != color){
+        i272++;
+    };
+    if(colores[i272] === color){
+    colores.splice(i272, 1);
+    };
+    };
+    i271 = 0;
+    i272 = 0;
+    npaises = 0;
 };
 
 //Simular ataques
@@ -2788,9 +2770,11 @@ function test16(color) {
         if (paisatacado.fichas === 0) {
             paisatacado.fichas++;
             paisseleccionado.fichas--;
+            coloratacado = paisatacado.colorfichas;
             paisatacado.colorfichas = paisseleccionado.colorfichas;
             test17(color);
             test21(color);
+            test27(coloratacado);
         if(paisseleccionado.fichas === 2){
         resultadodados.close();
         paisconquistador = paisseleccionado;

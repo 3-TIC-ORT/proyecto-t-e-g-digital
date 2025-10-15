@@ -1,5 +1,5 @@
 {
-  "turno": "Negro",
+  "turno": "Rojo",
   "fase": "Incorporar",
   "paises": [
     {
@@ -44,7 +44,7 @@
     },
     {
       "nombre": "Islandia",
-      "fichas": 11,
+      "fichas": 16,
       "color": "Negro"
     },
     {
@@ -114,7 +114,7 @@
     },
     {
       "nombre": "Colombia",
-      "fichas": 1,
+      "fichas": 6,
       "color": "Rojo"
     },
     {
@@ -582,12 +582,12 @@
     }
   ],
   "fichasnuevas": {
-    "rojo": 5,
+    "rojo": 0,
     "azul": 4,
     "amarillo": 5,
     "verde": 0,
     "magenta": 3,
-    "negro": 5
+    "negro": 0
   },
   "obj1": "Magenta",
   "obj2": "Rojo",

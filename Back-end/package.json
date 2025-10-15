@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "https://www.figma.com/design/dd9kTpDbVFlOJxGVjprEdl/Dise%C3%B1o-del-TEG?node-id=0-1&t=VK76xxjLZeBhjEwF-1",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

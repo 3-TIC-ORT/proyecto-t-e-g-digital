@@ -1,61 +1,70 @@
 {
   "turno": "Rojo",
+<<<<<<< HEAD
   "fase": "Incorporar",
+=======
+  "fase": "Atacar",
+>>>>>>> d7729040a093e5a2dd60fa2e3f3c86feba05960c
   "paises": [
     {
       "nombre": "Rusia",
-      "fichas": 13,
-      "color": "Amarillo"
+      "fichas": 6,
+      "color": "Rojo"
     },
     {
       "nombre": "Alemania",
-      "fichas": 6,
-      "color": "Verde"
+      "fichas": 17,
+      "color": "Rojo"
     },
     {
       "nombre": "Suecia",
       "fichas": 1,
-      "color": "Negro"
+      "color": "Rojo"
     },
     {
       "nombre": "Polonia",
-      "fichas": 1,
-      "color": "Verde"
+      "fichas": 9,
+      "color": "Rojo"
     },
     {
       "nombre": "Italia",
-      "fichas": 1,
-      "color": "Azul"
+      "fichas": 3,
+      "color": "Rojo"
     },
     {
       "nombre": "Francia",
-      "fichas": 3,
-      "color": "Azul"
+      "fichas": 1,
+      "color": "Rojo"
     },
     {
       "nombre": "España",
-      "fichas": 4,
-      "color": "Azul"
+      "fichas": 1,
+      "color": "Rojo"
     },
     {
       "nombre": "Gran Bretaña",
       "fichas": 1,
-      "color": "Verde"
+      "color": "Rojo"
     },
     {
       "nombre": "Islandia",
+<<<<<<< HEAD
       "fichas": 16,
       "color": "Negro"
+=======
+      "fichas": 1,
+      "color": "Rojo"
+>>>>>>> d7729040a093e5a2dd60fa2e3f3c86feba05960c
     },
     {
       "nombre": "Alaska",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Rojo"
     },
     {
       "nombre": "Canadá",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Rojo"
     },
     {
       "nombre": "Yukon",
@@ -65,12 +74,12 @@
     {
       "nombre": "Oregon",
       "fichas": 1,
-      "color": "Verde"
+      "color": "Rojo"
     },
     {
       "nombre": "Nueva York",
       "fichas": 1,
-      "color": "Negro"
+      "color": "Rojo"
     },
     {
       "nombre": "Terranova",
@@ -79,23 +88,23 @@
     },
     {
       "nombre": "Labrador",
-      "fichas": 1,
-      "color": "Negro"
+      "fichas": 9,
+      "color": "Azul"
     },
     {
       "nombre": "Groenlandia",
-      "fichas": 3,
-      "color": "Negro"
+      "fichas": 12,
+      "color": "Azul"
     },
     {
       "nombre": "California",
       "fichas": 1,
-      "color": "Negro"
+      "color": "Azul"
     },
     {
       "nombre": "México",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Rojo"
     },
     {
       "nombre": "Chile",
@@ -109,7 +118,7 @@
     },
     {
       "nombre": "Argentina",
-      "fichas": 11,
+      "fichas": 2,
       "color": "Rojo"
     },
     {
@@ -120,7 +129,7 @@
     {
       "nombre": "Brasil",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Rojo"
     },
     {
       "nombre": "Uruguay",
@@ -130,12 +139,12 @@
     {
       "nombre": "Sahara",
       "fichas": 1,
-      "color": "Azul"
+      "color": "Rojo"
     },
     {
       "nombre": "Egipto",
-      "fichas": 2,
-      "color": "Verde"
+      "fichas": 3,
+      "color": "Rojo"
     },
     {
       "nombre": "Etiopía",
@@ -145,7 +154,7 @@
     {
       "nombre": "Zaire",
       "fichas": 1,
-      "color": "Negro"
+      "color": "Azul"
     },
     {
       "nombre": "Sudáfrica",
@@ -160,57 +169,57 @@
     {
       "nombre": "Irán",
       "fichas": 1,
-      "color": "Verde"
+      "color": "Rojo"
     },
     {
       "nombre": "Japón",
-      "fichas": 1,
-      "color": "Negro"
+      "fichas": 9,
+      "color": "Azul"
     },
     {
       "nombre": "Gobi",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Rojo"
     },
     {
       "nombre": "Mongolia",
-      "fichas": 5,
-      "color": "Amarillo"
+      "fichas": 1,
+      "color": "Rojo"
     },
     {
       "nombre": "Kamchatka",
-      "fichas": 3,
-      "color": "Negro"
+      "fichas": 1,
+      "color": "Rojo"
     },
     {
       "nombre": "Turquía",
-      "fichas": 8,
-      "color": "Rojo"
+      "fichas": 1,
+      "color": "Azul"
     },
     {
       "nombre": "Israel",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Rojo"
     },
     {
       "nombre": "Arabia",
       "fichas": 1,
-      "color": "Rojo"
+      "color": "Azul"
     },
     {
       "nombre": "Siberia",
-      "fichas": 9,
-      "color": "Verde"
+      "fichas": 15,
+      "color": "Rojo"
     },
     {
       "nombre": "Taimir",
-      "fichas": 1,
-      "color": "Amarillo"
+      "fichas": 9,
+      "color": "Azul"
     },
     {
       "nombre": "Tartaria",
       "fichas": 1,
-      "color": "Negro"
+      "color": "Rojo"
     },
     {
       "nombre": "Aral",
@@ -220,22 +229,22 @@
     {
       "nombre": "China",
       "fichas": 1,
-      "color": "Amarillo"
+      "color": "Azul"
     },
     {
       "nombre": "Malasia",
       "fichas": 1,
-      "color": "Verde"
+      "color": "Rojo"
     },
     {
       "nombre": "India",
       "fichas": 1,
-      "color": "Verde"
+      "color": "Rojo"
     },
     {
       "nombre": "Sumatra",
       "fichas": 1,
-      "color": "Negro"
+      "color": "Rojo"
     },
     {
       "nombre": "Java",
@@ -245,7 +254,7 @@
     {
       "nombre": "Borneo",
       "fichas": 1,
-      "color": "Verde"
+      "color": "Azul"
     },
     {
       "nombre": "Australia",
@@ -287,7 +296,7 @@
     {
       "pais": "Malasia",
       "simbolo": "Cañon",
-      "color": "Azul",
+      "color": "",
       "fichas": 2
     },
     {
@@ -407,8 +416,8 @@
     {
       "pais": "Rusia",
       "simbolo": "Globo",
-      "color": "Amarillo",
-      "fichas": 0
+      "color": "",
+      "fichas": 2
     },
     {
       "pais": "Suecia",
@@ -419,8 +428,8 @@
     {
       "pais": "Alemania",
       "simbolo": "Fragata",
-      "color": "",
-      "fichas": 2
+      "color": "Rojo",
+      "fichas": 0
     },
     {
       "pais": "Polonia",
@@ -437,8 +446,8 @@
     {
       "pais": "Egipto",
       "simbolo": "Globo",
-      "color": "",
-      "fichas": 2
+      "color": "Rojo",
+      "fichas": 0
     },
     {
       "pais": "Etiopía",
@@ -473,8 +482,8 @@
     {
       "pais": "Francia",
       "simbolo": "Globo",
-      "color": "Azul",
-      "fichas": 0
+      "color": "",
+      "fichas": 2
     },
     {
       "pais": "Oregon",
@@ -485,7 +494,7 @@
     {
       "pais": "España",
       "simbolo": "Globo",
-      "color": "Verde",
+      "color": "",
       "fichas": 2
     },
     {
@@ -533,7 +542,7 @@
     {
       "pais": "Yukon",
       "simbolo": "Globo",
-      "color": "Negro",
+      "color": "",
       "fichas": 2
     },
     {
@@ -545,7 +554,7 @@
     {
       "pais": "Labrador",
       "simbolo": "Cañon",
-      "color": "Rojo",
+      "color": "",
       "fichas": 2
     },
     {
@@ -574,7 +583,7 @@
     },
     {
       "fichas": 0,
-      "color": ""
+      "color": "Rojo"
     },
     {
       "fichas": 0,
@@ -583,31 +592,36 @@
   ],
   "fichasnuevas": {
     "rojo": 0,
+<<<<<<< HEAD
     "azul": 4,
     "amarillo": 5,
     "verde": 0,
     "magenta": 3,
     "negro": 0
+=======
+    "azul": 0,
+    "amarillo": 3,
+    "verde": 3,
+    "magenta": 3,
+    "negro": 3
+>>>>>>> d7729040a093e5a2dd60fa2e3f3c86feba05960c
   },
-  "obj1": "Magenta",
+  "obj1": "",
   "obj2": "Rojo",
-  "obj3": "Azul",
-  "obj4": "Negro",
-  "obj5": "Amarillo",
+  "obj3": "",
+  "obj4": "",
+  "obj5": "Azul",
   "obj6": "",
   "obj7": "",
   "obj8": "",
-  "obj9": "Verde",
+  "obj9": "",
   "Acolores": [
-    "Verde",
-    "Negro",
-    "Rojo",
     "Azul",
-    "Amarillo"
+    "Rojo"
   ],
   "ninstructor": "true",
   "nobjetivos": "true",
-  "njugadores": 6,
+  "njugadores": 2,
   "Arrcanjes": {
     "canjesrojo": 0,
     "canjesazul": 0,
@@ -617,7 +631,7 @@
     "canjesnegro": 0
   },
   "objconquistas": {
-    "conquistasrojo": 0,
+    "conquistasrojo": 1,
     "conquistasazul": 0,
     "conquistasamarillo": 0,
     "conquistasverde": 0,

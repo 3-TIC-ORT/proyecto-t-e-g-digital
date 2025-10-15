@@ -2531,14 +2531,17 @@ function test17(colour){
     };
     if(nobjetivos === "true" || nobjetivos === "false"){
     if (i172 >= 30){
-        mensajefinal.textContent = "Ganó el " + colour;
-
+        pasarfichas1.close();
+        pasarfichas2.close();
+        mensajefinal.textContent = "El " + colour + " completó el objetivo común de 30 países.";
         fin.showModal();
     };
     };
     if(nobjetivos === "dominacion"){
     if (i172 === 50){
-        mensajefinal.textContent = "Ganó el " + colour;
+        pasarfichas1.close();
+        pasarfichas2.close();
+        mensajefinal.textContent = "El " + colour + " logró la dominación mundial";
         fin.showModal();
     };
     };
@@ -2589,8 +2592,9 @@ function test17(colour){
     };
     i174 = 0;
         if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].sudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
-        resultadodados.close();
-        mensajefinal.textContent = "Ganó el " + colour;
+        pasarfichas1.close();
+        pasarfichas2.close();
+        mensajefinal.textContent = "El " + colour + " completó su objetivo secreto: " + objetivos[i173].string;
         fin.showModal();
     };
 };
@@ -2772,20 +2776,19 @@ function test16(color) {
             paisseleccionado.fichas--;
             coloratacado = paisatacado.colorfichas;
             paisatacado.colorfichas = paisseleccionado.colorfichas;
-            test17(color);
-            test21(color);
-            test27(coloratacado);
         if(paisseleccionado.fichas === 2){
-        resultadodados.close();
         paisconquistador = paisseleccionado;
         paisconquistado = paisatacado;
         pasarfichas1.showModal();
         } else if (paisseleccionado.fichas >= 3){
-        resultadodados.close();
         paisconquistador = paisseleccionado;
         paisconquistado = paisatacado;
         pasarfichas2.showModal();
         };
+        test17(color);
+        test21(color);
+        test27(coloratacado);
+        resultadodados.close();
     };
         test26(paisseleccionado);
         test26(paisatacado);

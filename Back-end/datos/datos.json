@@ -1,10 +1,6 @@
 {
   "turno": "Rojo",
-<<<<<<< HEAD
   "fase": "Incorporar",
-=======
-  "fase": "Atacar",
->>>>>>> d7729040a093e5a2dd60fa2e3f3c86feba05960c
   "paises": [
     {
       "nombre": "Rusia",
@@ -48,13 +44,8 @@
     },
     {
       "nombre": "Islandia",
-<<<<<<< HEAD
       "fichas": 16,
       "color": "Negro"
-=======
-      "fichas": 1,
-      "color": "Rojo"
->>>>>>> d7729040a093e5a2dd60fa2e3f3c86feba05960c
     },
     {
       "nombre": "Alaska",
@@ -592,19 +583,11 @@
   ],
   "fichasnuevas": {
     "rojo": 0,
-<<<<<<< HEAD
     "azul": 4,
     "amarillo": 5,
     "verde": 0,
     "magenta": 3,
     "negro": 0
-=======
-    "azul": 0,
-    "amarillo": 3,
-    "verde": 3,
-    "magenta": 3,
-    "negro": 3
->>>>>>> d7729040a093e5a2dd60fa2e3f3c86feba05960c
   },
   "obj1": "",
   "obj2": "Rojo",

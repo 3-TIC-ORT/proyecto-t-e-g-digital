@@ -18,7 +18,7 @@ njugadores = parseInt(players.value);
 localStorage.setItem("njugadores", njugadores);
 };
 if(parseInt(objectives.value)===0){
-contenidoobj.textContent = "SELECCIONAR CONDICIÓN DE VICTORIA";  
+contenidoobj.textContent = "SELECCIONAR MODO DE JUEGO";  
 };
 if(parseInt(objectives.value)===1){
 contenidoobj.textContent ="OBJETIVOS SECRETOS";

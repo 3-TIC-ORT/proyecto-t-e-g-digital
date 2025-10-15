@@ -101,8 +101,11 @@ justify-content: center;
 
 .chile {
     position: absolute;
-    top: 72.5%;
-    right: 67.25%;
+    top: 73%;
+    right: 64.7%;
+    width: 8.5%;
+    height: 21.5%;
+    transform: rotate(-1deg);
 }
 
 .peru {
@@ -115,25 +118,29 @@ justify-content: center;
 
 .argentina {
     position: absolute;
-    top: 72.5%;
-    right: 62.5%;
+    top: 72.8%;
+    right: 57.5%;
+    width: 16.5%;
+    height: 21.5%;
+    transform: rotate(-1deg);
 }
 
 .uruguay {
     position: absolute;
-    top: 74%;
-    right: 57.5%;
-    width: 6%;
-    height: 6%;
-    transform: rotate(-15deg);
+    top: 72.6%;
+    right: 56%;
+    width: 10%;
+    height: 11%;
+    transform: rotate(1deg);
 }
 
 .brasil {
     position: absolute;
-    top: 60%;
-    right: 55.5%;
-    width: 9%;
-    height: 13%;
+    top: 55.5%;
+    right: 51.7%;
+    width: 17%;
+    height: 20.2%;
+    transform: rotate(-2deg);
 }
 
 .colombia {
@@ -430,11 +437,11 @@ justify-content: center;
 
 .oregon{
     position: absolute;
-    top: 36%;
-    right: 83%;
-    width: 13%;
-    height: 9%;
-    transform: rotate(-30deg);
+    top: 30.5%;
+    right: 77.5%;
+    width: 23.5%;
+    height: 23.5%;
+    transform: rotate(-1deg);
 }
 
 .nuevayork{

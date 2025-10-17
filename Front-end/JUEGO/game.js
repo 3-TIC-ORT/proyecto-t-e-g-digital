@@ -27,7 +27,6 @@ let reanudar = document.getElementById("reanudar");
 let actRapidaIns = document.getElementById("actRapidaIns");
 let configuracion = document.getElementById("configuracion");
 let atrasConfig = document.getElementById("atrasConfig");
-let autoGuardado = document.getElementById("autoGuardado")
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -133,12 +132,6 @@ if(localStorage.getItem("brillo") != "null"){
 let checkCargar = localStorage.getItem("cargarPartidaInicio")
 if (checkCargar === "true") {
     cargarPartida;
-};
-
-//cambiar autoguardado
-function cambiarAutoGuardado() {
-    let autoGuardadoCheck = ( autoGuardado === true || autoGuardado === false );
-
 };
 
 //cantidad jugadores
@@ -2313,9 +2306,7 @@ function test12(colorturno) {
                 i122 = 0;
             };
             actualizarInstrucciones(fase);
-            if (autoGuardado === true) {
-                guardarPartida();
-            };
+            guardarPartida();
             tselect1 = 0;
             tselect2 = 0;
             tselect3 = 0;
@@ -2516,9 +2507,7 @@ function test14(pais) {
             };
             };
             actualizarInstrucciones(fase);
-            if (autoGuardado === true) {
-                guardarPartida();
-            };
+            guardarPartida();
             i141 = 0;
             };
 
@@ -2619,9 +2608,7 @@ function test18() {
     };
     test26(paisconquistador);
     test26(paisconquistado);
-    if (autoGuardado === true) {
-        guardarPartida();
-    };
+    guardarPartida();
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2635,9 +2622,7 @@ function test19() {
     };
     test26(paisconquistador);
     test26(paisconquistado);
-    if (autoGuardado === true) {
-        guardarPartida();
-    };
+    guardarPartida();
     paisconquistado = 0;
     paisconquistador = 0;
 };
@@ -2807,9 +2792,7 @@ function test16(color) {
     };
         test26(paisseleccionado);
         test26(paisatacado);
-        if (autoGuardado === true) {
-            guardarPartida();
-        };
+        guardarPartida();
         paisseleccionado = 0;
         paisatacado = 0;
         resultadosatacante = [];
@@ -2941,7 +2924,6 @@ cerrarpasarfichas2.addEventListener("click", ()=> test19());
 botonPausa.addEventListener("click", ()=> abrirMenuPausa());
 reanudar.addEventListener("click", ()=> menuPausa.close());
 actRapidaIns.addEventListener("click", ()=> cambiarInstructor());
-autoGuardado.addEventListener("click", ()=> cambiarAutoGuardado())
 
 mostrarrojo.addEventListener("click", function(){
     if(turno === "Rojo" && nobjetivos === "true"){

@@ -1,6 +1,6 @@
 .cuadro {
     width: 800px;
-    height: 500px;
+    height: fit-content;
     background-color: #CDCDCD;
     text-align: center;
     font-size: 1.4rem;
@@ -8,10 +8,10 @@
 
 .logoMini {
     position: absolute;
-    top: 85%; 
     right: 92%; 
     height: 68px; 
     width: 70px; 
+    bottom: 4%;
 }
 
 .caja_cuadro {
@@ -26,8 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #363636;
-    height: 90vh; 
-    margin: 0;
+    margin: 3%;
 }   
 
 

@@ -2924,6 +2924,7 @@ cerrarpasarfichas2.addEventListener("click", ()=> test19());
 botonPausa.addEventListener("click", ()=> abrirMenuPausa());
 reanudar.addEventListener("click", ()=> menuPausa.close());
 actRapidaIns.addEventListener("click", ()=> cambiarInstructor());
+
 mostrarrojo.addEventListener("click", function(){
     if(turno === "Rojo" && nobjetivos === "true"){
         objetivorojo.showModal()};

@@ -41,14 +41,7 @@ h1 {
     letter-spacing: 0.5px;
     text-shadow: 0 1px 4px #222;
 }
-@media (max-width: 500px) {
-    .creditos-container {
-        padding: 24px 8px;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-}
+
 .boton_atras {
  position: absolute;
  top: 1.5rem; 

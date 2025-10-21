@@ -2395,6 +2395,39 @@ function test14(pais) {
                 };
                 if(copiapaises[i142].nombre === pais.nombre && copiapaises[i142].fichas > 1){
                 paisseleccionado = pais;
+                paises.forEach((p)=>{
+                    p.idsvg.style.stroke = "black";
+                    })
+                    if(paisseleccionado.colorfichas === "Rojo"){
+                    paisseleccionado.idsvg.style.stroke = "red";
+                    } else if(paisseleccionado.colorfichas === "Azul"){
+                    paisseleccionado.idsvg.style.stroke = "blue";
+                    } else if(paisseleccionado.colorfichas === "Amarillo"){
+                    paisseleccionado.idsvg.style.stroke = "yellow";
+                    } else if(paisseleccionado.colorfichas === "Verde"){
+                    paisseleccionado.idsvg.style.stroke = "green";
+                    } else if(paisseleccionado.colorfichas === "Magenta"){
+                    paisseleccionado.idsvg.style.stroke = "magenta";
+                    } else if(paisseleccionado.colorfichas === "Negro"){
+                    paisseleccionado.idsvg.style.stroke = "dimgray";
+                    };
+                    paisseleccionado.limitrofes.forEach((l)=>{
+                        if(l.colorfichas === paisseleccionado.colorfichas){
+                        if(l.colorfichas === "Rojo"){
+                        l.idsvg.style.stroke = "red";
+                        } else if(l.colorfichas === "Azul"){
+                        l.idsvg.style.stroke = "blue";
+                        } else if(l.colorfichas === "Amarillo"){
+                        l.idsvg.style.stroke = "yellow";
+                        } else if(l.colorfichas === "Verde"){
+                        l.idsvg.style.stroke = "green";
+                        } else if(l.colorfichas === "Magenta"){
+                        l.idsvg.style.stroke = "magenta";
+                        } else if(l.colorfichas === "Negro"){
+                        l.idsvg.style.stroke = "dimgray";
+                        };
+                        };
+                        })
                 };
             };
         };
@@ -2412,6 +2445,9 @@ function test14(pais) {
             test26(paisreceptor);
             paisreceptor = 0;
             paisseleccionado = 0;
+            paises.forEach((p)=>{
+                p.idsvg.style.stroke = "black";
+                })
         };
     };
     i141 = 0;
@@ -3311,7 +3347,7 @@ actualizarInstrucciones(fase);
 
 paises.forEach((v)=>{
 v.idsvg.addEventListener("mouseenter", function(){
-
+if(v.colorfichas === turno){
     if(v.colorfichas === "Rojo"){
     v.idsvg.style.stroke = "red";
     } else if(v.colorfichas === "Azul"){
@@ -3325,9 +3361,16 @@ v.idsvg.addEventListener("mouseenter", function(){
     } else if(v.colorfichas === "Negro"){
         v.idsvg.style.stroke = "dimgray";
     }
+};
 })
 v.idsvg.addEventListener("mouseleave", function(){
+    if(fase === "Atacar"){
     if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas === paisseleccionado.colorfichas))){
+    v.idsvg.style.stroke = "black";
+    }} else if (fase === "Reagrupar"){
+    if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas != paisseleccionado.colorfichas))){
+    v.idsvg.style.stroke = "black";
+    }} else {
     v.idsvg.style.stroke = "black";
     }
 })

@@ -131,10 +131,9 @@ justify-content: center;
 
 .colombia {
     position: absolute;
-    top: 57%;
-    right: 65%;
-    width: 7%;
-    height: 7%;
+    top: 53.7%;
+    right: 64.1%;
+    width: auto;
 }
 
 .india {
@@ -354,47 +353,43 @@ justify-content: center;
 .sahara {
     position: absolute;
     top: 66.8%;
-    right: 32.8%;
+    right: 32.7%;
     width: auto;
 }
 
 .egipto {
     position: absolute;
-    top: 69%;
-    right: 22%;
-    width: 9%;
-    height: 7%;
-    transform: rotate(20deg);
+    top: 65.3%;
+    right: 20.6%;
+    width: auto;
 }
 
 .etiopia {
     position: absolute;
-    top: 72.8%;
-    right: 23.7%;
+    top: 72.6%;
+    right: 23.8%;
     width: auto;
 }
 
 .zaire {
     position: absolute;
-    top: 77.7%;
+    top: 77.6%;
     right: 29.3%;
     width: auto;
 }
 
 .sudafrica {
     position: absolute;
-    top: 83.1%;
+    top: 82.9%;
     right: 25%;
     width: auto;
 }
 
 .madagascar {
     position: absolute;
-    top: 79%;
-    right: 19%;
-    width: 3%;
-    height: 14%;
-    transform: rotate(15deg);
+    top: 77%;
+    right: 17.3%;
+    width: auto;
 }
 
 .mexico {

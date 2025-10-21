@@ -100,6 +100,7 @@ let copiapaises = [];
 let copiapais = null;
 let npaises = 0;
 let coloratacado = null;
+let ganador = false;
 
 //menu pausa
 function abrirMenuPausa() {
@@ -2330,6 +2331,39 @@ function test14(pais) {
     if (fase === "Atacar") {
         if (turno === pais.colorfichas && pais.fichas > 1) {
             paisseleccionado = pais;
+            paises.forEach((p)=>{
+            p.idsvg.style.stroke = "black";
+            })
+            if(paisseleccionado.colorfichas === "Rojo"){
+            paisseleccionado.idsvg.style.stroke = "red";
+            } else if(paisseleccionado.colorfichas === "Azul"){
+            paisseleccionado.idsvg.style.stroke = "blue";
+            } else if(paisseleccionado.colorfichas === "Amarillo"){
+            paisseleccionado.idsvg.style.stroke = "yellow";
+            } else if(paisseleccionado.colorfichas === "Verde"){
+            paisseleccionado.idsvg.style.stroke = "green";
+            } else if(paisseleccionado.colorfichas === "Magenta"){
+            paisseleccionado.idsvg.style.stroke = "magenta";
+            } else if(paisseleccionado.colorfichas === "Negro"){
+            paisseleccionado.idsvg.style.stroke = "dimgray";
+            };
+            paisseleccionado.limitrofes.forEach((l)=>{
+            if(l.colorfichas != paisseleccionado.colorfichas){
+            if(l.colorfichas === "Rojo"){
+            l.idsvg.style.stroke = "red";
+            } else if(l.colorfichas === "Azul"){
+            l.idsvg.style.stroke = "blue";
+            } else if(l.colorfichas === "Amarillo"){
+            l.idsvg.style.stroke = "yellow";
+            } else if(l.colorfichas === "Verde"){
+            l.idsvg.style.stroke = "green";
+            } else if(l.colorfichas === "Magenta"){
+            l.idsvg.style.stroke = "magenta";
+            } else if(l.colorfichas === "Negro"){
+            l.idsvg.style.stroke = "dimgray";
+            };
+            };
+            })
         } else if (turno != pais.colorfichas && paisseleccionado.colorfichas != pais.colorfichas) {
             i141 = 0;
             while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
@@ -2337,41 +2371,37 @@ function test14(pais) {
             };
             if (pais.limitrofes[i141] === paisseleccionado) {
                 paisatacado = pais;
+                paises.forEach((p)=>{
+                p.idsvg.style.stroke = "black";
+                })
+                if(paisseleccionado.colorfichas === "Rojo"){
+                paisseleccionado.idsvg.style.stroke = "red";
+                } else if(paisseleccionado.colorfichas === "Azul"){
+                paisseleccionado.idsvg.style.stroke = "blue";
+                } else if(paisseleccionado.colorfichas === "Amarillo"){
+                paisseleccionado.idsvg.style.stroke = "yellow";
+                } else if(paisseleccionado.colorfichas === "Verde"){
+                paisseleccionado.idsvg.style.stroke = "green";
+                } else if(paisseleccionado.colorfichas === "Magenta"){
+                paisseleccionado.idsvg.style.stroke = "magenta";
+                } else if(paisseleccionado.colorfichas === "Negro"){
+                paisseleccionado.idsvg.style.stroke = "dimgray";
+                };
+                if(paisatacado.colorfichas === "Rojo"){
+                paisatacado.idsvg.style.stroke = "red";
+                } else if(paisatacado.colorfichas === "Azul"){
+                paisatacado.idsvg.style.stroke = "blue";
+                } else if(paisatacado.colorfichas === "Amarillo"){
+                paisatacado.idsvg.style.stroke = "yellow";
+                } else if(paisatacado.colorfichas === "Verde"){
+                paisatacado.idsvg.style.stroke = "green";
+                } else if(paisatacado.colorfichas === "Magenta"){
+                paisatacado.idsvg.style.stroke = "magenta";
+                } else if(paisatacado.colorfichas === "Negro"){
+                paisatacado.idsvg.style.stroke = "dimgray";
+                };
             };
         };
-        paises.forEach((p)=>{
-        p.idsvg.style.stroke = "black";
-        })
-        if(paisseleccionado.colorfichas === "Rojo"){
-        paisseleccionado.idsvg.style.stroke = "red";
-        } else if(paisseleccionado.colorfichas === "Azul"){
-        paisseleccionado.idsvg.style.stroke = "blue";
-        } else if(paisseleccionado.colorfichas === "Amarillo"){
-        paisseleccionado.idsvg.style.stroke = "yellow";
-        } else if(paisseleccionado.colorfichas === "Verde"){
-        paisseleccionado.idsvg.style.stroke = "green";
-        } else if(paisseleccionado.colorfichas === "Magenta"){
-        paisseleccionado.idsvg.style.stroke = "magenta";
-        } else if(paisseleccionado.colorfichas === "Negro"){
-        paisseleccionado.idsvg.style.stroke = "dimgray";
-        };
-    paisseleccionado.limitrofes.forEach((l)=>{
-    if(l.colorfichas != paisseleccionado.colorfichas){
-    if(l.colorfichas === "Rojo"){
-    l.idsvg.style.stroke = "red";
-    } else if(l.colorfichas === "Azul"){
-    l.idsvg.style.stroke = "blue";
-    } else if(l.colorfichas === "Amarillo"){
-    l.idsvg.style.stroke = "yellow";
-    } else if(l.colorfichas === "Verde"){
-    l.idsvg.style.stroke = "green";
-    } else if(l.colorfichas === "Magenta"){
-    l.idsvg.style.stroke = "magenta";
-    } else if(l.colorfichas === "Negro"){
-    l.idsvg.style.stroke = "dimgray";
-    };
-    };
-    })
     };
     i141 = 0;
     if (fase === "Reagrupar") {
@@ -2608,6 +2638,7 @@ function test17(colour){
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " completó el objetivo común de 30 países.";
         fin.showModal();
+        ganador = true;
     };
     };
     if(nobjetivos === "dominacion"){
@@ -2616,6 +2647,7 @@ function test17(colour){
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " logró la dominación mundial";
         fin.showModal();
+        ganador = true;
     };
     };
     if(nobjetivos === "true"){
@@ -2669,8 +2701,10 @@ function test17(colour){
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " completó su objetivo secreto: " + objetivos[i173].string;
         fin.showModal();
+        ganador = true;
     };
 };
+return(ganador);
 };
 
 //Dialogs pasar fichas
@@ -2853,15 +2887,19 @@ function test16(color) {
         paisconquistador = paisseleccionado;
         paisconquistado = paisatacado;
         pasarfichas1.showModal();
+        resultadodados.close();
         } else if (paisseleccionado.fichas >= 3){
         paisconquistador = paisseleccionado;
         paisconquistado = paisatacado;
         pasarfichas2.showModal();
+        resultadodados.close();
         };
         test17(color);
         test21(color);
         test27(coloratacado);
+        if(ganador === true){
         resultadodados.close();
+        };
     };
         test26(paisseleccionado);
         test26(paisatacado);

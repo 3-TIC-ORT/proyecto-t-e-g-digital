@@ -2310,6 +2310,10 @@ function test12(colorturno) {
             tselect1 = 0;
             tselect2 = 0;
             tselect3 = 0;
+            paisseleccionado = 0;
+            paises.forEach((p)=>{
+            p.idsvg.style.stroke = "black";
+            })
             test22("Rojo");
             test22("Azul");
             test22("Amarillo");
@@ -2335,6 +2339,39 @@ function test14(pais) {
                 paisatacado = pais;
             };
         };
+        paises.forEach((p)=>{
+        p.idsvg.style.stroke = "black";
+        })
+        if(paisseleccionado.colorfichas === "Rojo"){
+        paisseleccionado.idsvg.style.stroke = "red";
+        } else if(paisseleccionado.colorfichas === "Azul"){
+        paisseleccionado.idsvg.style.stroke = "blue";
+        } else if(paisseleccionado.colorfichas === "Amarillo"){
+        paisseleccionado.idsvg.style.stroke = "yellow";
+        } else if(paisseleccionado.colorfichas === "Verde"){
+        paisseleccionado.idsvg.style.stroke = "green";
+        } else if(paisseleccionado.colorfichas === "Magenta"){
+        paisseleccionado.idsvg.style.stroke = "magenta";
+        } else if(paisseleccionado.colorfichas === "Negro"){
+        paisseleccionado.idsvg.style.stroke = "dimgray";
+        };
+    paisseleccionado.limitrofes.forEach((l)=>{
+    if(l.colorfichas != paisseleccionado.colorfichas){
+    if(l.colorfichas === "Rojo"){
+    l.idsvg.style.stroke = "red";
+    } else if(l.colorfichas === "Azul"){
+    l.idsvg.style.stroke = "blue";
+    } else if(l.colorfichas === "Amarillo"){
+    l.idsvg.style.stroke = "yellow";
+    } else if(l.colorfichas === "Verde"){
+    l.idsvg.style.stroke = "green";
+    } else if(l.colorfichas === "Magenta"){
+    l.idsvg.style.stroke = "magenta";
+    } else if(l.colorfichas === "Negro"){
+    l.idsvg.style.stroke = "dimgray";
+    };
+    };
+    })
     };
     i141 = 0;
     if (fase === "Reagrupar") {
@@ -2797,6 +2834,9 @@ function test16(color) {
         paisatacado = 0;
         resultadosatacante = [];
         resultadosdefensor = [];
+        paises.forEach((p)=>{
+        p.idsvg.style.stroke = "black";
+        })
     };
 };
 
@@ -3268,3 +3308,27 @@ window.onload = function() {
     actualizarInstrucciones(fase);
     }};
 actualizarInstrucciones(fase);
+
+paises.forEach((v)=>{
+v.idsvg.addEventListener("mouseenter", function(){
+
+    if(v.colorfichas === "Rojo"){
+    v.idsvg.style.stroke = "red";
+    } else if(v.colorfichas === "Azul"){
+        v.idsvg.style.stroke = "blue";
+    } else if(v.colorfichas === "Amarillo"){
+        v.idsvg.style.stroke = "yellow";
+    } else if(v.colorfichas === "Verde"){
+        v.idsvg.style.stroke = "green";
+    } else if(v.colorfichas === "Magenta"){
+        v.idsvg.style.stroke = "magenta";
+    } else if(v.colorfichas === "Negro"){
+        v.idsvg.style.stroke = "dimgray";
+    }
+})
+v.idsvg.addEventListener("mouseleave", function(){
+    if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas === paisseleccionado.colorfichas))){
+    v.idsvg.style.stroke = "black";
+    }
+})
+})

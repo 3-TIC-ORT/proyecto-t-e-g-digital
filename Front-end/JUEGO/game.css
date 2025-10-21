@@ -104,6 +104,7 @@ justify-content: center;
     top: 63.5%;
     right: 64.1%;
     width: auto;
+    z-index: 1;
 }
 
 .argentina {
@@ -118,7 +119,7 @@ justify-content: center;
     top: 72.6%;
     right: 57.9%;
     width: auto;
-    transform: rotate(1deg);
+    z-index: 1;
 }
 
 .brasil {
@@ -735,6 +736,7 @@ transform: scale(1.1);
     text-align: center;
     color: black;
     border: 1px solid white;
+    z-index: 3;
 }
 
 .faustralia {

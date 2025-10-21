@@ -159,10 +159,9 @@ justify-content: center;
 
 .iran {
     position: absolute;
-    top: 22%;
-    right: 15.5%;
+    top: 22.2%;
+    right: 15.4%;
     width: auto;
-    height: 28%;
 }
 
 .japon {
@@ -194,11 +193,10 @@ justify-content: center;
 
 .kamchatka {
     position: absolute;
-    top: 6%;
-    right: 11%;
-    width: 5%;
-    height: 8%;
-    transform: rotate(-20deg);
+    top: 4%;
+    right: 10.1%;
+    width: auto;
+    z-index: 1;
 }
 
 .turquia {
@@ -230,20 +228,16 @@ justify-content: center;
 
 .siberia {
     position: absolute;
-    top: 15%;
-    right: 16%;
-    width: 8%;
-    height: 6%;
-    transform: rotate(-10deg);
+    top: 7.2%;
+    right: 13.8%;
+    width: auto;
 }
 
 .taimir {
     position: absolute;
-    top: 5%;
-    right: 17.5%;
-    width: 4%;
-    height: 9%;
-    transform: rotate(15deg);
+    top: 2.6%;
+    right: 17%;
+    width: auto;
 }
 
 .tartaria {
@@ -265,11 +259,9 @@ justify-content: center;
 
 .rusia {
     position: absolute;
-    top: 9%;
-    right: 26%;
-    width: 5%;
-    height: 36%;
-    transform: rotate(-30deg);
+    top: 8.5%;
+    right: 22.1%;
+    width: auto;
 }
 
 .suecia {
@@ -387,11 +379,9 @@ justify-content: center;
 
 .mexico {
     position: absolute;
-    top: 48%;
-    right: 72%;
-    width: 9%;
-    height: 7%;
-    transform: rotate(30deg);
+    top: 43.3%;
+    right: 71.8%;
+    width: auto;
 }
 
 .california{
@@ -716,8 +706,8 @@ transform: scale(1.1);
     position: absolute;
     top: 45%;
     right: 45%;
-    width: 30px;
-    height: 30px;
+    width: 2%;
+    height: 4%;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -756,6 +746,8 @@ transform: scale(1.1);
     position: absolute;
     top: 78%;
     right: 68%;
+    height: 3%;
+    width: 1.5%;
 }
 
 .fperu {

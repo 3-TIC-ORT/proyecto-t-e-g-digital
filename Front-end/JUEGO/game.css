@@ -166,11 +166,9 @@ justify-content: center;
 
 .japon {
     position: absolute;
-    top: 14%;
-    right: 2%;
-    width: 7%;
-    height: 6%;
-    transform: rotate(40deg);
+    top: 11.5%;
+    right: 1.5%;
+    width: auto;
 }
 
 .gobi {
@@ -275,11 +273,9 @@ justify-content: center;
 
 .polonia {
     position: absolute;
-    top: 37%;
-    right: 28%;
-    width: 4.5%;
-    height: 12%;
-    transform: rotate(-20deg);
+    top: 32.8%;
+    right: 26.6%;
+    width: auto;
 }
 
 .alemania {
@@ -368,6 +364,7 @@ justify-content: center;
     top: 82.9%;
     right: 25%;
     width: auto;
+    z-index: 1;
 }
 
 .madagascar {
@@ -429,10 +426,9 @@ justify-content: center;
 
 .groenlandia{
     position: absolute;
-    top: 4%;
-    right: 62%;
-    width: 6%;
-    height: 23%;
+    top: 0.5%;
+    right: 60.1%;
+    width: auto;
 }
 
 .canada {
@@ -707,7 +703,7 @@ transform: scale(1.1);
     top: 45%;
     right: 45%;
     width: 2%;
-    height: 4%;
+    height: 4.35%;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -719,26 +715,32 @@ transform: scale(1.1);
 
 .faustralia {
     position: absolute;
-    top: 78%;
-    right: 4%;
+    top: 82%;
+    right: 4.5%;
 }
 
 .fsumatra {
     position: absolute;
-    top: 66%;
-    right: 14%;
+    top: 67%;
+    right: 14.5%;
+    height: 3.2%;
+    width: 1.5%;
 }
 
 .fborneo {
     position: absolute;
     top: 60%;
-    right: 7%;
+    right: 7.5%;
+    height: 3.2%;
+    width: 1.5%;
 }
 
 .fjava {
     position: absolute;
-    top: 58%;
-    right: 2.5%;
+    top: 59%;
+    right: 3%;
+    height: 3.2%;
+    width: 1.5%;
 }
 
 
@@ -746,20 +748,24 @@ transform: scale(1.1);
     position: absolute;
     top: 78%;
     right: 68%;
-    height: 3%;
+    height: 3.2%;
     width: 1.5%;
 }
 
 .fperu {
     position: absolute;
-    top: 66%;
-    right: 67%;
+    top: 67%;
+    right: 67.5%;
+    height: 3.9%;
+    width: 1.8%;
 }
 
 .fargentina {
     position: absolute;
-    top: 78%;
-    right: 65%;
+    top: 82%;
+    right: 64%;
+    height: 3.9%;
+    width: 1.8%
 }
 
 .furuguay {
@@ -770,7 +776,7 @@ transform: scale(1.1);
 
 .fbrasil {
     position: absolute;
-    top: 64%;
+    top: 67%;
     right: 59%;
 }
 
@@ -782,14 +788,14 @@ transform: scale(1.1);
 
 .findia {
     position: absolute;
-    top: 50%;
+    top: 47.5%;
     right: 11%;
 }
 
 .fmalasia {
     position: absolute;
-    top: 45%;
-    right: 4%;
+    top: 47%;
+    right: 4.5%;
 }
 
 .fchina {
@@ -800,14 +806,16 @@ transform: scale(1.1);
 
 .firan {
     position: absolute;
-    top: 34%;
-    right: 20%;
+    top: 26%;
+    right: 22.5%;
 }
 
 .fjapon {
     position: absolute;
-    top: 14%;
+    top: 16%;
     right: 4%;
+    height: 3.2%;
+    width: 1.5%;
 }
 
 .fgobi {
@@ -872,8 +880,8 @@ transform: scale(1.1);
 
 .frusia {
     position: absolute;
-    top: 25%;
-    right: 29%;
+    top: 20%;
+    right: 30.5%;
 }
 
 .fsuecia {
@@ -884,8 +892,8 @@ transform: scale(1.1);
 
 .fpolonia {
     position: absolute;
-    top: 40%;
-    right: 29%;
+    top: 42.5%;
+    right: 28.5%;
 }
 
 .falemania {
@@ -926,7 +934,7 @@ transform: scale(1.1);
 
 .fsahara {
     position: absolute;
-    top: 73%;
+    top: 77%;
     right: 38%;
 }
 
@@ -944,14 +952,14 @@ transform: scale(1.1);
 
 .fzaire {
     position: absolute;
-    top: 80%;
+    top: 81%;
     right: 33%;
 }
 
 .fsudafrica {
     position: absolute;
-    top: 88%;
-    right: 28%;
+    top: 85%;
+    right: 27.5%;
 }
 
 .fmadagascar {
@@ -974,8 +982,8 @@ transform: scale(1.1);
 
 .foregon{
     position: absolute;
-    top: 37%;
-    right: 88%;
+    top: 34%;
+    right: 85%;
 }
 
 .fnuevayork{
@@ -998,8 +1006,8 @@ transform: scale(1.1);
 
 .fgroenlandia{
     position: absolute;
-    top: 10%;
-    right: 64%;
+    top: 4%;
+    right: 65.5%;
 }
 
 .fcanada {
@@ -1018,4 +1026,22 @@ transform: scale(1.1);
     position: absolute;
     top: 32.5%;
     right: 94.5%;
+}
+
+.puentemad-zai{
+    position: absolute;
+    top: 87%;
+    right: 22.2%;
+    width: auto;
+    height: 12.5%;
+    z-index: 0;
+}
+
+.puenteaus-sum{
+    position: absolute;
+    top: 72%;
+    right: 9.6%;
+    width: auto;
+    height: 4.5%;
+    z-index: 0;
 }

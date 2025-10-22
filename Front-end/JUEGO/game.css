@@ -280,19 +280,18 @@ justify-content: center;
 
 .alemania {
     position: absolute;
-    top: 34%;
-    right: 30.8%;
+    top: 34.1%;
+    right: 30.9%;
     width: auto;
     z-index: 1;
 }
 
 .italia {
     position: absolute;
-    top: 51%;
-    right: 33%;
-    width: 4%;
-    height: 15%;
-    transform: rotate(-10deg);
+    top: 49.8%;
+    right: 30.8%;
+    width: auto;
+    z-index: 1;
 }
 
 .francia {
@@ -901,7 +900,7 @@ transform: scale(1.1);
 
 .fitalia {
     position: absolute;
-    top: 55%;
+    top: 53.5%;
     right: 34.5%;
 }
 

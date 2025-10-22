@@ -684,6 +684,13 @@ transform: scale(1.1);
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #c59a3e;
+    box-shadow: rgb(58, 45, 45);
+}
+
+
+.fin_dialog {
+    background-color: #c59a3e;
 }
 
 .rojo{background-color: red;}

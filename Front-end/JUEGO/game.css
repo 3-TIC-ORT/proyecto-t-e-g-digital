@@ -280,11 +280,10 @@ justify-content: center;
 
 .alemania {
     position: absolute;
-    top: 38%;
-    right: 33%;
-    width: 4.5%;
-    height: 13%;
-    transform: rotate(-10deg);
+    top: 34%;
+    right: 30.8%;
+    width: auto;
+    z-index: 1;
 }
 
 .italia {
@@ -298,11 +297,9 @@ justify-content: center;
 
 .francia {
     position: absolute;
-    top: 44.5%;
-    right: 37.5%;
-    width: 7.5%;
-    height: 9%;
-    transform: rotate(-30deg);
+    top: 39.1%;
+    right: 37.3%;
+    width: auto;
 }
 
 .españa{
@@ -898,7 +895,7 @@ transform: scale(1.1);
 
 .falemania {
     position: absolute;
-    top: 42%;
+    top: 38%;
     right: 34%;
 }
 
@@ -910,7 +907,7 @@ transform: scale(1.1);
 
 .ffrancia {
     position: absolute;
-    top: 47%;
+    top: 43%;
     right: 40%;
 }
 

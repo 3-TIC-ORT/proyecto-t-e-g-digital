@@ -245,19 +245,17 @@ svg path.nombre {
 
 .tartaria {
     position: absolute;
-    top: 3%;
-    right: 22%;
-    width: 3%;
-    height: 13%;
+    top: 0.5%;
+    right: 21%;
+    width: auto;
+    height: 16.4%;
 }
 
 .aral {
     position: absolute;
-    top: 9%;
-    right: 25%;
-    width: 3%;
-    height: 12%;
-    transform: rotate(-15deg);
+    top: 5.8%;
+    right: 23.8%;
+    width: auto;
 }
 
 .rusia {
@@ -349,16 +347,15 @@ svg path.nombre {
 .zaire {
     position: absolute;
     top: 77.6%;
-    right: 29.3%;
+    right: 29.4%;
     width: auto;
 }
 
 .sudafrica {
     position: absolute;
-    top: 82.9%;
-    right: 25%;
+    top: 82.7%;
+    right: 24.9%;
     width: auto;
-    z-index: 1;
 }
 
 .madagascar {
@@ -729,7 +726,7 @@ transform: scale(1.1);
     top: 67%;
     right: 14.5%;
     height: 3.2%;
-    width: 1.5%;
+    width: 1.4%;
 }
 
 .fborneo {
@@ -737,15 +734,15 @@ transform: scale(1.1);
     top: 60%;
     right: 7.5%;
     height: 3.2%;
-    width: 1.5%;
+    width: 1.4%;
 }
 
 .fjava {
     position: absolute;
     top: 58.5%;
-    right: 2.6%;
+    right: 2.8%;
     height: 3.2%;
-    width: 1.5%;
+    width: 1.4%;
 }
 
 
@@ -754,7 +751,7 @@ transform: scale(1.1);
     top: 78%;
     right: 68%;
     height: 3.2%;
-    width: 1.5%;
+    width: 1.4%;
 }
 
 .fperu {
@@ -819,7 +816,7 @@ transform: scale(1.1);
 
 .fjapon {
     position: absolute;
-    top: 16%;
+    top: 16.6%;
     right: 4%;
     height: 3.2%;
     width: 1.5%;
@@ -827,20 +824,26 @@ transform: scale(1.1);
 
 .fgobi {
     position: absolute;
-    top: 36.3%;
+    top: 36.5%;
     right: 15.7%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fmongolia {
     position: absolute;
-    top: 23%;
-    right: 18%;
+    top: 27.2%;
+    right: 18.4%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fkamchatka {
     position: absolute;
-    top: 7.5%;
-    right: 12.5%;
+    top: 5.8%;
+    right: 13%;
+    width: 1.4%;
+    height: 3.2%;
 }
 
 .fturquia {
@@ -865,25 +868,31 @@ transform: scale(1.1);
 
 .fsiberia {
     position: absolute;
-    top: 15%;
-    right: 18%;
+    top: 16.5%;
+    right: 21.3%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .ftaimir {
     position: absolute;
-    top: 8%;
-    right: 19%;
+    top: 10.1%;
+    right: 19.2%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .ftartaria {
     position: absolute;
-    top: 6%;
-    right: 22.5%;
+    top: 8%;
+    right: 22.4%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .faral {
     position: absolute;
-    top: 13%;
+    top: 15.7%;
     right: 25%;
 }
 
@@ -949,20 +958,26 @@ transform: scale(1.1);
 
 .fegipto {
     position: absolute;
-    top: 69%;
-    right: 26%;
+    top: 73.8%;
+    right: 23%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fetiopia {
     position: absolute;
-    top: 76%;
-    right: 28%;
+    top: 74.5%;
+    right: 30.8%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fzaire {
     position: absolute;
-    top: 81%;
+    top: 79%;
     right: 33%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fsudafrica {
@@ -973,8 +988,8 @@ transform: scale(1.1);
 
 .fmadagascar {
     position: absolute;
-    top: 83%;
-    right: 19.5%;
+    top: 85%;
+    right: 19.7%;
 }
 
 .fmexico {
@@ -1037,29 +1052,30 @@ transform: scale(1.1);
     right: 94.5%;
 }
 
-.puentemad-zai{
+.puente{
+    pointer-events: none;
+}
+
+.mad-zai{
     position: absolute;
     top: 87%;
     right: 22.2%;
     width: auto;
     height: 12.5%;
-    z-index: 0;
 }
 
-.puenteaus-sum{
+.aus-sum{
     position: absolute;
     top: 72%;
     right: 9.6%;
     width: auto;
     height: 4.5%;
-    z-index: 0;
 }
 
-.puentegro-nue{
+.gro-nue{
     position: absolute;
     top: 23%;
     right: 67%;
     width: auto;
     height: 12.5%;
-    z-index: 0;
 }

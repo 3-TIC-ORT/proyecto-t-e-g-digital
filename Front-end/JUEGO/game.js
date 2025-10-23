@@ -3401,7 +3401,35 @@ if(v.colorfichas === turno){
     }
 };
 })
+v.id.addEventListener("mouseenter", function(){
+if(v.colorfichas === turno){
+    if(v.colorfichas === "Rojo"){
+    v.idsvg.style.stroke = "red";
+    } else if(v.colorfichas === "Azul"){
+        v.idsvg.style.stroke = "blue";
+    } else if(v.colorfichas === "Amarillo"){
+        v.idsvg.style.stroke = "yellow";
+    } else if(v.colorfichas === "Verde"){
+        v.idsvg.style.stroke = "green";
+    } else if(v.colorfichas === "Magenta"){
+        v.idsvg.style.stroke = "magenta";
+    } else if(v.colorfichas === "Negro"){
+        v.idsvg.style.stroke = "dimgray";
+    }
+};
+})
 v.idsvg.addEventListener("mouseleave", function(){
+    if(fase === "Atacar"){
+    if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas === paisseleccionado.colorfichas))){
+    v.idsvg.style.stroke = "black";
+    }} else if (fase === "Reagrupar"){
+    if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas != paisseleccionado.colorfichas))){
+    v.idsvg.style.stroke = "black";
+    }} else {
+    v.idsvg.style.stroke = "black";
+    }
+})
+v.id.addEventListener("mouseleave", function(){
     if(fase === "Atacar"){
     if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas === paisseleccionado.colorfichas))){
     v.idsvg.style.stroke = "black";

@@ -45,7 +45,6 @@ body {
     font-style: normal;
 }
 
-
 .map-container {
 display: flex;
 justify-content: center;
@@ -62,6 +61,18 @@ justify-content: center;
   margin: 0 auto;   
   object-fit: contain;
   visibility: visible;
+}
+
+.svg{
+    pointer-events: none;
+}
+
+.svg path{
+    pointer-events: visiblePainted;
+}
+
+svg path.nombre {
+  pointer-events: none;
 }
 
 .australia {
@@ -102,7 +113,7 @@ justify-content: center;
 .peru {
     position: absolute;
     top: 63.5%;
-    right: 64.1%;
+    right: 64%;
     width: auto;
     z-index: 1;
 }
@@ -173,20 +184,16 @@ justify-content: center;
 
 .gobi {
     position: absolute;
-    top: 31%;
-    right: 13.5%;
-    width: 5%;
-    height: 10%;
-    transform: rotate(-25deg);
+    top: 27%;
+    right: 13%;
+    width: auto;
 }
 
 .mongolia {
     position: absolute;
-    top: 21%;
-    right: 15.5%;
-    width: 6%;
-    height: 10%;
-    transform: rotate(-15deg);
+    top: 18.3%;
+    right: 14.8%;
+    width: auto;
 }
 
 .kamchatka {
@@ -199,11 +206,9 @@ justify-content: center;
 
 .turquia {
     position: absolute;
-    top: 45%;
-    right: 20%;
-    width: 9%;
-    height: 6%;
-    transform: rotate(-20deg);
+    top: 40.5%;
+    right: 17%;
+    width: auto;
 }
 
 .israel {
@@ -710,6 +715,7 @@ transform: scale(1.1);
     color: black;
     border: 1px solid white;
     z-index: 3;
+    cursor: default;
 }
 
 .faustralia {
@@ -753,9 +759,9 @@ transform: scale(1.1);
 
 .fperu {
     position: absolute;
-    top: 67%;
-    right: 67.5%;
-    height: 3.9%;
+    top: 68.5%;
+    right: 65%;
+    height: 4%;
     width: 1.8%;
 }
 
@@ -763,7 +769,7 @@ transform: scale(1.1);
     position: absolute;
     top: 82%;
     right: 64%;
-    height: 3.9%;
+    height: 4%;
     width: 1.8%
 }
 
@@ -781,8 +787,10 @@ transform: scale(1.1);
 
 .fcolombia {
     position: absolute;
-    top: 57%;
-    right: 67%;
+    top: 55.3%;
+    right: 66.6%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .findia {
@@ -819,8 +827,8 @@ transform: scale(1.1);
 
 .fgobi {
     position: absolute;
-    top: 33%;
-    right: 15%;
+    top: 36.3%;
+    right: 15.7%;
 }
 
 .fmongolia {
@@ -837,8 +845,10 @@ transform: scale(1.1);
 
 .fturquia {
     position: absolute;
-    top: 44%;
-    right: 22%;
+    top: 47%;
+    right: 18.8%;
+    height: 4%;
+    width: 1.8%;
 }
 
 .fisrael {

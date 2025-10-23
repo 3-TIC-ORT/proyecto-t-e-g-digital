@@ -677,6 +677,7 @@ transform: scale(1.1);
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
     background-color: #c59a3e;
     box-shadow: rgb(58, 45, 45);
 }
@@ -684,6 +685,8 @@ transform: scale(1.1);
 
 .fin_dialog {
     background-color: #c59a3e;
+    border-radius: 10px;
+    border-color: white;
 }
 
 .rojo{background-color: red;}
@@ -1039,5 +1042,14 @@ transform: scale(1.1);
     right: 9.6%;
     width: auto;
     height: 4.5%;
+    z-index: 0;
+}
+
+.puentegro-nue{
+    position: absolute;
+    top: 23%;
+    right: 67%;
+    width: auto;
+    height: 12.5%;
     z-index: 0;
 }

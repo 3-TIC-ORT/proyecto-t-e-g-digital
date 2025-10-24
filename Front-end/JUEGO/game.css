@@ -60,7 +60,7 @@ justify-content: center;
   display: block;
   margin: 0 auto;   
   object-fit: contain;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .svg{
@@ -377,35 +377,30 @@ svg path.nombre {
 
 .oregon{
     position: absolute;
-    top: 30.5%;
-    right: 81.8%;
+    top: 30.4%;
+    right: 81.9%;
     width: auto;
 }
 
 .nuevayork{
     position: absolute;
-    top: 32%;
-    right: 72%;
-    width: 12%;
-    height: 6%;
-    transform: rotate(20deg);
+    top: 21.8%;
+    right: 70.5%;
+    width: auto;
 }
 
 .terranova{
     position: absolute;
-    top: 26%;
-    right: 71%;
-    width: 10%;
-    height: 6%;
-    transform: rotate(20deg);
+    top: 20.7%;
+    right: 70.8%;
+    width: auto;
 }
 
 .labrador{
     position: absolute;
-    top: 17%;
-    right: 71%;
-    width: 5%;
-    height: 9%;
+    top: 15.8%;
+    right: 69.6%;
+    width: auto;
 }
 
 .groenlandia{
@@ -971,10 +966,10 @@ transform: scale(1.1);
 
 .fzaire {
     position: absolute;
-    top: 79%;
-    right: 33%;
-    width: 1.8%;
-    height: 4%;
+    top: 82.5%;
+    right: 30.5%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fsudafrica {
@@ -997,8 +992,10 @@ transform: scale(1.1);
 
 .fcalifornia{
     position: absolute;
-    top: 40.5%;
-    right: 82%;
+    top: 40.6%;
+    right: 84.6%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .foregon{
@@ -1009,20 +1006,24 @@ transform: scale(1.1);
 
 .fnuevayork{
     position: absolute;
-    top: 32%;
-    right: 79%;
+    top: 26%;
+    right: 81%;
 }
 
 .fterranova{
     position: absolute;
-    top: 26%;
-    right: 76%;
+    top: 29%;
+    right: 72%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .flabrador{
     position: absolute;
-    top: 20%;
-    right: 72%;
+    top: 22%;
+    right: 73.8%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fgroenlandia{
@@ -1033,19 +1034,19 @@ transform: scale(1.1);
 
 .fcanada {
     position: absolute;
-    top: 13%;
-    right: 83%;
+    top: 15.5%;
+    right: 82.5%;
 }
 
 .fyukon{
     position: absolute;
-    top: 24%;
+    top: 27%;
     right: 89%;
 }
 
 .falaska {
     position: absolute;
-    top: 28.5%;
+    top: 27.5%;
     right: 95.1%;
 }
 

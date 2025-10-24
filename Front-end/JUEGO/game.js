@@ -3443,12 +3443,3 @@ window.onload = function() {
     actualizarInstrucciones(fase);
     }};
 actualizarInstrucciones(fase);
-
-function guardarTempTarjetas() {
-    let tarjetas = tpaises;
-    let tarjetasLimpias = tarjetas.map(l => ({
-        fichas: fichas,
-        color: color,
-        simbolo: simbolo,
-      }));
-}

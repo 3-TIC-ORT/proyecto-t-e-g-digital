@@ -213,20 +213,16 @@ svg path.nombre {
 
 .israel {
     position: absolute;
-    top: 52%;
-    right: 21%;
-    width: 6%;
-    height: 7%;
-    transform: rotate(-20deg);
+    top: 49.5%;
+    right: 19.7%;
+    width: auto;
 }
 
 .arabia {
     position: absolute;
-    top: 56%;
-    right: 18%;
-    width: 5%;
-    height: 7%;
-    transform: rotate(-25deg);
+    top: 52.2%;
+    right: 16.8%;
+    width: auto;
 }
 
 .siberia {
@@ -374,11 +370,9 @@ svg path.nombre {
 
 .california{
     position: absolute;
-    top: 41%;
-    right: 77%;
-    width: 13%;
-    height: 7%;
-    transform: rotate(-20deg);
+    top: 36.5%;
+    right: 75.6%;
+    width: auto;
 }
 
 .oregon{
@@ -386,7 +380,6 @@ svg path.nombre {
     top: 30.5%;
     right: 81.8%;
     width: auto;
-    transform: rotate(-1deg);
 }
 
 .nuevayork{
@@ -424,25 +417,21 @@ svg path.nombre {
 
 .canada {
     position: absolute;
-    top: 3%;
-    right: 80%;
-    width: 7%;
-    height: 25%;
-    transform: rotate(15deg);
+    top: 1%;
+    right: 76%;
+    width: auto;
 }
 
 .yukon{
     position: absolute;
-    top: 16%;
-    right: 87.5%;
-    width: 6.5%;
-    height: 17%;
-    transform: rotate(-15deg);
+    top: 11.6%;
+    right: 85.4%;
+    width: auto;
 }
 
 .alaska {
     position: absolute;
-    top: 20.9%;
+    top: 20.3%;
     right: 91.9%;
     width: auto;
 }

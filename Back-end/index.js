@@ -16,4 +16,12 @@ function leerEstado() {
 
 subscribeGETEvent("cargarEstado", leerEstado);
 
+//cargar tarjetas
+function cargarTarjetas() {
+  let tarjetas = fs.readFileSync("./datos/tarjetas.json", "utf-8")
+}
+
+function temporalGuardarT() {
+
+}
 startServer(3099, true);

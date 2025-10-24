@@ -635,9 +635,11 @@ transform: scale(1.1);
 }
 
 .dialogtarjetas{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #c59a3e;
+    border-radius: 10px;
+    border-color: white;
+    justify-content: center;
+    align-items: center ;
 }
 
 .dialogdados{
@@ -683,6 +685,13 @@ transform: scale(1.1);
     box-shadow: rgb(58, 45, 45);
 }
 
+.dialogObjetivos {
+    background-color: #c59a3e;
+    border-radius: 10px;
+    border-color: white;
+    justify-content: center;
+    align-items: center ;
+}
 
 .fin_dialog {
     background-color: #c59a3e;

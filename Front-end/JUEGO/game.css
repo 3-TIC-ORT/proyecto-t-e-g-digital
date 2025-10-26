@@ -45,7 +45,6 @@ body {
     font-style: normal;
 }
 
-
 .map-container {
 display: flex;
 justify-content: center;
@@ -61,7 +60,19 @@ justify-content: center;
   display: block;
   margin: 0 auto;   
   object-fit: contain;
-  visibility: visible;
+  visibility: hidden;
+}
+
+.svg{
+    pointer-events: none;
+}
+
+.svg path{
+    pointer-events: visiblePainted;
+}
+
+svg path.nombre {
+  pointer-events: none;
 }
 
 .australia {
@@ -102,8 +113,9 @@ justify-content: center;
 .peru {
     position: absolute;
     top: 63.5%;
-    right: 64.1%;
+    right: 64%;
     width: auto;
+    z-index: 1;
 }
 
 .argentina {
@@ -115,10 +127,10 @@ justify-content: center;
 
 .uruguay {
     position: absolute;
-    top: 72.6%;
+    top: 72.4%;
     right: 57.9%;
     width: auto;
-    transform: rotate(1deg);
+    z-index: 1;
 }
 
 .brasil {
@@ -130,356 +142,293 @@ justify-content: center;
 
 .colombia {
     position: absolute;
-    top: 57%;
-    right: 65%;
-    width: 7%;
-    height: 7%;
+    top: 53.7%;
+    right: 64.1%;
+    width: auto;
 }
 
 .india {
     position: absolute;
-    top: 48%;
-    right: 11%;
-    width: 3%;
-    height: 14%;
-    transform: rotate(15deg);
+    top: 44.8%;
+    right: 8.8%;
+    width: auto;
 }
 
 .malasia {
     position: absolute;
-    top: 43%;
-    right: 3%;
-    width: 5%;
-    height: 8%;
-    transform: rotate(-15deg);
+    top: 39%;
+    right: 2.6%;
+    width: auto;
 }
 
 .china {
     position: absolute;
-    top: 15%;
-    right: 8%;
-    width: 6%;
-    height: 30%;
-    transform: rotate(-15deg);
+    top: 14.3%;
+    right: 2.3%;
+    width: auto;
 }
 
 .iran {
     position: absolute;
-    top: 22%;
-    right: 20%;
-    width: 2%;
-    height: 30%;
-    transform: rotate(-35deg);
+    top: 22.2%;
+    right: 15.4%;
+    width: auto;
 }
 
 .japon {
     position: absolute;
-    top: 14%;
-    right: 2%;
-    width: 7%;
-    height: 6%;
-    transform: rotate(40deg);
+    top: 11.5%;
+    right: 1.5%;
+    width: auto;
 }
 
 .gobi {
     position: absolute;
-    top: 31%;
-    right: 13.5%;
-    width: 5%;
-    height: 10%;
-    transform: rotate(-25deg);
+    top: 27%;
+    right: 13%;
+    width: auto;
 }
 
 .mongolia {
     position: absolute;
-    top: 21%;
-    right: 15.5%;
-    width: 6%;
-    height: 10%;
-    transform: rotate(-15deg);
+    top: 18.3%;
+    right: 14.8%;
+    width: auto;
 }
 
 .kamchatka {
     position: absolute;
-    top: 6%;
-    right: 11%;
-    width: 5%;
-    height: 8%;
-    transform: rotate(-20deg);
+    top: 4%;
+    right: 10.1%;
+    width: auto;
+    z-index: 1;
 }
 
 .turquia {
     position: absolute;
-    top: 45%;
-    right: 20%;
-    width: 9%;
-    height: 6%;
-    transform: rotate(-20deg);
+    top: 40.5%;
+    right: 17%;
+    width: auto;
 }
 
 .israel {
     position: absolute;
-    top: 52%;
-    right: 21%;
-    width: 6%;
-    height: 7%;
-    transform: rotate(-20deg);
+    top: 49.5%;
+    right: 19.7%;
+    width: auto;
 }
 
 .arabia {
     position: absolute;
-    top: 56%;
-    right: 18%;
-    width: 5%;
-    height: 7%;
-    transform: rotate(-25deg);
+    top: 52.2%;
+    right: 16.8%;
+    width: auto;
 }
 
 .siberia {
     position: absolute;
-    top: 15%;
-    right: 16%;
-    width: 8%;
-    height: 6%;
-    transform: rotate(-10deg);
+    top: 7.2%;
+    right: 13.8%;
+    width: auto;
 }
 
 .taimir {
     position: absolute;
-    top: 5%;
-    right: 17.5%;
-    width: 4%;
-    height: 9%;
-    transform: rotate(15deg);
+    top: 2.6%;
+    right: 17%;
+    width: auto;
 }
 
 .tartaria {
     position: absolute;
-    top: 3%;
-    right: 22%;
-    width: 3%;
-    height: 13%;
+    top: 0.5%;
+    right: 21%;
+    width: auto;
+    height: 16.4%;
 }
 
 .aral {
     position: absolute;
-    top: 9%;
-    right: 25%;
-    width: 3%;
-    height: 12%;
-    transform: rotate(-15deg);
+    top: 5.8%;
+    right: 23.8%;
+    width: auto;
 }
 
 .rusia {
     position: absolute;
-    top: 9%;
-    right: 26%;
-    width: 5%;
-    height: 36%;
-    transform: rotate(-30deg);
+    top: 8.5%;
+    right: 22.1%;
+    width: auto;
 }
 
 .suecia {
     position: absolute;
-    top: 13%;
-    right: 36%;
-    width: 6%;
-    height: 10%;
-    transform: rotate(-15deg);
+    top: 10.9%;
+    right: 34.9%;
+    width: auto;
 }
 
 .polonia {
     position: absolute;
-    top: 37%;
-    right: 28%;
-    width: 4.5%;
-    height: 12%;
-    transform: rotate(-20deg);
+    top: 32.8%;
+    right: 26.6%;
+    width: auto;
 }
 
 .alemania {
     position: absolute;
-    top: 38%;
-    right: 33%;
-    width: 4.5%;
-    height: 13%;
-    transform: rotate(-10deg);
+    top: 34.1%;
+    right: 30.9%;
+    width: auto;
+    z-index: 1;
 }
 
 .italia {
     position: absolute;
-    top: 51%;
-    right: 33%;
-    width: 4%;
-    height: 15%;
-    transform: rotate(-10deg);
+    top: 49.8%;
+    right: 30.8%;
+    width: auto;
+    z-index: 1;
 }
 
 .francia {
     position: absolute;
-    top: 44.5%;
-    right: 37.5%;
-    width: 7.5%;
-    height: 9%;
-    transform: rotate(-30deg);
+    top: 39.1%;
+    right: 37.3%;
+    width: auto;
 }
 
 .españa{
     position: absolute;
-    top: 52%;
-    right: 44.5%;
-    width: 6%;
-    height: 11%;
-    transform: rotate(-10deg);
+    top: 50.5%;
+    right: 43.3%;
+    width: auto;
 }
 
 .granbretaña{
     position: absolute;
-    top: 27.3%;
-    right: 42%;
-    width: 8%;
-    height: 17%;
-    transform: rotate(0deg);
+    top: 27%;
+    right: 42.5%;
+    width: auto;
 }
 
 .islandia{
     position: absolute;
-    top: 27%;
-    right: 54%;
-    width: 4%;
-    height: 13%;
+    top: 24.2%;
+    right: 51.9%;
+    width: auto;
 }
 
 .sahara {
     position: absolute;
     top: 66.8%;
-    right: 32.8%;
+    right: 32.7%;
     width: auto;
 }
 
 .egipto {
     position: absolute;
-    top: 69%;
-    right: 22%;
-    width: 9%;
-    height: 7%;
-    transform: rotate(20deg);
+    top: 65.3%;
+    right: 20.6%;
+    width: auto;
 }
 
 .etiopia {
     position: absolute;
-    top: 72.8%;
-    right: 23.7%;
+    top: 72.6%;
+    right: 23.8%;
     width: auto;
 }
 
 .zaire {
     position: absolute;
-    top: 77.7%;
-    right: 29.3%;
+    top: 77.6%;
+    right: 29.4%;
     width: auto;
 }
 
 .sudafrica {
     position: absolute;
-    top: 83.1%;
-    right: 25%;
+    top: 82.7%;
+    right: 24.9%;
     width: auto;
 }
 
 .madagascar {
     position: absolute;
-    top: 79%;
-    right: 19%;
-    width: 3%;
-    height: 14%;
-    transform: rotate(15deg);
+    top: 77%;
+    right: 17.3%;
+    width: auto;
 }
 
 .mexico {
     position: absolute;
-    top: 48%;
-    right: 72%;
-    width: 9%;
-    height: 7%;
-    transform: rotate(30deg);
+    top: 43.3%;
+    right: 71.8%;
+    width: auto;
 }
 
 .california{
     position: absolute;
-    top: 41%;
-    right: 77%;
-    width: 13%;
-    height: 7%;
-    transform: rotate(-20deg);
+    top: 36.5%;
+    right: 75.6%;
+    width: auto;
 }
 
 .oregon{
     position: absolute;
-    top: 30.5%;
-    right: 81.8%;
+    top: 30.4%;
+    right: 81.9%;
     width: auto;
-    transform: rotate(-1deg);
 }
 
 .nuevayork{
     position: absolute;
-    top: 32%;
-    right: 72%;
-    width: 12%;
-    height: 6%;
-    transform: rotate(20deg);
+    top: 21.8%;
+    right: 70.5%;
+    width: auto;
 }
 
 .terranova{
     position: absolute;
-    top: 26%;
-    right: 71%;
-    width: 10%;
-    height: 6%;
-    transform: rotate(20deg);
+    top: 20.7%;
+    right: 70.8%;
+    width: auto;
 }
 
 .labrador{
     position: absolute;
-    top: 17%;
-    right: 71%;
-    width: 5%;
-    height: 9%;
+    top: 15.8%;
+    right: 69.6%;
+    width: auto;
 }
 
 .groenlandia{
     position: absolute;
-    top: 4%;
-    right: 62%;
-    width: 6%;
-    height: 23%;
+    top: 0.5%;
+    right: 60.1%;
+    width: auto;
 }
 
 .canada {
     position: absolute;
-    top: 3%;
-    right: 80%;
-    width: 7%;
-    height: 25%;
-    transform: rotate(15deg);
+    top: 1%;
+    right: 76%;
+    width: auto;
 }
 
 .yukon{
     position: absolute;
-    top: 16%;
-    right: 87.5%;
-    width: 6.5%;
-    height: 17%;
-    transform: rotate(-15deg);
+    top: 11.6%;
+    right: 85.4%;
+    width: auto;
 }
 
 .alaska {
     position: absolute;
-    top: 27%;
-    right: 94%;
-    width: 4%;
-    height: 14%;
+    top: 20.3%;
+    right: 91.9%;
+    width: auto;
 }
 
 .boton_atras {    
@@ -670,9 +619,11 @@ transform: scale(1.1);
 }
 
 .dialogtarjetas{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #c59a3e;
+    border-radius: 10px;
+    border-color: white;
+    justify-content: center;
+    align-items: center ;
 }
 
 .dialogdados{
@@ -713,6 +664,23 @@ transform: scale(1.1);
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
+    background-color: #c59a3e;
+    box-shadow: rgb(58, 45, 45);
+}
+
+.dialogObjetivos {
+    background-color: #c59a3e;
+    border-radius: 10px;
+    border-color: white;
+    justify-content: center;
+    align-items: center ;
+}
+
+.fin_dialog {
+    background-color: #c59a3e;
+    border-radius: 10px;
+    border-color: white;
 }
 
 .rojo{background-color: red;}
@@ -727,38 +695,46 @@ transform: scale(1.1);
     position: absolute;
     top: 45%;
     right: 45%;
-    width: 30px;
-    height: 30px;
+    width: 2%;
+    height: 4.35%;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: black;
     border: 1px solid white;
+    z-index: 3;
+    cursor: default;
 }
 
 .faustralia {
     position: absolute;
-    top: 78%;
-    right: 4%;
+    top: 82%;
+    right: 4.5%;
 }
 
 .fsumatra {
     position: absolute;
-    top: 66%;
-    right: 14%;
+    top: 67%;
+    right: 14.5%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fborneo {
     position: absolute;
     top: 60%;
-    right: 7%;
+    right: 7.5%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fjava {
     position: absolute;
-    top: 58%;
-    right: 2.5%;
+    top: 58.5%;
+    right: 2.8%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 
@@ -766,18 +742,24 @@ transform: scale(1.1);
     position: absolute;
     top: 78%;
     right: 68%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fperu {
     position: absolute;
-    top: 66%;
-    right: 67%;
+    top: 68.5%;
+    right: 65%;
+    height: 4%;
+    width: 1.8%;
 }
 
 .fargentina {
     position: absolute;
-    top: 78%;
-    right: 65%;
+    top: 82%;
+    right: 64%;
+    height: 4%;
+    width: 1.8%
 }
 
 .furuguay {
@@ -788,26 +770,28 @@ transform: scale(1.1);
 
 .fbrasil {
     position: absolute;
-    top: 64%;
+    top: 67.5%;
     right: 59%;
 }
 
 .fcolombia {
     position: absolute;
-    top: 57%;
-    right: 67%;
+    top: 55.3%;
+    right: 66.6%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .findia {
     position: absolute;
-    top: 50%;
+    top: 47.5%;
     right: 11%;
 }
 
 .fmalasia {
     position: absolute;
-    top: 45%;
-    right: 4%;
+    top: 47%;
+    right: 4.5%;
 }
 
 .fchina {
@@ -818,38 +802,48 @@ transform: scale(1.1);
 
 .firan {
     position: absolute;
-    top: 34%;
-    right: 20%;
+    top: 26%;
+    right: 22.5%;
 }
 
 .fjapon {
     position: absolute;
-    top: 14%;
+    top: 16.6%;
     right: 4%;
+    height: 3.2%;
+    width: 1.5%;
 }
 
 .fgobi {
     position: absolute;
-    top: 33%;
-    right: 15%;
+    top: 36.5%;
+    right: 15.7%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fmongolia {
     position: absolute;
-    top: 23%;
-    right: 18%;
+    top: 27.2%;
+    right: 18.4%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fkamchatka {
     position: absolute;
-    top: 7.5%;
-    right: 12.5%;
+    top: 5.8%;
+    right: 13%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fturquia {
     position: absolute;
-    top: 44%;
-    right: 22%;
+    top: 47%;
+    right: 18.8%;
+    height: 4%;
+    width: 1.8%;
 }
 
 .fisrael {
@@ -866,116 +860,128 @@ transform: scale(1.1);
 
 .fsiberia {
     position: absolute;
-    top: 15%;
-    right: 18%;
+    top: 16.5%;
+    right: 21.3%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .ftaimir {
     position: absolute;
-    top: 8%;
-    right: 19%;
+    top: 10.1%;
+    right: 19.2%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .ftartaria {
     position: absolute;
-    top: 6%;
-    right: 22.5%;
+    top: 8%;
+    right: 22.4%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .faral {
     position: absolute;
-    top: 13%;
+    top: 15.7%;
     right: 25%;
 }
 
 .frusia {
     position: absolute;
-    top: 25%;
-    right: 29%;
+    top: 20%;
+    right: 30.5%;
 }
 
 .fsuecia {
     position: absolute;
-    top: 16%;
+    top: 19.7%;
     right: 38%;
 }
 
 .fpolonia {
     position: absolute;
-    top: 40%;
-    right: 29%;
+    top: 42.5%;
+    right: 28.5%;
 }
 
 .falemania {
     position: absolute;
-    top: 42%;
+    top: 38%;
     right: 34%;
 }
 
 .fitalia {
     position: absolute;
-    top: 55%;
+    top: 53.5%;
     right: 34.5%;
 }
 
 .ffrancia {
     position: absolute;
-    top: 47%;
+    top: 43%;
     right: 40%;
 }
 
 .fespaña{
     position: absolute;
-    top: 56%;
+    top: 52.5%;
     right: 46.5%;
 }
 
 .fgranbretaña{
     position: absolute;
-    top: 36%;
-    right: 44.5%;
+    top: 37%;
+    right: 44.8%;
 }
 
 .fislandia{
     position: absolute;
-    top: 32%;
+    top: 27.5%;
     right: 55%;
 }
 
 .fsahara {
     position: absolute;
-    top: 73%;
+    top: 77%;
     right: 38%;
 }
 
 .fegipto {
     position: absolute;
-    top: 69%;
-    right: 26%;
+    top: 73.8%;
+    right: 23%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fetiopia {
     position: absolute;
-    top: 76%;
-    right: 28%;
+    top: 74.5%;
+    right: 30.8%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fzaire {
     position: absolute;
-    top: 80%;
-    right: 33%;
+    top: 82.5%;
+    right: 30.5%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fsudafrica {
     position: absolute;
-    top: 88%;
-    right: 28%;
+    top: 85%;
+    right: 27.5%;
 }
 
 .fmadagascar {
     position: absolute;
-    top: 83%;
-    right: 19.5%;
+    top: 85%;
+    right: 19.7%;
 }
 
 .fmexico {
@@ -986,54 +992,88 @@ transform: scale(1.1);
 
 .fcalifornia{
     position: absolute;
-    top: 40.5%;
-    right: 82%;
+    top: 40.6%;
+    right: 84.6%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .foregon{
     position: absolute;
-    top: 37%;
-    right: 88%;
+    top: 33.5%;
+    right: 85%;
 }
 
 .fnuevayork{
     position: absolute;
-    top: 32%;
-    right: 79%;
+    top: 26%;
+    right: 81%;
 }
 
 .fterranova{
     position: absolute;
-    top: 26%;
-    right: 76%;
+    top: 29%;
+    right: 72%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .flabrador{
     position: absolute;
-    top: 20%;
-    right: 72%;
+    top: 22%;
+    right: 73.8%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fgroenlandia{
     position: absolute;
-    top: 10%;
-    right: 64%;
+    top: 4%;
+    right: 65.5%;
 }
 
 .fcanada {
     position: absolute;
-    top: 13%;
-    right: 83%;
+    top: 15.5%;
+    right: 82.5%;
 }
 
 .fyukon{
     position: absolute;
-    top: 24%;
+    top: 27%;
     right: 89%;
 }
 
 .falaska {
     position: absolute;
-    top: 32.5%;
-    right: 94.5%;
+    top: 27.5%;
+    right: 95.1%;
+}
+
+.puente{
+    pointer-events: none;
+}
+
+.mad-zai{
+    position: absolute;
+    top: 87%;
+    right: 22.2%;
+    width: auto;
+    height: 12.5%;
+}
+
+.aus-sum{
+    position: absolute;
+    top: 72%;
+    right: 9.6%;
+    width: auto;
+    height: 4.5%;
+}
+
+.gro-nue{
+    position: absolute;
+    top: 23%;
+    right: 67%;
+    width: auto;
+    height: 12.5%;
 }

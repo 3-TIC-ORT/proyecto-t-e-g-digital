@@ -1,0 +1,65 @@
+desde 938; 
+let taustralia = {};
+let tsumatra = {};
+let tjava = {};
+let tborneo = {};
+let tindia = {};
+let tmalasia = {};
+let tchina = {};
+let tiran = {};
+let tchile = {};
+let tperu = {};
+let targentina = {};
+let turuguay = {};
+let tbrasil = {};
+let tcolombia = {};
+let tjapon = {};
+let tgobi = {};
+let tmongolia = {};
+let tkamchatka = {};
+let tturquia = {};
+let tisrael = {};
+let tarabia = {};
+let tsiberia = {};
+let ttaimir = {};
+let ttartaria = {};
+let taral = {};
+let trusia = {};
+let tsuecia = {};
+let talemania = {};
+let tpolonia = {};
+let tsahara = {};
+let tegipto = {};
+let tetiopia = {};
+let talaska = {};
+let tmexico = {};
+let titalia = {};
+let tcalifornia = {};
+let tfrancia = {};
+let toregon = {};
+let tespaña = {};
+let tgranbretaña = {};
+let tislandia = {};
+let tzaire = {};
+let tsudafrica = {};
+let tmadagascar = {};
+let tnuevayork = {};
+let tcanada = {};
+let tyukon = {};
+let tterranova = {};
+let tlabrador = {};
+let tgroenlandia = {};
+
+let tpaises = [taustralia, tsumatra, tjava, tborneo, tindia, tmalasia, tchina, tiran, tchile, tperu, targentina, turuguay, tbrasil, tcolombia, tjapon, tgobi, tmongolia, tkamchatka, tturquia, tisrael, tarabia, tsiberia, ttaimir, ttartaria, taral, trusia, tsuecia, talemania, tpolonia, tsahara, tegipto, tetiopia, talaska, tmexico, titalia, tcalifornia, tfrancia, toregon, tespaña, tgranbretaña, tislandia, tzaire, tsudafrica, tmadagascar, tnuevayork, tcanada, tyukon, tterranova, tlabrador, tgroenlandia];
+console.log(tpaises);
+
+//lo hablo el martes que viene con shulian
+
+getEvent("cargarEstado", (tarjetas) => {
+    for (let itar = 0; itar < tarjetas.length; itar++) {   
+       tpaises[itar].pais = tarjetas.tarjetasLimpias[itar].pais;
+        tpaises[itar].simbolo = tarjetas.tarjetasLimpias[itar].simbolo;
+        tpaises[itar].color = tarjetas.tarjetasLimpias[itar].color;
+        tpaises[itar].fichas = tarjetas.tarjetasLimpias[itar].fichas;
+    }
+});

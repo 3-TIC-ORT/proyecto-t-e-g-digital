@@ -19,6 +19,10 @@ body {
   font-family: "Tiro Bangla", serif;
   font-weight: 600;
   font-style: normal;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #866834;
 }
 
 .objSecretos {
@@ -31,6 +35,10 @@ body {
   font-family: "Tiro Bangla", serif;
   font-weight: 600;
   font-style: normal;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #866834;
 }
 
 .instructor {
@@ -43,9 +51,14 @@ body {
   font-family: "Tiro Bangla", serif;
   font-weight: 600;
   font-style: normal;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #866834;
 }
 
 .botonSiguiente {
+ background-color: rgb(214, 218, 195);
  width: 15%;
  height: 10%;
  text-align: center;
@@ -54,6 +67,10 @@ body {
  font-family: "Tiro Bangla", serif;
  font-weight: 600;
  font-style: normal;
+ border-radius: 10px;
+ border-width: 3px;
+ border-style: solid;
+ border-color: #866834;
 }
 
 .boton_atras {

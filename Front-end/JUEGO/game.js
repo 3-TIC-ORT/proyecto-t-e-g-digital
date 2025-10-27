@@ -2,8 +2,8 @@
 let turno = "Rojo";
 let colores = [];
 let listacolores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
-let fase = "Inicio Ronda 1";
-let fases = ["Inicio Ronda 1","Inicio Ronda 2", "Atacar", "Reagrupar", "Incorporar"];
+let fase = "Primera Incorporación";
+let fases = ["Primera Incorporación","Segunda Incorporación", "Atacar", "Reagrupar", "Incorporar"];
 let currentphase = document.getElementById("currentphase");
 let currentturn = document.getElementById("currentturn");
 let atacarrojo = document.getElementById("atacarrojo");
@@ -1409,9 +1409,9 @@ if (texto === ""){
  instrucciones.textContent = atacarInstruccion
 } else if (faseactual === "Reagrupar") {
  instrucciones.textContent = reagruparInstruccion;
-} else if (faseactual === "Inicio Ronda 1"){
+} else if (faseactual === "Primera Incorporación"){
  instrucciones.textContent = "Tenés " + fichasActuales + " fichas para incorporar, clickea el territorio para poner una ficha";
-} else if (faseactual === "Inicio Ronda 2"){
+} else if (faseactual === "Segunda Incorporación"){
  instrucciones.textContent = "Ahora tenés " + fichasActuales + " fichas para incorporar";
 };
 iactins1 = 0;
@@ -1891,7 +1891,7 @@ function test12(colorturno) {
             fase = "Reagrupar";
             currentphase.textContent = "Fase: " + fase;
         } 
-    else if(fase === "Inicio Ronda 1"){
+    else if(fase === "Primera Incorporación"){
         i121 = 0;
         while (colores[i121] != colorturno){
             i121++;
@@ -1915,7 +1915,7 @@ function test12(colorturno) {
         } 
     else if (i121 === colores.length){
         i121 = 0;
-        fase = "Inicio Ronda 2";
+        fase = "Segunda Incorporación";
         turno = colores[i121];
         currentturn.textContent = "Turno: " + turno;
         currentphase.textContent = "Fase: " + fase;
@@ -1927,7 +1927,7 @@ function test12(colorturno) {
         fichasnuevas.negro = 3;
     };
     }
-    else if(fase === "Inicio Ronda 2"){
+    else if(fase === "Segunda Incorporación"){
     i121 = 0;
        while (colores[i121] != colorturno){
             i121++;
@@ -2509,7 +2509,7 @@ function test14(pais) {
         };
     };
     i141 = 0;
-    if (fase === "Inicio Ronda 1" || fase === "Inicio Ronda 2") {
+    if (fase === "Primera Incorporación" || fase === "Segunda Incorporación") {
         if (turno === pais.colorfichas){
             if (turno === "Rojo"){
             if (fichasnuevas.rojo > 0){

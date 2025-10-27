@@ -1251,6 +1251,8 @@ let itarj2 = 0;
 let itarj3 = 0;
 let itarj4 = 0;
 
+
+//cargar tarjetas del back
 function cargarTarjetas () {
 getEvent("cargarTarjetas", (tarjetas) => {
 itarj = 0;

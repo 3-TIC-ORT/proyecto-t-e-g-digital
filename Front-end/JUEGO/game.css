@@ -106,7 +106,7 @@ svg path.nombre {
 
 .colombia {
     position: absolute;
-    top: 53.7%;
+    top: 53.9%;
     right: 64.1%;
     width: auto;
 }
@@ -228,7 +228,7 @@ svg path.nombre {
 .suecia {
     position: absolute;
     top: 10.9%;
-    right: 34.9%;
+    right: 34.8%;
     width: auto;
 }
 
@@ -376,7 +376,7 @@ svg path.nombre {
 
 .canada {
     position: absolute;
-    top: 1%;
+    top: 1.3%;
     right: 76%;
     width: auto;
 }
@@ -402,6 +402,7 @@ svg path.nombre {
 
 .guardar {
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 .guardar:hover {
     transform: scale(1.1);
@@ -462,7 +463,7 @@ a {
 }
 
 .boton_interaccion {
-    width:max-content;
+    width: fit-content;
     height: auto;
     color: darkgoldenrod;
     padding: 4px;
@@ -474,12 +475,26 @@ a {
     border-color: darkgoldenrod;
     font-family: "Tiro Bangla", serif;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.boton_interaccion:hover{
+    transform: scale(1.1);
+    background-color: darkgoldenrod;
+    color: white;
+    border-color: white
+}
+
+.objetivo{
+    color: white;
+    font-family: "Tiro Bangla", serif;
 }
 
 .pausa {
 position: absolute;
 left: 2.5%;
 top: 2.5%;
+transition: all 0.2s ease-in-out;
 }
 
 .pausa:hover {
@@ -488,10 +503,12 @@ transform: scale(1.1);
 
 .reanudar {
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .actRapidaIns {
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .actRapidaIns:hover {
@@ -527,6 +544,7 @@ transform: scale(1.1);
 .atrasConfig {
     justify-self:flex-start;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .atrasConfig:hover {
@@ -539,6 +557,7 @@ transform: scale(1.1);
 
 .configuracion {
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .configuracion:hover {
@@ -547,6 +566,7 @@ transform: scale(1.1);
 
 .salir {
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 .salir:hover {
     transform: scale(1.1);
@@ -570,9 +590,14 @@ transform: scale(1.1);
 }
 
 .tarjeta {
-  background-color: burlywood;
+  background-color: #fcff9d;
   width: 80px;
   height: 110px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
 }
 
 .dialogtarjetas{

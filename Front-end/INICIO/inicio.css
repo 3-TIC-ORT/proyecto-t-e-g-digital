@@ -7,7 +7,7 @@
 
 .botones_inicio {
     text-align: center;
-    width: fit-content;
+    width: 70%;
     height: fit-content;
     font-optical-sizing: auto;
     text-transform: uppercase;
@@ -36,7 +36,7 @@
     background-color: #f7f3e9; 
     color: #c59a3e; 
     border: 3px solid #c59a3e;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .boton_atras {

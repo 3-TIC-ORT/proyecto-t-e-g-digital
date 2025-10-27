@@ -71,6 +71,11 @@ body {
  border-width: 3px;
  border-style: solid;
  border-color: #866834;
+ transition: all 0.2s ease-in-out;
+}
+
+.botonSiguiente:hover{
+  transform: scale(1.1);
 }
 
 .boton_atras {
@@ -89,7 +94,7 @@ body {
     display: inline-block;
     text-decoration: none;
     font-family: "Tiro Bangla", serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -122,4 +127,11 @@ font-style:inherit ;
   right: 92%; 
   height: 68px; 
   width: 70px; 
+}
+
+option {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: darkgoldenrod;
 }

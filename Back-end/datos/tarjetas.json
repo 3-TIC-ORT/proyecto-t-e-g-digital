@@ -69,8 +69,8 @@
     {
       "pais": "Uruguay",
       "simbolo": "Globo",
-      "color": "Rojo",
-      "fichas": 0
+      "color": "",
+      "fichas": 2
     },
     {
       "pais": "Brasil",
@@ -153,8 +153,8 @@
     {
       "pais": "Rusia",
       "simbolo": "Globo",
-      "color": "Rojo",
-      "fichas": 0
+      "color": "",
+      "fichas": 2
     },
     {
       "pais": "Suecia",

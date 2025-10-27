@@ -8,50 +8,13 @@ body {
     gap: 1%;
 }
 
-.oceania {
-    background-color: transparent;
-    font-family: "Tiro Bangla", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.sudamerica { 
-    background-color: transparent;
-    font-family: "Tiro Bangla", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.asia { 
-    background-color: transparent; 
-    font-family: "Tiro Bangla", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.europa { 
-    background-color: transparent; 
-    font-family: "Tiro Bangla", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.africa {
-    background-color: transparent;
-    font-family: "Tiro Bangla", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.norteamerica {
-    background-color: transparent;
-    font-family: "Tiro Bangla", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
 .map-container {
 display: flex;
 justify-content: center;
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #1e1e1e; 
+  background-color: rgb(32, 120, 178); 
 }
 
 .mapa {
@@ -1057,7 +1020,7 @@ transform: scale(1.1);
 .mad-zai{
     position: absolute;
     top: 87%;
-    right: 22.2%;
+    right: 22.3%;
     width: auto;
     height: 12.5%;
 }
@@ -1076,4 +1039,12 @@ transform: scale(1.1);
     right: 67%;
     width: auto;
     height: 12.5%;
+}
+
+.gro-lab{
+    position: absolute;
+    top: 13.5%;
+    right: 68.2%;
+    width: auto;
+    height: 6%;
 }

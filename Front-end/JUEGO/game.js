@@ -1245,6 +1245,50 @@ let tarjetasverde = [];
 let tarjetasmagenta = [];
 let tarjetasnegro = []; 
 let mazoreserva = [];
+tpaises = [];
+let itarj = 0;
+let itarj2 = 0;
+let itarj3 = 0;
+let itarj4 = 0;
+
+function cargarTarjetas () {
+getEvent("cargarTarjetas", (tarjetas) => {
+itarj = 0;
+itarj2 = 0;
+itarj3 = 0;
+itarj4 = 0;
+while(tarjetas.tarjetasLimpias.length > itarj){
+while(tarjetas.tarjetasLimpias[itarj].pais != paises[itarj2].nombre){
+itarj2++;
+};
+let paistarjeta = paises[itarj2];
+let nuevatarjeta = {
+    "pais": paistarjeta,
+    "fichas": tarjetas.tarjetasLimpias[itarj].fichas,
+    "color": tarjetas.tarjetasLimpias[itarj].color,
+    "simbolo": tarjetas.tarjetasLimpias[itarj].simbolo,
+};
+tpaises.push(nuevatarjeta);
+itarj2 = 0;
+itarj++;
+}
+while(tpaises.length > itarj3){
+    randomizador = Math.floor(Math.random() * tpaises.length);
+    itarj4 = 0;
+    while(mazo.length > itarj4 && mazo[itarj4] != tpaises[randomizador]){
+        itarj4++;
+    };
+    if(mazo[itarj4] != tpaises[randomizador]){
+        mazo.push(tpaises[randomizador]);
+        itarj3++;
+    };
+itarj4 = 0;
+};
+})
+return { tpaises, mazo }
+}
+
+cargarTarjetas();
 
 //Numero de jugadores
 i = 0;
@@ -1272,22 +1316,6 @@ i2++;
 };
 test26(paises[randomizador]);
 };
-};
-i = 0;
-i2 = 0;
-
-//Mezclar tarjetas países
-while(tpaises.length > i){
-    randomizador = Math.floor(Math.random() * tpaises.length);
-    i2 = 0;
-    while(mazo.length > i2 && mazo[i2] != tpaises[randomizador]){
-        i2++;
-    };
-    if(mazo[i2] != tpaises[randomizador]){
-        mazo.push(tpaises[randomizador]);
-        i++;
-    };
-i2 = 0;
 };
 i = 0;
 i2 = 0;

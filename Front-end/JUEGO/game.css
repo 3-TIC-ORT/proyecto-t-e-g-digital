@@ -1295,3 +1295,14 @@ select {
     align-items: center;
     gap: 10px
 }
+
+.dnuevatarjeta{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #c59a3e;
+    box-shadow: rgb(58, 45, 45);
+    font-family: "Tiro Bangla", serif;
+    border-radius: 10px
+}

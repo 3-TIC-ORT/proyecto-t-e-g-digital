@@ -708,16 +708,16 @@ transform: scale(1.1);
 
 .fborneo {
     position: absolute;
-    top: 60%;
-    right: 7.5%;
+    top: 58%;
+    right: 7.6%;
     height: 3.2%;
     width: 1.4%;
 }
 
 .fjava {
     position: absolute;
-    top: 58.5%;
-    right: 2.8%;
+    top: 57.5%;
+    right: 2.5%;
     height: 3.2%;
     width: 1.4%;
 }
@@ -733,10 +733,10 @@ transform: scale(1.1);
 
 .fperu {
     position: absolute;
-    top: 68.5%;
+    top: 69.2%;
     right: 65%;
-    height: 4%;
-    width: 1.8%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fargentina {
@@ -761,10 +761,10 @@ transform: scale(1.1);
 
 .fcolombia {
     position: absolute;
-    top: 55.3%;
-    right: 66.6%;
-    width: 1.8%;
-    height: 4%;
+    top: 60%;
+    right: 66.4%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .findia {
@@ -794,9 +794,9 @@ transform: scale(1.1);
 .fjapon {
     position: absolute;
     top: 16.6%;
-    right: 4%;
+    right: 4.1%;
     height: 3.2%;
-    width: 1.5%;
+    width: 1.4%;
 }
 
 .fgobi {
@@ -809,8 +809,8 @@ transform: scale(1.1);
 
 .fmongolia {
     position: absolute;
-    top: 27.2%;
-    right: 18.4%;
+    top: 27.5%;
+    right: 18.5%;
     width: 1.8%;
     height: 4%;
 }
@@ -825,22 +825,26 @@ transform: scale(1.1);
 
 .fturquia {
     position: absolute;
-    top: 47%;
-    right: 18.8%;
-    height: 4%;
-    width: 1.8%;
+    top: 42.1%;
+    right: 22%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fisrael {
     position: absolute;
-    top: 53%;
-    right: 23%;
+    top: 56.6%;
+    right: 23.9%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .farabia {
     position: absolute;
-    top: 57%;
-    right: 19%;
+    top: 59.5%;
+    right: 18.6%;
+    height: 4%;
+    width: 1.8%;
 }
 
 .fsiberia {
@@ -900,7 +904,9 @@ transform: scale(1.1);
 .fitalia {
     position: absolute;
     top: 53.5%;
-    right: 34.5%;
+    right: 34.6%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .ffrancia {
@@ -917,8 +923,10 @@ transform: scale(1.1);
 
 .fgranbretaña{
     position: absolute;
-    top: 37%;
-    right: 44.8%;
+    top: 32.6%;
+    right: 44.2%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fislandia{
@@ -943,10 +951,10 @@ transform: scale(1.1);
 
 .fetiopia {
     position: absolute;
-    top: 74.5%;
-    right: 30.8%;
-    width: 1.8%;
-    height: 4%;
+    top: 74.2%;
+    right: 31.7%;
+    width: 1.4%;
+    height: 3.2%;
 }
 
 .fzaire {
@@ -971,8 +979,10 @@ transform: scale(1.1);
 
 .fmexico {
     position: absolute;
-    top: 48%;
-    right: 75.5%;
+    top: 45.8%;
+    right: 79.7%;
+    width: 1.8%;
+    height: 4%;
 }
 
 .fcalifornia{
@@ -997,10 +1007,10 @@ transform: scale(1.1);
 
 .fterranova{
     position: absolute;
-    top: 29%;
+    top: 29.5%;
     right: 72%;
-    width: 1.8%;
-    height: 4%;
+    width: 1.4%;
+    height: 3.2%;
 }
 
 .flabrador{
@@ -1242,7 +1252,13 @@ transform: scale(1.1);
 .sectorturno{
     border-width: 3px;   
     border-style: solid;
-    border-color: rgb(204, 150, 13);
+    border-color: darkgoldenrod;
+}
+
+.elsesector{
+    border-width: 3px;   
+    border-style: solid;
+    border-color: rgb(59, 59, 59);
 }
 
 .pasarfichas{

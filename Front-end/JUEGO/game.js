@@ -274,18 +274,27 @@ let sectorverde = document.getElementById("sectorverde");
 let sectormagenta = document.getElementById("sectormagenta");
 let sectornegro = document.getElementById("sectornegro");
 let sectores = [sectorrojo, sectorazul, sectoramarillo, sectorverde, sectormagenta, sectornegro];
+sectores.forEach((s) => {
+s.classList.add("elsesector")
+});
 if(turno === "Rojo"){
-    sectorrojo.classList.add("sectorturno");
+sectorrojo.classList.add("sectorturno");
+sectorrojo.classList.remove("elsesector");
 } else if(turno === "Azul"){
-    sectorazul.classList.add("sectorturno");
+sectorazul.classList.add("sectorturno");
+sectorazul.classList.remove("elsesector");
 } else if(turno === "Amarillo"){
-    sectoramarillo.classList.add("sectorturno");
+sectoramarillo.classList.add("sectorturno");
+sectoramarillo.classList.remove("elsesector");
 } else if(turno === "Verde"){
-    sectorverde.classList.add("sectorturno");
+sectorverde.classList.add("sectorturno");
+sectorverde.classList.remove("elsesector");
 } else if(turno === "Magenta"){
-    sectormagenta.classList.add("sectorturno");
+sectormagenta.classList.add("sectorturno");
+sectormagenta.classList.remove("elsesector");
 } else if(turno === "Negro"){
-    sectornegro.classList.add("sectorturno");
+sectornegro.classList.add("sectorturno");
+sectornegro.classList.remove("elsesector");
 }
 
 //Declaracion de instrucciones
@@ -2178,20 +2187,27 @@ function test12(colorturno) {
             sectores.forEach((s) => {
                 if(s.classList.contains("sectorturno")){
                 s.classList.remove("sectorturno");
+                s.classList.add("elsesector");
                 };
             });
             if(turno === "Rojo"){
                 sectorrojo.classList.add("sectorturno");
+                sectorrojo.classList.remove("elsesector");
             } else if(turno === "Azul"){
                 sectorazul.classList.add("sectorturno");
+                sectorazul.classList.remove("elsesector");
             } else if(turno === "Amarillo"){
                 sectoramarillo.classList.add("sectorturno");
+                sectoramarillo.classList.remove("elsesector");
             } else if(turno === "Verde"){
                 sectorverde.classList.add("sectorturno");
+                sectorverde.classList.remove("elsesector");
             } else if(turno === "Magenta"){
                 sectormagenta.classList.add("sectorturno");
+                sectormagenta.classList.remove("elsesector");
             } else if(turno === "Negro"){
                 sectornegro.classList.add("sectorturno");
+                sectornegro.classList.remove("elsesector");
             }
             };
         };
@@ -3306,6 +3322,7 @@ icarg5 = 0;
 sectores.forEach((s) => {
     if(s.classList.contains("sectorturno")){
     s.classList.remove("sectorturno");
+    s.classList.add("elsesector")
     };
 });
 if(turno === "Rojo"){

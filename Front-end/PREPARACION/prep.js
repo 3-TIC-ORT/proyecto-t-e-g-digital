@@ -19,36 +19,26 @@ localStorage.setItem("njugadores", njugadores);
 };
 if(parseInt(objectives.value)===0){
 contenidoobj.textContent = "SELECCIONAR MODO DE JUEGO";  
-};
-if(parseInt(objectives.value)===1){
+} else if(parseInt(objectives.value)===1){
 contenidoobj.textContent ="OBJETIVOS SECRETOS";
 nobjetivos = "true";
 localStorage.setItem("nobjetivos", nobjetivos);
-};
-if(parseInt(objectives.value)===2){
+} else if(parseInt(objectives.value)===2){
 contenidoobj.textContent = "OBJETIVO COMÚN (30 PAÍSES)";
 nobjetivos = "false";
 localStorage.setItem("nobjetivos", nobjetivos);
-};
-if(parseInt(objectives.value)===3){
+} else if(parseInt(objectives.value)===3){
 contenidoobj.textContent ="DOMINACIÓN MUNDIAL (50 PAÍSES)";
 nobjetivos = "dominacion";
 localStorage.setItem("nobjetivos", nobjetivos);
 };
-if(parseInt(objectives.value)===2){
-contenidoobj.textContent ="OBJETIVOS SECRETOS";
-nobjetivos = true;
-localStorage.setItem("nobjetivos", nobjetivos);
-};
 if(parseInt(instructor.value) === 0){
     contenidoins.textContent = "SELECCIONAR USO DE INSTRUCTOR";
-}
-if(parseInt(instructor.value) === 1){
+} else if(parseInt(instructor.value) === 1){
     contenidoins.textContent = "CON INSTRUCTOR";
     ninstructor = true;
     localStorage.setItem("ninstructor", ninstructor);
-}
-if(parseInt(instructor.value) === 2){
+} else if(parseInt(instructor.value) === 2){
     contenidoins.textContent = "SIN INSTRUCTOR";
     ninstructor = false;
     localStorage.setItem("ninstructor", ninstructor);

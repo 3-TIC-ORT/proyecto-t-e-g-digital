@@ -1287,3 +1287,11 @@ select {
     font-family: "Tiro Bangla", serif;
     border-radius: 10px
 }
+
+.containerobjetivo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}

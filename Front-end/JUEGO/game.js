@@ -1172,10 +1172,23 @@ function test22(color){
 i221 = 0;
 if(color === "Rojo"){
 while(tarjetasrojo.length > i221){
-    docTrojo[i221].textContent = tarjetasrojo[i221].pais.nombre + " " + tarjetasrojo[i221].simbolo;
+    docTrojo[i221].textContent = tarjetasrojo[i221].pais.nombre;
     if(docTrojo[i221].textContent != "" && !docTrojo[i221].classList.contains("tarjeta")){
         docTrojo[i221].classList.add("tarjeta");
     };
+    if(tarjetasrojo[i221].simbolo === "Globo"){
+        docTrojo[i221].innerHTML += `
+        <img src=../IMAGENES/Globo.svg>
+        `
+        } else if(tarjetasrojo[i221].simbolo === "Cañon"){
+        docTrojo[i221].innerHTML += `
+        <img src=../IMAGENES/Cañon.svg>
+        `
+        } else if(tarjetasrojo[i221].simbolo === "Fragata"){
+        docTrojo[i221].innerHTML += `
+        <img src=../IMAGENES/Fragata.svg>
+        `
+        }
     if (tselect1 === tarjetasrojo[i221] || tselect2 === tarjetasrojo[i221] || tselect3 === tarjetasrojo[i221]){
         if(!docTrojo[i221].classList.contains("bordeAmarillo")){
         docTrojo[i221].classList.add("bordeAmarillo");};
@@ -1189,10 +1202,23 @@ while(tarjetasrojo.length > i221){
 i221 = 0;
 if(color === "Azul"){
 while(tarjetasazul.length > i221){
-    docTazul[i221].textContent = tarjetasazul[i221].pais.nombre + " " + tarjetasazul[i221].simbolo;
+    docTazul[i221].textContent = tarjetasazul[i221].pais.nombre;
     if(docTazul[i221].textContent != "" && !docTazul[i221].classList.contains("tarjeta")){
     docTazul[i221].classList.add("tarjeta");
     };
+    if(tarjetasazul[i221].simbolo === "Globo"){
+        docTazul[i221].innerHTML += `
+        <img src=../IMAGENES/Globo.svg>
+        `
+        } else if(tarjetasazul[i221].simbolo === "Cañon"){
+        docTazul[i221].innerHTML += `
+        <img src=../IMAGENES/Cañon.svg>
+        `
+        } else if(tarjetasazul[i221].simbolo === "Fragata"){
+        docTazul[i221].innerHTML += `
+        <img src=../IMAGENES/Fragata.svg>
+        `
+        }
     if (tselect1 === tarjetasazul[i221] || tselect2 === tarjetasazul[i221] || tselect3 === tarjetasazul[i221]){
         if(!docTazul[i221].classList.contains("bordeAmarillo")){
         docTazul[i221].classList.add("bordeAmarillo");};
@@ -1206,10 +1232,23 @@ while(tarjetasazul.length > i221){
 i221 = 0;
 if(color === "Amarillo"){
 while(tarjetasamarillo.length > i221){
-    docTamarillo[i221].textContent = tarjetasamarillo[i221].pais.nombre + " " + tarjetasamarillo[i221].simbolo;
+    docTamarillo[i221].textContent = tarjetasamarillo[i221].pais.nombre;
     if(docTamarillo[i221].textContent != "" && !docTamarillo[i221].classList.contains("tarjeta")){
     docTamarillo[i221].classList.add("tarjeta");
-    };    
+    };
+    if(tarjetasamarillo[i221].simbolo === "Globo"){
+        docTamarillo[i221].innerHTML += `
+        <img src=../IMAGENES/Globo.svg>
+        `
+        } else if(tarjetasamarillo[i221].simbolo === "Cañon"){
+        docTamarillo[i221].innerHTML += `
+        <img src=../IMAGENES/Cañon.svg>
+        `
+        } else if(tarjetasamarillo[i221].simbolo === "Fragata"){
+        docTamarillo[i221].innerHTML += `
+        <img src=../IMAGENES/Fragata.svg>
+        `
+        }    
     if (tselect1 === tarjetasamarillo[i221] || tselect2 === tarjetasamarillo[i221] || tselect3 === tarjetasamarillo[i221]){
         if(!docTamarillo[i221].classList.contains("bordeAmarillo")){
         docTamarillo[i221].classList.add("bordeAmarillo");};
@@ -1223,10 +1262,23 @@ while(tarjetasamarillo.length > i221){
 i221 = 0;
 if(color === "Verde"){
 while(tarjetasverde.length > i221){
-    docTverde[i221].textContent = tarjetasverde[i221].pais.nombre + " " + tarjetasverde[i221].simbolo;
+    docTverde[i221].textContent = tarjetasverde[i221].pais.nombre;
     if(docTverde[i221].textContent != "" && !docTverde[i221].classList.contains("tarjeta")){
     docTverde[i221].classList.add("tarjeta");
-    };    
+    };  
+    if(tarjetasverde[i221].simbolo === "Globo"){
+        docTverde[i221].innerHTML += `
+        <img src=../IMAGENES/Globo.svg>
+        `
+        } else if(tarjetasverde[i221].simbolo === "Cañon"){
+        docTverde[i221].innerHTML += `
+        <img src=../IMAGENES/Cañon.svg>
+        `
+        } else if(tarjetasverde[i221].simbolo === "Fragata"){
+        docTverde[i221].innerHTML += `
+        <img src=../IMAGENES/Fragata.svg>
+        `
+        }  
     if (tselect1 === tarjetasverde[i221] || tselect2 === tarjetasverde[i221] || tselect3 === tarjetasverde[i221]){
         if(!docTverde[i221].classList.contains("bordeAmarillo")){
         docTverde[i221].classList.add("bordeAmarillo");};
@@ -1240,10 +1292,23 @@ while(tarjetasverde.length > i221){
 i221 = 0;
 if(color === "Magenta"){
 while(tarjetasmagenta.length > i221){
-    docTmagenta[i221].textContent = tarjetasmagenta[i221].pais.nombre + " " + tarjetasmagenta[i221].simbolo;
+    docTmagenta[i221].textContent = tarjetasmagenta[i221].pais.nombre;
     if(docTmagenta[i221].textContent != "" && !docTmagenta[i221].classList.contains("tarjeta")){
     docTmagenta[i221].classList.add("tarjeta");
     };
+    if(tarjetasmagenta[i221].simbolo === "Globo"){
+        docTmagenta[i221].innerHTML += `
+        <img src=../IMAGENES/Globo.svg>
+        `
+        } else if(tarjetasmagenta[i221].simbolo === "Cañon"){
+        docTmagenta[i221].innerHTML += `
+        <img src=../IMAGENES/Cañon.svg>
+        `
+        } else if(tarjetasmagenta[i221].simbolo === "Fragata"){
+        docTmagenta[i221].innerHTML += `
+        <img src=../IMAGENES/Fragata.svg>
+        `
+        }
     if (tselect1 === tarjetasmagenta[i221] || tselect2 === tarjetasmagenta[i221] || tselect3 === tarjetasmagenta[i221]){
     if(!docTmagenta[i221].classList.contains("bordeAmarillo")){
     docTmagenta[i221].classList.add("bordeAmarillo");};
@@ -1257,10 +1322,23 @@ while(tarjetasmagenta.length > i221){
 i221 = 0;
 if(color === "Negro"){
 while(tarjetasnegro.length > i221){
-    docTnegro[i221].textContent = tarjetasnegro[i221].pais.nombre + " " + tarjetasnegro[i221].simbolo;
+    docTnegro[i221].textContent = tarjetasnegro[i221].pais.nombre;
     if(docTnegro[i221].textContent != "" && !docTnegro[i221].classList.contains("tarjeta")){
     docTnegro[i221].classList.add("tarjeta");
     };
+        if(tarjetasnegro[i221].simbolo === "Globo"){
+        docTnegro[i221].innerHTML += `
+        <img src=../IMAGENES/Globo.svg>
+        `
+        } else if(tarjetasnegro[i221].simbolo === "Cañon"){
+        docTnegro[i221].innerHTML += `
+        <img src=../IMAGENES/Cañon.svg>
+        `
+        } else if(tarjetasnegro[i221].simbolo === "Fragata"){
+        docTnegro[i221].innerHTML += `
+        <img src=../IMAGENES/Fragata.svg>
+        `
+        }
     if (tselect1 === tarjetasnegro[i221] || tselect2 === tarjetasnegro[i221] || tselect3 === tarjetasnegro[i221]){
     if(!docTnegro[i221].classList.contains("bordeAmarillo")){
     docTnegro[i221].classList.add("bordeAmarillo");};
@@ -1335,6 +1413,7 @@ while(tarjetasrojo[i241] != tselect2){
         docTrojo[i241].textContent = "";
         docTrojo[i241].classList.remove("tarjeta");
         docTrojo[i241].classList.remove("bordeAmarillo");
+        docTrojo[i241].innerHTML = "";
         i241++;
     };
     i241 = 0;
@@ -1379,6 +1458,7 @@ while(tarjetasazul[i241] != tselect2){
     docTazul[i241].textContent = "";
     docTazul[i241].classList.remove("tarjeta");
     docTazul[i241].classList.remove("bordeAmarillo");
+    docTazul[i241].innerHTML = "";
     i241++;
     };
     i241 = 0;
@@ -1422,7 +1502,8 @@ while(tarjetasamarillo[i241] != tselect2){
     while(docTamarillo.length > i241){
     docTamarillo[i241].textContent = "";
     docTamarillo[i241].classList.remove("tarjeta");
-    docTamarillo[i241].classList.remove("bordeAmarillo");    
+    docTamarillo[i241].classList.remove("bordeAmarillo");
+    docTamarillo[i241].innerHTML = "";    
     i241++;
     };
     i241 = 0;
@@ -1466,7 +1547,8 @@ while(tarjetasverde[i241] != tselect2){
     while(docTverde.length > i241){
     docTverde[i241].textContent = "";
     docTverde[i241].classList.remove("tarjeta");
-    docTverde[i241].classList.remove("bordeAmarillo");    
+    docTverde[i241].classList.remove("bordeAmarillo");
+    docTverde[i241].innerHTML = "";    
     i241++;
     };
     i241 = 0;
@@ -1510,7 +1592,8 @@ while(tarjetasmagenta[i241] != tselect2){
     while(docTmagenta.length > i241){
     docTmagenta[i241].textContent = "";
     docTmagenta[i241].classList.remove("tarjeta");
-    docTmagenta[i241].classList.remove("bordeAmarillo");    
+    docTmagenta[i241].classList.remove("bordeAmarillo");
+    docTmagenta[i241].innerHTML = "";    
     i241++;
     };
     i241 = 0;
@@ -1554,7 +1637,8 @@ while(tarjetasnegro[i241] != tselect2){
     while(docTnegro.length > i241){
     docTnegro[i241].textContent = "";
     docTnegro[i241].classList.remove("tarjeta");
-    docTnegro[i241].classList.remove("bordeAmarillo");    
+    docTnegro[i241].classList.remove("bordeAmarillo");
+    docTnegro[i241].innerHTML = "";    
     i241++;
     };
     i241 = 0;

@@ -592,6 +592,9 @@ transform: scale(1.1);
   justify-content: center;
   align-items: center;
   padding: 3px;
+  font-family: "Tiro Bangla", serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .dialogtarjetas{
@@ -608,6 +611,7 @@ transform: scale(1.1);
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-family: "Tiro Bangla", serif;
 }
 
 .containertarjetas{
@@ -643,6 +647,7 @@ transform: scale(1.1);
     color: white;
     background-color: #c59a3e;
     box-shadow: rgb(58, 45, 45);
+    font-family: "Tiro Bangla", serif;
 }
 
 .dialogObjetivos {
@@ -1234,4 +1239,8 @@ transform: scale(1.1);
     border-width: 3px;   
     border-style: solid;
     border-color: rgb(204, 150, 13);
+}
+
+.pasarfichas{
+        font-family: "Tiro Bangla", serif;
 }

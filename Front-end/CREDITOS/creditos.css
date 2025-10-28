@@ -15,10 +15,9 @@ body {
     width: 100%;
     text-align: center;
     transition: all 0.3s ease-in-out;
-}
-
-.creditos-container:hover {
-    transform: translateY(-20px);
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 8px;
 }
 
 h1 {
@@ -60,7 +59,6 @@ h1 {
  display: inline-block;
  text-decoration: none;
  font-family: "Tiro Bangla", serif;
- font-weight: 600;
  font-style: normal;
 }
 

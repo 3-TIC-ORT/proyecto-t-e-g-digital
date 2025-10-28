@@ -115,10 +115,14 @@ a {
 text-align: center;
 font-weight: bold;
 padding: 10px;
-background-color: #9b9386;
-color: rgb(200, 201, 185);
-font-family:'Times New Roman', Times, serif;
+background-color: rgb(255, 254, 204);
+color: black;
+font-family: "Tiro Bangla", serif;
 font-style:inherit ;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: darkgoldenrod;
 }
 
 .logoMini {
@@ -134,4 +138,27 @@ option {
   border-style: solid;
   border-width: 3px;
   border-color: darkgoldenrod;
+}
+
+.boton_interaccion {
+    width: fit-content;
+    height: auto;
+    color: darkgoldenrod;
+    padding: 4px;
+    background-color: rgb(255, 254, 204);
+    font-weight: 100;
+    margin: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: darkgoldenrod;
+    font-family: "Tiro Bangla", serif;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.boton_interaccion:hover{
+    transform: scale(1.1);
+    background-color: darkgoldenrod;
+    color: white;
+    border-color: white
 }

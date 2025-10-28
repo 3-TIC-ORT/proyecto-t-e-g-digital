@@ -24,7 +24,7 @@ justify-content: center;
   display: block;
   margin: 0 auto;   
   object-fit: contain;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .svg{
@@ -451,10 +451,11 @@ a {
     padding: 2px;
     border: #f7f3e9;
     height: fit-content;
-    width: 10%;
-    border-width: 10px;
-    margin: 1%;
+    width: 15%;
+    border-width: 3px;   
     border-radius: 10px;
+    border-style: solid;
+    border-color: darkgoldenrod;
 }
 
 .boton_interaccion {
@@ -1073,8 +1074,8 @@ transform: scale(1.1);
 
 .kam-ala{
     position: absolute;
-    top: 20.1%;
-    right: 96.5%;
+    top: 20.5%;
+    right: 96.55%;
     width: auto;
     height: 0.6%;
 }
@@ -1117,4 +1118,36 @@ transform: scale(1.1);
     right: 6.6%;
     width: auto;
     height: 9.8%;
+}
+
+.jap-kam{
+    position: absolute;
+    top: 11.4%;
+    right: 8.5%;
+    width: auto;
+    height: 3.1%;
+}
+
+.sah-bra{
+    position: absolute;
+    top: 69.4%;
+    right: 42.9%;
+    width: auto;
+    height: 2.7%;
+}
+
+.sah-esp{
+    position: absolute;
+    top: 61.4%;
+    right: 41.4%;
+    width: auto;
+    height: 6.7%;
+}
+
+.gro-isl{
+    position: absolute;
+    top: 25%;
+    right: 58.5%;
+    width: auto;
+    height: 8.1%;
 }

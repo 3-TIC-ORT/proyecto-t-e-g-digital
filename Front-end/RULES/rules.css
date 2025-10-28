@@ -1,9 +1,11 @@
 .cuadro {
     width: 800px;
     height: fit-content;
-    background-color: #CDCDCD;
+    background-color: rgb(255, 254, 204);
     text-align: center;
     font-size: 1.4rem;
+    border-radius: 10px;
+    font-family: "Tiro Bangla", serif;
 }
 
 .logoMini {
@@ -11,7 +13,7 @@
     right: 92%; 
     height: 68px; 
     width: 70px; 
-    bottom: 4%;
+    bottom: -60%;
 }
 
 .caja_cuadro {
@@ -26,7 +28,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #363636;
-    margin: 3%;
 }   
 
 
@@ -62,8 +63,9 @@ a {
     }
 
 h1 {
-    color:  #CDCDCD;
+    color: darkgoldenrod;
     font-size: 5rem;
     margin-bottom: 20px;
     text-align: center;
+    font-family: "Tiro Bangla", serif;
 }

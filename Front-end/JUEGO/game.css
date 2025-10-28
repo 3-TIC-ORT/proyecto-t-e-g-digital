@@ -630,12 +630,16 @@ transform: scale(1.1);
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerdefensor{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .fin{
@@ -1242,5 +1246,44 @@ transform: scale(1.1);
 }
 
 .pasarfichas{
-        font-family: "Tiro Bangla", serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #c59a3e;
+    box-shadow: rgb(58, 45, 45);
+    font-family: "Tiro Bangla", serif;
+    border-radius: 10px
+}
+
+select {
+  background-color: rgb(255, 254, 204);
+  text-align: center;
+  color: darkgoldenrod;
+  font-family: "Tiro Bangla", serif;
+  font-style: normal;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: darkgoldenrod;
+  height: 25px;
+}
+
+.tcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.dialogresultados{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #c59a3e;
+    box-shadow: rgb(58, 45, 45);
+    font-family: "Tiro Bangla", serif;
+    border-radius: 10px
 }

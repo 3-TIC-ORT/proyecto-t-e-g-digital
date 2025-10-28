@@ -1,6 +1,6 @@
 {
-  "turno": "Amarillo",
-  "fase": "Atacar",
+  "turno": "Magenta",
+  "fase": "Incorporar",
   "paises": [
     {
       "nombre": "Rusia",
@@ -149,7 +149,7 @@
     },
     {
       "nombre": "Sudáfrica",
-      "fichas": 17,
+      "fichas": 21,
       "color": "Verde"
     },
     {
@@ -582,12 +582,12 @@
     }
   ],
   "fichasnuevas": {
-    "rojo": 0,
-    "azul": 0,
-    "amarillo": 0,
+    "rojo": 4,
+    "azul": 4,
+    "amarillo": 4,
     "verde": 0,
-    "magenta": 0,
-    "negro": 0
+    "magenta": 4,
+    "negro": 4
   },
   "obj1": "Verde",
   "obj2": "Magenta",
@@ -599,12 +599,12 @@
   "obj8": "",
   "obj9": "Amarillo",
   "Acolores": [
-    "Amarillo",
     "Verde",
     "Magenta",
     "Negro",
     "Rojo",
-    "Azul"
+    "Azul",
+    "Amarillo"
   ],
   "ninstructor": "true",
   "nobjetivos": "true",

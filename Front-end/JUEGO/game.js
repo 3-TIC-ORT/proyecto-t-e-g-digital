@@ -267,6 +267,26 @@ let restablecer6 = document.getElementById("restablecer6");
 let dnuevatarjeta = document.getElementById("dnuevatarjeta");
 let cnuevatarjeta = document.getElementById("cnuevatarjeta");
 let cerrarnuevatarjeta = document.getElementById("cerrarnuevatarjeta");
+let sectorrojo = document.getElementById("sectorrojo");
+let sectorazul = document.getElementById("sectorazul");
+let sectoramarillo = document.getElementById("sectoramarillo");
+let sectorverde = document.getElementById("sectorverde");
+let sectormagenta = document.getElementById("sectormagenta");
+let sectornegro = document.getElementById("sectornegro");
+let sectores = [sectorrojo, sectorazul, sectoramarillo, sectorverde, sectormagenta, sectornegro];
+if(turno === "Rojo"){
+    sectorrojo.classList.add("sectorturno");
+} else if(turno === "Azul"){
+    sectorazul.classList.add("sectorturno");
+} else if(turno === "Amarillo"){
+    sectoramarillo.classList.add("sectorturno");
+} else if(turno === "Verde"){
+    sectorverde.classList.add("sectorturno");
+} else if(turno === "Magenta"){
+    sectormagenta.classList.add("sectorturno");
+} else if(turno === "Negro"){
+    sectornegro.classList.add("sectorturno");
+}
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner una ficha";
@@ -933,310 +953,7 @@ norteamerica.push(alaska, oregon, california, mexico, nuevayork, canada, yukon, 
 
 //Declaracion de continentes
 let continentes = [norteamerica, sudamerica, europa, asia, oceania, africa]
-
-//Declaración tarjetas de países
-let taustralia = {
-    pais: australia,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tsumatra = {
-    pais: sumatra,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tjava = {
-    pais: java,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tborneo = {
-    pais: borneo,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tindia = {
-    pais: india,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tmalasia = {
-    pais: malasia,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tchina = {
-    pais: china,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tiran = {
-    pais: iran,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tjapon = {
-    pais: japon,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tgobi = {
-    pais: gobi,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tmongolia = {
-    pais: mongolia,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tkamchatka = {
-    pais: kamchatka,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tturquia = {
-    pais: turquia,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tisrael = {
-    pais: israel,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tarabia = {
-    pais: arabia,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tsiberia = {
-    pais: siberia,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let ttaimir = {
-    pais: taimir,
-    fichas: 2,
-    color: "",
-    simbolo: "Comodin",
-};
-let ttartaria = {
-    pais: tartaria,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let taral = {
-    pais: aral,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let trusia = {
-    pais: rusia,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tsuecia = {
-    pais: suecia,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tpolonia = {
-    pais: polonia,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let talemania = {
-    pais: alemania,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let titalia = {
-    pais: italia,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tfrancia = {
-    pais: francia,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tespaña = {
-    pais: españa,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tgranbretaña = {
-    pais: granbretaña,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tislandia = {
-    pais: islandia,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let talaska = {
-    pais: alaska,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tcanada = {
-    pais: canada,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tyukon = {
-    pais: yukon,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let toregon = {
-    pais: oregon,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tnuevayork = {
-    pais: nuevayork,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tterranova = {
-    pais: terranova,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tlabrador = {
-    pais: labrador,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tgroenlandia = {
-    pais: groenlandia,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tcalifornia = {
-    pais: california,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tmexico = {
-    pais: mexico,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tchile = {
-    pais: chile,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tperu = {
-    pais: peru,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let targentina = {
-    pais: argentina,
-    fichas: 2,
-    color: "",
-    simbolo: "Comodin",
-};
-let turuguay = {
-    pais: uruguay,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tbrasil = {
-    pais: brasil,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tcolombia = {
-    pais: colombia,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tsahara = {
-    pais: sahara,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tegipto = {
-    pais: egipto,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tetiopia = {
-    pais: etiopia,
-    fichas: 2,
-    color: "",
-    simbolo: "Globo",
-};
-let tzaire = {
-    pais: zaire,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-let tsudafrica = {
-    pais: sudafrica,
-    fichas: 2,
-    color: "",
-    simbolo: "Cañon",
-};
-let tmadagascar = {
-    pais: madagascar,
-    fichas: 2,
-    color: "",
-    simbolo: "Fragata",
-};
-
-let tpaises = [taustralia, tsumatra, tjava, tborneo, tindia, tmalasia, tchina, tiran, tchile, tperu, targentina, turuguay, tbrasil, tcolombia, tjapon, tgobi, tmongolia, tkamchatka, tturquia, tisrael, tarabia, tsiberia, ttaimir, ttartaria, taral, trusia, tsuecia, talemania, tpolonia, tsahara, tegipto, tetiopia, talaska, tmexico, titalia, tcalifornia, tfrancia, toregon, tespaña, tgranbretaña, tislandia, tzaire, tsudafrica, tmadagascar, tnuevayork, tcanada, tyukon, tterranova, tlabrador, tgroenlandia];
+let tpaises = [];
 let mazo = [];
 let tarjetasrojo = [];
 let tarjetasazul = [];
@@ -1245,7 +962,6 @@ let tarjetasverde = [];
 let tarjetasmagenta = [];
 let tarjetasnegro = []; 
 let mazoreserva = [];
-tpaises = [];
 let itarj = 0;
 let itarj2 = 0;
 let itarj3 = 0;
@@ -2351,6 +2067,24 @@ function test12(colorturno) {
             test22("Verde");
             test22("Magenta");
             test22("Negro");
+            sectores.forEach((s) => {
+                if(s.classList.contains("sectorturno")){
+                s.classList.remove("sectorturno");
+                };
+            });
+            if(turno === "Rojo"){
+                sectorrojo.classList.add("sectorturno");
+            } else if(turno === "Azul"){
+                sectorazul.classList.add("sectorturno");
+            } else if(turno === "Amarillo"){
+                sectoramarillo.classList.add("sectorturno");
+            } else if(turno === "Verde"){
+                sectorverde.classList.add("sectorturno");
+            } else if(turno === "Magenta"){
+                sectormagenta.classList.add("sectorturno");
+            } else if(turno === "Negro"){
+                sectornegro.classList.add("sectorturno");
+            }
             };
         };
 
@@ -3461,6 +3195,24 @@ icarg5 = 0;
             icarg3++;
           }
         actualizarInstrucciones(estado.fase);
+sectores.forEach((s) => {
+    if(s.classList.contains("sectorturno")){
+    s.classList.remove("sectorturno");
+    };
+});
+if(turno === "Rojo"){
+    sectorrojo.classList.add("sectorturno");
+} else if(turno === "Azul"){
+    sectorazul.classList.add("sectorturno");
+} else if(turno === "Amarillo"){
+    sectoramarillo.classList.add("sectorturno");
+} else if(turno === "Verde"){
+    sectorverde.classList.add("sectorturno");
+} else if(turno === "Magenta"){
+    sectormagenta.classList.add("sectorturno");
+} else if(turno === "Negro"){
+    sectornegro.classList.add("sectorturno");
+}
     });
 };
 

@@ -452,10 +452,8 @@ a {
     border: #f7f3e9;
     height: fit-content;
     width: 15%;
-    border-width: 3px;   
     border-radius: 10px;
-    border-style: solid;
-    border-color: darkgoldenrod;
+    transition: all 0.1s ease-in-out;
 }
 
 .boton_interaccion {
@@ -1150,4 +1148,90 @@ transform: scale(1.1);
     right: 58.5%;
     width: auto;
     height: 8.1%;
+}
+
+.isl-gra{
+    position: absolute;
+    top: 37%;
+    right: 47.8%;
+    width: auto;
+    height: 1.7%;
+}
+
+.isl-sue{
+    position: absolute;
+    top: 21.4%;
+    right: 42%;
+    width: auto;
+    height: 11%;
+}
+
+.gra-esp{
+    position: absolute;
+    top: 44%;
+    right: 47.4%;
+    width: auto;
+    height: 7.7%;
+}
+
+.gra-ale{
+    position: absolute;
+    top: 35.4%;
+    right: 37.9%;
+    width: auto;
+    height: 2.2%;
+}
+
+.ind-sum{
+    position: absolute;
+    top: 63.2%;
+    right: 13.5%;
+    width: auto;
+    height: 3.3%;
+}
+
+.mal-bor{
+    position: absolute;
+    top: 49.6%;
+    right: 7.4%;
+    width: auto;
+    height: 4.8%;
+}
+
+.egi-isr{
+    position: absolute;
+    top: 59.8%;
+    right: 26.4%;
+    width: auto;
+    height: 5.9%;
+}
+
+.egi-tur{
+    position: absolute;
+    top: 54.3%;
+    right: 28.1%;
+    width: auto;
+    height: 12.4%;
+}
+
+.egi-pol{
+    position: absolute;
+    top: 52.7%;
+    right: 30.1%;
+    width: auto;
+    height: 15.8%;
+}
+
+.egi-mad{
+    position: absolute;
+    top: 77.8%;
+    right: 21.1%;
+    width: auto;
+    height: 2.5%;
+}
+
+.sectorturno{
+    border-width: 3px;   
+    border-style: solid;
+    border-color: rgb(204, 150, 13);
 }

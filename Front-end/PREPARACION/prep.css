@@ -127,7 +127,7 @@ font-style:inherit ;
 
 .logoMini {
   position: absolute;
-  top: 85%; 
+  bottom: -20%; 
   right: 92%; 
   height: 68px; 
   width: 70px; 

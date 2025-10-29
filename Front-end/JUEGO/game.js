@@ -1131,14 +1131,18 @@ iactins1++;
 };
 if (iactins3.length > 0){
     while(iactins3.length > iactins2){
+        if(iactins2 + 1 === iactins3.length){
         texto = texto + " y " + fncontinentes[iactins3[iactins2]].fichas + " fichas de " + fncontinentes[iactins3[iactins2]].string;
+        } else{
+            texto = texto + ", " + fncontinentes[iactins3[iactins2]].fichas + " fichas de " + fncontinentes[iactins3[iactins2]].string;
+        }
         iactins2++;
     };
 };
 if (texto === ""){
  instrucciones.textContent = "Te quedan " + fichasActuales + " fichas para incorporar. Clickea el territorio donde quieras ubicarlas.";
 } else {
- instrucciones.textContent = "Te quedan " + fichasActuales + " fichas " + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
+ instrucciones.textContent = "Te quedan " + fichasActuales + " fichas" + texto + " para incorporar. Clickea el territorio donde quieras ubicarlas.";
 };
 } else if (faseactual === "Atacar") {
  instrucciones.textContent = atacarInstruccion

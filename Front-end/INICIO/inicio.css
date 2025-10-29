@@ -5,23 +5,13 @@
     align-items: center;
 }
 
-a {
-    color: black;
-    font-style: normal;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #c59a3e;
-}
-
 .botones_inicio {
     text-align: center;
-    width: 70%;
+    width: 80%;
     height: fit-content;
     font-optical-sizing: auto;
     text-transform: uppercase;
-    color: #f7f3e9; 
+    color: black; 
     background-color: #c59a3e; 
     border: 3px solid #000000; 
     padding: 5px 10px;
@@ -33,6 +23,16 @@ a:hover {
     font-weight: 600;
     font-style: normal;
     display: inline-block;
+}
+
+a {
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c59a3e;
 }
 
 .logoMini {

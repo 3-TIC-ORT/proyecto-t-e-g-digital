@@ -1,5 +1,5 @@
 // Declaración de Variables
-let turno = "Rojo";
+let turno = "";
 let colores = [];
 let listacolores = ["Rojo", "Azul", "Amarillo", "Verde", "Magenta", "Negro"];
 let fase = "Primera Incorporación";
@@ -274,28 +274,6 @@ let sectorverde = document.getElementById("sectorverde");
 let sectormagenta = document.getElementById("sectormagenta");
 let sectornegro = document.getElementById("sectornegro");
 let sectores = [sectorrojo, sectorazul, sectoramarillo, sectorverde, sectormagenta, sectornegro];
-sectores.forEach((s) => {
-s.classList.add("elsesector")
-});
-if(turno === "Rojo"){
-sectorrojo.classList.add("sectorturno");
-sectorrojo.classList.remove("elsesector");
-} else if(turno === "Azul"){
-sectorazul.classList.add("sectorturno");
-sectorazul.classList.remove("elsesector");
-} else if(turno === "Amarillo"){
-sectoramarillo.classList.add("sectorturno");
-sectoramarillo.classList.remove("elsesector");
-} else if(turno === "Verde"){
-sectorverde.classList.add("sectorturno");
-sectorverde.classList.remove("elsesector");
-} else if(turno === "Magenta"){
-sectormagenta.classList.add("sectorturno");
-sectormagenta.classList.remove("elsesector");
-} else if(turno === "Negro"){
-sectornegro.classList.add("sectorturno");
-sectornegro.classList.remove("elsesector");
-}
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner una ficha";
@@ -1024,6 +1002,36 @@ colores.push(listacolores[i]);
 i++;
 };
 i = 0;
+randomizador = Math.floor(Math.random() * colores.length);
+let listacoloresreserva = colores.splice(0, randomizador);
+while(listacoloresreserva.length > 0){
+    colores.push(listacoloresreserva[0]);
+    listacoloresreserva.shift();
+};
+console.log(colores);
+turno = colores[0];
+sectores.forEach((s) => {
+    s.classList.add("elsesector")
+    });
+    if(turno === "Rojo"){
+    sectorrojo.classList.add("sectorturno");
+    sectorrojo.classList.remove("elsesector");
+    } else if(turno === "Azul"){
+    sectorazul.classList.add("sectorturno");
+    sectorazul.classList.remove("elsesector");
+    } else if(turno === "Amarillo"){
+    sectoramarillo.classList.add("sectorturno");
+    sectoramarillo.classList.remove("elsesector");
+    } else if(turno === "Verde"){
+    sectorverde.classList.add("sectorturno");
+    sectorverde.classList.remove("elsesector");
+    } else if(turno === "Magenta"){
+    sectormagenta.classList.add("sectorturno");
+    sectormagenta.classList.remove("elsesector");
+    } else if(turno === "Negro"){
+    sectornegro.classList.add("sectorturno");
+    sectornegro.classList.remove("elsesector");
+    }
 
 //Turno y Fase iniciales
 currentturn.textContent = "Turno: " + turno;

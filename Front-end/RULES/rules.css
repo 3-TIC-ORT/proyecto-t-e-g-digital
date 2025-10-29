@@ -47,6 +47,7 @@ body {
     transition: all 0.2s ease-in-out;
     display: inline-block;
     text-decoration: none;
+    font-family: "Tiro Bangla", serif;
 }
 
 .boton_atras:hover {

@@ -79,23 +79,21 @@ body {
 }
 
 .boton_atras {
-    position: absolute;
-    top: 1.5rem; 
-    left: 1.5rem; 
-    z-index: 100;
-    text-transform: uppercase;
-    color: #f7f3e9; 
-    background-color: #c59a3e; 
-    border: 3px solid #ffffff; 
-    padding: 5px 10px;
-    border-radius: 5px; 
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    display: inline-block;
-    text-decoration: none;
-    font-family: "Tiro Bangla", serif;
-    font-weight: 500;
-    font-style: normal;
+  position: absolute;
+  top: 1.5rem; 
+  left: 1.5rem; 
+  z-index: 100;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f7f3e9; 
+  background-color: #c59a3e; 
+  border: 3px solid #ffffff; 
+  padding: 5px 10px;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .boton_atras:hover {
@@ -109,7 +107,11 @@ a {
     color: black;
     font-style: normal;
     text-decoration: none;
-    }
+}
+
+a:hover {
+  color: #c59a3e;
+}
 
 .advertencia {
 text-align: center;

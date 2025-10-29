@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #363636;
+    background: linear-gradient( #524019, #c59a3e) ;
 }   
 
 
@@ -60,7 +60,11 @@ a {
     color: black;
     font-style: normal;
     text-decoration: none;
-    }
+}
+
+a:hover {
+    color: #c59a3e;
+}
 
 h1 {
     color: darkgoldenrod;

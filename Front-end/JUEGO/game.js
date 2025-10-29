@@ -1008,7 +1008,6 @@ while(listacoloresreserva.length > 0){
     colores.push(listacoloresreserva[0]);
     listacoloresreserva.shift();
 };
-console.log(colores);
 turno = colores[0];
 sectores.forEach((s) => {
     s.classList.add("elsesector")

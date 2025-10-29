@@ -133,7 +133,7 @@ svg path.nombre {
 .iran {
     position: absolute;
     top: 22.2%;
-    right: 15.45%;
+    right: 15.4%;
     width: auto;
 }
 
@@ -406,7 +406,7 @@ svg path.nombre {
 .currentturn {
     position: absolute;
     color: white;
-    background-color: darkgoldenrod;
+    background-color: #c59a3e;;
     width: 13.8%;
     height: fit-content;
     font-size: 110%;
@@ -426,7 +426,7 @@ svg path.nombre {
 }
 
 a {
-    color: black;
+    color: white;
     font-style: normal;
     text-decoration: none;
     outline: none;
@@ -453,7 +453,7 @@ a {
     height: fit-content;
     width: 15%;
     border-radius: 10px;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .boton_interaccion {
@@ -489,6 +489,7 @@ position: absolute;
 left: 2.5%;
 top: 2.5%;
 transition: all 0.2s ease-in-out;
+cursor: pointer;
 }
 
 .pausa:hover {
@@ -515,26 +516,26 @@ transform: scale(1.1);
     width: 200px;
     text-align: center;
     align-items: center;
-    font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Tiro Bangla", serif;
     font-style:inherit;
     background-color: #c59a3e;
     border-radius: 10px;
+    color: white;
 }
 
 .menuConfig {
     justify-self: center;
     margin-top: 17%;
     width: 20%;
-    height: 20%;
+    height: 30%;
     text-align: center;
     align-items: center;
     vertical-align: auto;
-    font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Tiro Bangla", serif;
     font-style:inherit;
     background-color: #c59a3e;
     border-radius: 10px;
+    color: white;
 }
 
 .atrasConfig {
@@ -563,6 +564,7 @@ transform: scale(1.1);
 .salir {
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    color: white;
 }
 .salir:hover {
     transform: scale(1.1);
@@ -757,16 +759,18 @@ transform: scale(1.1);
 
 .fargentina {
     position: absolute;
-    top: 82%;
-    right: 64%;
+    top: 82.5%;
+    right: 64.2%;
     height: 4%;
     width: 1.8%
 }
 
 .furuguay {
     position: absolute;
-    top: 75%;
-    right: 60%;
+    top: 73.6%;
+    right: 60.8%;
+    height: 3.2%;
+    width: 1.4%;
 }
 
 .fbrasil {

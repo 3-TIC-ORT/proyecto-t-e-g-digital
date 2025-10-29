@@ -10,67 +10,67 @@ body {
 }
 
 .cantJugadores{
-  background-color: rgb(214, 218, 195);
+  background-color: rgb(255, 254, 204);
   width: 25%;
   height: 12%;
   text-align: center;
   font-size:135%;
-  color: #866834;
+  color: darkgoldenrod;
   font-family: "Tiro Bangla", serif;
   font-weight: 600;
   font-style: normal;
   border-radius: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: #866834;
+  border-color: darkgoldenrod;
 }
 
 .objSecretos {
-  background-color: rgb(214, 218, 195);
+  background-color: rgb(255, 254, 204);
   width: 25%;
   height: 12%;
   text-align: center;
   font-size: 135%;
-  color: #866834;
+  color: darkgoldenrod;
   font-family: "Tiro Bangla", serif;
   font-weight: 600;
   font-style: normal;
   border-radius: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: #866834;
+  border-color: darkgoldenrod;
 }
 
 .instructor {
-  background-color: rgb(214, 218, 195);
+  background-color: rgb(255, 254, 204);;
   width: 25%;
   height: 12%;
   text-align: center;
   font-size: 135%;
-  color: #866834;
+  color: darkgoldenrod;
   font-family: "Tiro Bangla", serif;
   font-weight: 600;
   font-style: normal;
   border-radius: 10px;
   border-width: 3px;
   border-style: solid;
-  border-color: #866834;
+  border-color: darkgoldenrod;
 }
 
 .botonSiguiente {
- background-color: rgb(214, 218, 195);
+ background-color: rgb(255, 254, 204);;
  width: 15%;
  height: 10%;
  text-align: center;
  font-size: 135%;
- color:#866834;
+ color: darkgoldenrod;
  font-family: "Tiro Bangla", serif;
  font-weight: 600;
  font-style: normal;
  border-radius: 10px;
  border-width: 3px;
  border-style: solid;
- border-color: #866834;
+ border-color: darkgoldenrod;
  transition: all 0.2s ease-in-out;
 }
 
@@ -160,5 +160,5 @@ option {
     transform: scale(1.1);
     background-color: darkgoldenrod;
     color: white;
-    border-color: white
+    border-color: black
 }

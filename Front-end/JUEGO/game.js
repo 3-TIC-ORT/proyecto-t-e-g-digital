@@ -3326,17 +3326,23 @@ sectores.forEach((s) => {
     };
 });
 if(turno === "Rojo"){
-    sectorrojo.classList.add("sectorturno");
+sectorrojo.classList.add("sectorturno");
+sectorrojo.classList.remove("elsesector");
 } else if(turno === "Azul"){
-    sectorazul.classList.add("sectorturno");
+sectorazul.classList.add("sectorturno");
+sectorazul.classList.remove("elsesector");
 } else if(turno === "Amarillo"){
-    sectoramarillo.classList.add("sectorturno");
+sectoramarillo.classList.add("sectorturno");
+sectoramarillo.classList.remove("elsesector");
 } else if(turno === "Verde"){
-    sectorverde.classList.add("sectorturno");
+sectorverde.classList.add("sectorturno");
+sectorverde.classList.remove("elsesector");
 } else if(turno === "Magenta"){
-    sectormagenta.classList.add("sectorturno");
+sectormagenta.classList.add("sectorturno");
+sectormagenta.classList.remove("elsesector");
 } else if(turno === "Negro"){
-    sectornegro.classList.add("sectorturno");
+sectornegro.classList.add("sectorturno");
+sectornegro.classList.remove("elsesector");
 }
     });
 };

@@ -529,10 +529,12 @@ transform: scale(1.1);
     height: 20%;
     text-align: center;
     align-items: center;
+    vertical-align: auto;
     font-weight: bold;
     font-family:'Times New Roman', Times, serif;
     font-style:inherit;
     background-color: #c59a3e;
+    border-radius: 10px;
 }
 
 .atrasConfig {
@@ -566,17 +568,31 @@ transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.labelBrillo {
-    font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    font-style:inherit;
+.barraBrillo {
+    width: 60%; 
+    height: auto;
+    border-radius: 10px; 
+    border: 3px solid;
+    border-color: #c59a3e;
+    appearance: none; 
+    margin-top: 20px; 
+    cursor: pointer;
+    background: linear-gradient(45deg, #504e4c, #c4bab7ef);
+    padding: 5px 10px;
+    transition: opacity 0.5s ease-in-out; 
 }
 
-.barraBrillo {
-    width: 60%;
-    cursor: pointer;
-    text-transform: uppercase;
+.barraBrillo::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: #c59a3e;
+  border-radius: 4px; 
+  border-width: 2px;
+  border-style: solid;
+  border-color: #413e3e8a;
+  cursor: pointer;
 }
 
 .bordeAmarillo {

@@ -94,6 +94,9 @@ body {
     background-color:#363636;
     height: 90vh; 
     margin: 0;
+    background-image: url("../IMAGENES/FONDO.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 footer {
@@ -101,8 +104,8 @@ footer {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     width: 100%;
     position: absolute;
-    bottom: 5%;
+    bottom: -5%;
 }

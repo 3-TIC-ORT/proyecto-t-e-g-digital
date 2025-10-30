@@ -4,9 +4,11 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: #363636;
-   height: 80vh;
+   background: linear-gradient( #4e3e1b, #c59a3e) ;
+   height: 97.3vh;
    padding: auto;
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
 
 .cantJugadores{
@@ -23,6 +25,7 @@ body {
   border-width: 3px;
   border-style: solid;
   border-color: darkgoldenrod;
+  transition: all 0.2s ease-in-out;
 }
 
 .objSecretos {
@@ -39,6 +42,7 @@ body {
   border-width: 3px;
   border-style: solid;
   border-color: darkgoldenrod;
+  transition: all 0.2s ease-in-out;
 }
 
 .instructor {
@@ -55,28 +59,35 @@ body {
   border-width: 3px;
   border-style: solid;
   border-color: darkgoldenrod;
+  transition: all 0.2s ease-in-out;
 }
 
 .botonSiguiente {
- background-color: rgb(255, 254, 204);;
+ background-color: darkgoldenrod;
  width: 15%;
  height: 10%;
  text-align: center;
  font-size: 135%;
- color: darkgoldenrod;
+ color: rgb(255, 254, 204);
  font-family: "Tiro Bangla", serif;
  font-weight: 600;
  font-style: normal;
  border-radius: 10px;
  border-width: 3px;
  border-style: solid;
- border-color: darkgoldenrod;
+ border-color: rgb(255, 254, 204);
  transition: all 0.2s ease-in-out;
  cursor: pointer;
 }
 
 .botonSiguiente:hover{
   transform: scale(1.1);
+  color: darkgoldenrod;
+  background-color: black;
+  border-color: darkgoldenrod;
+}
+
+select:hover{
   color: rgb(255, 254, 204);
   background-color: darkgoldenrod;
   border-color: rgb(255, 254, 204);
@@ -123,7 +134,7 @@ font-style:inherit ;
 
 .logoMini {
   position: absolute;
-  bottom: -20%; 
+  bottom: 0.5%; 
   right: 92%; 
   width: 70px; 
 }

@@ -12,7 +12,9 @@
     position: absolute;
     right: 92%; 
     width: 70px; 
-    bottom: -60%;
+    bottom: 1%;
+    width: 5%;
+    height: auto;
 }
 
 .caja_cuadro {

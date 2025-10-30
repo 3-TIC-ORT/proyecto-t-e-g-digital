@@ -534,6 +534,7 @@ a {
 .objetivo{
     color: white;
     font-family: "Tiro Bangla", serif;
+    text-align: center;
 }
 
 .pausa {
@@ -650,7 +651,7 @@ transform: scale(1.1);
 }
 
 .tarjeta {
-  background-color: #fcff9d;
+  background: linear-gradient( #fcff9d, #b2a36b);
   width: 80px;
   height: 110px;
   border-radius: 10px;

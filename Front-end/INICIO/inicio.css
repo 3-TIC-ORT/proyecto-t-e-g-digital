@@ -27,7 +27,7 @@
     display: inline-block;
 }
 
-.botones_inicio_b {
+.botones_inicio_b { 
     text-align: center;
     width: 150px;
     height: fit-content;
@@ -45,7 +45,6 @@
     font-weight: 600;
     font-style: normal;
     display: inline-block;
-    font-size: 75%
 }
 
 a {
@@ -64,7 +63,7 @@ a {
 .botones_inicio_b:hover {
     background-color: #f7f3e9; 
     border: 3px solid #c59a3e;
-    transform: scale(1.2);
+    transform: translateY(-7px);
     color: #c59a3e;
 }
 
@@ -92,7 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color:#363636;
-    height: 90vh; 
+    height: 100vh; 
     margin: 0;
     background-image: url("../IMAGENES/FONDO.png");
     background-repeat: no-repeat;
@@ -104,8 +103,19 @@ footer {
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    background-color: transparent;
     gap: 25px;
     width: 100%;
     position: absolute;
     bottom: -5%;
+}
+
+.botones_abajo {
+    position: absolute;
+    bottom: 5%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }

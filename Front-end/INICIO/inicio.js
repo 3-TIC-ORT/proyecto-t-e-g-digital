@@ -19,5 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
   valorBrillo = parseFloat(valorBrillo);
   };
   document.body.style.filter = "brightness(" + valorBrillo + ")";
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+  fondoAlternativo = localStorage.getItem("fondoAlternativo");
+  if (fondoAlternativo === "true") {
+    document.body.style.backgroundImage = "none";
+    document.body.style.background = "linear-gradient( #524019, #c59a3e)";
+  } else if (fondoAlternativo === "false" || fondoAlternativo === null) {
+    document.body.style.backgroundImage = "url(../IMAGENES/FONDO.png)";
+    document.body.style.backgroundColor= "none";
+  };
+  console.log(fondoAlternativo);
 });

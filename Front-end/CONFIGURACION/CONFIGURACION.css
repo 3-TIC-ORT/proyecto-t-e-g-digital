@@ -85,10 +85,9 @@ body {
 }
 
 label {
-    font-weight: 600;
     text-transform: uppercase;
-    color: #c59a3e; 
-    font-size: 120%;
+    color: #fdffd0; 
+    font-size: 150%;
     font-family: "Tiro Bangla", serif;
 }
 

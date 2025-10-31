@@ -1744,7 +1744,6 @@ function test12(colorturno) {
     i127 = 0;
     tarjetareserva = 0;
     copiapais = null;
-    copiapaises = [];
     if (colorturno === turno) {
         if (fase === "Atacar") {
             while(paises.length > i127){
@@ -1753,6 +1752,7 @@ function test12(colorturno) {
             fichas: paises[i127].fichas,
             colorfichas: paises[i127].colorfichas
             }
+            copiapaises = [];
             copiapaises.push(copiapais);
             i127++;
             };
@@ -2641,6 +2641,7 @@ function test18() {
     guardarPartida();
     paisconquistado = 0;
     paisconquistador = 0;
+    resultadodados.showModal();
 };
 function test19() {
     if(parseInt(selectpasarfichas2.value) === 2){
@@ -2655,6 +2656,7 @@ function test19() {
     guardarPartida();
     paisconquistado = 0;
     paisconquistador = 0;
+    resultadodados.showModal();
 };
 
 //Conquistas por turno

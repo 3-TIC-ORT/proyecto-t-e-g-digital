@@ -652,8 +652,8 @@ transform: scale(1.1);
 
 .tarjeta {
   background: linear-gradient( #fcff9d, #b2a36b);
-  width: 80px;
-  height: 110px;
+  width: 90px;
+  height: 130px;
   border-radius: 10px;
   text-align: center;
   justify-content: center;
@@ -1399,4 +1399,10 @@ select {
     box-shadow: rgb(58, 45, 45);
     font-family: "Tiro Bangla", serif;
     border-radius: 10px
+}
+
+.containertbuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

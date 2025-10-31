@@ -3,10 +3,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #363636;
-    height: 90vh; 
+    background: linear-gradient( #4e3e1b, #c59a3e) ;
+    height: 100vh; 
     margin: 0;
     filter: brightness(1); 
+    background-repeat: no-repeat;
 }
 
 .botones_inicio {
@@ -57,7 +58,7 @@ body {
 
 .logoMini {
     position: absolute;
-    top: 95%; 
+    top: 85%; 
     right: 92%; 
     width: 70px; 
 }

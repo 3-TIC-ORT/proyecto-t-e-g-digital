@@ -3,8 +3,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#363636;
-    height: 90vh; 
+    background: linear-gradient( #4e3e1b, #c59a3e) ;;
+    height: 100vh; 
     margin: 0;
 }
 .creditos-container {

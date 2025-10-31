@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   valorBrillo = parseFloat(valorBrillo);
   };
   document.body.style.filter = "brightness(" + valorBrillo + ")";
-
 });
 
 document.addEventListener("DOMContentLoaded", () => {

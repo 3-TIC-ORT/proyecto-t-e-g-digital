@@ -1,5 +1,6 @@
-
+// barra de valor brillo
 let valorBrillo = 1;
+
 document.addEventListener("DOMContentLoaded", () => {
   let barraBrillo = document.getElementById("barraBrillo");
   if(localStorage.getItem("brillo") != "null"){
@@ -14,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("brillo", valorBrillo);
   });
 });
+
+//resetear el brillo
 function resetbrillo() {
 valorBrillo = 1;
 barraBrillo.value = 1;

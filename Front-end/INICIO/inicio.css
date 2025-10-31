@@ -9,8 +9,8 @@
 
 .botones_inicio {
     text-align: center;
-    width: 200px;
-    height: 40px;
+    width: 140px;
+    height: fit-content;
     font-optical-sizing: auto;
     text-transform: uppercase;
     color: black; 
@@ -20,6 +20,7 @@
     border-radius: 5px; 
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+    display: inline-block;
     font-family: "Tiro Bangla", serif;
     font-weight: 600;
     font-style: normal;
@@ -29,9 +30,9 @@
     font-size: 125%;
 }
 
-.botones_inicio_b {
+.botones_inicio_b { 
     text-align: center;
-    width: 180px;
+    width: 120px;
     height: fit-content;
     font-optical-sizing: auto;
     text-transform: uppercase;
@@ -42,11 +43,12 @@
     border-radius: 5px; 
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+    display: inline-block;
     font-family: "Tiro Bangla", serif;
     font-weight: 600;
     font-style: normal;
     display: inline-block;
-    font-size: 100%
+    font-size: 75%
 }
 
 a {
@@ -65,7 +67,7 @@ a {
 .botones_inicio_b:hover {
     background-color: #f7f3e9; 
     border: 3px solid #c59a3e;
-    transform: scale(1.2);
+    transform: translateY(-7px);
     color: #c59a3e;
     transform: translateY(-10px);
 }
@@ -93,8 +95,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #70510c;
-    height: 100vh; 
+    background-color:#363636;
+    height: 90vh; 
     margin: 0;
     background-image: url("../IMAGENES/FONDO.png");
     background-repeat: no-repeat;
@@ -122,4 +124,14 @@ h1 {
 
 img{
     margin: 10px;
+}
+
+.botones_abajo {
+    position: absolute;
+    bottom: 5%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }

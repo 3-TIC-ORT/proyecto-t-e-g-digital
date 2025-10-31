@@ -9,7 +9,7 @@
 
 .botones_inicio {
     text-align: center;
-    width: 180px;
+    width: 200px;
     height: 40px;
     font-optical-sizing: auto;
     text-transform: uppercase;
@@ -31,7 +31,7 @@
 
 .botones_inicio_b {
     text-align: center;
-    width: 120px;
+    width: 180px;
     height: fit-content;
     font-optical-sizing: auto;
     text-transform: uppercase;
@@ -46,7 +46,7 @@
     font-weight: 600;
     font-style: normal;
     display: inline-block;
-    font-size: 75%
+    font-size: 100%
 }
 
 a {
@@ -94,7 +94,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #70510c;
-    height: 90vh; 
+    height: 100vh; 
     margin: 0;
     background-image: url("../IMAGENES/FONDO.png");
     background-repeat: no-repeat;
@@ -106,6 +106,7 @@ footer {
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    background-color: transparent;
     gap: 25px;
     width: 100%;
     position: absolute;

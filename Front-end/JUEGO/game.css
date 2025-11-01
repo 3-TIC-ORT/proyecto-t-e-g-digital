@@ -491,15 +491,16 @@ a {
     border-style: solid;
     border-color: darkgoldenrod;
     font-family: "Tiro Bangla", serif;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    cursor: pointer;    
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;    
 }
 
 .boton_sector:hover{
     transform: scale(1.1);
     background-color: darkgoldenrod;
-    color: white;
-    border-color: white
+    color: rgb(179, 176, 176);
+    border-color: white;
 }
 
 .boton_sector_b {

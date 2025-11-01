@@ -45,7 +45,8 @@ if(parseInt(instructor.value) === 0){
 };
 advertencia.showModal();
 if(parseInt(players.value) != 0 && parseInt(objectives.value) != 0 && parseInt(instructor.value)!= 0) {
-window.location.href = "../JUEGO/game.html"
+window.location.href = "../JUEGO/game.html";
+localStorage.setItem("cargarPartidaInicio", "false");
 };
 };
 let ready = document.getElementById("gameready");

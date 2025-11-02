@@ -84,6 +84,10 @@ body {
   transform: scale(1.1);
 }
 
+select{
+  cursor: pointer;
+}
+
 select:hover{
   color: rgb(255, 254, 204);
   background-color: darkgoldenrod;
@@ -143,6 +147,7 @@ option {
   border-color: darkgoldenrod;
   font-family: "Tiro Bangla", serif;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .boton_interaccion {

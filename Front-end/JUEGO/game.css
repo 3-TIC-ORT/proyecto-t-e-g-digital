@@ -1359,6 +1359,7 @@ select {
   border-style: solid;
   border-color: darkgoldenrod;
   height: 25px;
+  cursor: pointer;
 }
 
 .tcontainer{

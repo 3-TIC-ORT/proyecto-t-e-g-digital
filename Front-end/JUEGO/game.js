@@ -2252,8 +2252,17 @@ function test14(pais) {
     i141 = 0;
     i142 = 0;
     if (fase === "Atacar") {
-        if (turno === pais.colorfichas && pais.fichas > 1) {
+        if(pais === paisseleccionado){
+            paises.forEach((p)=>{
+                if(p!== paisseleccionado){
+                p.idsvg.style.stroke = "black";
+                p.idsvg.parentElement.style.zIndex = 0;
+                }});
+                paisseleccionado = 0;
+                paisatacado = 0;
+            } else if (turno === pais.colorfichas && pais.fichas > 1) {
             paisseleccionado = pais;
+            paisatacado = 0;
             paises.forEach((p)=>{
             p.idsvg.style.stroke = "black";
             p.idsvg.parentElement.style.zIndex = 0;
@@ -3104,6 +3113,7 @@ paises.forEach((v)=>{
     v.idsvg.addEventListener("mouseenter", function(){
     if(v.colorfichas === turno){
         v.idsvg.parentElement.style.zIndex = 3;
+        v.idsvg.parentElement.style.cursor = "pointer";
         if(v.colorfichas === "Rojo"){
         v.idsvg.style.stroke = "red";
         } else if(v.colorfichas === "Azul"){
@@ -3122,6 +3132,7 @@ paises.forEach((v)=>{
     v.id.addEventListener("mouseenter", function(){
     if(v.colorfichas === turno){
         v.idsvg.parentElement.style.zIndex = 3;
+        v.id.style.cursor = "pointer";
         if(v.colorfichas === "Rojo"){
         v.idsvg.style.stroke = "red";
         } else if(v.colorfichas === "Azul"){

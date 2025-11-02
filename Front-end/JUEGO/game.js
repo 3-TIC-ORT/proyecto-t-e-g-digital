@@ -1744,6 +1744,7 @@ function test12(colorturno) {
     tarjetareserva = 0;
     copiapais = null;
     if (colorturno === turno) {
+        copiapaises = [];
         if (fase === "Atacar") {
             while(paises.length > i127){
             copiapais = {
@@ -1751,7 +1752,6 @@ function test12(colorturno) {
             fichas: paises[i127].fichas,
             colorfichas: paises[i127].colorfichas
             }
-            copiapaises = [];
             copiapaises.push(copiapais);
             i127++;
             };
@@ -2211,6 +2211,7 @@ function test12(colorturno) {
             paisseleccionado = 0;
             paises.forEach((p)=>{
             p.idsvg.style.stroke = "black";
+            p.idsvg.parentElement.style.zIndex = 0;
             })
             test22("Rojo");
             test22("Azul");
@@ -2255,7 +2256,9 @@ function test14(pais) {
             paisseleccionado = pais;
             paises.forEach((p)=>{
             p.idsvg.style.stroke = "black";
+            p.idsvg.parentElement.style.zIndex = 0;
             })
+            paisseleccionado.idsvg.parentElement.style.zIndex = 3;
             if(paisseleccionado.colorfichas === "Rojo"){
             paisseleccionado.idsvg.style.stroke = "red";
             } else if(paisseleccionado.colorfichas === "Azul"){
@@ -2271,6 +2274,7 @@ function test14(pais) {
             };
             paisseleccionado.limitrofes.forEach((l)=>{
             if(l.colorfichas != paisseleccionado.colorfichas){
+            l.idsvg.parentElement.style.zIndex = 2;
             if(l.colorfichas === "Rojo"){
             l.idsvg.style.stroke = "red";
             } else if(l.colorfichas === "Azul"){
@@ -2295,7 +2299,10 @@ function test14(pais) {
                 paisatacado = pais;
                 paises.forEach((p)=>{
                 p.idsvg.style.stroke = "black";
+                p.idsvg.parentElement.style.zIndex = 0;
                 })
+                paisseleccionado.idsvg.parentElement.style.zIndex = 3;
+                paisatacado.idsvg.parentElement.style.zIndex = 2;
                 if(paisseleccionado.colorfichas === "Rojo"){
                 paisseleccionado.idsvg.style.stroke = "red";
                 } else if(paisseleccionado.colorfichas === "Azul"){
@@ -2349,7 +2356,9 @@ function test14(pais) {
                 paisseleccionado = pais;
                 paises.forEach((p)=>{
                     p.idsvg.style.stroke = "black";
+                    p.idsvg.parentElement.style.zIndex = 0;
                     })
+                paisseleccionado.idsvg.parentElement.style.zIndex = 3;
                     if(paisseleccionado.colorfichas === "Rojo"){
                     paisseleccionado.idsvg.style.stroke = "red";
                     } else if(paisseleccionado.colorfichas === "Azul"){
@@ -2365,6 +2374,7 @@ function test14(pais) {
                     };
                     paisseleccionado.limitrofes.forEach((l)=>{
                         if(l.colorfichas === paisseleccionado.colorfichas){
+                        l.idsvg.parentElement.style.zIndex = 2;
                         if(l.colorfichas === "Rojo"){
                         l.idsvg.style.stroke = "red";
                         } else if(l.colorfichas === "Azul"){
@@ -2399,6 +2409,7 @@ function test14(pais) {
             paisseleccionado = 0;
             paises.forEach((p)=>{
                 p.idsvg.style.stroke = "black";
+                p.idsvg.parentElement.style.zIndex = 0;
                 })
         };
     };
@@ -2834,6 +2845,7 @@ function test16(color) {
         resultadosdefensor = [];
         paises.forEach((p)=>{
         p.idsvg.style.stroke = "black";
+        p.idsvg.parentElement.style.zIndex = 0;
         })
     };
 };
@@ -3085,6 +3097,7 @@ restablecer2.addEventListener("click", function(){
 paises.forEach((v)=>{
     v.idsvg.addEventListener("mouseenter", function(){
     if(v.colorfichas === turno){
+        v.idsvg.parentElement.style.zIndex = 3;
         if(v.colorfichas === "Rojo"){
         v.idsvg.style.stroke = "red";
         } else if(v.colorfichas === "Azul"){
@@ -3102,6 +3115,7 @@ paises.forEach((v)=>{
     })
     v.id.addEventListener("mouseenter", function(){
     if(v.colorfichas === turno){
+        v.idsvg.parentElement.style.zIndex = 3;
         if(v.colorfichas === "Rojo"){
         v.idsvg.style.stroke = "red";
         } else if(v.colorfichas === "Azul"){
@@ -3121,22 +3135,28 @@ paises.forEach((v)=>{
         if(fase === "Atacar"){
         if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas === paisseleccionado.colorfichas))){
         v.idsvg.style.stroke = "black";
+        v.idsvg.parentElement.style.zIndex = 0;
         }} else if (fase === "Reagrupar"){
         if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas != paisseleccionado.colorfichas))){
         v.idsvg.style.stroke = "black";
+        v.idsvg.parentElement.style.zIndex = 0;
         }} else {
         v.idsvg.style.stroke = "black";
+        v.idsvg.parentElement.style.zIndex = 0;
         }
     })
     v.id.addEventListener("mouseleave", function(){
         if(fase === "Atacar"){
         if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas === paisseleccionado.colorfichas))){
         v.idsvg.style.stroke = "black";
+        v.idsvg.parentElement.style.zIndex = 0;
         }} else if (fase === "Reagrupar"){
         if((paisseleccionado === 0) || (paisseleccionado != 0 && paisseleccionado !== v && (!paisseleccionado.limitrofes.includes(v) || v.colorfichas != paisseleccionado.colorfichas))){
         v.idsvg.style.stroke = "black";
+        v.idsvg.parentElement.style.zIndex = 0;
         }} else {
         v.idsvg.style.stroke = "black";
+        v.idsvg.parentElement.style.zIndex = 0;
         }
     })
     })

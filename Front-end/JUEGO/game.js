@@ -1716,6 +1716,7 @@ tselect3 = 0;
 
 test22(color);
 actualizarInstrucciones(fase);
+guardarPartida();
 }
 
 function test24(color){
@@ -2290,7 +2291,7 @@ function test14(pais) {
             };
             paisseleccionado.limitrofes.forEach((l)=>{
             if(l.colorfichas != paisseleccionado.colorfichas){
-            l.idsvg.parentElement.style.zIndex = 2;
+            l.idsvg.parentElement.style.zIndex = 1;
             l.idsvg.parentElement.style.cursor = "pointer";
             l.id.style.cursor = "pointer";
             if(l.colorfichas === "Rojo"){
@@ -2323,7 +2324,7 @@ function test14(pais) {
                 p.idsvg.parentElement.style.cursor = "default";
             }})
                 paisseleccionado.idsvg.parentElement.style.zIndex = 3;
-                paisatacado.idsvg.parentElement.style.zIndex = 2;
+                paisatacado.idsvg.parentElement.style.zIndex = 1;
                 paisatacado.idsvg.parentElement.style.cursor = "pointer";
                 paisatacado.id.style.cursor = "pointer";
                 if(paisseleccionado.colorfichas === "Rojo"){
@@ -2366,15 +2367,7 @@ function test14(pais) {
                 p.id.style.cursor = "default";
                 }});
                 paisseleccionado = 0;
-            } else if (turno === pais.colorfichas && paisseleccionado.colorfichas === pais.colorfichas) {
-            i141 = 0;
-            while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
-                i141++;
-            };
-            if (pais.limitrofes[i141] === paisseleccionado) {
-                paisreceptor = pais;
-            }
-        } else if (turno === pais.colorfichas) {
+            } else if (turno === pais.colorfichas) {
             i141 = 0;
             while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
                 i141++;
@@ -2392,6 +2385,8 @@ function test14(pais) {
                     p.idsvg.parentElement.style.cursor = "default";
                     })
                 paisseleccionado.idsvg.parentElement.style.zIndex = 3;
+                paisseleccionado.idsvg.parentElement.style.cursor = "pointer";
+                paisseleccionado.id.style.cursor = "pointer";
                     if(paisseleccionado.colorfichas === "Rojo"){
                     paisseleccionado.idsvg.style.stroke = "red";
                     } else if(paisseleccionado.colorfichas === "Azul"){
@@ -2407,7 +2402,7 @@ function test14(pais) {
                     };
                     paisseleccionado.limitrofes.forEach((l)=>{
                         if(l.colorfichas === paisseleccionado.colorfichas){
-                        l.idsvg.parentElement.style.zIndex = 2;
+                        l.idsvg.parentElement.style.zIndex = 1;
                         if(l.colorfichas === "Rojo"){
                         l.idsvg.style.stroke = "red";
                         } else if(l.colorfichas === "Azul"){
@@ -2425,6 +2420,15 @@ function test14(pais) {
                         })
                 };
             };
+        }; 
+        if (turno === pais.colorfichas && paisseleccionado.colorfichas === pais.colorfichas) {
+            i141 = 0;
+            while (pais.limitrofes.length > i141 && paisseleccionado != pais.limitrofes[i141]) {
+                i141++;
+            };
+            if (pais.limitrofes[i141] === paisseleccionado) {
+                paisreceptor = pais;
+            }
         };
         i142 = 0;
         if (paisreceptor === pais) {
@@ -3137,7 +3141,9 @@ restablecer2.addEventListener("click", function(){
 paises.forEach((v)=>{
     v.idsvg.addEventListener("mouseenter", function(){
     if(v.colorfichas === turno){
-        v.idsvg.parentElement.style.zIndex = 3;
+        if(v !== paisseleccionado){
+        v.idsvg.parentElement.style.zIndex = 2;
+        };
         v.idsvg.parentElement.style.cursor = "pointer";
         if(v.colorfichas === "Rojo"){
         v.idsvg.style.stroke = "red";
@@ -3156,7 +3162,9 @@ paises.forEach((v)=>{
     })
     v.id.addEventListener("mouseenter", function(){
     if(v.colorfichas === turno){
-        v.idsvg.parentElement.style.zIndex = 3;
+        if(v !== paisseleccionado){
+        v.idsvg.parentElement.style.zIndex = 2;
+        };
         v.id.style.cursor = "pointer";
         if(v.colorfichas === "Rojo"){
         v.idsvg.style.stroke = "red";

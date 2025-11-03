@@ -529,7 +529,7 @@ a {
 }
 
 .objetivo{
-    color: white;
+    color: black;
     font-family: "Tiro Bangla", serif;
     text-align: center;
 }
@@ -730,9 +730,9 @@ transform: scale(1.1);
 }
 
 .dialogObjetivos {
-    background-color: #c59a3e;
+    background-color: rgb(255, 254, 204);
     border-radius: 10px;
-    border-color: white;
+    border-color: #c59a3e;
     justify-content: center;
     align-items: center ;
 }

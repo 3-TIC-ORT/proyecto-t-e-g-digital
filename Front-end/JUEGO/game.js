@@ -2287,7 +2287,7 @@ function test14(pais) {
             } else if(paisseleccionado.colorfichas === "Magenta"){
             paisseleccionado.idsvg.style.stroke = "magenta";
             } else if(paisseleccionado.colorfichas === "Negro"){
-            paisseleccionado.idsvg.style.stroke = "dimgray";
+            paisseleccionado.idsvg.style.stroke = "#444444";
             };
             paisseleccionado.limitrofes.forEach((l)=>{
             if(l.colorfichas != paisseleccionado.colorfichas){
@@ -2305,7 +2305,7 @@ function test14(pais) {
             } else if(l.colorfichas === "Magenta"){
             l.idsvg.style.stroke = "magenta";
             } else if(l.colorfichas === "Negro"){
-            l.idsvg.style.stroke = "dimgray";
+            l.idsvg.style.stroke = "#444444";
             };
             };
             })
@@ -2338,7 +2338,7 @@ function test14(pais) {
                 } else if(paisseleccionado.colorfichas === "Magenta"){
                 paisseleccionado.idsvg.style.stroke = "magenta";
                 } else if(paisseleccionado.colorfichas === "Negro"){
-                paisseleccionado.idsvg.style.stroke = "dimgray";
+                paisseleccionado.idsvg.style.stroke = "#444444";
                 };
                 if(paisatacado.colorfichas === "Rojo"){
                 paisatacado.idsvg.style.stroke = "red";
@@ -2351,7 +2351,7 @@ function test14(pais) {
                 } else if(paisatacado.colorfichas === "Magenta"){
                 paisatacado.idsvg.style.stroke = "magenta";
                 } else if(paisatacado.colorfichas === "Negro"){
-                paisatacado.idsvg.style.stroke = "dimgray";
+                paisatacado.idsvg.style.stroke = "#444444";
                 };
             };
         };
@@ -2398,7 +2398,7 @@ function test14(pais) {
                     } else if(paisseleccionado.colorfichas === "Magenta"){
                     paisseleccionado.idsvg.style.stroke = "magenta";
                     } else if(paisseleccionado.colorfichas === "Negro"){
-                    paisseleccionado.idsvg.style.stroke = "dimgray";
+                    paisseleccionado.idsvg.style.stroke = "#444444";
                     };
                     paisseleccionado.limitrofes.forEach((l)=>{
                         if(l.colorfichas === paisseleccionado.colorfichas){
@@ -2414,7 +2414,7 @@ function test14(pais) {
                         } else if(l.colorfichas === "Magenta"){
                         l.idsvg.style.stroke = "magenta";
                         } else if(l.colorfichas === "Negro"){
-                        l.idsvg.style.stroke = "dimgray";
+                        l.idsvg.style.stroke = "#444444";
                         };
                         };
                         })
@@ -3107,7 +3107,9 @@ cerrarTnegro.addEventListener("click",()=> dialogTnegro.close());
 cerrarnuevatarjeta.addEventListener("click",()=> dnuevatarjeta.close());
 
 configuracion.addEventListener("click", ()=> abrirMenuConfig());
+configuracion.addEventListener("click", ()=> menuPausa.close());
 atrasConfig.addEventListener("click", ()=> menuConfig.close());
+atrasConfig.addEventListener("click", ()=> abrirMenuPausa());
 
 //event listeners tarjetas (no hay forma de que escriba mas event listeners que funciones)
 contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));
@@ -3199,7 +3201,7 @@ paises.forEach((v)=>{
         } else if(v.colorfichas === "Magenta"){
             v.idsvg.style.stroke = "magenta";
         } else if(v.colorfichas === "Negro"){
-            v.idsvg.style.stroke = "dimgray";
+            v.idsvg.style.stroke = "#444444";
         }
     };
     })
@@ -3220,7 +3222,7 @@ paises.forEach((v)=>{
         } else if(v.colorfichas === "Magenta"){
             v.idsvg.style.stroke = "magenta";
         } else if(v.colorfichas === "Negro"){
-            v.idsvg.style.stroke = "dimgray";
+            v.idsvg.style.stroke = "#444444";
         }
     };
     })

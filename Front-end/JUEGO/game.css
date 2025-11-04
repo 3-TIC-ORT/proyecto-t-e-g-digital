@@ -562,8 +562,7 @@ transform: scale(1.1);
 
 .menuPausa {
     justify-self: center;
-    margin-top: 17%;
-    width: 200px;
+    width: 15%;
     text-align: center;
     align-items: center;
     font-family: "Tiro Bangla", serif;
@@ -575,9 +574,8 @@ transform: scale(1.1);
 
 .menuConfig {
     justify-self: center;
-    margin-top: 17%;
     width: 20%;
-    height: 30%;
+    height: 28%;
     text-align: center;
     align-items: center;
     vertical-align: auto;

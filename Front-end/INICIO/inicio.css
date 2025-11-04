@@ -4,7 +4,8 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 10%
+    top: 10%;
+    gap: 5px;
 }
 
 .botones_inicio {
@@ -101,17 +102,6 @@ body {
     background-size: 100%;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-    position: absolute;
-    bottom: 10%;
-}
-
 h1 {
      color: white;
      font-weight: normal;
@@ -121,4 +111,19 @@ h1 {
 
 img{
     margin: 10px;
+}
+
+.containerbotonessecundarios {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px
+}
+
+.containerbuttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
 }

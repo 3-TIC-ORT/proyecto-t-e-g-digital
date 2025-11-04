@@ -2768,13 +2768,56 @@ function test27(color){
         i271++;
     };
     if (npaises === 0){
+    if(color === "Rojo"){
+        tarjetasrojo.forEach((t)=>{
+            t.fichas = 2;
+            t.color = "";
+            mazo.push(t);
+    });
+    tarjetasrojo = [];
+    } else if(color === "Azul"){
+        tarjetasazul.forEach((t)=>{
+            t.fichas = 2;
+            t.color = "";
+            mazo.push(t);
+        });
+        tarjetasazul = [];
+    } else if(color === "Amarillo"){
+        tarjetasamarillo.forEach((t)=>{
+            t.fichas = 2;
+            t.color = "";
+            mazo.push(t);
+        });
+        tarjetasamarillo = [];
+    } else if(color === "Verde"){
+        tarjetasverde.forEach((t)=>{
+            t.fichas = 2;
+            t.color = "";
+            mazo.push(t);
+        });
+        tarjetasverde = [];
+    } else if(color === "Magenta"){
+        tarjetasmagenta.forEach((t)=>{
+            t.fichas = 2;
+            t.color = "";
+            mazo.push(t);
+        });
+        tarjetasmagenta = [];
+    } else if(color === "Negro"){
+        tarjetasnegro.forEach((t)=>{
+            t.fichas = 2;
+            t.color = "";
+            mazo.push(t);
+        });
+        tarjetasnegro = [];
+    };
     while(colores.length > i272 && colores[i272] != color){
         i272++;
     };
     if(colores[i272] === color){
     colores.splice(i272, 1);
     };
-    };
+};
     i271 = 0;
     i272 = 0;
     npaises = 0;

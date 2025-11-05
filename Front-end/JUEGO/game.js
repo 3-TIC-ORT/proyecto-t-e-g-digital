@@ -40,6 +40,7 @@ let resultadosatacante = [];
 let resultadosdefensor = [];
 let dadoreserva = 0;
 let tarjetareserva = 0;
+let explocion = new Audio('../imagenes/explocion.mp3');
 let i121 = 0;
 let i122 = 0;
 let i123 = 0;
@@ -2935,6 +2936,8 @@ function test16(color) {
         p.id.style.cursor = "default";
         })
     };
+  explocion.currentTime = 0;
+ explocion.play();
 };
 
 //Event Listeners x país

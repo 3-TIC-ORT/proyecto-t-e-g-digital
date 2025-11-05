@@ -961,7 +961,6 @@ let itarj2 = 0;
 let itarj3 = 0;
 let itarj4 = 0;
 
-
 //cargar tarjetas del back
 function cargarTarjetas () {
 getEvent("cargarTarjetas", (tarjetas) => {
@@ -1459,37 +1458,37 @@ if(color === "Rojo"){
 if(2 >= canjesrojo){
 fichascanjerojo.textContent = "Se te otorgarán " +  (4 + 3 * canjesrojo) + " fichas por este canje.";
 } else if (canjesrojo > 2){
-fichascanjerojo = "Se te otorgarán" + (10 + 5 * (canjesrojo-2)) + " fichas por este canje.";
+fichascanjerojo.textContent = "Se te otorgarán " + (10 + 5 * (canjesrojo-2)) + " fichas por este canje.";
 };
 } else if(color === "Azul"){
 if(2 >= canjesazul){
 fichascanjeazul.textContent = "Se te otorgarán " +  (4 + 3 * canjesazul) + " fichas por este canje.";
 } else if (canjesazul > 2){
-fichascanjeazul = "Se te otorgarán" + (10 + 5 * (canjesazul-2)) + " fichas por este canje.";
+fichascanjeazul.textContent = "Se te otorgarán " + (10 + 5 * (canjesazul-2)) + " fichas por este canje.";
 };
 } else if(color === "Amarillo"){
 if(2 >= canjesamarillo){
 fichascanjeamarillo.textContent = "Se te otorgarán " +  (4 + 3 * canjesamarillo) + " fichas por este canje.";
 } else if (canjesamarillo > 2){
-fichascanjeamarillo = "Se te otorgarán" + (10 + 5 * (canjesamarillo-2)) + " fichas por este canje.";
+fichascanjeamarillo.textContent = "Se te otorgarán " + (10 + 5 * (canjesamarillo-2)) + " fichas por este canje.";
 };
 } else if(color === "Verde"){
 if(2 >= canjesverde){
 fichascanjeverde.textContent = "Se te otorgarán " +  (4 + 3 * canjesverde) + " fichas por este canje.";
 } else if (canjesverde > 2){
-fichascanjeverde = "Se te otorgarán" + (10 + 5 * (canjesverde-2)) + " fichas por este canje.";
+fichascanjeverde.textContent = "Se te otorgarán " + (10 + 5 * (canjesverde-2)) + " fichas por este canje.";
 };
 } else if(color === "Magenta"){
 if(2 >= canjesmagenta){
 fichascanjemagenta.textContent = "Se te otorgarán " +  (4 + 3 * canjesmagenta) + " fichas por este canje.";
 } else if (canjesmagenta > 2){
-fichascanjemagenta = "Se te otorgarán" + (10 + 5 * (canjesmagenta-2)) + " fichas por este canje.";
+fichascanjemagenta.textContent = "Se te otorgarán " + (10 + 5 * (canjesmagenta-2)) + " fichas por este canje.";
 };
 } else if(color === "Negro"){
 if(2 >= canjesnegro){
 fichascanjenegro.textContent = "Se te otorgarán " +  (4 + 3 * canjesnegro) + " fichas por este canje.";
 } else if (canjesnegro > 2){
-fichascanjenegro = "Se te otorgarán" + (10 + 5 * (canjesnegro-2)) + " fichas por este canje.";
+fichascanjenegro.textContent = "Se te otorgarán " + (10 + 5 * (canjesnegro-2)) + " fichas por este canje.";
 };
 }
 };
@@ -2275,6 +2274,9 @@ function test12(colorturno) {
             p.idsvg.parentElement.style.cursor = "default";
             p.id.style.cursor = "default";
             })
+            fichascanjearray.forEach(f =>{
+                f.textContent = "";
+            });
             test22("Rojo");
             test22("Azul");
             test22("Amarillo");

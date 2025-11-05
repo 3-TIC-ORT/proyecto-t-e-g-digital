@@ -397,10 +397,12 @@ svg path.nombre {
 
 .guardar {
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .guardar:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    lighting-color: #af8308;
+    color: #fcff9d  ;
 }
 
 .currentturn {
@@ -548,16 +550,18 @@ transform: scale(1.1);
 
 .reanudar {
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .actRapidaIns {
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .actRapidaIns:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    lighting-color: #af8308;
+    color: #fcff9d  ;
 }
 
 .menuPausa {
@@ -574,8 +578,8 @@ transform: scale(1.1);
 
 .menuConfig {
     justify-self: center;
-    width: 20%;
-    height: 28%;
+    width: max-content;
+    height: 35%;
     text-align: center;
     align-items: center;
     vertical-align: auto;
@@ -597,25 +601,30 @@ transform: scale(1.1);
 }
 
 .reanudar:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    lighting-color: #af8308;
+    color: #fcff9d  ;
 }
 
 .configuracion {
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .configuracion:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    lighting-color: #af8308;
+    color: #fcff9d  ;
 }
 
 .salir {
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
-    color: white;
+    transition: all 0.2s ease-in-out;
 }
 .salir:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    lighting-color: #af8308;
+    color: #fcff9d  ;
 }
 
 .barraBrillo {

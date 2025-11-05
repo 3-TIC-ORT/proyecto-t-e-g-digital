@@ -129,6 +129,43 @@ if(localStorage.getItem("brillo") != "null"){
   });
 });
 
+//sonido animaciones
+let sonidoAnimacionValor = "";
+addEventListener("DOMContentLoaded", () => {
+if (localStorage.getItem("sonidoAnimacion") === null) {
+   sonidoAnimacionValor = "true";   
+   sonidoAnimaciones.textContent = "Sonido de animación activados";
+} else if (localStorage.getItem("sonidoAnimacion") === "true") {
+   sonidoAnimacionValor = "true";
+   sonidoAnimaciones.textContent = "Sonido de animación activados";
+} else if (localStorage.getItem("sonidoAnimacion") === "false") {
+   sonidoAnimacionValor = "false";
+   sonidoAnimaciones.textContent = "Sonido de animación desactivados";
+}
+});    
+
+let sonidoAnimaciones = document.getElementById("actRapidaSonido");
+function cambiarSonidoAnimacion() {
+    if (sonidoAnimacionValor === "true") {
+        sonidoAnimacionValor = "false";
+        sonidoAnimaciones.textContent = "Sonido de animación desactivados";
+        localStorage.setItem("sonidoAnimacion", "false");
+    }
+    else if (sonidoAnimacionValor === "false") {
+        sonidoAnimacionValor = "true";
+        sonidoAnimaciones.textContent = "Sonido de animación activados";
+        localStorage.setItem("sonidoAnimacion", "true");
+    }
+};    
+
+function sonidoExplocion() {
+    sonidoAnimacionValor = localStorage.getItem("sonidoAnimacion");
+    if (sonidoAnimacionValor === "true") {
+        explocion.currentTime = 0;
+        explocion.play();
+    }    
+}
+
 //checkear cargar partida (7/10)
 let checkCargar = localStorage.getItem("cargarPartidaInicio")
 if (checkCargar === "true") {
@@ -2994,8 +3031,7 @@ function test16(color) {
         p.id.style.cursor = "default";
         })
     };
-  explocion.currentTime = 0;
- explocion.play();
+    sonidoExplocion.play();
 };
 
 //Event Listeners x país
@@ -3171,6 +3207,7 @@ configuracion.addEventListener("click", ()=> abrirMenuConfig());
 configuracion.addEventListener("click", ()=> menuPausa.close());
 atrasConfig.addEventListener("click", ()=> menuConfig.close());
 atrasConfig.addEventListener("click", ()=> abrirMenuPausa());
+sonidoAnimaciones.addEventListener("click", cambiarSonidoAnimacion());
 
 //event listeners tarjetas (no hay forma de que escriba mas event listeners que funciones)
 contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));

@@ -386,7 +386,7 @@ svg path.nombre {
 .alaska {
     position: absolute;
     top: 20.1%;
-    right: 91.8%;
+    right: 91.9%;
     width: auto;
 }
 
@@ -400,7 +400,6 @@ svg path.nombre {
     transition: all 0.2s ease-in-out;
 }
 .guardar:hover {
-    transform: scale(1.15);
     lighting-color: #af8308;
     color: #fcff9d  ;
 }
@@ -559,7 +558,6 @@ transform: scale(1.1);
 }
 
 .actRapidaIns:hover {
-    transform: scale(1.15);
     lighting-color: #af8308;
     color: #fcff9d  ;
 }
@@ -591,17 +589,18 @@ transform: scale(1.1);
 }
 
 .atrasConfig {
-    justify-self:flex-start;
+    justify-self: left;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    width: 20%;
 }
 
 .atrasConfig:hover {
-    transform: scale(1.1);
+    lighting-color: #af8308;
+    color: #fcff9d  ; 
 }
 
 .reanudar:hover {
-    transform: scale(1.15);
     lighting-color: #af8308;
     color: #fcff9d  ;
 }
@@ -612,7 +611,6 @@ transform: scale(1.1);
 }
 
 .configuracion:hover {
-    transform: scale(1.15);
     lighting-color: #af8308;
     color: #fcff9d  ;
 }
@@ -622,9 +620,8 @@ transform: scale(1.1);
     transition: all 0.2s ease-in-out;
 }
 .salir:hover {
-    transform: scale(1.15);
     lighting-color: #af8308;
-    color: #fcff9d  ;
+    color: #fcff9d;
 }
 
 .barraBrillo {

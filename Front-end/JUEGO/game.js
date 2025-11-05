@@ -317,6 +317,7 @@ let fichascanjeverde = document.getElementById("fichascanjeverde");
 let fichascanjemagenta = document.getElementById("fichascanjemagenta");
 let fichascanjenegro = document.getElementById("fichascanjenegro");
 let fichascanjearray = [fichascanjerojo, fichascanjeazul, fichascanjeamarillo, fichascanjeverde, fichascanjemagenta, fichascanjenegro];
+let salir = document.getElementById("salir");
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner una ficha";
@@ -2270,16 +2271,40 @@ function test12(colorturno) {
                 if(stop === false){
                 if (colores[i121] === "Rojo" && fichasnuevas.rojo === 0){
                 i121++;
+                tselect1 = 0;
+                tselect2 = 0;
+                tselect3 = 0;
+                fichascanjerojo.textContent = "";
                 } else if (colores[i121] === "Azul" && fichasnuevas.azul === 0) {
                 i121++;
+                tselect1 = 0;
+                tselect2 = 0;
+                tselect3 = 0;
+                fichascanjeazul.textContent = "";
                 } else if (colores[i121] === "Amarillo" && fichasnuevas.amarillo === 0) {
                 i121++;
+                tselect1 = 0;
+                tselect2 = 0;
+                tselect3 = 0;
+                fichascanjeamarillo.textContent = "";
                 } else if (colores[i121] === "Verde" && fichasnuevas.verde === 0) {
-                    i121++;
+                i121++;
+                tselect1 = 0;
+                tselect2 = 0;
+                tselect3 = 0;
+                fichascanjeverde.textContent = "";
                 } else if (colores[i121] === "Magenta" && fichasnuevas.magenta === 0) {
                 i121++;
+                tselect1 = 0;
+                tselect2 = 0;
+                tselect3 = 0;
+                fichascanjemagenta.textContent = "";
                 } else if (colores[i121] === "Negro" && fichasnuevas.negro === 0) {
                 i121++;
+                tselect1 = 0;
+                tselect2 = 0;
+                tselect3 = 0;
+                fichascanjenegro.textContent = "";
                 };
             };
                 if (i121 < colores.length){
@@ -2300,9 +2325,6 @@ function test12(colorturno) {
             };
             actualizarInstrucciones(fase);
             guardarPartida();
-            tselect1 = 0;
-            tselect2 = 0;
-            tselect3 = 0;
             paisseleccionado = 0;
             paises.forEach((p)=>{
             p.idsvg.style.stroke = "black";
@@ -2310,9 +2332,6 @@ function test12(colorturno) {
             p.idsvg.parentElement.style.cursor = "default";
             p.id.style.cursor = "default";
             })
-            fichascanjearray.forEach(f =>{
-                f.textContent = "";
-            });
             test22("Rojo");
             test22("Azul");
             test22("Amarillo");
@@ -3297,7 +3316,9 @@ restablecer2.addEventListener("click", function(){
         test22("Negro");
     };
 });
-
+salir.addEventListener("click", function(){
+window.location.href = "../INICIO/inicio.html"
+})
 
 //event listener stokes
 paises.forEach((v)=>{

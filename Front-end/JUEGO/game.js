@@ -274,6 +274,13 @@ let sectorverde = document.getElementById("sectorverde");
 let sectormagenta = document.getElementById("sectormagenta");
 let sectornegro = document.getElementById("sectornegro");
 let sectores = [sectorrojo, sectorazul, sectoramarillo, sectorverde, sectormagenta, sectornegro];
+let fichascanjerojo = document.getElementById("fichascanjerojo");
+let fichascanjeazul = document.getElementById("fichascanjeazul");
+let fichascanjeamarillo = document.getElementById("fichascanjeamarillo");
+let fichascanjeverde = document.getElementById("fichascanjeverde");
+let fichascanjemagenta = document.getElementById("fichascanjemagenta");
+let fichascanjenegro = document.getElementById("fichascanjenegro");
+let fichascanjearray = [fichascanjerojo, fichascanjeazul, fichascanjeamarillo, fichascanjeverde, fichascanjemagenta, fichascanjenegro];
 
 //Declaracion de instrucciones
 let inicioRonda1 = "Tenes 5 fichas para incorporar, clickea un territorio propio para poner una ficha";
@@ -1435,7 +1442,56 @@ if(tselect1 === 0){
     tselect3 = 0;
 };
 test22(turno);
+if(tselect1 != 0 && tselect2 != 0 && tselect3 != 0){
+    if(tselect1.simbolo === "Comodin" || tselect2.simbolo === "Comodin" || tselect3.simbolo === "Comodin"){
+    test28(turno);
+    } else if (tselect1.simbolo === tselect2.simbolo && tselect2.simbolo === tselect3.simbolo){
+    test28(turno);
+    } else if (tselect1.simbolo != tselect2.simbolo && tselect2.simbolo != tselect3.simbolo && tselect3.simbolo != tselect1.simbolo){
+    test28(turno);
+    };
+    };
 };
+};
+
+function test28(color){
+if(color === "Rojo"){
+if(2 >= canjesrojo){
+fichascanjerojo.textContent = "Se te otorgarán " +  (4 + 3 * canjesrojo) + " fichas por este canje.";
+} else if (canjesrojo > 2){
+fichascanjerojo = "Se te otorgarán" + (10 + 5 * (canjesrojo-2)) + " fichas por este canje.";
+};
+} else if(color === "Azul"){
+if(2 >= canjesazul){
+fichascanjeazul.textContent = "Se te otorgarán " +  (4 + 3 * canjesazul) + " fichas por este canje.";
+} else if (canjesazul > 2){
+fichascanjeazul = "Se te otorgarán" + (10 + 5 * (canjesazul-2)) + " fichas por este canje.";
+};
+} else if(color === "Amarillo"){
+if(2 >= canjesamarillo){
+fichascanjeamarillo.textContent = "Se te otorgarán " +  (4 + 3 * canjesamarillo) + " fichas por este canje.";
+} else if (canjesamarillo > 2){
+fichascanjeamarillo = "Se te otorgarán" + (10 + 5 * (canjesamarillo-2)) + " fichas por este canje.";
+};
+} else if(color === "Verde"){
+if(2 >= canjesverde){
+fichascanjeverde.textContent = "Se te otorgarán " +  (4 + 3 * canjesverde) + " fichas por este canje.";
+} else if (canjesverde > 2){
+fichascanjeverde = "Se te otorgarán" + (10 + 5 * (canjesverde-2)) + " fichas por este canje.";
+};
+} else if(color === "Magenta"){
+if(2 >= canjesmagenta){
+fichascanjemagenta.textContent = "Se te otorgarán " +  (4 + 3 * canjesmagenta) + " fichas por este canje.";
+} else if (canjesmagenta > 2){
+fichascanjemagenta = "Se te otorgarán" + (10 + 5 * (canjesmagenta-2)) + " fichas por este canje.";
+};
+} else if(color === "Negro"){
+if(2 >= canjesnegro){
+fichascanjenegro.textContent = "Se te otorgarán " +  (4 + 3 * canjesnegro) + " fichas por este canje.";
+} else if (canjesnegro > 2){
+fichascanjenegro = "Se te otorgarán" + (10 + 5 * (canjesnegro-2)) + " fichas por este canje.";
+};
+}
 };
 
 //Ejecutar canjes
@@ -1714,7 +1770,9 @@ while(tarjetasnegro[i241] != tselect2){
 tselect1 = 0;
 tselect2 = 0;
 tselect3 = 0;
-
+fichascanjearray.forEach(f => {
+f.textContent = "";
+});
 test22(color);
 actualizarInstrucciones(fase);
 guardarPartida();
@@ -3152,36 +3210,54 @@ canjearverde.addEventListener("click",()=> test24("Verde"));
 canjearmagenta.addEventListener("click",()=> test24("Magenta"));
 canjearnegro.addEventListener("click",()=> test24("Negro"));
 restablecer1.addEventListener("click", function(){
+    if(turno === "Rojo"){
     tselect1 = 0;
     tselect2 = 0;
     tselect3 = 0;
+    fichascanjerojo.textContent = "";
     test22("Rojo");
+};
 });
 restablecer2.addEventListener("click", function(){
-    tselect1 = 0;
-    tselect2 = 0;
-    tselect3 = 0;
-    test22("Azul");
+    if(turno === "Azul"){
+        tselect1 = 0;
+        tselect2 = 0;
+        tselect3 = 0;
+        fichascanjeazul.textContent = "";
+        test22("Azul");
+    };
 });restablecer3.addEventListener("click", function(){
-    tselect1 = 0;
-    tselect2 = 0;
-    tselect3 = 0;
-    test22("Amarillo");
+    if(turno === "Amarillo"){
+        tselect1 = 0;
+        tselect2 = 0;
+        tselect3 = 0;
+        fichascanjeamarillo.textContent = "";
+        test22("Amarillo");
+    };
 });restablecer4.addEventListener("click", function(){
-    tselect1 = 0;
-    tselect2 = 0;
-    tselect3 = 0;
-    test22("Verde");
+    if(turno === "Verde"){
+        tselect1 = 0;
+        tselect2 = 0;
+        tselect3 = 0;
+        fichascanjeverde.textContent = "";
+        test22("Verde");
+    };
 });restablecer5.addEventListener("click", function(){
-    tselect1 = 0;
-    tselect2 = 0;
-    tselect3 = 0;
-    test22("Magenta");
+    if(turno === "Magenta"){
+        tselect1 = 0;
+        tselect2 = 0;
+        tselect3 = 0;
+        fichascanjemagenta.textContent = "";
+        test22("Magenta");
+    };
 });restablecer6.addEventListener("click", function(){
-    tselect1 = 0;
-    tselect2 = 0;
-    tselect3 = 0;
-    test22("Negro");
+    if(turno === "Negro"){
+        tselect1 = 0;
+        tselect2 = 0;
+        tselect3 = 0;
+        fichascanjenegro.textContent = "";
+        test22("Negro");
+    };
 });
 
 

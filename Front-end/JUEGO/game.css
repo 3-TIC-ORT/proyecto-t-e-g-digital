@@ -1404,3 +1404,10 @@ select {
     flex-direction: row;
     justify-content: center;
 }
+
+.fichascanje{
+    color: white;
+    margin: 3px;
+    font-family: "Tiro Bangla", serif;
+    justify-self: center;
+}

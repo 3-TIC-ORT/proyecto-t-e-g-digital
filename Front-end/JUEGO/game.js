@@ -112,6 +112,42 @@ function abrirMenuConfig() {
     menuConfig.showModal();
 }
 
+//sonido
+let botonSonido = document.getElementById("botonAnimacion");
+let animacionValor = ""
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("sonidoAnimacion") === null) {
+        animacionValor = "true";
+        botonSonido.textContent = "Sonido activado";
+    } else if (localStorage.getItem("sonidoAnimacion") === "true") {
+        animacionValor = "true";
+        botonSonido.textContent = "Sonido activado";
+    } else if (localStorage.getItem("sonidoAnimacion") === "false") {
+        animacionValor = "false";
+        botonSonido.textContent = "Sonido desactivado"
+    }
+});    
+
+function toggleSonido() {
+    if (animacionValor === "true") {
+        animacionValor = "false";
+        localStorage.setItem("sonidoAnimacion", "false");
+        botonSonido.textContent = "Sonido desactivado";
+    } else if (animacionValor === "false") {
+        animacionValor = "true";
+        localStorage.setItem("sonidoAnimacion", "true");        
+        botonSonido.textContent = "Sonido activado";
+    }
+}
+
+function explocionAnimacion() {
+    if (animacionValor === "true") { 
+    explocion.currentTime = 0;
+    explocion.play();
+    }
+}
+
 //brillo
   let valorBrillo = 1;
 document.addEventListener("DOMContentLoaded", () => {
@@ -2994,8 +3030,7 @@ function test16(color) {
         p.id.style.cursor = "default";
         })
     };
-  explocion.currentTime = 0;
- explocion.play();
+   explocion();
 };
 
 //Event Listeners x país
@@ -3171,6 +3206,7 @@ configuracion.addEventListener("click", ()=> abrirMenuConfig());
 configuracion.addEventListener("click", ()=> menuPausa.close());
 atrasConfig.addEventListener("click", ()=> menuConfig.close());
 atrasConfig.addEventListener("click", ()=> abrirMenuPausa());
+botonSonido.addEventListener("click", ()=> toggleSonido());
 
 //event listeners tarjetas (no hay forma de que escriba mas event listeners que funciones)
 contenidoTrojo1.addEventListener("click",()=> test23(tarjetasrojo[0]));

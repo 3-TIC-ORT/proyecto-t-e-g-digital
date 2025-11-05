@@ -146,6 +146,7 @@ function explocionAnimacion() {
     explocion.currentTime = 0;
     explocion.play();
     }
+    console.log(animacionValor)
 }
 
 //brillo
@@ -2947,7 +2948,8 @@ function test16(color) {
     paisconquistador = 0;
     dresultadosatacante.textContent = "";
     dresultadosdefensor.textContent = "";
-    if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {
+    if (color === turno && color === paisseleccionado.colorfichas && paisatacado != 0) {   
+        explocionAnimacion();
         dadosatacante = paisseleccionado.fichas - 1;
         dadosdefensor = paisatacado.fichas;
         if (dadosatacante > 3) {
@@ -3051,7 +3053,6 @@ function test16(color) {
         p.id.style.cursor = "default";
         })
     };
-   explocion();
 };
 
 //Event Listeners x país

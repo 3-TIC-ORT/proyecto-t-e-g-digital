@@ -26,3 +26,33 @@ localStorage.setItem("brillo", valorBrillo);
 
 let restablecerBrillo = document.getElementById("restablecerBrillo");
 restablecerBrillo.addEventListener("click", resetbrillo);
+
+//sonidos animacion
+let sonidoAnimacion = document.getElementById("sonidoAnimacion");
+let sonidoAnimacionValor = "";
+
+addEventListener("DOMContentLoaded", () => {
+if (localStorage.getItem("sonidoAnimacion") === "null") {
+   sonidoAnimacionValor = "true";
+} else if (localStorage.getItem("sonidoAnimacion") === "true") {
+   sonidoAnimacionValor = "true";
+   sonidoAnimacion.textContent = "Sonido de animación activados";
+} else if (localStorage.getItem("sonidoAnimacion") === "false") {
+   sonidoAnimacionValor = "false";
+   sonidoAnimacion.textContent = "Sonido de animación desactivados";
+}
+});
+
+function cambiarSonidoAnimacion() {
+  if (sonidoAnimacionValor === "true") {
+    sonidoAnimacionValor = "false";
+    sonidoAnimacion.textContent = "Sonido de animación desactivados";
+    localStorage.setItem("sonidoAnimacion", "false");
+  } else if (sonidoAnimacionValor === "false") {
+    sonidoAnimacionValor = "true";
+    sonidoAnimacion.textContent = "Sonido de animación activados";
+    localStorage.setItem("sonidoAnimacion", "true");
+  }
+}
+
+sonidoAnimacion.addEventListener("click", cambiarSonidoAnimacion);

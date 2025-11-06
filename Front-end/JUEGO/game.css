@@ -401,7 +401,7 @@ svg path.nombre {
 }
 .guardar:hover {
     lighting-color: #af8308;
-    color: #fcff9d  ;
+    color: #403000  ;
 }
 
 .currentturn {
@@ -559,12 +559,13 @@ transform: scale(1.1);
 
 .actRapidaIns:hover {
     lighting-color: #af8308;
-    color: #fcff9d  ;
+    color: #403000  ;
 }
 
 .menuPausa {
     justify-self: center;
     width: 15%;
+    height: fit-content;
     text-align: center;
     align-items: center;
     font-family: "Tiro Bangla", serif;
@@ -577,7 +578,7 @@ transform: scale(1.1);
 .menuConfig {
     justify-self: center;
     width: max-content;
-    height: 35%;
+    height: max-content;
     text-align: center;
     align-items: center;
     vertical-align: auto;
@@ -597,12 +598,12 @@ transform: scale(1.1);
 
 .atrasConfig:hover {
     lighting-color: #af8308;
-    color: #fcff9d  ; 
+    color: #403000  ; 
 }
 
 .reanudar:hover {
     lighting-color: #af8308;
-    color: #fcff9d  ;
+    color: #403000  ;
 }
 
 .configuracion {
@@ -612,7 +613,7 @@ transform: scale(1.1);
 
 .configuracion:hover {
     lighting-color: #af8308;
-    color: #fcff9d  ;
+    color: #403000  ;
 }
 
 .salir {
@@ -621,7 +622,7 @@ transform: scale(1.1);
 }
 .salir:hover {
     lighting-color: #af8308;
-    color: #fcff9d;
+    color: #403000;
 }
 
 .barraBrillo {

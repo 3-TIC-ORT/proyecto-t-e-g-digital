@@ -51,7 +51,7 @@ function cambiarSonidoAnimacion() {
     localStorage.setItem("sonidoAnimacion", "false");
   } else if (sonidoAnimacionValor === "false") {
     sonidoAnimacionValor = "true";
-    sonidoAnimacion.textContent = "Sonido de animación activados";
+    sonidoAnimacion.textContent = "Sonido de animación activado";
     localStorage.setItem("sonidoAnimacion", "true");
   }
 }

@@ -40,7 +40,8 @@ let resultadosatacante = [];
 let resultadosdefensor = [];
 let dadoreserva = 0;
 let tarjetareserva = 0;
-let explocion = new Audio('../imagenes/explocion.mp3');
+let explocion = new Audio('../AUDIO/explocion.mp3');
+let musicaVictoria = new Audio('../AUDIO/musicaVictoria.mp3');
 let i121 = 0;
 let i122 = 0;
 let i123 = 0;
@@ -112,7 +113,7 @@ function abrirMenuConfig() {
     menuConfig.showModal();
 }
 
-//sonido
+//sonido y musiquita
 let botonSonido = document.getElementById("botonAnimacion");
 let animacionValor = ""
 
@@ -146,7 +147,13 @@ function explocionAnimacion() {
     explocion.currentTime = 0;
     explocion.play();
     }
-    console.log(animacionValor)
+}
+
+function sonarMusicaVictoria() {
+    if (animacionValor === "true") { 
+    musicaVictoria.currentTime = 0;
+    musicaVictoria.play();
+    }
 }
 
 //brillo
@@ -2727,8 +2734,10 @@ function test17(colour){
         pasarfichas1.close();
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " completó el objetivo común de 30 países.";
+        sonarMusicaVictoria();
         fin.showModal();
         ganador = true;
+        
     };
     };
     if(nobjetivos === "dominacion"){
@@ -2736,6 +2745,7 @@ function test17(colour){
         pasarfichas1.close();
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " logró la dominación mundial";
+        sonarMusicaVictoria();
         fin.showModal();
         ganador = true;
     };
@@ -2790,6 +2800,7 @@ function test17(colour){
         pasarfichas1.close();
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " completó su objetivo secreto: " + objetivos[i173].string;
+        sonarMusicaVictoria();
         fin.showModal();
         ganador = true;
     };

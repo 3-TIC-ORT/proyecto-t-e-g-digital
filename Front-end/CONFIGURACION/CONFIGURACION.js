@@ -32,7 +32,7 @@ let sonidoAnimacion = document.getElementById("sonidoAnimacion");
 let sonidoAnimacionValor = "";
 
 addEventListener("DOMContentLoaded", () => {
-if (localStorage.getItem("sonidoAnimacion") === "null") {
+if (localStorage.getItem("sonidoAnimacion") === null) {
    sonidoAnimacionValor = "true";
    sonidoAnimacion.textContent = "Sonido de animación activado";
 } else if (localStorage.getItem("sonidoAnimacion") === "true") {

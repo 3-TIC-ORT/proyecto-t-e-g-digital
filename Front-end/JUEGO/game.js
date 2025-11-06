@@ -173,6 +173,43 @@ if(localStorage.getItem("brillo") != "null"){
   });
 });
 
+//sonido animaciones
+let sonidoAnimacionValor = "";
+addEventListener("DOMContentLoaded", () => {
+if (localStorage.getItem("sonidoAnimacion") === null) {
+   sonidoAnimacionValor = "true";   
+   sonidoAnimaciones.textContent = "Sonido de animación activados";
+} else if (localStorage.getItem("sonidoAnimacion") === "true") {
+   sonidoAnimacionValor = "true";
+   sonidoAnimaciones.textContent = "Sonido de animación activados";
+} else if (localStorage.getItem("sonidoAnimacion") === "false") {
+   sonidoAnimacionValor = "false";
+   sonidoAnimaciones.textContent = "Sonido de animación desactivados";
+}
+});    
+
+let sonidoAnimaciones = document.getElementById("actRapidaSonido");
+function cambiarSonidoAnimacion() {
+    if (sonidoAnimacionValor === "true") {
+        sonidoAnimacionValor = "false";
+        sonidoAnimaciones.textContent = "Sonido de animación desactivados";
+        localStorage.setItem("sonidoAnimacion", "false");
+    }
+    else if (sonidoAnimacionValor === "false") {
+        sonidoAnimacionValor = "true";
+        sonidoAnimaciones.textContent = "Sonido de animación activados";
+        localStorage.setItem("sonidoAnimacion", "true");
+    }
+};    
+
+function sonidoExplocion() {
+    sonidoAnimacionValor = localStorage.getItem("sonidoAnimacion");
+    if (sonidoAnimacionValor === "true") {
+        explocion.currentTime = 0;
+        explocion.play();
+    }    
+}
+
 //checkear cargar partida (7/10)
 let checkCargar = localStorage.getItem("cargarPartidaInicio")
 if (checkCargar === "true") {
@@ -3064,6 +3101,7 @@ function test16(color) {
         p.id.style.cursor = "default";
         })
     };
+    sonidoExplocion.play();
 };
 
 //Event Listeners x país

@@ -26,6 +26,7 @@ let reanudar = document.getElementById("reanudar");
 let actRapidaIns = document.getElementById("actRapidaIns");
 let configuracion = document.getElementById("configuracion");
 let atrasConfig = document.getElementById("atrasConfig");
+let guardadoListo = document.getElementById("guardadoListo");
 let i = 0;
 let i2 = 0;
 let dado = 0;
@@ -2734,9 +2735,12 @@ function test17(colour){
         pasarfichas1.close();
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " completó el objetivo común de 30 países.";
-        sonarMusicaVictoria();
-        fin.showModal();
         ganador = true;
+        setTimeout(function() {
+            sonarMusicaVictoria();
+            fin.showModal();
+        }, 1000); 
+        
         
     };
     };
@@ -2745,9 +2749,11 @@ function test17(colour){
         pasarfichas1.close();
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " logró la dominación mundial";
-        sonarMusicaVictoria();
-        fin.showModal();
         ganador = true;
+        setTimeout(function() {
+            sonarMusicaVictoria();
+            fin.showModal();
+        }, 1000); 
     };
     };
     if(nobjetivos === "true"){
@@ -2800,9 +2806,11 @@ function test17(colour){
         pasarfichas1.close();
         pasarfichas2.close();
         mensajefinal.textContent = "El " + colour + " completó su objetivo secreto: " + objetivos[i173].string;
-        sonarMusicaVictoria();
-        fin.showModal();
         ganador = true;
+        setTimeout(function() {
+            sonarMusicaVictoria();
+            fin.showModal();
+        }, 1000); 
     };
 };
 return(ganador);
@@ -3182,7 +3190,7 @@ skipamarillo.addEventListener("click", () => test12("Amarillo"));
 skipverde.addEventListener("click", () => test12("Verde"));
 skipmagenta.addEventListener("click", () => test12("Magenta"));
 skipnegro.addEventListener("click", () => test12("Negro"));
-botonGuardar.addEventListener("click",()=> guardarPartida());
+botonGuardar.addEventListener("click", () => clickGuardar());
 cerrarpasarfichas1.addEventListener("click", ()=> pasarfichas1.close());
 cerrarpasarfichas2.addEventListener("click", ()=> pasarfichas2.close());
 cerrarpasarfichas1.addEventListener("click", ()=> test18());
@@ -3279,6 +3287,8 @@ canjearamarillo.addEventListener("click",()=> test24("Amarillo"));
 canjearverde.addEventListener("click",()=> test24("Verde"));
 canjearmagenta.addEventListener("click",()=> test24("Magenta"));
 canjearnegro.addEventListener("click",()=> test24("Negro"));
+
+//restablecer seleccion de tarjetas
 restablecer1.addEventListener("click", function(){
     if(turno === "Rojo"){
     tselect1 = 0;
@@ -3481,6 +3491,19 @@ function guardarPartida() {
     postEvent("guardarEstado", estado);
     icarg = 0;
 };
+
+function confirmarGuardado() {
+    guardadoListo.showModal(); 
+    setTimeout(function() {
+        guardadoListo.close();
+        console.log("Diálogo cerrado después de 1 segundo");
+    }, 1000); 
+};
+
+function clickGuardar() {
+    guardarPartida();
+    confirmarGuardado();
+}
 
 //funcion cargar partida
 function cargarPartida() {    

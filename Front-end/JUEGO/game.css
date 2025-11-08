@@ -1354,6 +1354,19 @@ transform: scale(1.1);
     border-radius: 10px
 }
 
+.guardadoListo {
+    position: relative;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #c59a3e;
+    box-shadow: rgb(58, 45, 45);
+    font-family: "Tiro Bangla", serif;
+    border-radius: 10px;
+}
+
 select {
   background-color: rgb(255, 254, 204);
   text-align: center;

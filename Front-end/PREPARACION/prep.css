@@ -148,7 +148,10 @@ option {
   font-family: "Tiro Bangla", serif;
   font-weight: bold;
   cursor: pointer;
-  font-size: 80%;
+}
+
+.chiquito{
+  font-size: 75%;
 }
 
 .boton_interaccion {

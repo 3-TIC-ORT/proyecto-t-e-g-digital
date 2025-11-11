@@ -1529,6 +1529,9 @@ if(tselect1 === 0){
     tselect1 = tarjeta;
     tselect2 = 0;
     tselect3 = 0;
+    fichascanjearray.forEach(f => {
+        f.textContent = "";
+    });
 };
 test22(turno);
 if(tselect1 != 0 && tselect2 != 0 && tselect3 != 0){

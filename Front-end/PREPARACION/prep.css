@@ -148,6 +148,7 @@ option {
   font-family: "Tiro Bangla", serif;
   font-weight: bold;
   cursor: pointer;
+  font-size: 80%;
 }
 
 .boton_interaccion {

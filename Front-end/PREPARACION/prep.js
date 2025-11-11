@@ -20,8 +20,12 @@ localStorage.setItem("njugadores", njugadores);
 if(parseInt(objectives.value)===0){
 contenidoobj.textContent = "SELECCIONAR MODO DE JUEGO";  
 } else if(parseInt(objectives.value)===1){
-contenidoobj.textContent ="OBJETIVOS SECRETOS";
+contenidoobj.textContent ="OBJETIVOS SECRETOS (SIN OBJ. DESTRUCCIÓN)";
 nobjetivos = "true";
+localStorage.setItem("nobjetivos", nobjetivos);
+} else if(parseInt(objectives.value)===4){
+contenidoobj.textContent = "OBJETIVOS SECRETOS (CON OBJ. DESTRUCCIÓN)";
+nobjetivos = "destruccion";
 localStorage.setItem("nobjetivos", nobjetivos);
 } else if(parseInt(objectives.value)===2){
 contenidoobj.textContent = "OBJETIVO COMÚN (30 PAÍSES)";

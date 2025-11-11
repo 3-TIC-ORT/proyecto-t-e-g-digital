@@ -64,6 +64,7 @@ let i242 = 0;
 let i261 = 0;
 let i271 = 0;
 let i272 = 0;
+let i273 = 0;
 let icarg = 0;
 let icarg1 = 0;
 let icarg2 = 0;
@@ -426,7 +427,38 @@ let obj9 = {
     color: "",
     string: "Ocupar Oceanía, África y 5 países de América del Norte."
 };
+let obj10 = {
+    destruir: "Rojo",
+    color: "",
+    string: "Destruir el ejército Rojo."
+}
+let obj11 = {
+    destruir: "Azul",
+    color: "",
+    string: "Destruir el ejército Azul."
+}
+let obj12 = {
+    destruir: "Amarillo",
+    color: "",
+    string: "Destruir el ejército Amarillo."
+}
+let obj13 = {
+    destruir: "Verde",
+    color: "",
+    string: "Destruir el ejército Verde."
+}
+let obj14 = {
+    destruir: "Magenta",
+    color: "",
+    string: "Destruir el ejército Magenta."
+}
+let obj15 = {
+    destruir: "Negro",
+    color: "",
+    string: "Destruir el ejército Negro."
+};
 let objetivos = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
+let desobjetivos = [obj10, obj11, obj12, obj13, obj14, obj15];
 
 connect2Server(3099);  
 
@@ -1107,13 +1139,26 @@ i = 0;
 i2 = 0;
 
 //Asignar objetivos
-if(nobjetivos === "true"){
+if(nobjetivos === "destruccion"){
+    desobjetivos.forEach((d) => {
+        if(colores.includes(d.destruir)){
+            objetivos.push(d);
+        };
+    });
+};
+if(nobjetivos === "true" || nobjetivos === "destruccion"){
 while (colores.length > i) {
     randomizador = Math.floor(Math.random() * objetivos.length);
     if (objetivos[randomizador].color === ""){
+        if(desobjetivos.includes(objetivos[randomizador])){
+            if(objetivos[randomizador].destruir !== colores[i]){
         objetivos[randomizador].color = colores[i];
         i++;
-    };
+    }} else {
+        objetivos[randomizador].color = colores[i];
+        i++;
+    }
+};
 };
 };
 i = 0;
@@ -1153,7 +1198,6 @@ while(objetivos.length > i && objetivos[i].color != "Negro"){
 if (objetivos.length > i && objetivos[i].color === "Negro"){
     contenidonegro.textContent = objetivos[i].string;}
 i = 0;
-
 //Instructor
 function actualizarInstrucciones(faseactual){
 let fichasActuales = 0;
@@ -2756,7 +2800,7 @@ function test17(colour){
         }, 1000); 
     };
     };
-    if(nobjetivos === "true"){
+    if(nobjetivos === "true" || nobjetivos === "destruccion"){
     while (objetivos.length > i173 && objetivos[i173].color != colour) {
         i173++;
     };
@@ -2802,6 +2846,7 @@ function test17(colour){
     i174++;
     };
     i174 = 0;
+    if(!desobjetivos.includes(objetivos[i173])){
         if(ioceania >= objetivos[i173].oceania && iafrica >= objetivos[i173].africa && isudamerica >= objetivos[i173].sudamerica && iasia >= objetivos[i173].asia && ieuropa >= objetivos[i173].europa && inorteamerica >= objetivos[i173].norteamerica){
         pasarfichas1.close();
         pasarfichas2.close();
@@ -2812,6 +2857,7 @@ function test17(colour){
             fin.showModal();
         }, 1000); 
     };
+};
 };
 return(ganador);
 };
@@ -2896,6 +2942,7 @@ function test26(pais) {
 function test27(color){
     i271 = 0;
     i272 = 0;
+    i273 = 0;
     npaises = 0;
     while(paises.length > i271){
         if(paises[i271].colorfichas === color){
@@ -2953,9 +3000,27 @@ function test27(color){
     if(colores[i272] === color){
     colores.splice(i272, 1);
     };
+    if(nobjetivos === "destruccion"){
+        while(objetivos.length > i273 && objetivos[i273].color != turno){
+            i273++;
+        };
+        if(objetivos[i273].color === turno && desobjetivos.includes(objetivos[i273])){
+        if(objetivos[i273].destruir === color){
+        pasarfichas1.close();
+        pasarfichas2.close();
+        mensajefinal.textContent = "El " + turno + " completó su objetivo secreto: " + objetivos[i273].string;
+        ganador = true;
+        setTimeout(function() {
+            sonarMusicaVictoria();
+            fin.showModal();
+        }, 1000); 
+    };
+};
+};
 };
     i271 = 0;
     i272 = 0;
+    i273 = 0;
     npaises = 0;
 };
 
@@ -3200,32 +3265,32 @@ reanudar.addEventListener("click", ()=> menuPausa.close());
 actRapidaIns.addEventListener("click", ()=> cambiarInstructor());
 
 mostrarrojo.addEventListener("click", function(){
-    if(turno === "Rojo" && nobjetivos === "true"){
+    if(turno === "Rojo" && (nobjetivos === "true" || nobjetivos === "destruccion")){
         objetivorojo.showModal()};
     });
 cerrarrojo.addEventListener("click",()=> objetivorojo.close());
 mostrarazul.addEventListener("click", function(){
-    if(turno === "Azul" && nobjetivos === "true"){
+    if(turno === "Azul" && (nobjetivos === "true" || nobjetivos === "destruccion")){
         objetivoazul.showModal()};
     });
 cerrarazul.addEventListener("click",()=> objetivoazul.close());
 mostraramarillo.addEventListener("click", function(){
-    if(turno === "Amarillo" && nobjetivos === "true"){
+    if(turno === "Amarillo" && (nobjetivos === "true" || nobjetivos === "destruccion")){
         objetivoamarillo.showModal()};
     });
 cerraramarillo.addEventListener("click",()=> objetivoamarillo.close());
 mostrarverde.addEventListener("click", function(){
-    if(turno === "Verde" && nobjetivos === "true"){
+    if(turno === "Verde" && (nobjetivos === "true" || nobjetivos === "destruccion")){
         objetivoverde.showModal()};
     });
 cerrarverde.addEventListener("click",()=> objetivoverde.close());
 mostrarmagenta.addEventListener("click", function(){
-    if(turno === "Magenta" && nobjetivos === "true"){
+    if(turno === "Magenta" && (nobjetivos === "true" || nobjetivos === "destruccion")){
         objetivomagenta.showModal()};
     });
 cerrarmagenta.addEventListener("click",()=> objetivomagenta.close());
 mostrarnegro.addEventListener("click", function(){
-    if(turno === "Negro" && nobjetivos === "true"){
+    if(turno === "Negro" && (nobjetivos === "true" || nobjetivos === "destruccion")){
         objetivonegro.showModal()};
     });
 cerrarnegro.addEventListener("click",()=> objetivonegro.close());
@@ -3476,6 +3541,12 @@ function obtenerEstadoJuego() {
       obj7: obj7.color,
       obj8: obj8.color,
       obj9: obj9.color,
+      obj10: obj10.color,
+      obj11: obj11.color,
+      obj12: obj12.color,
+      obj13: obj13.color,
+      obj14: obj14.color,
+      obj15: obj15.color,
       Acolores: colores,
       ninstructor: ninstructor,
       nobjetivos: nobjetivos,
@@ -3496,7 +3567,6 @@ function confirmarGuardado() {
     guardadoListo.showModal(); 
     setTimeout(function() {
         guardadoListo.close();
-        console.log("Diálogo cerrado después de 1 segundo");
     }, 1000); 
 };
 
@@ -3522,6 +3592,23 @@ function cargarPartida() {
         obj7.color = estado.obj7;
         obj8.color = estado.obj8;
         obj9.color = estado.obj9;
+        obj10.color = estado.obj10;
+        obj11.color = estado.obj11;
+        obj12.color = estado.obj12;
+        obj13.color = estado.obj13;
+        obj14.color = estado.obj14;
+        obj15.color = estado.obj15;
+
+        icarg5 = 0;
+        if(estado.nobjetivos === "destruccion"){
+        while(estado.njugadores > icarg5){
+        if(!objetivos.includes(desobjetivos[icarg5])){
+        objetivos.push(desobjetivos[icarg5]);
+        }
+        icarg5++;
+        };
+    };
+
         icarg5 = 0;
 while(objetivos.length > icarg5 && objetivos[icarg5].color != "Rojo"){
     icarg5++;

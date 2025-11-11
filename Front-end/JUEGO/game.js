@@ -2777,7 +2777,7 @@ function test17(colour){
         };
         i171++;
     };
-    if(nobjetivos === "true" || nobjetivos === "false"){
+    if(nobjetivos === "true" || nobjetivos === "false" || nobjetivos === "destruccion"){
     if (i172 >= 30){
         pasarfichas1.close();
         pasarfichas2.close();
@@ -3140,7 +3140,6 @@ function test16(color) {
         p.id.style.cursor = "default";
         })
     };
-    sonidoExplocion.play();
 };
 
 //Event Listeners x país

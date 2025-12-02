@@ -676,6 +676,14 @@ transform: scale(1.1);
   border-color: gold;
 }
 
+dialog{
+    outline: none;
+}
+
+select{
+    outline: none;
+}
+
 .dialogtarjetas{
     background-color: #c59a3e;
     border-radius: 10px;

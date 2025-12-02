@@ -78,6 +78,7 @@ body {
  border-color: rgb(255, 254, 204);
  transition: all 0.2s ease-in-out;
  cursor: pointer;
+ outline: none;
 }
 
 .botonSiguiente:hover{
@@ -86,6 +87,7 @@ body {
 
 select{
   cursor: pointer;
+  outline: none;
 }
 
 select:hover{
@@ -131,6 +133,7 @@ font-style:inherit ;
   border-style: solid;
   border-width: 3px;
   border-color: darkgoldenrod;
+  outline: none;
 }
 
 .logoMini {
@@ -148,6 +151,7 @@ option {
   font-family: "Tiro Bangla", serif;
   font-weight: bold;
   cursor: pointer;
+  outline: none;
 }
 
 .chiquito{
